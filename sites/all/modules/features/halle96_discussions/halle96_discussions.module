@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Halle 96 Diskussionen feature.
+ */
+
+include_once 'halle96_discussions.features.inc';
