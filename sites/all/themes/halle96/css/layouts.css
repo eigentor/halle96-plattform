@@ -1,0 +1,25 @@
+/* line 3, ../sass/layouts.sass */
+#page-wrapper {
+  background: transparent;
+}
+
+/* line 6, ../sass/layouts.sass */
+#header {
+  background: #ffbf00;
+}
+
+/* line 9, ../sass/layouts.sass */
+#name-and-slogan {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 13, ../sass/layouts.sass */
+#footer-wrapper {
+  background: #bbbbbb;
+}
+
+/* line 16, ../sass/layouts.sass */
+#footer {
+  margin: 0;
+}
