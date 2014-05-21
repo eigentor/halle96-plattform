@@ -3,3 +3,4 @@ description = Theme für die Halle 96 Community-Plattform
 package = Core
 version = VERSION
 core = 7.x
+base theme = responsive_bartik
