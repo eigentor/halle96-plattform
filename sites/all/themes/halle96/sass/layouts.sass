@@ -1,7 +1,21 @@
 @import "includes/variables_mixins"
 
+// Set the behaviour of our IE8-Fallback.
+// Default to write it into the same file with an extra
+// wrapper class
+$breakpoint-no-queries: false
+$breakpoint-no-query-fallbacks: true
+
+* 
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
 #page-wrapper 
   background: transparent
+  min-height: 100%
+  position: relative
+  padding-bottom: 95px
 
 #header 
   background: $header-background
@@ -12,6 +26,23 @@
 
 #footer-wrapper 
   background: #bbb
+  padding: 20px 0 20px
+  height: 95px
 
 #footer
-  margin: 0
+  margin-top: 0
+  margin-bottom: 0
+  border-top: 0
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------- DESKTOP LAYOUT -------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+body
+  +breakpoint($breakpoint-desktop, $no-query: '.lt-ie9')
+    #footer-wrapper 
+      position: absolute
+      bottom: 0
+      width: 100%

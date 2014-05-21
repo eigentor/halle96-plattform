@@ -1,25 +1,59 @@
-/* line 3, ../sass/layouts.sass */
-#page-wrapper {
-  background: transparent;
+/* line 9, ../sass/layouts.sass */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-/* line 6, ../sass/layouts.sass */
+/* line 14, ../sass/layouts.sass */
+#page-wrapper {
+  background: transparent;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 95px;
+}
+
+/* line 20, ../sass/layouts.sass */
 #header {
   background: #ffbf00;
 }
 
-/* line 9, ../sass/layouts.sass */
+/* line 23, ../sass/layouts.sass */
 #name-and-slogan {
   margin: 0;
   padding: 0;
 }
 
-/* line 13, ../sass/layouts.sass */
+/* line 27, ../sass/layouts.sass */
 #footer-wrapper {
   background: #bbbbbb;
+  padding: 20px 0 20px;
+  height: 95px;
 }
 
-/* line 16, ../sass/layouts.sass */
+/* line 32, ../sass/layouts.sass */
 #footer {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-top: 0;
+}
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*-------------- DESKTOP LAYOUT ------------- */
+/*------------------------------------------- */
+/*------------------------------------------- */
+@media (min-width: 850px) {
+  /* line 45, ../sass/layouts.sass */
+  body #footer-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}
+/* line 45, ../sass/layouts.sass */
+.lt-ie9 body #footer-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
