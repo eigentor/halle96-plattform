@@ -6,7 +6,7 @@
     
     <?php if ($logo): ?>
       <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-        <img src="<?php print path_to_theme(). '/images/halle-96-logo.png'; ?>" alt="<?php print t('Home'); ?>" />
+        <img src="<?php print '/' . path_to_theme() . '/images/halle-96-logo.png'; ?>" alt="<?php print t('Home'); ?>" />
       </a>
     <?php endif; ?>
 
