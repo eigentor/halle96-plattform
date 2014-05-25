@@ -50,7 +50,49 @@ function halle_96_service_info_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-page-field_attachments'
+  $field_instances['node-page-field_attachments'] = array(
+    'bundle' => 'page',
+    'deleted' => 0,
+    'description' => 'Hier können PDFs, Word-Dokumente, Excel-Dokumente, Bilder und einfache Text-Dateien hochgeladen werden.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_attachments',
+    'label' => 'Dateianhänge',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 1,
+      'file_directory' => 'documents',
+      'file_extensions' => 'gif png jpg jpeg pdf doc docx xls xlsx txt',
+      'max_filesize' => '15 MB',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 3,
     ),
   );
 
@@ -87,13 +129,15 @@ function halle_96_service_info_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 31,
+      'weight' => 1,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Dateianhänge');
+  t('Hier können PDFs, Word-Dokumente, Excel-Dokumente, Bilder und einfache Text-Dateien hochgeladen werden.');
   t('Themen');
   t('Themen für Infoseiten.');
 
