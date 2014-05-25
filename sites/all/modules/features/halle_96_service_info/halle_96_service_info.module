@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Halle 96 Service / Info feature.
+ */
+
+include_once 'halle_96_service_info.features.inc';
