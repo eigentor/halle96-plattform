@@ -1,0 +1,5 @@
+name = Halle 96 Panels styles
+description = "Halle 96 Panels styles"
+dependencies[] = panels
+package = "Halle 96"
+core = 7.x

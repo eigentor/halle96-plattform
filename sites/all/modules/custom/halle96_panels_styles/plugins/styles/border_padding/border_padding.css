@@ -1,0 +1,17 @@
+.border-padding-pane {
+  border: 1px solid #ddd;
+  padding: 10px 13px;
+  margin-bottom: 20px;
+}
+.border-padding-pane .pane-content h3 {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.3em;
+}
+.border-padding-pane h3.pane-title,
+.border-padding-pane h2.pane-title {
+  font-size: 18px;
+  line-height: 1.3;
+  margin-top: 3px;
+  margin-bottom: 0;
+}
