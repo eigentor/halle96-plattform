@@ -1,4 +1,12 @@
 #block-masquerade-masquerade {
   clear: both;
 }
- 
+input#edit-title {
+  font-size: 17px;
+  border: 2px solid #ccc;
+  padding: 3px 8px;
+}
+.page-node-add input#edit-title, .article-node-add input#edit-title,
+.page-node-edit input#edit-title, .article-node-edit input#edit-title {
+  
+}
