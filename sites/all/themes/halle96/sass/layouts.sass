@@ -34,6 +34,15 @@ $breakpoint-no-query-fallbacks: true
   margin-bottom: 0
   border-top: 0
 
+/** Service und Info Seite **/
+.page-service-info
+  .panel-panel, .center-wrapper
+    +legacy-pie-clearfix
+  .panel-pane 
+    padding: 7px 15px
+    border: 1px solid #ddd
+  // Styles for single panes
+
 /*-------------------------------------------*/
 /*-------------------------------------------*/
 /*-------------- DESKTOP LAYOUT -------------*/
@@ -46,3 +55,14 @@ body
       position: absolute
       bottom: 0
       width: 100%
+
+    /** Service und Info Seite **/
+    &.page-service-info
+      // Styles for single panes
+      .pane-alle-kategorien-service-info-panel-pane-1
+        float: left
+        width: 63.6%
+        margin-right: 3%
+      .pane-einzelne-kategorie-service-und-info-panel-pane-1 
+        float: left
+        width: 33,3%

@@ -8,6 +8,8 @@ base theme = responsive_bartik
 stylesheets[all][] = css/layouts.css
 stylesheets[all][] = css/styles.css
 
+scripts[] = js/halle96_custom.js
+
 
 regions[header] = Header
 regions[help] = Help

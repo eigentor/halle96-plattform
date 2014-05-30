@@ -38,22 +38,72 @@
   border-top: 0;
 }
 
+/*Service und Info Seite */
+/* line 39, ../sass/layouts.sass */
+.page-service-info .panel-panel, .page-service-info .center-wrapper {
+  *zoom: 1;
+}
+/* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.page-service-info .panel-panel:after, .page-service-info .center-wrapper:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 41, ../sass/layouts.sass */
+.page-service-info .panel-pane {
+  padding: 7px 15px;
+  border: 1px solid #dddddd;
+}
+
 /*------------------------------------------- */
 /*------------------------------------------- */
 /*-------------- DESKTOP LAYOUT ------------- */
 /*------------------------------------------- */
 /*------------------------------------------- */
 @media (min-width: 850px) {
-  /* line 45, ../sass/layouts.sass */
+  /* line 52, ../sass/layouts.sass */
+  body {
+    /*Service und Info Seite */
+  }
+  /* line 54, ../sass/layouts.sass */
   body #footer-wrapper {
     position: absolute;
     bottom: 0;
     width: 100%;
   }
+  /* line 62, ../sass/layouts.sass */
+  body.page-service-info .pane-alle-kategorien-service-info-panel-pane-1 {
+    float: left;
+    width: 63.6%;
+    margin-right: 3%;
+  }
+  /* line 66, ../sass/layouts.sass */
+  body.page-service-info .pane-einzelne-kategorie-service-und-info-panel-pane-1 {
+    float: left;
+    width: 33, 3%;
+  }
 }
-/* line 45, ../sass/layouts.sass */
+/* line 118, C:/Ruby193/lib/ruby/gems/1.9.1/gems/breakpoint-2.0.7/stylesheets/_breakpoint.scss */
+.lt-ie9 body {
+  /*Service und Info Seite */
+}
+/* line 54, ../sass/layouts.sass */
 .lt-ie9 body #footer-wrapper {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+/* line 62, ../sass/layouts.sass */
+.lt-ie9 body.page-service-info .pane-alle-kategorien-service-info-panel-pane-1 {
+  float: left;
+  width: 63.6%;
+  margin-right: 3%;
+}
+/* line 66, ../sass/layouts.sass */
+.lt-ie9 body.page-service-info .pane-einzelne-kategorie-service-und-info-panel-pane-1 {
+  float: left;
+  width: 33, 3%;
 }
