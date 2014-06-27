@@ -40,6 +40,10 @@
 
 /*Service und Info Seite */
 /* line 39, ../sass/layouts.sass */
+.page-service-info h2.pane-title {
+  margin-top: 5px;
+}
+/* line 41, ../sass/layouts.sass */
 .page-service-info .panel-panel, .page-service-info .center-wrapper {
   *zoom: 1;
 }
@@ -52,10 +56,23 @@
   overflow: hidden;
   visibility: hidden;
 }
-/* line 41, ../sass/layouts.sass */
+/* line 44, ../sass/layouts.sass */
+.page-service-info .center-wrapper .panel-panel {
+  border: 1px solid #dddddd;
+  float: none;
+  width: auto;
+}
+/* line 50, ../sass/layouts.sass */
+.page-service-info .panel-col-top .panel-pane, .page-service-info .panel-col-bottom .panel-pane {
+  border: 1px solid #dddddd;
+}
+/* line 52, ../sass/layouts.sass */
+.page-service-info .panel-col-top, .page-service-info .center-wrapper {
+  margin-bottom: 25px;
+}
+/* line 57, ../sass/layouts.sass */
 .page-service-info .panel-pane {
   padding: 7px 15px;
-  border: 1px solid #dddddd;
 }
 
 /*------------------------------------------- */
@@ -64,46 +81,106 @@
 /*------------------------------------------- */
 /*------------------------------------------- */
 @media (min-width: 850px) {
-  /* line 52, ../sass/layouts.sass */
+  /* line 67, ../sass/layouts.sass */
   body {
     /*Service und Info Seite */
   }
-  /* line 54, ../sass/layouts.sass */
+  /* line 69, ../sass/layouts.sass */
   body #footer-wrapper {
     position: absolute;
     bottom: 0;
     width: 100%;
   }
-  /* line 62, ../sass/layouts.sass */
-  body.page-service-info .pane-alle-kategorien-service-info-panel-pane-1 {
-    float: left;
-    width: 63.6%;
-    margin-right: 3%;
+  /* line 80, ../sass/layouts.sass */
+  body.page-service-info .views-row {
+    line-height: 1.6;
   }
-  /* line 66, ../sass/layouts.sass */
-  body.page-service-info .pane-einzelne-kategorie-service-und-info-panel-pane-1 {
+  /* line 83, ../sass/layouts.sass */
+  body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 {
     float: left;
-    width: 33, 3%;
+    width: 64.3%;
+    margin-right: 2.3%;
+    background: whitesmoke;
+    min-height: 200px;
+  }
+  /* line 90, ../sass/layouts.sass */
+  body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 .view-alle-kategorien-service-info .views-row {
+    float: left;
+    width: 42%;
+    margin-right: 3%;
+    font-size: 17.1px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  /* line 96, ../sass/layouts.sass */
+  body.page-service-info .panel-col-top .pane-einzelne-kategorie-service-und-info-panel-pane-1 {
+    float: left;
+    width: 31%;
+    min-height: 200px;
+  }
+  /* line 101, ../sass/layouts.sass */
+  body.page-service-info .center-wrapper .panel-panel {
+    float: left;
+    width: 31%;
+    margin-right: 2.3%;
+    min-height: 250px;
+  }
+  /* line 107, ../sass/layouts.sass */
+  body.page-service-info .panel-col-bottom .panel-pane {
+    float: left;
+    width: 31%;
+    margin-right: 2.3%;
+    min-height: 250px;
   }
 }
 /* line 118, C:/Ruby193/lib/ruby/gems/1.9.1/gems/breakpoint-2.0.7/stylesheets/_breakpoint.scss */
 .lt-ie9 body {
   /*Service und Info Seite */
 }
-/* line 54, ../sass/layouts.sass */
+/* line 69, ../sass/layouts.sass */
 .lt-ie9 body #footer-wrapper {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
-/* line 62, ../sass/layouts.sass */
-.lt-ie9 body.page-service-info .pane-alle-kategorien-service-info-panel-pane-1 {
-  float: left;
-  width: 63.6%;
-  margin-right: 3%;
+/* line 80, ../sass/layouts.sass */
+.lt-ie9 body.page-service-info .views-row {
+  line-height: 1.6;
 }
-/* line 66, ../sass/layouts.sass */
-.lt-ie9 body.page-service-info .pane-einzelne-kategorie-service-und-info-panel-pane-1 {
+/* line 83, ../sass/layouts.sass */
+.lt-ie9 body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 {
   float: left;
-  width: 33, 3%;
+  width: 64.3%;
+  margin-right: 2.3%;
+  background: whitesmoke;
+  min-height: 200px;
+}
+/* line 90, ../sass/layouts.sass */
+.lt-ie9 body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 .view-alle-kategorien-service-info .views-row {
+  float: left;
+  width: 42%;
+  margin-right: 3%;
+  font-size: 17.1px;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+/* line 96, ../sass/layouts.sass */
+.lt-ie9 body.page-service-info .panel-col-top .pane-einzelne-kategorie-service-und-info-panel-pane-1 {
+  float: left;
+  width: 31%;
+  min-height: 200px;
+}
+/* line 101, ../sass/layouts.sass */
+.lt-ie9 body.page-service-info .center-wrapper .panel-panel {
+  float: left;
+  width: 31%;
+  margin-right: 2.3%;
+  min-height: 250px;
+}
+/* line 107, ../sass/layouts.sass */
+.lt-ie9 body.page-service-info .panel-col-bottom .panel-pane {
+  float: left;
+  width: 31%;
+  margin-right: 2.3%;
+  min-height: 250px;
 }
