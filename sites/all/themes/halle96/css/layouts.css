@@ -19,37 +19,24 @@
 }
 
 /* line 23, ../sass/layouts.sass */
-#logo {
-  float: left;
-  padding: 20px 15px 10px;
-}
-
-/* line 27, ../sass/layouts.sass */
-#main-menu {
-  clear: none;
-  float: left;
-  padding: 40px 0 0 20px;
-}
-
-/* line 32, ../sass/layouts.sass */
 #name-and-slogan {
   margin: 0;
   padding: 0;
 }
 
-/* line 36, ../sass/layouts.sass */
+/* line 27, ../sass/layouts.sass */
 #main {
   margin-top: 35px;
 }
 
-/* line 39, ../sass/layouts.sass */
+/* line 30, ../sass/layouts.sass */
 #footer-wrapper {
   background: #bbbbbb;
   padding: 20px 0 20px;
   height: 95px;
 }
 
-/* line 44, ../sass/layouts.sass */
+/* line 35, ../sass/layouts.sass */
 #footer {
   margin-top: 0;
   margin-bottom: 0;
@@ -57,11 +44,11 @@
 }
 
 /*Service und Info Seite */
-/* line 51, ../sass/layouts.sass */
+/* line 42, ../sass/layouts.sass */
 .page-service-info h2.pane-title {
   margin-top: 5px;
 }
-/* line 53, ../sass/layouts.sass */
+/* line 44, ../sass/layouts.sass */
 .page-service-info .panel-panel, .page-service-info .center-wrapper {
   *zoom: 1;
 }
@@ -74,26 +61,26 @@
   overflow: hidden;
   visibility: hidden;
 }
-/* line 56, ../sass/layouts.sass */
+/* line 47, ../sass/layouts.sass */
 .page-service-info .center-wrapper .panel-panel {
   border: 1px solid #dddddd;
   float: none;
   width: auto;
 }
-/* line 60, ../sass/layouts.sass */
+/* line 51, ../sass/layouts.sass */
 .page-service-info .center-wrapper .panel-panel .panel-pane {
   margin-bottom: 0;
 }
-/* line 64, ../sass/layouts.sass */
+/* line 55, ../sass/layouts.sass */
 .page-service-info .panel-col-top .panel-pane, .page-service-info .panel-col-bottom .panel-pane {
   border: 1px solid #dddddd;
 }
-/* line 67, ../sass/layouts.sass */
+/* line 58, ../sass/layouts.sass */
 .page-service-info .panel-pane {
   padding: 7px 15px;
   margin-bottom: 20px;
 }
-/* line 70, ../sass/layouts.sass */
+/* line 61, ../sass/layouts.sass */
 .page-service-info .center-wrapper .panel-panel {
   margin-bottom: 10px;
 }
@@ -104,15 +91,26 @@
 /*------------------------------------------- */
 /*------------------------------------------- */
 @media (min-width: 850px) {
-  /* line 80, ../sass/layouts.sass */
+  /* line 71, ../sass/layouts.sass */
   body {
     /*Service und Info Seite */
   }
-  /* line 82, ../sass/layouts.sass */
+  /* line 73, ../sass/layouts.sass */
   body #footer-wrapper {
     position: absolute;
     bottom: 0;
     width: 100%;
+  }
+  /* line 78, ../sass/layouts.sass */
+  body #logo {
+    float: left;
+    padding: 20px 15px 10px;
+  }
+  /* line 82, ../sass/layouts.sass */
+  body #main-menu {
+    clear: none;
+    float: left;
+    padding: 40px 0 0 20px;
   }
   /* line 93, ../sass/layouts.sass */
   body.page-service-info .views-row {
@@ -160,11 +158,22 @@
 .lt-ie9 body {
   /*Service und Info Seite */
 }
-/* line 82, ../sass/layouts.sass */
+/* line 73, ../sass/layouts.sass */
 .lt-ie9 body #footer-wrapper {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+/* line 78, ../sass/layouts.sass */
+.lt-ie9 body #logo {
+  float: left;
+  padding: 20px 15px 10px;
+}
+/* line 82, ../sass/layouts.sass */
+.lt-ie9 body #main-menu {
+  clear: none;
+  float: left;
+  padding: 40px 0 0 20px;
 }
 /* line 93, ../sass/layouts.sass */
 .lt-ie9 body.page-service-info .views-row {
