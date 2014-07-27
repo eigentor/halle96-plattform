@@ -2,3 +2,82 @@
 .page-entdeckertag .panel-pane.entdeckertag h2.pane-title {
   display: none;
 }
+
+/* line 16, ../sass/styles.sass */
+#homepage .panel-pane {
+  border: 1px solid #dddddd;
+  min-height: 300px;
+  padding: 12px 15px 7px;
+  margin-bottom: 20px;
+}
+
+/* line 23, ../sass/styles.sass */
+.front h1#page-title {
+  display: none;
+}
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*-------------- DESKTOP LAYOUT ------------- */
+/*------------------------------------------- */
+/*------------------------------------------- */
+@media (min-width: 850px) {
+  /* line 35, ../sass/styles.sass */
+  body #main-menu-links {
+    margin-bottom: 7px;
+  }
+  /* line 37, ../sass/styles.sass */
+  body #main-menu-links a {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    margin-right: 7px;
+    font-size: 18px;
+    font-size: 1rem;
+    line-height: 1;
+    border: 1px solid #bbbbbb;
+    background: #fff2cc;
+    color: #555555;
+  }
+  /* line 45, ../sass/styles.sass */
+  body #main-menu-links a.active, body #main-menu-links a:hover {
+    background: white;
+    border: 1px solid #777777;
+    color: black;
+  }
+  /* line 51, ../sass/styles.sass */
+  body #homepage .panel-pane {
+    margin-right: 20px;
+  }
+}
+/* line 35, ../sass/styles.sass */
+.lt-ie9 body #main-menu-links {
+  margin-bottom: 7px;
+}
+/* line 37, ../sass/styles.sass */
+.lt-ie9 body #main-menu-links a {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  margin-right: 7px;
+  font-size: 18px;
+  font-size: 1rem;
+  line-height: 1;
+  border: 1px solid #bbbbbb;
+  background: #fff2cc;
+  color: #555555;
+}
+/* line 45, ../sass/styles.sass */
+.lt-ie9 body #main-menu-links a.active, .lt-ie9 body #main-menu-links a:hover {
+  background: white;
+  border: 1px solid #777777;
+  color: black;
+}
+/* line 51, ../sass/styles.sass */
+.lt-ie9 body #homepage .panel-pane {
+  margin-right: 20px;
+}

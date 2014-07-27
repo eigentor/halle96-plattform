@@ -1,0 +1,8 @@
+name = Halle96 Startseite
+core = 7.x
+package = Halle 96
+dependencies[] = ctools
+dependencies[] = page_manager
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:2
+features[page_manager_pages][] = homepage

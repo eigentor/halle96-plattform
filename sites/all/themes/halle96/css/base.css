@@ -1,0 +1,36 @@
+/* line 10, ../sass/base.sass */
+h1, #content h1 {
+  font-size: 30.6px;
+  font-size: 1.7rem;
+}
+
+/* line 13, ../sass/base.sass */
+h2, #content h2 {
+  font-size: 25.2px;
+  font-size: 1.4rem;
+}
+
+/* line 16, ../sass/base.sass */
+h1, h2, h3, h4,
+h1 a, h2 a, h3 a, h4 a {
+  color: #333333;
+  margin-top: 0;
+}
+
+/* line 22, ../sass/base.sass */
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
+  color: #00a4f7;
+}
+/* line 24, ../sass/base.sass */
+h1 a:link, h2 a:link, h3 a:link, h4 a:link {
+  padding-top: 0;
+}
+
+/* line 27, ../sass/base.sass */
+a {
+  color: #3580a8;
+}
+/* line 29, ../sass/base.sass */
+a:hover {
+  color: #00a4f7;
+}

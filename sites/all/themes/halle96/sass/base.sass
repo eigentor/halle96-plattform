@@ -1,0 +1,30 @@
+@import "includes/variables_mixins"
+
+// Set the behaviour of our IE8-Fallback.
+// Default to write it into the same file with an extra
+// wrapper class
+$breakpoint-no-queries: false
+$breakpoint-no-query-fallbacks: true
+
+
+h1, #content h1
+  @include x-rem(font-size, 1.7)
+
+h2, #content h2
+  @include x-rem(font-size, 1.4)
+
+h1, h2, h3, h4, 
+h1 a, h2 a, h3 a, h4 a 
+  color: #333
+  margin-top: 0
+
+h1 a, h2 a, h3 a, h4 a 
+  &:hover 
+    color: $link-hover-color
+  &:link 
+    padding-top: 0
+
+a 
+  color: $link-color 
+  &:hover 
+    color: $link-hover-color

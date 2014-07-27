@@ -5,6 +5,7 @@ version = VERSION
 core = 7.x
 base theme = responsive_bartik
 
+stylesheets[all][] = css/base.css
 stylesheets[all][] = css/layouts.css
 stylesheets[all][] = css/styles.css
 

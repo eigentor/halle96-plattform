@@ -10,3 +10,43 @@ $breakpoint-no-query-fallbacks: true
   .panel-pane.entdeckertag 
     h2.pane-title 
       display: none
+
+
+#homepage 
+  .panel-pane 
+    border: 1px solid #ddd
+    min-height: 300px
+    padding: 12px 15px 7px
+    margin-bottom: 20px
+
+.front 
+  h1#page-title 
+    display: none
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------- DESKTOP LAYOUT -------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+body
+  +breakpoint($breakpoint-desktop, $no-query: '.lt-ie9')
+    #main-menu-links 
+      margin-bottom: 7px
+      a
+        @include border-radius(5px)
+        margin-right: 7px
+        @include x-rem(font-size, 1)
+        line-height: 1
+        border: 1px solid #bbb
+        background: lighten($gelb, 40%)
+        color: #555
+        &.active, &:hover 
+          background: white
+          border: 1px solid #777
+          color: black
+
+    #homepage 
+      .panel-pane
+        margin-right: 20px

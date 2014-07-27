@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Halle96 Startseite feature.
+ */
+
+include_once 'halle96_startseite.features.inc';
