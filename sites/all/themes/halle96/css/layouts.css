@@ -62,17 +62,22 @@
   float: none;
   width: auto;
 }
-/* line 50, ../sass/layouts.sass */
+/* line 48, ../sass/layouts.sass */
+.page-service-info .center-wrapper .panel-panel .panel-pane {
+  margin-bottom: 0;
+}
+/* line 52, ../sass/layouts.sass */
 .page-service-info .panel-col-top .panel-pane, .page-service-info .panel-col-bottom .panel-pane {
   border: 1px solid #dddddd;
 }
-/* line 52, ../sass/layouts.sass */
-.page-service-info .panel-col-top, .page-service-info .center-wrapper {
-  margin-bottom: 25px;
-}
-/* line 57, ../sass/layouts.sass */
+/* line 55, ../sass/layouts.sass */
 .page-service-info .panel-pane {
   padding: 7px 15px;
+  margin-bottom: 20px;
+}
+/* line 58, ../sass/layouts.sass */
+.page-service-info .center-wrapper .panel-panel {
+  margin-bottom: 10px;
 }
 
 /*------------------------------------------- */
@@ -81,29 +86,32 @@
 /*------------------------------------------- */
 /*------------------------------------------- */
 @media (min-width: 850px) {
-  /* line 67, ../sass/layouts.sass */
+  /* line 68, ../sass/layouts.sass */
   body {
     /*Service und Info Seite */
   }
-  /* line 69, ../sass/layouts.sass */
+  /* line 70, ../sass/layouts.sass */
   body #footer-wrapper {
     position: absolute;
     bottom: 0;
     width: 100%;
   }
-  /* line 80, ../sass/layouts.sass */
+  /* line 81, ../sass/layouts.sass */
   body.page-service-info .views-row {
     line-height: 1.6;
   }
   /* line 83, ../sass/layouts.sass */
+  body.page-service-info .panel-pane {
+    min-height: 250px;
+  }
+  /* line 86, ../sass/layouts.sass */
   body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 {
     float: left;
     width: 64.3%;
     margin-right: 2.3%;
     background: whitesmoke;
-    min-height: 200px;
   }
-  /* line 90, ../sass/layouts.sass */
+  /* line 92, ../sass/layouts.sass */
   body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 .view-alle-kategorien-service-info .views-row {
     float: left;
     width: 42%;
@@ -112,50 +120,50 @@
     font-size: 0.95rem;
     line-height: 1.7;
   }
-  /* line 96, ../sass/layouts.sass */
+  /* line 98, ../sass/layouts.sass */
   body.page-service-info .panel-col-top .pane-einzelne-kategorie-service-und-info-panel-pane-1 {
     float: left;
     width: 31%;
-    min-height: 200px;
   }
-  /* line 101, ../sass/layouts.sass */
+  /* line 102, ../sass/layouts.sass */
   body.page-service-info .center-wrapper .panel-panel {
     float: left;
     width: 31%;
     margin-right: 2.3%;
-    min-height: 250px;
   }
   /* line 107, ../sass/layouts.sass */
   body.page-service-info .panel-col-bottom .panel-pane {
     float: left;
     width: 31%;
     margin-right: 2.3%;
-    min-height: 250px;
   }
 }
 /* line 118, C:/Ruby193/lib/ruby/gems/1.9.1/gems/breakpoint-2.0.7/stylesheets/_breakpoint.scss */
 .lt-ie9 body {
   /*Service und Info Seite */
 }
-/* line 69, ../sass/layouts.sass */
+/* line 70, ../sass/layouts.sass */
 .lt-ie9 body #footer-wrapper {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
-/* line 80, ../sass/layouts.sass */
+/* line 81, ../sass/layouts.sass */
 .lt-ie9 body.page-service-info .views-row {
   line-height: 1.6;
 }
 /* line 83, ../sass/layouts.sass */
+.lt-ie9 body.page-service-info .panel-pane {
+  min-height: 250px;
+}
+/* line 86, ../sass/layouts.sass */
 .lt-ie9 body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 {
   float: left;
   width: 64.3%;
   margin-right: 2.3%;
   background: whitesmoke;
-  min-height: 200px;
 }
-/* line 90, ../sass/layouts.sass */
+/* line 92, ../sass/layouts.sass */
 .lt-ie9 body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 .view-alle-kategorien-service-info .views-row {
   float: left;
   width: 42%;
@@ -164,23 +172,20 @@
   font-size: 0.95rem;
   line-height: 1.7;
 }
-/* line 96, ../sass/layouts.sass */
+/* line 98, ../sass/layouts.sass */
 .lt-ie9 body.page-service-info .panel-col-top .pane-einzelne-kategorie-service-und-info-panel-pane-1 {
   float: left;
   width: 31%;
-  min-height: 200px;
 }
-/* line 101, ../sass/layouts.sass */
+/* line 102, ../sass/layouts.sass */
 .lt-ie9 body.page-service-info .center-wrapper .panel-panel {
   float: left;
   width: 31%;
   margin-right: 2.3%;
-  min-height: 250px;
 }
 /* line 107, ../sass/layouts.sass */
 .lt-ie9 body.page-service-info .panel-col-bottom .panel-pane {
   float: left;
   width: 31%;
   margin-right: 2.3%;
-  min-height: 250px;
 }

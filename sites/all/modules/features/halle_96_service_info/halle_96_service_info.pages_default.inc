@@ -151,6 +151,53 @@ function halle_96_service_info_default_page_manager_pages() {
     $display->content['new-3d18f098-384e-42c4-8107-15b9e571a767'] = $pane;
     $display->panels['bottom'][2] = 'new-3d18f098-384e-42c4-8107-15b9e571a767';
     $pane = new stdClass();
+    $pane->pid = 'new-78f718ed-8a1b-465b-9b01-b45537bf08a4';
+    $pane->panel = 'bottom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'einzelne_kategorie_service_und_info-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'tid' => '19',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 3;
+    $pane->locks = array();
+    $pane->uuid = '78f718ed-8a1b-465b-9b01-b45537bf08a4';
+    $display->content['new-78f718ed-8a1b-465b-9b01-b45537bf08a4'] = $pane;
+    $display->panels['bottom'][3] = 'new-78f718ed-8a1b-465b-9b01-b45537bf08a4';
+    $pane = new stdClass();
+    $pane->pid = 'new-c4306f09-4668-4c67-9657-b8456a48d1f2';
+    $pane->panel = 'bottom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'einzelne_kategorie_service_und_info-panel_pane_1';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'arguments' => array(
+        'tid' => '12',
+      ),
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+      'style' => 'default',
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 4;
+    $pane->locks = array();
+    $pane->uuid = 'c4306f09-4668-4c67-9657-b8456a48d1f2';
+    $display->content['new-c4306f09-4668-4c67-9657-b8456a48d1f2'] = $pane;
+    $display->panels['bottom'][4] = 'new-c4306f09-4668-4c67-9657-b8456a48d1f2';
+    $pane = new stdClass();
     $pane->pid = 'new-d0f349de-1860-4207-ae51-5594378f093f';
     $pane->panel = 'left';
     $pane->type = 'views_panes';
@@ -244,7 +291,7 @@ function halle_96_service_info_default_page_manager_pages() {
     $display->content['new-b225032b-662c-4ff0-acae-de6925387e80'] = $pane;
     $display->panels['top'][0] = 'new-b225032b-662c-4ff0-acae-de6925387e80';
     $pane = new stdClass();
-    $pane->pid = 'new-c4306f09-4668-4c67-9657-b8456a48d1f2';
+    $pane->pid = 'new-ce01f1cc-33c7-4cce-9849-64712bfc653e';
     $pane->panel = 'top';
     $pane->type = 'views_panes';
     $pane->subtype = 'einzelne_kategorie_service_und_info-panel_pane_1';
@@ -252,21 +299,20 @@ function halle_96_service_info_default_page_manager_pages() {
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'tid' => '12',
+        'tid' => '20',
       ),
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
-      'style' => 'default',
     );
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
     $pane->locks = array();
-    $pane->uuid = 'c4306f09-4668-4c67-9657-b8456a48d1f2';
-    $display->content['new-c4306f09-4668-4c67-9657-b8456a48d1f2'] = $pane;
-    $display->panels['top'][1] = 'new-c4306f09-4668-4c67-9657-b8456a48d1f2';
+    $pane->uuid = 'ce01f1cc-33c7-4cce-9849-64712bfc653e';
+    $display->content['new-ce01f1cc-33c7-4cce-9849-64712bfc653e'] = $pane;
+    $display->panels['top'][1] = 'new-ce01f1cc-33c7-4cce-9849-64712bfc653e';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

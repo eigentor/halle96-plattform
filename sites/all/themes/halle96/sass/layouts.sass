@@ -45,17 +45,18 @@ $breakpoint-no-query-fallbacks: true
       border: 1px solid #ddd 
       float: none
       width: auto
+      .panel-pane 
+        margin-bottom: 0
 
   .panel-col-top, .panel-col-bottom 
     .panel-pane 
       border: 1px solid #ddd
-  .panel-col-top, .center-wrapper 
-    margin-bottom: 25px
-
-
     
   .panel-pane 
     padding: 7px 15px
+    margin-bottom: 20px
+  .center-wrapper .panel-panel
+    margin-bottom: 10px
   // Styles for single panes
 
 /*-------------------------------------------*/
@@ -79,13 +80,14 @@ body
       // Styles for single panes
       .views-row 
         line-height: 1.6
+      .panel-pane
+        min-height: $min-pane-height
       .panel-col-top
         .pane-alle-kategorien-service-info-panel-pane-1
           float: left
           width: 64.3%
           margin-right: 2.3%
           background: #f5f5f5
-          min-height: 200px
           .view-alle-kategorien-service-info 
             .views-row 
               float: left
@@ -96,16 +98,14 @@ body
         .pane-einzelne-kategorie-service-und-info-panel-pane-1 
           float: left
           width: 31%
-          min-height: 200px
       .center-wrapper 
         .panel-panel 
           float: left
           width: 31%
           margin-right: 2.3%
-          min-height: $min-pane-height
       .panel-col-bottom 
         .panel-pane 
           float: left
           width: 31%
           margin-right: 2.3%
-          min-height: $min-pane-height
+          
