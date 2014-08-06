@@ -71,9 +71,30 @@ $breakpoint-no-query-fallbacks: true
           background-color: #EDE5D0
           padding-left: 50px
           border: 1px solid #999
-          margin-left: 26px
           &:hover 
             background-color: white
+
+
+/* Kommentare */
+form#comment-form
+  #edit-author--2
+    display: none
+
+.comment 
+  .comment-permalink 
+    display: none
+  .attribution
+    display: block
+  .comment-text
+    display: block
+  .submitted 
+    margin-bottom: 7px
+  .commenter-name, .comment-time 
+    display: inline
+  .comment-time 
+    padding-left: 10px
+  .comment-arrow
+    display: none
 
 /*-------------------------------------------*/
 /*-------------------------------------------*/
@@ -96,6 +117,11 @@ body
       clear: none
       float: left
       padding: 40px 0 0 20px
+      ul 
+        li  
+          a 
+            &.beitrag-schreiben
+              margin-left: 26px
 
     /** Service und Info Seite **/
     &.page-service-info
@@ -133,4 +159,21 @@ body
           float: left
           width: 31%
           margin-right: 2.3%
+
+
+    /* Kommentare */
+    .comment 
+      .attribution
+        display: table-cell
+      .comment-text
+        display: table-cell
+      .submitted 
+        margin-bottom: 0
+      .commenter-name, .comment-time 
+        display: block
+      .comment-time 
+        padding-left: 0
+      .comment-arrow
+        display: block
+        margin-left: -45px
           
