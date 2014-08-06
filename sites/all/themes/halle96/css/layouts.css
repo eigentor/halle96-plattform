@@ -85,49 +85,62 @@
   margin-bottom: 10px;
 }
 
+/* line 69, ../sass/layouts.sass */
+#main-menu ul li a.beitrag-schreiben {
+  background: #fffaef url(../images/beitrag-schreiben-button.png) no-repeat -20px center;
+  background-color: #ede5d0;
+  padding-left: 50px;
+  border: 1px solid #999999;
+  margin-left: 26px;
+}
+/* line 75, ../sass/layouts.sass */
+#main-menu ul li a.beitrag-schreiben:hover {
+  background-color: white;
+}
+
 /*------------------------------------------- */
 /*------------------------------------------- */
 /*-------------- DESKTOP LAYOUT ------------- */
 /*------------------------------------------- */
 /*------------------------------------------- */
 @media (min-width: 850px) {
-  /* line 71, ../sass/layouts.sass */
+  /* line 84, ../sass/layouts.sass */
   body {
     /*Service und Info Seite */
   }
-  /* line 73, ../sass/layouts.sass */
+  /* line 86, ../sass/layouts.sass */
   body #footer-wrapper {
     position: absolute;
     bottom: 0;
     width: 100%;
   }
-  /* line 78, ../sass/layouts.sass */
+  /* line 91, ../sass/layouts.sass */
   body #logo {
     float: left;
     padding: 20px 15px 10px;
   }
-  /* line 82, ../sass/layouts.sass */
+  /* line 95, ../sass/layouts.sass */
   body #main-menu {
     clear: none;
     float: left;
     padding: 40px 0 0 20px;
   }
-  /* line 93, ../sass/layouts.sass */
+  /* line 106, ../sass/layouts.sass */
   body.page-service-info .views-row {
     line-height: 1.6;
   }
-  /* line 95, ../sass/layouts.sass */
+  /* line 108, ../sass/layouts.sass */
   body.page-service-info .panel-pane {
     min-height: 250px;
   }
-  /* line 98, ../sass/layouts.sass */
+  /* line 111, ../sass/layouts.sass */
   body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 {
     float: left;
     width: 64.3%;
     margin-right: 2.3%;
     background: whitesmoke;
   }
-  /* line 104, ../sass/layouts.sass */
+  /* line 117, ../sass/layouts.sass */
   body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 .view-alle-kategorien-service-info .views-row {
     float: left;
     width: 42%;
@@ -136,18 +149,18 @@
     font-size: 0.95rem;
     line-height: 1.7;
   }
-  /* line 110, ../sass/layouts.sass */
+  /* line 123, ../sass/layouts.sass */
   body.page-service-info .panel-col-top .pane-einzelne-kategorie-service-und-info-panel-pane-1 {
     float: left;
     width: 31%;
   }
-  /* line 114, ../sass/layouts.sass */
+  /* line 127, ../sass/layouts.sass */
   body.page-service-info .center-wrapper .panel-panel {
     float: left;
     width: 31%;
     margin-right: 2.3%;
   }
-  /* line 119, ../sass/layouts.sass */
+  /* line 132, ../sass/layouts.sass */
   body.page-service-info .panel-col-bottom .panel-pane {
     float: left;
     width: 31%;
@@ -158,39 +171,39 @@
 .lt-ie9 body {
   /*Service und Info Seite */
 }
-/* line 73, ../sass/layouts.sass */
+/* line 86, ../sass/layouts.sass */
 .lt-ie9 body #footer-wrapper {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
-/* line 78, ../sass/layouts.sass */
+/* line 91, ../sass/layouts.sass */
 .lt-ie9 body #logo {
   float: left;
   padding: 20px 15px 10px;
 }
-/* line 82, ../sass/layouts.sass */
+/* line 95, ../sass/layouts.sass */
 .lt-ie9 body #main-menu {
   clear: none;
   float: left;
   padding: 40px 0 0 20px;
 }
-/* line 93, ../sass/layouts.sass */
+/* line 106, ../sass/layouts.sass */
 .lt-ie9 body.page-service-info .views-row {
   line-height: 1.6;
 }
-/* line 95, ../sass/layouts.sass */
+/* line 108, ../sass/layouts.sass */
 .lt-ie9 body.page-service-info .panel-pane {
   min-height: 250px;
 }
-/* line 98, ../sass/layouts.sass */
+/* line 111, ../sass/layouts.sass */
 .lt-ie9 body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 {
   float: left;
   width: 64.3%;
   margin-right: 2.3%;
   background: whitesmoke;
 }
-/* line 104, ../sass/layouts.sass */
+/* line 117, ../sass/layouts.sass */
 .lt-ie9 body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 .view-alle-kategorien-service-info .views-row {
   float: left;
   width: 42%;
@@ -199,18 +212,18 @@
   font-size: 0.95rem;
   line-height: 1.7;
 }
-/* line 110, ../sass/layouts.sass */
+/* line 123, ../sass/layouts.sass */
 .lt-ie9 body.page-service-info .panel-col-top .pane-einzelne-kategorie-service-und-info-panel-pane-1 {
   float: left;
   width: 31%;
 }
-/* line 114, ../sass/layouts.sass */
+/* line 127, ../sass/layouts.sass */
 .lt-ie9 body.page-service-info .center-wrapper .panel-panel {
   float: left;
   width: 31%;
   margin-right: 2.3%;
 }
-/* line 119, ../sass/layouts.sass */
+/* line 132, ../sass/layouts.sass */
 .lt-ie9 body.page-service-info .panel-col-bottom .panel-pane {
   float: left;
   width: 31%;

@@ -15,7 +15,6 @@ function allgemeine_einstellungen_user_default_permissions() {
     'name' => 'access content',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -25,7 +24,7 @@ function allgemeine_einstellungen_user_default_permissions() {
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
     'roles' => array(
-      'Hallenleitung' => 'Hallenleitung',
+      'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -44,7 +43,7 @@ function allgemeine_einstellungen_user_default_permissions() {
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
     'roles' => array(
-      'Hallenleitung' => 'Hallenleitung',
+      'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -63,8 +62,17 @@ function allgemeine_einstellungen_user_default_permissions() {
   $permissions['create article content'] = array(
     'name' => 'create article content',
     'roles' => array(
-      'Mieter' => 'Mieter',
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
       'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create discussion content'.
+  $permissions['create discussion content'] = array(
+    'name' => 'create discussion content',
+    'roles' => array(
+      'Mieter' => 'Mieter',
     ),
     'module' => 'node',
   );
@@ -73,7 +81,7 @@ function allgemeine_einstellungen_user_default_permissions() {
   $permissions['create page content'] = array(
     'name' => 'create page content',
     'roles' => array(
-      'Mieter' => 'Mieter',
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -83,9 +91,16 @@ function allgemeine_einstellungen_user_default_permissions() {
   $permissions['delete any article content'] = array(
     'name' => 'delete any article content',
     'roles' => array(
-      'Hallenleitung' => 'Hallenleitung',
+      'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete any discussion content'.
+  $permissions['delete any discussion content'] = array(
+    'name' => 'delete any discussion content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -93,7 +108,7 @@ function allgemeine_einstellungen_user_default_permissions() {
   $permissions['delete any page content'] = array(
     'name' => 'delete any page content',
     'roles' => array(
-      'Hallenleitung' => 'Hallenleitung',
+      'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -103,9 +118,16 @@ function allgemeine_einstellungen_user_default_permissions() {
   $permissions['delete own article content'] = array(
     'name' => 'delete own article content',
     'roles' => array(
-      'Hallenleitung' => 'Hallenleitung',
+      'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own discussion content'.
+  $permissions['delete own discussion content'] = array(
+    'name' => 'delete own discussion content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -113,7 +135,7 @@ function allgemeine_einstellungen_user_default_permissions() {
   $permissions['delete own page content'] = array(
     'name' => 'delete own page content',
     'roles' => array(
-      'Hallenleitung' => 'Hallenleitung',
+      'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -132,9 +154,17 @@ function allgemeine_einstellungen_user_default_permissions() {
   $permissions['edit any article content'] = array(
     'name' => 'edit any article content',
     'roles' => array(
-      'Hallenleitung' => 'Hallenleitung',
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
+      'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit any discussion content'.
+  $permissions['edit any discussion content'] = array(
+    'name' => 'edit any discussion content',
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -142,7 +172,8 @@ function allgemeine_einstellungen_user_default_permissions() {
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
     'roles' => array(
-      'Hallenleitung' => 'Hallenleitung',
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
+      'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -152,8 +183,16 @@ function allgemeine_einstellungen_user_default_permissions() {
   $permissions['edit own article content'] = array(
     'name' => 'edit own article content',
     'roles' => array(
-      'Mieter' => 'Mieter',
       'administrator' => 'administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own discussion content'.
+  $permissions['edit own discussion content'] = array(
+    'name' => 'edit own discussion content',
+    'roles' => array(
+      'Mieter' => 'Mieter',
     ),
     'module' => 'node',
   );
@@ -162,7 +201,6 @@ function allgemeine_einstellungen_user_default_permissions() {
   $permissions['edit own page content'] = array(
     'name' => 'edit own page content',
     'roles' => array(
-      'Mieter' => 'Mieter',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -186,11 +224,39 @@ function allgemeine_einstellungen_user_default_permissions() {
     'module' => 'better_formats',
   );
 
+  // Exported permission: 'use text format filtered_html'.
+  $permissions['use text format filtered_html'] = array(
+    'name' => 'use text format filtered_html',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: 'use text format full_html'.
+  $permissions['use text format full_html'] = array(
+    'name' => 'use text format full_html',
+    'roles' => array(
+      'Zentrumsleitung' => 'Zentrumsleitung',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: 'use text format limited_html'.
+  $permissions['use text format limited_html'] = array(
+    'name' => 'use text format limited_html',
+    'roles' => array(
+      'Mieter' => 'Mieter',
+    ),
+    'module' => 'filter',
+  );
+
   // Exported permission: 'view own unpublished content'.
   $permissions['view own unpublished content'] = array(
     'name' => 'view own unpublished content',
     'roles' => array(
-      'Hallenleitung' => 'Hallenleitung',
+      'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
     'module' => 'node',

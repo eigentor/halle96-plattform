@@ -21,9 +21,9 @@ function halle96_mitteilungen_node_info() {
     'discussion' => array(
       'name' => t('Mitteilung'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Mitteilungen zwischen den Bewohnern der HALLE96'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titel'),
       'help' => '',
     ),
   );
