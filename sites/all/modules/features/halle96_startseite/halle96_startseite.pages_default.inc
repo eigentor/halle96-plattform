@@ -61,8 +61,42 @@ function halle96_startseite_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-7312ea42-fbe7-49e1-bc14-78a09927148f';
+    $pane->pid = 'new-1d15303b-e303-41ce-8c0f-ad6693f1f9ca';
     $pane->panel = 'left';
+    $pane->type = 'views';
+    $pane->subtype = 'kommentare';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 0,
+      'nodes_per_page' => '5',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 0,
+      'link_to_view' => 0,
+      'args' => '',
+      'url' => '',
+      'display' => 'block',
+      'override_title' => 1,
+      'override_title_text' => 'Neueste Kommentare',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $pane->uuid = '1d15303b-e303-41ce-8c0f-ad6693f1f9ca';
+    $display->content['new-1d15303b-e303-41ce-8c0f-ad6693f1f9ca'] = $pane;
+    $display->panels['left'][0] = 'new-1d15303b-e303-41ce-8c0f-ad6693f1f9ca';
+    $pane = new stdClass();
+    $pane->pid = 'new-7312ea42-fbe7-49e1-bc14-78a09927148f';
+    $pane->panel = 'right';
     $pane->type = 'views_panes';
     $pane->subtype = 'news-panel_pane_1';
     $pane->shown = TRUE;
@@ -80,7 +114,7 @@ function halle96_startseite_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '7312ea42-fbe7-49e1-bc14-78a09927148f';
     $display->content['new-7312ea42-fbe7-49e1-bc14-78a09927148f'] = $pane;
-    $display->panels['left'][0] = 'new-7312ea42-fbe7-49e1-bc14-78a09927148f';
+    $display->panels['right'][0] = 'new-7312ea42-fbe7-49e1-bc14-78a09927148f';
     $pane = new stdClass();
     $pane->pid = 'new-55bd7c54-0e43-482b-8f3c-10016e4f132d';
     $pane->panel = 'right';
@@ -110,11 +144,11 @@ function halle96_startseite_default_page_manager_pages() {
     );
     $pane->css = array();
     $pane->extras = array();
-    $pane->position = 0;
+    $pane->position = 1;
     $pane->locks = array();
     $pane->uuid = '55bd7c54-0e43-482b-8f3c-10016e4f132d';
     $display->content['new-55bd7c54-0e43-482b-8f3c-10016e4f132d'] = $pane;
-    $display->panels['right'][0] = 'new-55bd7c54-0e43-482b-8f3c-10016e4f132d';
+    $display->panels['right'][1] = 'new-55bd7c54-0e43-482b-8f3c-10016e4f132d';
     $pane = new stdClass();
     $pane->pid = 'new-c3e64793-bec3-4e3a-9721-67b602d233d1';
     $pane->panel = 'top';
