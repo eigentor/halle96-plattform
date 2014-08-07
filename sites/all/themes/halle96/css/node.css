@@ -22,6 +22,21 @@
   padding-bottom: 0.5em;
   border-bottom: 1px dotted #eeeeee;
 }
+/* line 27, ../sass/node.sass */
+.front .view-kommentare .views-row {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px dotted #eeeeee;
+}
+/* line 31, ../sass/node.sass */
+.front .view-kommentare .views-field-name {
+  font-size: 12.15px;
+  font-size: 0.675rem;
+}
+/* line 33, ../sass/node.sass */
+.front .view-kommentare .views-field-name a {
+  color: #999999;
+}
 
 /*------------------------------------------- */
 /*------------------------------------------- */

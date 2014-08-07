@@ -10,6 +10,108 @@
 function halle96_mitteilungen_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'comment-comment_node_discussion-comment_body'
+  $field_instances['comment-comment_node_discussion-comment_body'] = array(
+    'bundle' => 'comment_node_discussion',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_discussion-field_datei_anhang'
+  $field_instances['comment-comment_node_discussion-field_datei_anhang'] = array(
+    'bundle' => 'comment_node_discussion',
+    'deleted' => 0,
+    'description' => 'Hier könnt Ihr Dateien mit den angezeigten Formaten hochladen.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'field_datei_anhang',
+    'label' => 'Datei-Anhang',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => 'datei-anhaenge',
+      'file_extensions' => 'pdf xls xlsx doc docx jpg png jpeg',
+      'max_filesize' => '5 MB',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'comment-comment_node_page-comment_body'
+  $field_instances['comment-comment_node_page-comment_body'] = array(
+    'bundle' => 'comment_node_page',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'comment',
+    'field_name' => 'comment_body',
+    'label' => 'Comment',
+    'required' => TRUE,
+    'settings' => array(
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'node-discussion-body'
   $field_instances['node-discussion-body'] = array(
     'bundle' => 'discussion',
@@ -81,6 +183,48 @@ function halle96_mitteilungen_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-discussion-field_datei_anhang'
+  $field_instances['node-discussion-field_datei_anhang'] = array(
+    'bundle' => 'discussion',
+    'deleted' => 0,
+    'description' => 'Hier könnt Ihr Dateianhänge mit den angezeigten Formaten hochladen.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_datei_anhang',
+    'label' => 'Datei-Anhang',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => 'datei-anhaenge',
+      'file_extensions' => 'pdf xls xlsx doc docx jpg png jpeg',
+      'max_filesize' => '5MB',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'file',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'file_generic',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'node-discussion-field_kategorie'
   $field_instances['node-discussion-field_kategorie'] = array(
     'bundle' => 'discussion',
@@ -89,7 +233,7 @@ function halle96_mitteilungen_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
@@ -121,6 +265,10 @@ function halle96_mitteilungen_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Comment');
+  t('Datei-Anhang');
+  t('Hier könnt Ihr Dateianhänge mit den angezeigten Formaten hochladen.');
+  t('Hier könnt Ihr Dateien mit den angezeigten Formaten hochladen.');
   t('Kategorie');
 
   return $field_instances;
