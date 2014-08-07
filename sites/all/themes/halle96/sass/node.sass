@@ -1,0 +1,34 @@
+@import "includes/variables_mixins"
+
+// Set the behaviour of our IE8-Fallback.
+// Default to write it into the same file with an extra
+// wrapper class
+$breakpoint-no-queries: false
+$breakpoint-no-query-fallbacks: true
+
+.front 
+  #block-system-main 
+    h3 
+      margin-bottom: 0
+      line-height: 1.3
+      a  
+        color: $link-color
+  .view-mitteilungen
+    .views-field-name
+      +x-rem(font-size, 0.675)
+      a 
+        color: #999
+    .views-row 
+      margin-bottom: 0.5em
+      padding-bottom: 0.5em
+      border-bottom: 1px dotted #eee
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------- DESKTOP LAYOUT -------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+body
+  +breakpoint($breakpoint-desktop, $no-query: '.lt-ie9')
