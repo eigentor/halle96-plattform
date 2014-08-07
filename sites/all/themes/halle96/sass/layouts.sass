@@ -96,6 +96,12 @@ form#comment-form
   .comment-arrow
     display: none
 
+#homepage 
+  &.panel-2col-stacked 
+    .panel-col-first, .panel-col-last
+      float: none
+      width: auto
+
 /*-------------------------------------------*/
 /*-------------------------------------------*/
 /*-------------- DESKTOP LAYOUT -------------*/
@@ -176,4 +182,11 @@ body
       .comment-arrow
         display: block
         margin-left: -45px
+
+
+    #homepage 
+      &.panel-2col-stacked 
+        .panel-col-first, .panel-col-last
+          float: left
+          width: 50%
           
