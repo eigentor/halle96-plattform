@@ -54,7 +54,7 @@ function halle96_entdeckertag_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'twocol';
+  $display->layout = 'twocol_stacked';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -71,7 +71,7 @@ function halle96_entdeckertag_default_page_manager_pages() {
   $display->panels = array();
     $pane = new stdClass();
     $pane->pid = 'new-7c59a134-9c26-4c1d-b424-4477606be35e';
-    $pane->panel = 'left';
+    $pane->panel = 'top';
     $pane->type = 'views_panes';
     $pane->subtype = 'einzelne_kategorie_service_und_info-panel_pane_1';
     $pane->shown = TRUE;
@@ -94,7 +94,7 @@ function halle96_entdeckertag_default_page_manager_pages() {
     $pane->locks = array();
     $pane->uuid = '7c59a134-9c26-4c1d-b424-4477606be35e';
     $display->content['new-7c59a134-9c26-4c1d-b424-4477606be35e'] = $pane;
-    $display->panels['left'][0] = 'new-7c59a134-9c26-4c1d-b424-4477606be35e';
+    $display->panels['top'][0] = 'new-7c59a134-9c26-4c1d-b424-4477606be35e';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
