@@ -6,6 +6,11 @@
 $breakpoint-no-queries: false
 $breakpoint-no-query-fallbacks: true
 
+
+.panel-pane 
+  .views-field-title h3, .views-field-title, .views-field-subject
+    +x-rem(font-size, 1)
+
 .front 
   #block-system-main 
     h3 
@@ -32,6 +37,21 @@ $breakpoint-no-query-fallbacks: true
       +x-rem(font-size, 0.675)
       a 
         color: #999
+  .view-alle-kategorien-service-info 
+    .views-field-name 
+      +x-rem(font-size, 1)
+
+  #content
+    h2.pane-title 
+      +x-rem(font-size, 1.6)
+      color: #000
+      a 
+        color: #000
+    .views-row 
+      margin-bottom: 0.5em
+      border-bottom: 1px dotted #ddd
+      padding-bottom: 0.5em
+
 
 .page-entdeckertag 
   .panel-pane

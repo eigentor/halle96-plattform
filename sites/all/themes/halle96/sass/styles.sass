@@ -18,7 +18,16 @@ $breakpoint-no-query-fallbacks: true
     min-height: 300px
     padding: 12px 15px 7px
     margin-bottom: 20px
-
+  .panel-col-top
+    border: 1px solid #ddd
+    min-height: 300px
+    padding: 12px 15px 7px
+    margin-bottom: 30px 
+    .panel-pane 
+      min-height: 0
+      border: 0
+      padding: 0
+      margin-bottom: 20px
 .front 
   h1#page-title 
     display: none
@@ -47,6 +56,13 @@ body
           border: 1px solid #777
           color: black
 
-    #homepage 
-      .panel-pane
-        margin-right: 20px
+    #homepage
+      .panel-col-first 
+        .inside 
+          margin-right: 1em
+      .panel-col-last 
+        .inside 
+          margin-left: 1em
+
+   
+        
