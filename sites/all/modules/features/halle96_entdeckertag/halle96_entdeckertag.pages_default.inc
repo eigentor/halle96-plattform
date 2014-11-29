@@ -13,15 +13,15 @@ function halle96_entdeckertag_default_page_manager_pages() {
   $page->api_version = 1;
   $page->name = 'entdeckertag_bersicht';
   $page->task = 'page';
-  $page->admin_title = 'Entdeckertag Übersicht';
+  $page->admin_title = 'Veranstaltungen Übersicht';
   $page->admin_description = '';
-  $page->path = 'entdeckertag';
+  $page->path = 'veranstaltungen';
   $page->access = array();
   $page->menu = array(
     'type' => 'normal',
-    'title' => 'Entdeckertag',
+    'title' => 'Veranstaltungen',
     'name' => 'main-menu',
-    'weight' => '3',
+    'weight' => '1',
     'parent' => array(
       'type' => 'none',
       'title' => '',
@@ -62,39 +62,40 @@ function halle96_entdeckertag_default_page_manager_pages() {
       'middle' => NULL,
       'left' => NULL,
       'right' => NULL,
+      'top' => NULL,
+      'bottom' => NULL,
     ),
   );
   $display->cache = array();
-  $display->title = 'Entdeckertag';
+  $display->title = 'Veranstaltungen';
   $display->uuid = 'f1467a1b-539c-498c-9305-c206a4d9f02a';
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-7c59a134-9c26-4c1d-b424-4477606be35e';
+    $pane->pid = 'new-9f3bb1ba-cd4c-4790-8722-4c813fc428dd';
     $pane->panel = 'top';
     $pane->type = 'views_panes';
-    $pane->subtype = 'einzelne_kategorie_service_und_info-panel_pane_1';
+    $pane->subtype = 'single_term_news_und_mitteilung-panel_pane_2';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
       'arguments' => array(
-        'tid' => '15',
+        'tid' => '6',
       ),
+      'override_title' => 1,
+      'override_title_text' => '',
     );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array(
-      'css_id' => '',
-      'css_class' => 'entdeckertag',
-    );
+    $pane->css = array();
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '7c59a134-9c26-4c1d-b424-4477606be35e';
-    $display->content['new-7c59a134-9c26-4c1d-b424-4477606be35e'] = $pane;
-    $display->panels['top'][0] = 'new-7c59a134-9c26-4c1d-b424-4477606be35e';
+    $pane->uuid = '9f3bb1ba-cd4c-4790-8722-4c813fc428dd';
+    $display->content['new-9f3bb1ba-cd4c-4790-8722-4c813fc428dd'] = $pane;
+    $display->panels['top'][0] = 'new-9f3bb1ba-cd4c-4790-8722-4c813fc428dd';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;

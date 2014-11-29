@@ -1,9 +1,14 @@
-name = Halle96 Entdeckertag
-description = Feature für den Entdeckertag
+name = Halle96 Veranstaltungen
+description = Feature für die Veranstaltungsübersiccht
 core = 7.x
 package = Halle 96
 dependencies[] = ctools
 dependencies[] = page_manager
+dependencies[] = views
+dependencies[] = views_content
 features[ctools][] = page_manager:pages_default:1
+features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[page_manager_pages][] = entdeckertag_bersicht
+features[views_view][] = single_term_news_und_mitteilung
+mtime = 1406482370
