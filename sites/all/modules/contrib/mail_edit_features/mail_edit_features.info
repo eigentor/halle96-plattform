@@ -1,0 +1,13 @@
+name = Mail editor features integration.
+description = "Mail edit templates Export."
+dependencies[] = mail_edit
+dependencies[] = features
+version = "7.x-1.x-dev"
+core = 7.x
+package = "Features"
+; Information added by drupal.org packaging script on 2013-10-01
+version = "7.x-1.0-alpha+1-dev"
+core = "7.x"
+project = "mail_edit_features"
+datestamp = "1380585771"
+
