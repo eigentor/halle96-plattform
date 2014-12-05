@@ -1,86 +1,129 @@
-/* line 11, ../sass/node.sass */
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*------------- All Screen Sizes ------------ */
+/*------------------------------------------- */
+/*------------------------------------------- */
+/* line 17, ../sass/node.sass */
 .panel-pane .views-field-title h3, .panel-pane .views-field-title, .panel-pane .views-field-subject {
   font-size: 18px;
   font-size: 1rem;
+  line-height: 1.3;
+}
+/* line 20, ../sass/node.sass */
+.panel-pane .views-field-title h3 a.username, .panel-pane .views-field-title a.username, .panel-pane .views-field-subject a.username {
+  font-size: 12.15px;
+  font-size: 0.675rem;
+  color: #999999;
+  padding-left: 5px;
 }
 
-/* line 16, ../sass/node.sass */
+/* line 26, ../sass/node.sass */
 .front #block-system-main h3 {
   margin-bottom: 0;
   line-height: 1.3;
 }
-/* line 19, ../sass/node.sass */
+/* line 29, ../sass/node.sass */
 .front #block-system-main h3 a {
   color: #3a99c9;
 }
-/* line 22, ../sass/node.sass */
-.front .view-mitteilungen .views-field-name {
+/* line 31, ../sass/node.sass */
+.front #block-system-main h3 a.username {
   font-size: 12.15px;
   font-size: 0.675rem;
+  color: #999999;
+  padding-left: 5px;
 }
-/* line 24, ../sass/node.sass */
+/* line 37, ../sass/node.sass */
 .front .view-mitteilungen .views-field-name a {
+  font-size: 12.15px;
+  font-size: 0.675rem;
   color: #999999;
 }
-/* line 26, ../sass/node.sass */
+/* line 39, ../sass/node.sass */
 .front .view-mitteilungen .views-row {
   margin-bottom: 0.5em;
   padding-bottom: 0.5em;
   border-bottom: 1px dotted #eeeeee;
 }
-/* line 32, ../sass/node.sass */
+/* line 45, ../sass/node.sass */
 .front .view-kommentare .views-row {
   margin-bottom: 0.5em;
   padding-bottom: 0.5em;
   border-bottom: 1px dotted #eeeeee;
 }
-/* line 36, ../sass/node.sass */
-.front .view-kommentare .views-field-name {
+/* line 50, ../sass/node.sass */
+.front .view-kommentare .views-field-name a {
   font-size: 12.15px;
   font-size: 0.675rem;
-}
-/* line 38, ../sass/node.sass */
-.front .view-kommentare .views-field-name a {
   color: #999999;
 }
-/* line 41, ../sass/node.sass */
+/* line 53, ../sass/node.sass */
 .front .view-alle-kategorien-service-info .views-field-name {
   font-size: 18px;
   font-size: 1rem;
 }
-/* line 45, ../sass/node.sass */
+/* line 57, ../sass/node.sass */
 .front #content h2.pane-title {
   font-size: 28.8px;
   font-size: 1.6rem;
   color: black;
 }
-/* line 48, ../sass/node.sass */
+/* line 60, ../sass/node.sass */
 .front #content h2.pane-title a {
   color: black;
 }
-/* line 50, ../sass/node.sass */
+/* line 62, ../sass/node.sass */
 .front #content .views-row {
   margin-bottom: 0.5em;
   border-bottom: 1px dotted #dddddd;
   padding-bottom: 0.5em;
 }
 
-/* line 57, ../sass/node.sass */
+/* line 69, ../sass/node.sass */
 .page-entdeckertag .panel-pane {
   border: 1px solid #dddddd;
   margin-bottom: 20px;
   min-height: 300px;
   padding: 12px 15px 7px;
 }
-/* line 59, ../sass/node.sass */
+/* line 71, ../sass/node.sass */
 .page-entdeckertag .views-row {
   margin-bottom: 0.5em;
   padding-bottom: 0.5em;
   border-bottom: 1px dotted #eeeeee;
 }
-/* line 63, ../sass/node.sass */
+/* line 75, ../sass/node.sass */
 .page-entdeckertag .views-row h3 {
   margin-bottom: 0;
+}
+
+/* line 79, ../sass/node.sass */
+#content h2.comment-form {
+  padding: 15px;
+  background: #f9f9f9;
+  border: 1px solid #eeeeee;
+  border-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 25px;
+}
+
+/* line 86, ../sass/node.sass */
+#comment-form {
+  padding: 15px;
+  background: #f9f9f9;
+  border: 1px solid #eeeeee;
+  border-top: 0;
+}
+/* line 91, ../sass/node.sass */
+#comment-form #edit-field-datei-anhang {
+  border: 1px solid #e3e3e3;
+  background: #ececec;
+  padding: 10px;
+}
+/* line 95, ../sass/node.sass */
+#comment-form #edit-field-datei-anhang .description {
+  margin-top: 5px;
+  margin-left: 125px;
 }
 
 /*------------------------------------------- */
@@ -88,3 +131,157 @@
 /*-------------- DESKTOP LAYOUT ------------- */
 /*------------------------------------------- */
 /*------------------------------------------- */
+@media (min-width: 850px) {
+  /* line 110, ../sass/node.sass */
+  html .node-type-discussion .field-name-field-mit-bild {
+    float: left;
+    margin: 5px 15px 5px 0;
+  }
+  /* line 32, ../sass/includes/_variables_mixins.sass */
+  html .node-type-discussion .field-name-field-mit-bild img {
+    margin-bottom: 0;
+  }
+  /* line 113, ../sass/node.sass */
+  html .node-type-article .field-name-field-news-bild {
+    float: left;
+    margin: 5px 15px 5px 0;
+  }
+  /* line 32, ../sass/includes/_variables_mixins.sass */
+  html .node-type-article .field-name-field-news-bild img {
+    margin-bottom: 0;
+  }
+  /* line 116, ../sass/node.sass */
+  html .views-row .node {
+    *zoom: 1;
+  }
+  /* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  html .views-row .node:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  /* line 118, ../sass/node.sass */
+  html .views-row .node .field-type-image {
+    float: left;
+    margin: 5px 15px 5px 0;
+  }
+  /* line 32, ../sass/includes/_variables_mixins.sass */
+  html .views-row .node .field-type-image img {
+    margin-bottom: 0;
+  }
+  /* line 125, ../sass/node.sass */
+  html .front .view-mitteilungen .views-row {
+    *zoom: 1;
+  }
+  /* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  html .front .view-mitteilungen .views-row:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  /* line 127, ../sass/node.sass */
+  html .front .view-mitteilungen .views-field-field-mit-bild {
+    float: left;
+    margin: 5px 15px 0 0;
+  }
+  /* line 131, ../sass/node.sass */
+  html .front .view-news .views-row {
+    *zoom: 1;
+  }
+  /* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  html .front .view-news .views-row:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  /* line 133, ../sass/node.sass */
+  html .front .view-news .views-field-field-news-bild {
+    float: left;
+    margin: 5px 15px 0 0;
+  }
+}
+/* line 110, ../sass/node.sass */
+.lt-ie9 html .node-type-discussion .field-name-field-mit-bild {
+  float: left;
+  margin: 5px 15px 5px 0;
+}
+/* line 32, ../sass/includes/_variables_mixins.sass */
+.lt-ie9 html .node-type-discussion .field-name-field-mit-bild img {
+  margin-bottom: 0;
+}
+/* line 113, ../sass/node.sass */
+.lt-ie9 html .node-type-article .field-name-field-news-bild {
+  float: left;
+  margin: 5px 15px 5px 0;
+}
+/* line 32, ../sass/includes/_variables_mixins.sass */
+.lt-ie9 html .node-type-article .field-name-field-news-bild img {
+  margin-bottom: 0;
+}
+/* line 116, ../sass/node.sass */
+.lt-ie9 html .views-row .node {
+  *zoom: 1;
+}
+/* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.lt-ie9 html .views-row .node:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 118, ../sass/node.sass */
+.lt-ie9 html .views-row .node .field-type-image {
+  float: left;
+  margin: 5px 15px 5px 0;
+}
+/* line 32, ../sass/includes/_variables_mixins.sass */
+.lt-ie9 html .views-row .node .field-type-image img {
+  margin-bottom: 0;
+}
+/* line 125, ../sass/node.sass */
+.lt-ie9 html .front .view-mitteilungen .views-row {
+  *zoom: 1;
+}
+/* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.lt-ie9 html .front .view-mitteilungen .views-row:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 127, ../sass/node.sass */
+.lt-ie9 html .front .view-mitteilungen .views-field-field-mit-bild {
+  float: left;
+  margin: 5px 15px 0 0;
+}
+/* line 131, ../sass/node.sass */
+.lt-ie9 html .front .view-news .views-row {
+  *zoom: 1;
+}
+/* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+.lt-ie9 html .front .view-news .views-row:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+/* line 133, ../sass/node.sass */
+.lt-ie9 html .front .view-news .views-field-field-news-bild {
+  float: left;
+  margin: 5px 15px 0 0;
+}

@@ -23,3 +23,15 @@ $breakpoint-desktop: 850px
   margin-bottom: 20px
   min-height: 300px
   padding: 12px 15px 7px
+
+
+/// Style Mixins
+@mixin image-in-full-node
+  float: left
+  margin: 5px 15px 5px 0 
+  img 
+    margin-bottom: 0
+
+@mixin user-name-submitted 
+  +x-rem(font-size, 0.675)
+  color: #999

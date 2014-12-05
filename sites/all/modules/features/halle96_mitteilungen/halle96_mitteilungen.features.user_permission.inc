@@ -59,7 +59,6 @@ function halle96_mitteilungen_user_default_permissions() {
   $permissions['subscribe to content'] = array(
     'name' => 'subscribe to content',
     'roles' => array(
-      'Mieter' => 'Mieter',
       'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
       'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
