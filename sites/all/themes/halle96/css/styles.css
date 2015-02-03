@@ -33,6 +33,7 @@
 /* line 37, ../sass/styles.sass */
 .submitted .user-picture img {
   height: auto;
+  margin-right: 15px;
 }
 
 /*------------------------------------------- */
@@ -41,11 +42,11 @@
 /*------------------------------------------- */
 /*------------------------------------------- */
 @media (min-width: 850px) {
-  /* line 50, ../sass/styles.sass */
+  /* line 51, ../sass/styles.sass */
   body #main-menu-links {
     margin-bottom: 7px;
   }
-  /* line 52, ../sass/styles.sass */
+  /* line 53, ../sass/styles.sass */
   body #main-menu-links a {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -60,26 +61,26 @@
     background: #fff2cc;
     color: #555555;
   }
-  /* line 60, ../sass/styles.sass */
+  /* line 61, ../sass/styles.sass */
   body #main-menu-links a.active, body #main-menu-links a:hover {
     background: white;
     border: 1px solid #777777;
     color: black;
   }
-  /* line 67, ../sass/styles.sass */
+  /* line 68, ../sass/styles.sass */
   body #homepage .panel-col-first .inside {
     margin-right: 1em;
   }
-  /* line 70, ../sass/styles.sass */
+  /* line 71, ../sass/styles.sass */
   body #homepage .panel-col-last .inside {
     margin-left: 1em;
   }
 }
-/* line 50, ../sass/styles.sass */
+/* line 51, ../sass/styles.sass */
 .lt-ie9 body #main-menu-links {
   margin-bottom: 7px;
 }
-/* line 52, ../sass/styles.sass */
+/* line 53, ../sass/styles.sass */
 .lt-ie9 body #main-menu-links a {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -94,17 +95,17 @@
   background: #fff2cc;
   color: #555555;
 }
-/* line 60, ../sass/styles.sass */
+/* line 61, ../sass/styles.sass */
 .lt-ie9 body #main-menu-links a.active, .lt-ie9 body #main-menu-links a:hover {
   background: white;
   border: 1px solid #777777;
   color: black;
 }
-/* line 67, ../sass/styles.sass */
+/* line 68, ../sass/styles.sass */
 .lt-ie9 body #homepage .panel-col-first .inside {
   margin-right: 1em;
 }
-/* line 70, ../sass/styles.sass */
+/* line 71, ../sass/styles.sass */
 .lt-ie9 body #homepage .panel-col-last .inside {
   margin-left: 1em;
 }
