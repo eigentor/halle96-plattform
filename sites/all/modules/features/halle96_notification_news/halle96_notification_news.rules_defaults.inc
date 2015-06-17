@@ -20,7 +20,8 @@ function halle96_notification_news_default_rules_configuration() {
         { "mail_to_users_of_role" : {
             "roles" : { "value" : { "7" : "7" } },
             "subject" : "News aus der Halle 96 - [node:title]",
-            "message" : "[node:title]\\r\\n\\r\\n[node:body]\\r\\n\\r\\nGru\\u00df von der Zentrumsleitung"
+            "message" : "[node:title]\\r\\n\\r\\n[node:body]\\r\\n\\r\\nGru\\u00df von der Zentrumsleitung",
+            "from" : "Marion.Groenig@hannoverimpuls.de"
           }
         }
       ]
