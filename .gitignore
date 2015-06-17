@@ -10,4 +10,6 @@ sites/*/private
 *.sassc
 *.scssc
 
-run.exe.stackdump
+*exe.stackdump
+
+.idea/
