@@ -1,0 +1,7 @@
+name = Benachrichtigungen für News
+core = 7.x
+package = Halle 96
+dependencies[] = entity
+dependencies[] = rules
+features[features_api][] = api:2
+features[rules_config][] = rules_notification_new_news
