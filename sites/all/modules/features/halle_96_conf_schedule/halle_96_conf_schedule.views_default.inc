@@ -44,6 +44,11 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['style_options']['weekMode'] = 'liquid';
   $handler->display->display_options['style_options']['timeformat'] = 'H:mm{ - H:mm}';
   $handler->display->display_options['style_options']['contentHeight'] = 650;
+  $handler->display->display_options['style_options']['fullcalendar_create']['click'] = TRUE;
+  $handler->display->display_options['style_options']['fullcalendar_create']['node_type'] = 'conference_room';
+  $handler->display->display_options['style_options']['fullcalendar_create']['date_field'] = array(
+    'field_conf_termin' => 'field_conf_termin',
+  );
   /* Feld: Inhalt: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';

@@ -71,10 +71,10 @@ function halle_96_conf_schedule_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
         'redirect' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
       ),
       'display' => array(),
