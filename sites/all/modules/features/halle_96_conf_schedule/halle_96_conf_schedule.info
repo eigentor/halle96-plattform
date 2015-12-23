@@ -1,6 +1,8 @@
 name = Halle 96 Besprechungsraum Belegungsplan
 core = 7.x
 package = Halle 96
+dependencies[] = colorbox
+dependencies[] = ctools
 dependencies[] = date
 dependencies[] = date_popup_timepicker
 dependencies[] = features
@@ -29,4 +31,4 @@ features[variable][] = node_options_conference_room
 features[variable][] = node_preview_conference_room
 features[variable][] = node_submitted_conference_room
 features[views_view][] = belegungsplan_besprechungsraum
-features_exclude[dependencies][ctools] = ctools
+mtime = 1450882568

@@ -37,6 +37,10 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'fullcalendar';
   $handler->display->display_options['style_options']['firstDay'] = '1';
+  $handler->display->display_options['style_options']['weekMode'] = 'liquid';
+  $handler->display->display_options['style_options']['timeformat'] = 'H:mm{ - H:mm}';
+  $handler->display->display_options['style_options']['sameWindow'] = TRUE;
+  $handler->display->display_options['style_options']['contentHeight'] = 650;
   /* Feld: Inhalt: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
