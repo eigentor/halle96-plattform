@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Halle 96 Besprechungsraum Belegungsplan feature.
+ */
+
+include_once 'halle_96_conf_schedule.features.inc';
