@@ -30,9 +30,10 @@ function halle_96_conf_schedule_node_info() {
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titel'),
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }

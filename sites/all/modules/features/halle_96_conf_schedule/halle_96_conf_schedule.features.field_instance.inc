@@ -10,7 +10,7 @@
 function halle_96_conf_schedule_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-conference_room-field_conf_firma'
+  // Exported field_instance: 'node-conference_room-field_conf_firma'.
   $field_instances['node-conference_room-field_conf_firma'] = array(
     'bundle' => 'conference_room',
     'default_value' => NULL,
@@ -80,7 +80,7 @@ function halle_96_conf_schedule_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-conference_room-field_conf_termin'
+  // Exported field_instance: 'node-conference_room-field_conf_termin'.
   $field_instances['node-conference_room-field_conf_termin'] = array(
     'bundle' => 'conference_room',
     'deleted' => 0,
@@ -95,6 +95,7 @@ function halle_96_conf_schedule_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 1,
