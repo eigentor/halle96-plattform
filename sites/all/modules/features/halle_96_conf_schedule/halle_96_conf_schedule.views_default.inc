@@ -25,7 +25,11 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mehr';
   $handler->display->display_options['link_display'] = 'page_1';
-  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['type'] = 'role';
+  $handler->display->display_options['access']['role'] = array(
+    3 => '3',
+    5 => '5',
+  );
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
@@ -44,15 +48,12 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['style_options']['theme_style'] = '1';
   $handler->display->display_options['style_options']['max_items'] = '0';
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
-  /* Feld: Inhalt: Titel */
-  $handler->display->display_options['fields']['title']['id'] = 'title';
-  $handler->display->display_options['fields']['title']['table'] = 'node';
-  $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = '';
-  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
-  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
+  /* Feld: Inhalt: Firma */
+  $handler->display->display_options['fields']['field_conf_firma']['id'] = 'field_conf_firma';
+  $handler->display->display_options['fields']['field_conf_firma']['table'] = 'field_data_field_conf_firma';
+  $handler->display->display_options['fields']['field_conf_firma']['field'] = 'field_conf_firma';
+  $handler->display->display_options['fields']['field_conf_firma']['label'] = '';
+  $handler->display->display_options['fields']['field_conf_firma']['element_label_colon'] = FALSE;
   /* Feld: Inhalt: Termin */
   $handler->display->display_options['fields']['field_conf_termin']['id'] = 'field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['table'] = 'field_data_field_conf_termin';
@@ -61,12 +62,12 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['fields']['field_conf_termin']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_conf_termin']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_conf_termin']['settings'] = array(
-    'format_type' => 'short',
+    'format_type' => 'hour_minute_only',
     'fromto' => 'both',
     'multiple_number' => '',
     'multiple_from' => '',
     'multiple_to' => '',
-    'show_repeat_rule' => '',
+    'show_remaining_days' => 0,
   );
   $handler->display->display_options['fields']['field_conf_termin']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_conf_termin']['delta_offset'] = '0';
