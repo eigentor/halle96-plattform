@@ -10,21 +10,13 @@
 function halle_96_conf_schedule_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_conf_firma'
+  // Exported field_base: 'field_conf_firma'.
   $field_bases['field_conf_firma'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_conf_firma',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -39,14 +31,13 @@ function halle_96_conf_schedule_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_conf_termin'
+  // Exported field_base: 'field_conf_termin'.
   $field_bases['field_conf_termin'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_conf_termin',
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'date',
