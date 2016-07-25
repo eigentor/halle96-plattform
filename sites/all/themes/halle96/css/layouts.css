@@ -193,32 +193,36 @@ form#comment-form #edit-author--2 {
     float: left;
     padding: 20px 15px 10px;
   }
-  /* line 122, ../sass/layouts.sass */
+  /* line 121, ../sass/layouts.sass */
+  body ul#main-menu-links {
+    padding: 0;
+  }
+  /* line 123, ../sass/layouts.sass */
   body #main-menu {
     clear: none;
     float: left;
     padding: 40px 0 0 20px;
   }
-  /* line 129, ../sass/layouts.sass */
+  /* line 130, ../sass/layouts.sass */
   body #main-menu ul li a.beitrag-schreiben {
     margin-left: 26px;
   }
-  /* line 138, ../sass/layouts.sass */
+  /* line 139, ../sass/layouts.sass */
   body.page-service-info .views-row {
     line-height: 1.6;
   }
-  /* line 140, ../sass/layouts.sass */
+  /* line 141, ../sass/layouts.sass */
   body.page-service-info .panel-pane {
     min-height: 250px;
   }
-  /* line 143, ../sass/layouts.sass */
+  /* line 144, ../sass/layouts.sass */
   body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 {
     float: left;
     width: 64.3%;
     margin-right: 2.3%;
     background: whitesmoke;
   }
-  /* line 149, ../sass/layouts.sass */
+  /* line 150, ../sass/layouts.sass */
   body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 .view-alle-kategorien-service-info .views-row {
     float: left;
     width: 42%;
@@ -227,49 +231,49 @@ form#comment-form #edit-author--2 {
     font-size: 0.95rem;
     line-height: 1.7;
   }
-  /* line 155, ../sass/layouts.sass */
+  /* line 156, ../sass/layouts.sass */
   body.page-service-info .panel-col-top .pane-einzelne-kategorie-service-und-info-panel-pane-1 {
     float: left;
     width: 31%;
   }
-  /* line 159, ../sass/layouts.sass */
+  /* line 160, ../sass/layouts.sass */
   body.page-service-info .center-wrapper .panel-panel {
     float: left;
     width: 31%;
     margin-right: 2.3%;
   }
-  /* line 164, ../sass/layouts.sass */
+  /* line 165, ../sass/layouts.sass */
   body.page-service-info .panel-col-bottom .panel-pane {
     float: left;
     width: 31%;
     margin-right: 2.3%;
   }
-  /* line 172, ../sass/layouts.sass */
+  /* line 173, ../sass/layouts.sass */
   body .comment .attribution {
     display: table-cell;
   }
-  /* line 174, ../sass/layouts.sass */
+  /* line 175, ../sass/layouts.sass */
   body .comment .comment-text {
     display: table-cell;
   }
-  /* line 176, ../sass/layouts.sass */
+  /* line 177, ../sass/layouts.sass */
   body .comment .submitted {
     margin-bottom: 0;
   }
-  /* line 178, ../sass/layouts.sass */
+  /* line 179, ../sass/layouts.sass */
   body .comment .commenter-name, body .comment .comment-time {
     display: block;
   }
-  /* line 180, ../sass/layouts.sass */
+  /* line 181, ../sass/layouts.sass */
   body .comment .comment-time {
     padding-left: 0;
   }
-  /* line 182, ../sass/layouts.sass */
+  /* line 183, ../sass/layouts.sass */
   body .comment .comment-arrow {
     display: block;
     margin-left: -45px;
   }
-  /* line 189, ../sass/layouts.sass */
+  /* line 190, ../sass/layouts.sass */
   body #homepage.panel-2col-stacked .panel-col-first, body #homepage.panel-2col-stacked .panel-col-last {
     float: left;
     width: 50%;
