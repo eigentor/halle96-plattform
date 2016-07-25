@@ -1,0 +1,91 @@
+@import "includes/halle96-central"
+
+// Set the behaviour of our IE8-Fallback.
+// Default to write it into the same file with an extra
+// wrapper class
+$breakpoint-no-queries: false
+$breakpoint-no-query-fallbacks: true
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*------------- All Screen Sizes ------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+.view-conference-room-schedule
+  .view-header
+    ul.pager
+      position: relative
+      margin-bottom: 0
+      li
+        text-align: left
+        position: static
+        display: inline-block
+        &.date-prev
+          margin-right: -5px
+        a:hover
+          color: $link-color
+    .book-room
+      +button
+      display: block
+      margin: auto
+      margin-top: 15px
+      text-align: center
+      padding-bottom: 9px
+      &:before
+        margin-right: 8px
+        margin-left: -2px
+        +font-awesome
+        content: "\f271"
+        font-size: 1.5em
+  td
+    div.day, div.day a
+      min-width: 30px
+    .views-field-field-conf-firma
+      font-weight: bold
+    .views-field-field-conf-termin
+      font-weight: normal
+      span
+        &.date-display-start, &.date-display-end, &.date-display-single
+          font-weight: normal
+
+  .calendar-calendar
+    .month-view
+      .full
+        td.single-day
+          div.monthview
+            background: $link-color
+            color: white
+            padding: 2px 7px
+            a
+              color: white
+
+
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------- DESKTOP LAYOUT -------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+html
+  +breakpoint($breakpoint-desktop)
+    .view-conference-room-schedule
+      .view-header
+        .date-nav
+          position: relative
+        ul.pager
+          position: static
+          margin-bottom: 0
+          li
+            text-align: right
+            position: absolute
+            &.date-prev
+              right: 90px
+              margin-right: 0
+        .book-room
+          position: absolute
+          left: 0
+          top: 0
+          margin-top: -3px

@@ -1,0 +1,40 @@
+/// Fonts
+@mixin font-awesome
+  font-family: FontAwesome
+
+///
+@mixin standard-panel-pane
+  border: 1px solid #dddddd
+  margin-bottom: 20px
+  min-height: 300px
+  padding: 12px 15px 7px
+
+
+/// Style Mixins
+@mixin image-in-full-node
+  float: left
+  margin: 5px 15px 5px 0
+  img
+    margin-bottom: 0
+
+@mixin user-name-submitted
+  +x-rem(font-size, 0.675)
+  color: #999
+
+
+/* Buttons */
+@mixin button
+  +arial
+  display: inline-block
+  padding: 7px 15px
+  +border-radius(5px)
+  background: $dark-grey
+  color: white
+  &:hover
+    background: darken($dark-grey, 20%)
+    text-decoration: none
+  a
+    color: white
+    &:hover
+      text-decoration: none
+

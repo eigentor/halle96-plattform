@@ -1,4 +1,4 @@
-@import "includes/variables_mixins"
+@import "includes/halle96-central"
 
 // Set the behaviour of our IE8-Fallback.
 // Default to write it into the same file with an extra
@@ -47,7 +47,7 @@ $breakpoint-no-query-fallbacks: true
 /*-------------------------------------------*/
 
 body
-  +breakpoint($breakpoint-desktop, $no-query: '.lt-ie9')
+  +breakpoint($breakpoint-desktop)
     #main-menu-links 
       margin-bottom: 7px
       a

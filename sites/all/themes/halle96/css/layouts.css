@@ -1,3 +1,36 @@
+/* line 4, ../sass/includes/_fonts.sass */
+h1, #content h1 {
+  font-size: 30.6px;
+  font-size: 1.7rem;
+}
+
+/* line 7, ../sass/includes/_fonts.sass */
+h2, #content h2 {
+  font-size: 25.2px;
+  font-size: 1.4rem;
+}
+
+/* line 10, ../sass/includes/_fonts.sass */
+h1, h2, h3, h4,
+h1 a, h2 a, h3 a, h4 a {
+  color: #333333;
+  margin-top: 0;
+}
+
+/* line 15, ../sass/includes/_fonts.sass */
+h1 a, h2 a, h3 a, h4 a {
+  color: #3a99c9;
+}
+/* line 17, ../sass/includes/_fonts.sass */
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
+  color: #00a4f7;
+}
+/* line 19, ../sass/includes/_fonts.sass */
+h1 a:link, h2 a:link, h3 a:link, h4 a:link {
+  padding-top: 0;
+}
+
+/* Buttons */
 /* line 9, ../sass/layouts.sass */
 * {
   -webkit-box-sizing: border-box;
@@ -52,7 +85,7 @@
 .page-service-info .panel-panel, .page-service-info .center-wrapper {
   *zoom: 1;
 }
-/* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 3, ../sass/includes/_mixins.sass */
 .page-service-info .panel-panel:after, .page-service-info .center-wrapper:after {
   content: "\0020";
   display: block;
@@ -143,7 +176,7 @@ form#comment-form #edit-author--2 {
 /*-------------- DESKTOP LAYOUT ------------- */
 /*------------------------------------------- */
 /*------------------------------------------- */
-@media (min-width: 850px) {
+@media only screen and (min-width: 850px) {
   /* line 111, ../sass/layouts.sass */
   body {
     /*Service und Info Seite */
@@ -241,101 +274,4 @@ form#comment-form #edit-author--2 {
     float: left;
     width: 50%;
   }
-}
-/* line 118, C:/Ruby193/lib/ruby/gems/1.9.1/gems/breakpoint-2.0.7/stylesheets/_breakpoint.scss */
-.lt-ie9 body {
-  /*Service und Info Seite */
-  /* Kommentare */
-}
-/* line 113, ../sass/layouts.sass */
-.lt-ie9 body #footer-wrapper {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-/* line 118, ../sass/layouts.sass */
-.lt-ie9 body #logo {
-  float: left;
-  padding: 20px 15px 10px;
-}
-/* line 122, ../sass/layouts.sass */
-.lt-ie9 body #main-menu {
-  clear: none;
-  float: left;
-  padding: 40px 0 0 20px;
-}
-/* line 129, ../sass/layouts.sass */
-.lt-ie9 body #main-menu ul li a.beitrag-schreiben {
-  margin-left: 26px;
-}
-/* line 138, ../sass/layouts.sass */
-.lt-ie9 body.page-service-info .views-row {
-  line-height: 1.6;
-}
-/* line 140, ../sass/layouts.sass */
-.lt-ie9 body.page-service-info .panel-pane {
-  min-height: 250px;
-}
-/* line 143, ../sass/layouts.sass */
-.lt-ie9 body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 {
-  float: left;
-  width: 64.3%;
-  margin-right: 2.3%;
-  background: whitesmoke;
-}
-/* line 149, ../sass/layouts.sass */
-.lt-ie9 body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 .view-alle-kategorien-service-info .views-row {
-  float: left;
-  width: 42%;
-  margin-right: 3%;
-  font-size: 17.1px;
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
-/* line 155, ../sass/layouts.sass */
-.lt-ie9 body.page-service-info .panel-col-top .pane-einzelne-kategorie-service-und-info-panel-pane-1 {
-  float: left;
-  width: 31%;
-}
-/* line 159, ../sass/layouts.sass */
-.lt-ie9 body.page-service-info .center-wrapper .panel-panel {
-  float: left;
-  width: 31%;
-  margin-right: 2.3%;
-}
-/* line 164, ../sass/layouts.sass */
-.lt-ie9 body.page-service-info .panel-col-bottom .panel-pane {
-  float: left;
-  width: 31%;
-  margin-right: 2.3%;
-}
-/* line 172, ../sass/layouts.sass */
-.lt-ie9 body .comment .attribution {
-  display: table-cell;
-}
-/* line 174, ../sass/layouts.sass */
-.lt-ie9 body .comment .comment-text {
-  display: table-cell;
-}
-/* line 176, ../sass/layouts.sass */
-.lt-ie9 body .comment .submitted {
-  margin-bottom: 0;
-}
-/* line 178, ../sass/layouts.sass */
-.lt-ie9 body .comment .commenter-name, .lt-ie9 body .comment .comment-time {
-  display: block;
-}
-/* line 180, ../sass/layouts.sass */
-.lt-ie9 body .comment .comment-time {
-  padding-left: 0;
-}
-/* line 182, ../sass/layouts.sass */
-.lt-ie9 body .comment .comment-arrow {
-  display: block;
-  margin-left: -45px;
-}
-/* line 189, ../sass/layouts.sass */
-.lt-ie9 body #homepage.panel-2col-stacked .panel-col-first, .lt-ie9 body #homepage.panel-2col-stacked .panel-col-last {
-  float: left;
-  width: 50%;
 }

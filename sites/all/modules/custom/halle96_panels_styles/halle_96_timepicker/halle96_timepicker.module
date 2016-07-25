@@ -1,0 +1,22 @@
+<?php
+
+function halle96_timepicker_conference_room_node_form_form_alter(&$form, &$form_state, $form_id) {
+  $path = drupal_get_path('module', 'halle96_timepicker');
+
+  // Adds a form field that the javascript utilizes or modifies.
+//  $form['location'] = array(
+//    '#type' => 'textfield',
+//    '#title' => 'Your Location (Country)',
+//    '#id' => 'country_autocomplete',
+//    // Both the library and custom JavaScript code are added to the '#attached'
+//    // property of a renderable array.
+//    '#attached' => array(
+//      'library' => array(
+//        array('system', 'ui.autocomplete'),
+//      ),
+//      'js' => array(
+//        "$path/mymodule-custom-javascript.js",
+//      ),
+//    ),
+//  );
+}

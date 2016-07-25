@@ -1,3 +1,36 @@
+/* line 4, ../sass/includes/_fonts.sass */
+h1, #content h1 {
+  font-size: 30.6px;
+  font-size: 1.7rem;
+}
+
+/* line 7, ../sass/includes/_fonts.sass */
+h2, #content h2 {
+  font-size: 25.2px;
+  font-size: 1.4rem;
+}
+
+/* line 10, ../sass/includes/_fonts.sass */
+h1, h2, h3, h4,
+h1 a, h2 a, h3 a, h4 a {
+  color: #333333;
+  margin-top: 0;
+}
+
+/* line 15, ../sass/includes/_fonts.sass */
+h1 a, h2 a, h3 a, h4 a {
+  color: #3a99c9;
+}
+/* line 17, ../sass/includes/_fonts.sass */
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
+  color: #00a4f7;
+}
+/* line 19, ../sass/includes/_fonts.sass */
+h1 a:link, h2 a:link, h3 a:link, h4 a:link {
+  padding-top: 0;
+}
+
+/* Buttons */
 /* line 11, ../sass/styles.sass */
 .page-entdeckertag .panel-pane.entdeckertag h2.pane-title {
   display: none;
@@ -41,7 +74,7 @@
 /*-------------- DESKTOP LAYOUT ------------- */
 /*------------------------------------------- */
 /*------------------------------------------- */
-@media (min-width: 850px) {
+@media only screen and (min-width: 850px) {
   /* line 51, ../sass/styles.sass */
   body #main-menu-links {
     margin-bottom: 7px;
@@ -75,37 +108,4 @@
   body #homepage .panel-col-last .inside {
     margin-left: 1em;
   }
-}
-/* line 51, ../sass/styles.sass */
-.lt-ie9 body #main-menu-links {
-  margin-bottom: 7px;
-}
-/* line 53, ../sass/styles.sass */
-.lt-ie9 body #main-menu-links a {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  margin-right: 7px;
-  font-size: 18px;
-  font-size: 1rem;
-  line-height: 1;
-  border: 1px solid #bbbbbb;
-  background: #fff2cc;
-  color: #555555;
-}
-/* line 61, ../sass/styles.sass */
-.lt-ie9 body #main-menu-links a.active, .lt-ie9 body #main-menu-links a:hover {
-  background: white;
-  border: 1px solid #777777;
-  color: black;
-}
-/* line 68, ../sass/styles.sass */
-.lt-ie9 body #homepage .panel-col-first .inside {
-  margin-right: 1em;
-}
-/* line 71, ../sass/styles.sass */
-.lt-ie9 body #homepage .panel-col-last .inside {
-  margin-left: 1em;
 }

@@ -1,3 +1,36 @@
+/* line 4, ../sass/includes/_fonts.sass */
+h1, #content h1 {
+  font-size: 30.6px;
+  font-size: 1.7rem;
+}
+
+/* line 7, ../sass/includes/_fonts.sass */
+h2, #content h2 {
+  font-size: 25.2px;
+  font-size: 1.4rem;
+}
+
+/* line 10, ../sass/includes/_fonts.sass */
+h1, h2, h3, h4,
+h1 a, h2 a, h3 a, h4 a {
+  color: #333333;
+  margin-top: 0;
+}
+
+/* line 15, ../sass/includes/_fonts.sass */
+h1 a, h2 a, h3 a, h4 a {
+  color: #3a99c9;
+}
+/* line 17, ../sass/includes/_fonts.sass */
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
+  color: #00a4f7;
+}
+/* line 19, ../sass/includes/_fonts.sass */
+h1 a:link, h2 a:link, h3 a:link, h4 a:link {
+  padding-top: 0;
+}
+
+/* Buttons */
 /*------------------------------------------- */
 /*------------------------------------------- */
 /*------------- All Screen Sizes ------------ */
@@ -131,13 +164,13 @@
 /*-------------- DESKTOP LAYOUT ------------- */
 /*------------------------------------------- */
 /*------------------------------------------- */
-@media (min-width: 850px) {
+@media only screen and (min-width: 850px) {
   /* line 110, ../sass/node.sass */
   html .node-type-discussion .field-name-field-mit-bild {
     float: left;
     margin: 5px 15px 5px 0;
   }
-  /* line 32, ../sass/includes/_variables_mixins.sass */
+  /* line 17, ../sass/includes/_style-mixins.sass */
   html .node-type-discussion .field-name-field-mit-bild img {
     margin-bottom: 0;
   }
@@ -146,7 +179,7 @@
     float: left;
     margin: 5px 15px 5px 0;
   }
-  /* line 32, ../sass/includes/_variables_mixins.sass */
+  /* line 17, ../sass/includes/_style-mixins.sass */
   html .node-type-article .field-name-field-news-bild img {
     margin-bottom: 0;
   }
@@ -154,7 +187,7 @@
   html .views-row .node {
     *zoom: 1;
   }
-  /* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 3, ../sass/includes/_mixins.sass */
   html .views-row .node:after {
     content: "\0020";
     display: block;
@@ -168,7 +201,7 @@
     float: left;
     margin: 5px 15px 5px 0;
   }
-  /* line 32, ../sass/includes/_variables_mixins.sass */
+  /* line 17, ../sass/includes/_style-mixins.sass */
   html .views-row .node .field-type-image img {
     margin-bottom: 0;
   }
@@ -176,7 +209,7 @@
   html .front .view-mitteilungen .views-row {
     *zoom: 1;
   }
-  /* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 3, ../sass/includes/_mixins.sass */
   html .front .view-mitteilungen .views-row:after {
     content: "\0020";
     display: block;
@@ -194,7 +227,7 @@
   html .front .view-news .views-row {
     *zoom: 1;
   }
-  /* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+  /* line 3, ../sass/includes/_mixins.sass */
   html .front .view-news .views-row:after {
     content: "\0020";
     display: block;
@@ -208,80 +241,4 @@
     float: left;
     margin: 5px 15px 0 0;
   }
-}
-/* line 110, ../sass/node.sass */
-.lt-ie9 html .node-type-discussion .field-name-field-mit-bild {
-  float: left;
-  margin: 5px 15px 5px 0;
-}
-/* line 32, ../sass/includes/_variables_mixins.sass */
-.lt-ie9 html .node-type-discussion .field-name-field-mit-bild img {
-  margin-bottom: 0;
-}
-/* line 113, ../sass/node.sass */
-.lt-ie9 html .node-type-article .field-name-field-news-bild {
-  float: left;
-  margin: 5px 15px 5px 0;
-}
-/* line 32, ../sass/includes/_variables_mixins.sass */
-.lt-ie9 html .node-type-article .field-name-field-news-bild img {
-  margin-bottom: 0;
-}
-/* line 116, ../sass/node.sass */
-.lt-ie9 html .views-row .node {
-  *zoom: 1;
-}
-/* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.lt-ie9 html .views-row .node:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-/* line 118, ../sass/node.sass */
-.lt-ie9 html .views-row .node .field-type-image {
-  float: left;
-  margin: 5px 15px 5px 0;
-}
-/* line 32, ../sass/includes/_variables_mixins.sass */
-.lt-ie9 html .views-row .node .field-type-image img {
-  margin-bottom: 0;
-}
-/* line 125, ../sass/node.sass */
-.lt-ie9 html .front .view-mitteilungen .views-row {
-  *zoom: 1;
-}
-/* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.lt-ie9 html .front .view-mitteilungen .views-row:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-/* line 127, ../sass/node.sass */
-.lt-ie9 html .front .view-mitteilungen .views-field-field-mit-bild {
-  float: left;
-  margin: 5px 15px 0 0;
-}
-/* line 131, ../sass/node.sass */
-.lt-ie9 html .front .view-news .views-row {
-  *zoom: 1;
-}
-/* line 22, C:/Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.6/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
-.lt-ie9 html .front .view-news .views-row:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-/* line 133, ../sass/node.sass */
-.lt-ie9 html .front .view-news .views-field-field-news-bild {
-  float: left;
-  margin: 5px 15px 0 0;
 }
