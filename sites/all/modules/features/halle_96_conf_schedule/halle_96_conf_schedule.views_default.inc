@@ -28,6 +28,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
     3 => '3',
+    8 => '8',
     5 => '5',
   );
   $handler->display->display_options['cache']['type'] = 'none';
@@ -48,6 +49,13 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['style_options']['theme_style'] = '1';
   $handler->display->display_options['style_options']['max_items'] = '0';
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
+  /* Feld: Inhalt: Beitrags-ID */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
   /* Feld: Inhalt: Firma */
   $handler->display->display_options['fields']['field_conf_firma']['id'] = 'field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['table'] = 'field_data_field_conf_firma';
@@ -59,6 +67,8 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['fields']['field_conf_termin']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['field'] = 'field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['label'] = '';
+  $handler->display->display_options['fields']['field_conf_termin']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_conf_termin']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_conf_termin']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_conf_termin']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_conf_termin']['settings'] = array(
