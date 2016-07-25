@@ -1,0 +1,4 @@
+name = Halle 96 Time Picker
+description = Add Timepicker to various form fields
+core = 7.x
+dependencies = date

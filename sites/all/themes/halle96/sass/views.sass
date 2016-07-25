@@ -26,14 +26,39 @@ $breakpoint-no-query-fallbacks: true
           color: $link-color
     .book-room
       +button
+      display: block
+      margin: auto
+      margin-top: 15px
+      text-align: center
+      padding-bottom: 9px
       &:before
-        margin-right: 5px
+        margin-right: 8px
+        margin-left: -2px
         +font-awesome
         content: "\f271"
         font-size: 1.5em
   td
     div.day, div.day a
       min-width: 30px
+    .views-field-field-conf-firma
+      font-weight: bold
+    .views-field-field-conf-termin
+      font-weight: normal
+      span
+        &.date-display-start, &.date-display-end, &.date-display-single
+          font-weight: normal
+
+  .calendar-calendar
+    .month-view
+      .full
+        td.single-day
+          div.monthview
+            background: $link-color
+            color: white
+            padding: 2px 7px
+            a
+              color: white
+
 
 
 
@@ -48,6 +73,8 @@ html
   +breakpoint($breakpoint-desktop)
     .view-conference-room-schedule
       .view-header
+        .date-nav
+          position: relative
         ul.pager
           position: static
           margin-bottom: 0
@@ -57,3 +84,8 @@ html
             &.date-prev
               right: 90px
               margin-right: 0
+        .book-room
+          position: absolute
+          left: 0
+          top: 0
+          margin-top: -3px

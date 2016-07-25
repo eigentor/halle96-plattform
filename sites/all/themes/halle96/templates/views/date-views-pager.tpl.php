@@ -31,9 +31,16 @@
  * Generate the $back_to_here variable to return to the current page after creating a node to book the conference room
  */
 
-$current_path = current_path();
+$button_book_room = '';
+
+// If the view is the conference schedule, insert the "book conference room" button.
+if($plugin->view->name == 'conference_room_schedule' && $plugin->view->current_display = 'page_1') {
+  $current_path = current_path();
 $back_to_here = '?destination=' . $current_path;
 $button_book_room = '<a class="book-room" alt ="Konferenzraum buchen" href="/node/add/conference-room' . $back_to_here . '">' . t('Book conference room') . '</a>';
+}
+
+
 
 ?>
 <?php if (!empty($pager_prefix)) : ?>
