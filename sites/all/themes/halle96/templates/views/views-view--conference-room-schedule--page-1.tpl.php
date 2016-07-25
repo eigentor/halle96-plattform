@@ -26,6 +26,11 @@
  *
  * @ingroup views_templates
  */
+
+/**
+ * Generate the $back_to_here variable to return to the current page after creating a node to book the conference room
+ */
+$back_to_here = '';
 ?>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
@@ -35,7 +40,8 @@
   <?php print render($title_suffix); ?>
   <?php if ($header): ?>
     <div class="view-header">
-      kuckuck
+      <!-- Button zum Buchen des Konferenzraumes -->
+      <a class="book-room" alt ="Konferenzraum buchen" href="/node/add/conference-room<?php print $back_to_here; ?>"><?php print t('Book conference room'); ?></a>
       <?php print $header; ?>
     </div>
   <?php endif; ?>

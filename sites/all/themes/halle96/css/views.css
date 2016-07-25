@@ -1,3 +1,4 @@
+/* Buttons */
 /*------------------------------------------- */
 /*------------------------------------------- */
 /*------------- All Screen Sizes ------------ */
@@ -22,7 +23,12 @@
 .view-conference-room-schedule .view-header ul.pager li a:hover {
   color: #3a99c9;
 }
-/* line 28, ../sass/views.sass */
+/* line 27, ../sass/views.sass */
+.view-conference-room-schedule .view-header .book-room:before {
+  font-family: FontAwesome;
+  content: "\f271";
+}
+/* line 31, ../sass/views.sass */
 .view-conference-room-schedule td div.day, .view-conference-room-schedule td div.day a {
   min-width: 30px;
 }
@@ -32,35 +38,20 @@
 /*-------------- DESKTOP LAYOUT ------------- */
 /*------------------------------------------- */
 /*------------------------------------------- */
-@media (min-width: 850px) {
-  /* line 44, ../sass/views.sass */
+@media only screen and (min-width: 850px) {
+  /* line 47, ../sass/views.sass */
   html .view-conference-room-schedule .view-header ul.pager {
     position: static;
     margin-bottom: 0;
   }
-  /* line 47, ../sass/views.sass */
+  /* line 50, ../sass/views.sass */
   html .view-conference-room-schedule .view-header ul.pager li {
     text-align: right;
     position: absolute;
   }
-  /* line 50, ../sass/views.sass */
+  /* line 53, ../sass/views.sass */
   html .view-conference-room-schedule .view-header ul.pager li.date-prev {
     right: 90px;
     margin-right: 0;
   }
-}
-/* line 44, ../sass/views.sass */
-.lt-ie9 html .view-conference-room-schedule .view-header ul.pager {
-  position: static;
-  margin-bottom: 0;
-}
-/* line 47, ../sass/views.sass */
-.lt-ie9 html .view-conference-room-schedule .view-header ul.pager li {
-  text-align: right;
-  position: absolute;
-}
-/* line 50, ../sass/views.sass */
-.lt-ie9 html .view-conference-room-schedule .view-header ul.pager li.date-prev {
-  right: 90px;
-  margin-right: 0;
 }
