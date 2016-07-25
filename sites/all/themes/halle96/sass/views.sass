@@ -1,0 +1,52 @@
+@import "includes/variables_mixins"
+
+// Set the behaviour of our IE8-Fallback.
+// Default to write it into the same file with an extra
+// wrapper class
+$breakpoint-no-queries: false
+$breakpoint-no-query-fallbacks: true
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*------------- All Screen Sizes ------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+.view-conference-room-schedule
+  .view-header
+    ul.pager
+      position: relative
+      margin-bottom: 0
+      li
+        text-align: left
+        position: static
+        display: inline-block
+        &.date-prev
+          margin-right: -5px
+        a:hover
+          color: $link-color
+  td
+    div.day, div.day a
+      min-width: 30px
+
+
+
+
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+/*-------------- DESKTOP LAYOUT -------------*/
+/*-------------------------------------------*/
+/*-------------------------------------------*/
+
+html
+  +breakpoint($breakpoint-desktop, $no-query: '.lt-ie9')
+    .view-conference-room-schedule
+      .view-header
+        ul.pager
+          position: static
+          margin-bottom: 0
+          li
+            text-align: right
+            position: absolute
+            &.date-prev
+              right: 90px
+              margin-right: 0
