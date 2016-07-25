@@ -30,7 +30,10 @@
 /**
  * Generate the $back_to_here variable to return to the current page after creating a node to book the conference room
  */
-$back_to_here = '';
+
+$current_path = current_path();
+$back_to_here = '?destination=' . $current_path;
+
 ?>
 <div class="<?php print $classes; ?>">
   <?php print render($title_prefix); ?>
