@@ -6,25 +6,6 @@
 $breakpoint-no-queries: false
 $breakpoint-no-query-fallbacks: true
 
-
-h1, #content h1
-  @include x-rem(font-size, 1.7)
-
-h2, #content h2
-  @include x-rem(font-size, 1.4)
-
-h1, h2, h3, h4, 
-h1 a, h2 a, h3 a, h4 a 
-  color: #333
-  margin-top: 0
-
-h1 a, h2 a, h3 a, h4 a
-  color: $link-color 
-  &:hover 
-    color: $link-hover-color
-  &:link 
-    padding-top: 0
-
 a 
   color: $link-color 
   &:hover 

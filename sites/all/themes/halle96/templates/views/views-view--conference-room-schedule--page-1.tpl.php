@@ -33,6 +33,7 @@
 
 $current_path = current_path();
 $back_to_here = '?destination=' . $current_path;
+$button_book_room = '<a class="book-room" alt ="Konferenzraum buchen" href="/node/add/conference-room' . $back_to_here . '">' . t('Book conference room') . '</a>';
 
 ?>
 <div class="<?php print $classes; ?>">
@@ -43,8 +44,6 @@ $back_to_here = '?destination=' . $current_path;
   <?php print render($title_suffix); ?>
   <?php if ($header): ?>
     <div class="view-header">
-      <!-- Button zum Buchen des Konferenzraumes -->
-      <a class="book-room" alt ="Konferenzraum buchen" href="/node/add/conference-room<?php print $back_to_here; ?>"><?php print t('Book conference room'); ?></a>
       <?php print $header; ?>
     </div>
   <?php endif; ?>

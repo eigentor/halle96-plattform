@@ -24,5 +24,17 @@
 
 /* Buttons */
 @mixin button
+  +arial
   display: inline-block
   padding: 7px 15px
+  +border-radius(5px)
+  background: $dark-grey
+  color: white
+  &:hover
+    background: darken($dark-grey, 15%)
+    text-decoration: none
+  a
+    color: white
+    &:hover
+      text-decoration: none
+

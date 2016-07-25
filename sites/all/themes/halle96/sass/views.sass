@@ -24,9 +24,13 @@ $breakpoint-no-query-fallbacks: true
           margin-right: -5px
         a:hover
           color: $link-color
-    .book-room:before
-      +font-awesome
-      content: "\f271"
+    .book-room
+      +button
+      &:before
+        margin-right: 5px
+        +font-awesome
+        content: "\f271"
+        font-size: 1.5em
   td
     div.day, div.day a
       min-width: 30px

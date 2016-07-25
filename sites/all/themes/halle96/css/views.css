@@ -1,3 +1,35 @@
+/* line 4, ../sass/includes/_fonts.sass */
+h1, #content h1 {
+  font-size: 30.6px;
+  font-size: 1.7rem;
+}
+
+/* line 7, ../sass/includes/_fonts.sass */
+h2, #content h2 {
+  font-size: 25.2px;
+  font-size: 1.4rem;
+}
+
+/* line 10, ../sass/includes/_fonts.sass */
+h1, h2, h3, h4,
+h1 a, h2 a, h3 a, h4 a {
+  color: #333333;
+  margin-top: 0;
+}
+
+/* line 15, ../sass/includes/_fonts.sass */
+h1 a, h2 a, h3 a, h4 a {
+  color: #3a99c9;
+}
+/* line 17, ../sass/includes/_fonts.sass */
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
+  color: #00a4f7;
+}
+/* line 19, ../sass/includes/_fonts.sass */
+h1 a:link, h2 a:link, h3 a:link, h4 a:link {
+  padding-top: 0;
+}
+
 /* Buttons */
 /*------------------------------------------- */
 /*------------------------------------------- */
@@ -24,11 +56,39 @@
   color: #3a99c9;
 }
 /* line 27, ../sass/views.sass */
+.view-conference-room-schedule .view-header .book-room {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: inline-block;
+  padding: 7px 15px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  background: #777777;
+  color: white;
+}
+/* line 33, ../sass/includes/_style-mixins.sass */
+.view-conference-room-schedule .view-header .book-room:hover {
+  background: #515151;
+  text-decoration: none;
+}
+/* line 36, ../sass/includes/_style-mixins.sass */
+.view-conference-room-schedule .view-header .book-room a {
+  color: white;
+}
+/* line 38, ../sass/includes/_style-mixins.sass */
+.view-conference-room-schedule .view-header .book-room a:hover {
+  text-decoration: none;
+}
+/* line 29, ../sass/views.sass */
 .view-conference-room-schedule .view-header .book-room:before {
+  margin-right: 5px;
   font-family: FontAwesome;
   content: "\f271";
+  font-size: 1.5em;
 }
-/* line 31, ../sass/views.sass */
+/* line 35, ../sass/views.sass */
 .view-conference-room-schedule td div.day, .view-conference-room-schedule td div.day a {
   min-width: 30px;
 }
@@ -39,17 +99,17 @@
 /*------------------------------------------- */
 /*------------------------------------------- */
 @media only screen and (min-width: 850px) {
-  /* line 47, ../sass/views.sass */
+  /* line 51, ../sass/views.sass */
   html .view-conference-room-schedule .view-header ul.pager {
     position: static;
     margin-bottom: 0;
   }
-  /* line 50, ../sass/views.sass */
+  /* line 54, ../sass/views.sass */
   html .view-conference-room-schedule .view-header ul.pager li {
     text-align: right;
     position: absolute;
   }
-  /* line 53, ../sass/views.sass */
+  /* line 57, ../sass/views.sass */
   html .view-conference-room-schedule .view-header ul.pager li.date-prev {
     right: 90px;
     margin-right: 0;
