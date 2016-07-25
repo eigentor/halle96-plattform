@@ -241,4 +241,8 @@ h1 a:link, h2 a:link, h3 a:link, h4 a:link {
     float: left;
     margin: 5px 15px 0 0;
   }
+  /* line 140, ../sass/node.sass */
+  html .node-type-conference-room #block-system-main .content .content {
+    margin-left: 85px;
+  }
 }
