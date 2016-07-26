@@ -173,56 +173,68 @@ form#comment-form #edit-author--2 {
 
 /*------------------------------------------- */
 /*------------------------------------------- */
+/*---------- Small Tablet LAYOUT ------------ */
+/*------------------------------------------- */
+/*------------------------------------------- */
+@media only screen and (min-width: 460px) {
+  /* line 113, ../sass/layouts.sass */
+  body.not-logged-in #content {
+    text-align: center;
+  }
+}
+
+/*------------------------------------------- */
+/*------------------------------------------- */
 /*-------------- DESKTOP LAYOUT ------------- */
 /*------------------------------------------- */
 /*------------------------------------------- */
 @media only screen and (min-width: 850px) {
-  /* line 111, ../sass/layouts.sass */
+  /* line 122, ../sass/layouts.sass */
   body {
     /*Service und Info Seite */
     /* Kommentare */
   }
-  /* line 113, ../sass/layouts.sass */
+  /* line 124, ../sass/layouts.sass */
   body #footer-wrapper {
     position: absolute;
     bottom: 0;
     width: 100%;
   }
-  /* line 118, ../sass/layouts.sass */
+  /* line 129, ../sass/layouts.sass */
   body #logo {
     float: left;
     padding: 20px 15px 10px;
   }
-  /* line 121, ../sass/layouts.sass */
+  /* line 132, ../sass/layouts.sass */
   body ul#main-menu-links {
     padding: 0;
   }
-  /* line 123, ../sass/layouts.sass */
+  /* line 134, ../sass/layouts.sass */
   body #main-menu {
     clear: none;
     float: left;
     padding: 40px 0 0 20px;
   }
-  /* line 130, ../sass/layouts.sass */
+  /* line 141, ../sass/layouts.sass */
   body #main-menu ul li a.beitrag-schreiben {
     margin-left: 26px;
   }
-  /* line 139, ../sass/layouts.sass */
+  /* line 150, ../sass/layouts.sass */
   body.page-service-info .views-row {
     line-height: 1.6;
   }
-  /* line 141, ../sass/layouts.sass */
+  /* line 152, ../sass/layouts.sass */
   body.page-service-info .panel-pane {
     min-height: 250px;
   }
-  /* line 144, ../sass/layouts.sass */
+  /* line 155, ../sass/layouts.sass */
   body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 {
     float: left;
     width: 64.3%;
     margin-right: 2.3%;
     background: whitesmoke;
   }
-  /* line 150, ../sass/layouts.sass */
+  /* line 161, ../sass/layouts.sass */
   body.page-service-info .panel-col-top .pane-alle-kategorien-service-info-panel-pane-1 .view-alle-kategorien-service-info .views-row {
     float: left;
     width: 42%;
@@ -231,49 +243,49 @@ form#comment-form #edit-author--2 {
     font-size: 0.95rem;
     line-height: 1.7;
   }
-  /* line 156, ../sass/layouts.sass */
+  /* line 167, ../sass/layouts.sass */
   body.page-service-info .panel-col-top .pane-einzelne-kategorie-service-und-info-panel-pane-1 {
     float: left;
     width: 31%;
   }
-  /* line 160, ../sass/layouts.sass */
+  /* line 171, ../sass/layouts.sass */
   body.page-service-info .center-wrapper .panel-panel {
     float: left;
     width: 31%;
     margin-right: 2.3%;
   }
-  /* line 165, ../sass/layouts.sass */
+  /* line 176, ../sass/layouts.sass */
   body.page-service-info .panel-col-bottom .panel-pane {
     float: left;
     width: 31%;
     margin-right: 2.3%;
   }
-  /* line 173, ../sass/layouts.sass */
+  /* line 184, ../sass/layouts.sass */
   body .comment .attribution {
     display: table-cell;
   }
-  /* line 175, ../sass/layouts.sass */
+  /* line 186, ../sass/layouts.sass */
   body .comment .comment-text {
     display: table-cell;
   }
-  /* line 177, ../sass/layouts.sass */
+  /* line 188, ../sass/layouts.sass */
   body .comment .submitted {
     margin-bottom: 0;
   }
-  /* line 179, ../sass/layouts.sass */
+  /* line 190, ../sass/layouts.sass */
   body .comment .commenter-name, body .comment .comment-time {
     display: block;
   }
-  /* line 181, ../sass/layouts.sass */
+  /* line 192, ../sass/layouts.sass */
   body .comment .comment-time {
     padding-left: 0;
   }
-  /* line 183, ../sass/layouts.sass */
+  /* line 194, ../sass/layouts.sass */
   body .comment .comment-arrow {
     display: block;
     margin-left: -45px;
   }
-  /* line 190, ../sass/layouts.sass */
+  /* line 201, ../sass/layouts.sass */
   body #homepage.panel-2col-stacked .panel-col-first, body #homepage.panel-2col-stacked .panel-col-last {
     float: left;
     width: 50%;
