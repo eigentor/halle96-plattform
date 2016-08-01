@@ -71,6 +71,4 @@ function halle96_timepicker_form_conference_room_node_form_alter(&$form, &$form_
       "$path/js/halle96_timepicker.js",
     ),
   );
-
-  dpm($form);
 }
