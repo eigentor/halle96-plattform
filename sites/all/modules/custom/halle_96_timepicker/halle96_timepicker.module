@@ -1,33 +1,76 @@
 <?php
 
-function halle96_timepicker_form_conference_room_node_form_alter(&$form, &$form_state) {
-  $path = drupal_get_path('module', 'halle96_timepicker');
-
-  dpm($form);
-
-  // Adds a form field that the javascript utilizes or modifies.
-//  $form['field_conf_termin'] = array(
-//    '#type' => 'textfield',
-//    '#title' => 'Your Location (Country)',
-//    '#id' => 'country_autocomplete',
-//    // Both the library and custom JavaScript code are added to the '#attached'
-//    // property of a renderable array.
-//    '#attached' => array(
-//      'library' => array(
-//        array('system', 'ui.timepcker'),
-//      ),
+///**
+// * Implements hook_libraries_info().
+// */
+//function halle96_timepicker_libraries_info() {
+//  $libraries = array();
+//  $libraries['timepicker'] = array(
+//    'name' => 'Jquery UI Timepicker',
+//    'vendor url' => 'https://fgelinas.com/code/timepicker/',
+//    'download url' => 'https://fgelinas.com/code/timepicker/releases/jquery-ui-timepicker-0.3.3.zip',
+//    // We do not care about the version of the plugin, so we simply return TRUE,
+//    // see the function 'short_circuit_version' below.
+//    'version callback' => 'short_circuit_version',
+//    'files' => array(
 //      'js' => array(
-//        "$path/js/halle96_timepicker.js",
+//        'jquery.ui.timepicker.js',
+//      ),
+//      'css' => array(
+//        'jquery.ui.timepicker.css'
 //      ),
 //    ),
 //  );
+//
+//  return $libraries;
+//}
+//
+///**
+//* Short-circuit the version argument.
+//*/
+//function short_circuit_version() {
+//  return TRUE;
+//}
+//
+/*
+ * Load scripts and the matching jquery versions on certain pages
+ */
+
+function halle96_timepicker_init() {
+
+
+  $module_path = drupal_get_path('module', 'halle96_timepicker');
+
+// load the slick script and jquery 1.11 on the front page
+
+// load the diplayed path. This is necessary for paths that are just aliases
+// It also works for system paths and thus is more reliable than arg(x)
+  $path = drupal_get_path_alias($_GET['q']);
+  $path_array = explode('/', $path);
+
+  if($path_array[0] == 'node' &&($path_array[1] == 'add' || $path_array[2] == 'edit')) {
+    //drupal_add_js(libraries_get_path('jquery-1.11') . '/jquery-1.11.1.min.js');
+    drupal_add_css(libraries_get_path('timepicker') . '/jquery.ui.timepicker.css');
+    drupal_add_js(libraries_get_path('timepicker') . '/jquery.ui.timepicker.js');
+    //drupal_add_js('var jq111 = jQuery; jQuery.noConflict(true);',
+      //array('type' => 'inline', 'scope' => 'header'));
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter()
+ */
+function halle96_timepicker_form_conference_room_node_form_alter(&$form, &$form_state) {
+  $path = drupal_get_path('module', 'halle96_timepicker');
 
   $form['field_conf_termin']['#attached'] = array(
-      'library' => array(
-        array('system', 'ui.timepcker'),
-      ),
-      'js' => array(
-        "$path/js/halle96_timepicker.js",
-      ),
-    );
+    'library' => array(
+      array('halle96_timepicker', 'timepicker'),
+    ),
+    'js' => array(
+      "$path/js/halle96_timepicker.js",
+    ),
+  );
+
+  dpm($form);
 }

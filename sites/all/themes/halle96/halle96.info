@@ -9,6 +9,7 @@ stylesheets[all][] = font-awesome/css/font-awesome.min.css
 stylesheets[all][] = css/base.css
 stylesheets[all][] = css/layouts.css
 stylesheets[all][] = css/node.css
+stylesheets[all][] = css/forms.css
 stylesheets[all][] = css/views.css
 stylesheets[all][] = css/styles.css
 
