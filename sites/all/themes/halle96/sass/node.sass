@@ -96,6 +96,17 @@ $breakpoint-no-query-fallbacks: true
       margin-top: 5px
       margin-left: 125px
 
+.node-type-conference-room
+  .field-name-submitted-by
+    +x-rem(font-size, 0.75)
+    color: #777
+  .field-name-back-to-conference-room-calendar
+    margin-top: 12px
+  .ds-2col, .ds-2col-stacked
+    .group-left, group-right
+      float: none
+      width: auto
+
 
 
 /*-------------------------------------------*/
@@ -139,3 +150,11 @@ html
         .content
           .content
             margin-left: 85px
+      .ds-2col, .ds-2col-stacked
+        .group-left
+          float: left
+          width: auto
+        .group-right
+          float: none
+          width: auto
+          margin-left: 85px
