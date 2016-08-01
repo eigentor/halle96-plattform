@@ -61,6 +61,8 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['fields']['field_conf_firma']['table'] = 'field_data_field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['field'] = 'field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['label'] = '';
+  $handler->display->display_options['fields']['field_conf_firma']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_conf_firma']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_conf_firma']['element_label_colon'] = FALSE;
   /* Feld: Inhalt: Termin */
   $handler->display->display_options['fields']['field_conf_termin']['id'] = 'field_conf_termin';
