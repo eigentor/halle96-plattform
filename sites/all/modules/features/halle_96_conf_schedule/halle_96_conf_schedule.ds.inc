@@ -35,7 +35,7 @@ function halle_96_conf_schedule_ds_field_settings_info() {
     'ds_user_picture' => array(
       'weight' => '1',
       'label' => 'hidden',
-      'format' => 'ds_picture_diskussionen_grosses_bild',
+      'format' => 'ds_picture_userbild',
     ),
   );
   $export['node|conference_room|default'] = $ds_fieldsetting;
