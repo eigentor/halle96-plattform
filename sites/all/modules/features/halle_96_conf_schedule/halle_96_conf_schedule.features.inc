@@ -29,7 +29,7 @@ function halle_96_conf_schedule_views_api($module = NULL, $api = NULL) {
 function halle_96_conf_schedule_node_info() {
   $items = array(
     'conference_room' => array(
-      'name' => t('Besprechungsraum buchen'),
+      'name' => t('Besprechungsraum reservieren'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
