@@ -15,3 +15,15 @@ input#edit-title {
   padding-left: 10px;
   font-size: 13px;
 }
+
+/* timepicker */
+table.ui-timepicker-table a.ui-state-active {
+  box-sizing: border-box;
+  background: #E3E9ED;
+  text-align: center;
+  padding-left: 0;
+  padding-right: 0;
+  width: auto;
+  color: #0F517A;
+  /*border: 1px solid #B5D1E0;*/
+}

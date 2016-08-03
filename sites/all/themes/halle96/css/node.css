@@ -159,13 +159,29 @@ h1 a:link, h2 a:link, h3 a:link, h4 a:link {
   margin-left: 125px;
 }
 
+/* line 100, ../sass/node.sass */
+.node-type-conference-room .field-name-submitted-by {
+  font-size: 13.5px;
+  font-size: 0.75rem;
+  color: #777777;
+}
+/* line 103, ../sass/node.sass */
+.node-type-conference-room .field-name-back-to-conference-room-calendar {
+  margin-top: 12px;
+}
+/* line 106, ../sass/node.sass */
+.node-type-conference-room .ds-2col .group-left, .node-type-conference-room .ds-2col group-right, .node-type-conference-room .ds-2col-stacked .group-left, .node-type-conference-room .ds-2col-stacked group-right {
+  float: none;
+  width: auto;
+}
+
 /*------------------------------------------- */
 /*------------------------------------------- */
 /*-------------- DESKTOP LAYOUT ------------- */
 /*------------------------------------------- */
 /*------------------------------------------- */
 @media only screen and (min-width: 850px) {
-  /* line 110, ../sass/node.sass */
+  /* line 121, ../sass/node.sass */
   html .node-type-discussion .field-name-field-mit-bild {
     float: left;
     margin: 5px 15px 5px 0;
@@ -174,7 +190,7 @@ h1 a:link, h2 a:link, h3 a:link, h4 a:link {
   html .node-type-discussion .field-name-field-mit-bild img {
     margin-bottom: 0;
   }
-  /* line 113, ../sass/node.sass */
+  /* line 124, ../sass/node.sass */
   html .node-type-article .field-name-field-news-bild {
     float: left;
     margin: 5px 15px 5px 0;
@@ -183,7 +199,7 @@ h1 a:link, h2 a:link, h3 a:link, h4 a:link {
   html .node-type-article .field-name-field-news-bild img {
     margin-bottom: 0;
   }
-  /* line 116, ../sass/node.sass */
+  /* line 127, ../sass/node.sass */
   html .views-row .node {
     *zoom: 1;
   }
@@ -196,7 +212,7 @@ h1 a:link, h2 a:link, h3 a:link, h4 a:link {
     overflow: hidden;
     visibility: hidden;
   }
-  /* line 118, ../sass/node.sass */
+  /* line 129, ../sass/node.sass */
   html .views-row .node .field-type-image {
     float: left;
     margin: 5px 15px 5px 0;
@@ -205,7 +221,7 @@ h1 a:link, h2 a:link, h3 a:link, h4 a:link {
   html .views-row .node .field-type-image img {
     margin-bottom: 0;
   }
-  /* line 125, ../sass/node.sass */
+  /* line 136, ../sass/node.sass */
   html .front .view-mitteilungen .views-row {
     *zoom: 1;
   }
@@ -218,12 +234,12 @@ h1 a:link, h2 a:link, h3 a:link, h4 a:link {
     overflow: hidden;
     visibility: hidden;
   }
-  /* line 127, ../sass/node.sass */
+  /* line 138, ../sass/node.sass */
   html .front .view-mitteilungen .views-field-field-mit-bild {
     float: left;
     margin: 5px 15px 0 0;
   }
-  /* line 131, ../sass/node.sass */
+  /* line 142, ../sass/node.sass */
   html .front .view-news .views-row {
     *zoom: 1;
   }
@@ -236,9 +252,24 @@ h1 a:link, h2 a:link, h3 a:link, h4 a:link {
     overflow: hidden;
     visibility: hidden;
   }
-  /* line 133, ../sass/node.sass */
+  /* line 144, ../sass/node.sass */
   html .front .view-news .views-field-field-news-bild {
     float: left;
     margin: 5px 15px 0 0;
+  }
+  /* line 151, ../sass/node.sass */
+  html .node-type-conference-room #block-system-main .content .content {
+    margin-left: 85px;
+  }
+  /* line 154, ../sass/node.sass */
+  html .node-type-conference-room .ds-2col .group-left, html .node-type-conference-room .ds-2col-stacked .group-left {
+    float: left;
+    width: auto;
+  }
+  /* line 157, ../sass/node.sass */
+  html .node-type-conference-room .ds-2col .group-right, html .node-type-conference-room .ds-2col-stacked .group-right {
+    float: none;
+    width: auto;
+    margin-left: 85px;
   }
 }

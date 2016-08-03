@@ -71,4 +71,5 @@ $button_book_room = '<a class="book-room" alt ="Konferenzraum buchen" href="/nod
         <?php print $button_book_room; ?>
       <!-- /Button zum Buchen des Konferenzraumes -->
   </div>
+  <div class="booking-description">Der Raum ist wochentags ab 08:30 reservierbar. An diesen Tagen wird er zwischen 06:00 und 08:30 gereinigt.</div>
 </div>

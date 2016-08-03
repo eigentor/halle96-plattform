@@ -8,6 +8,9 @@
  * Implements hook_ctools_plugin_api().
  */
 function halle_96_conf_schedule_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "ds" && $api == "ds") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -26,7 +29,7 @@ function halle_96_conf_schedule_views_api($module = NULL, $api = NULL) {
 function halle_96_conf_schedule_node_info() {
   $items = array(
     'conference_room' => array(
-      'name' => t('Besprechungsraum buchen'),
+      'name' => t('Besprechungsraum reservieren'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

@@ -28,6 +28,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
     3 => '3',
+    8 => '8',
     5 => '5',
   );
   $handler->display->display_options['cache']['type'] = 'none';
@@ -48,17 +49,28 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['style_options']['theme_style'] = '1';
   $handler->display->display_options['style_options']['max_items'] = '0';
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
-  /* Feld: Inhalt: Firma */
+  /* Field: Content: Nid */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Field: Beitrag: Firma */
   $handler->display->display_options['fields']['field_conf_firma']['id'] = 'field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['table'] = 'field_data_field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['field'] = 'field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['label'] = '';
+  $handler->display->display_options['fields']['field_conf_firma']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_conf_firma']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_conf_firma']['element_label_colon'] = FALSE;
-  /* Feld: Inhalt: Termin */
+  /* Field: Beitrag: Termin */
   $handler->display->display_options['fields']['field_conf_termin']['id'] = 'field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['field'] = 'field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['label'] = '';
+  $handler->display->display_options['fields']['field_conf_termin']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_conf_termin']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_conf_termin']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_conf_termin']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_conf_termin']['settings'] = array(
@@ -71,11 +83,11 @@ function halle_96_conf_schedule_views_default_views() {
   );
   $handler->display->display_options['fields']['field_conf_termin']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_conf_termin']['delta_offset'] = '0';
-  /* Sortierkriterien: Inhalt: Termin -  Startdatum (field_conf_termin) */
+  /* Sort criterion: Beitrag: Termin -  start date (field_conf_termin) */
   $handler->display->display_options['sorts']['field_conf_termin_value']['id'] = 'field_conf_termin_value';
   $handler->display->display_options['sorts']['field_conf_termin_value']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['sorts']['field_conf_termin_value']['field'] = 'field_conf_termin_value';
-  /* Filterkriterium: Inhalt: Veröffentlicht */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -103,7 +115,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['row_options']['colors']['legend'] = 'type';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Kontextfilter: Datum: Datum (node) */
+  /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -145,7 +157,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Kontextfilter: Datum: Datum (node) */
+  /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -185,7 +197,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Kontextfilter: Datum: Datum (node) */
+  /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -224,7 +236,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Feld: Inhalt: Titel */
+  /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -233,7 +245,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Feld: Inhalt: Termin */
+  /* Field: Beitrag: Termin */
   $handler->display->display_options['fields']['field_conf_termin']['id'] = 'field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['field'] = 'field_conf_termin';
@@ -251,7 +263,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['fields']['field_conf_termin']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_conf_termin']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Kontextfilter: Datum: Datum (node) */
+  /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -290,7 +302,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Kontextfilter: Datum: Datum (node) */
+  /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -320,14 +332,14 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterium: Inhalt: Veröffentlicht */
+  /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filterkriterium: Datum: Datum (node) */
+  /* Filter criterion: Date: Date (node) */
   $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
   $handler->display->display_options['filters']['date_filter']['table'] = 'node';
   $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
