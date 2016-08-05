@@ -37,7 +37,7 @@ $button_book_room = '';
 if($plugin->view->name == 'conference_room_schedule' && $plugin->view->current_display = 'page_1') {
   $current_path = current_path();
 $back_to_here = '?destination=' . $current_path;
-$button_book_room = '<a class="book-room" alt ="Konferenzraum buchen" href="/node/add/conference-room' . $back_to_here . '">' . t('Book conference room') . '</a>';
+$button_book_room = '<a class="book-room" alt ="Konferenzraum reservieren" href="/node/add/conference-room' . $back_to_here . '">' . t('Book conference room') . '</a>';
 }
 
 
