@@ -11,4 +11,3 @@ features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[page_manager_pages][] = entdeckertag_bersicht
 features[views_view][] = single_term_news_und_mitteilung
-mtime = 1417296786
