@@ -115,17 +115,17 @@ h1 a:link, h2 a:link, h3 a:link, h4 a:link {
 .view-conference-room-schedule td .views-field-field-conf-termin span.date-display-start, .view-conference-room-schedule td .views-field-field-conf-termin span.date-display-end, .view-conference-room-schedule td .views-field-field-conf-termin span.date-display-single {
   font-weight: normal;
 }
-/* line 58, ../sass/views.sass */
-.view-conference-room-schedule .calendar-calendar .month-view .full td.single-day div.monthview {
+/* line 57, ../sass/views.sass */
+.view-conference-room-schedule .calendar-calendar .month-view .full div.monthview, .view-conference-room-schedule .calendar-calendar .month-view .full td.single-day div.monthview {
   background: #3a99c9;
   color: white;
   padding: 2px 7px;
 }
-/* line 62, ../sass/views.sass */
-.view-conference-room-schedule .calendar-calendar .month-view .full td.single-day div.monthview a {
+/* line 61, ../sass/views.sass */
+.view-conference-room-schedule .calendar-calendar .month-view .full div.monthview a, .view-conference-room-schedule .calendar-calendar .month-view .full td.single-day div.monthview a {
   color: white;
 }
-/* line 64, ../sass/views.sass */
+/* line 63, ../sass/views.sass */
 .view-conference-room-schedule .booking-description {
   margin-bottom: 15px;
 }
@@ -136,26 +136,26 @@ h1 a:link, h2 a:link, h3 a:link, h4 a:link {
 /*------------------------------------------- */
 /*------------------------------------------- */
 @media only screen and (min-width: 850px) {
-  /* line 81, ../sass/views.sass */
+  /* line 80, ../sass/views.sass */
   html .view-conference-room-schedule .view-header .date-nav {
     position: relative;
   }
-  /* line 83, ../sass/views.sass */
+  /* line 82, ../sass/views.sass */
   html .view-conference-room-schedule .view-header ul.pager {
     position: static;
     margin-bottom: 0;
   }
-  /* line 86, ../sass/views.sass */
+  /* line 85, ../sass/views.sass */
   html .view-conference-room-schedule .view-header ul.pager li {
     text-align: right;
     position: absolute;
   }
-  /* line 89, ../sass/views.sass */
+  /* line 88, ../sass/views.sass */
   html .view-conference-room-schedule .view-header ul.pager li.date-prev {
     right: 90px;
     margin-right: 0;
   }
-  /* line 92, ../sass/views.sass */
+  /* line 91, ../sass/views.sass */
   html .view-conference-room-schedule .view-header .book-room {
     position: absolute;
     left: 0;
