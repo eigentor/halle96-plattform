@@ -10,7 +10,7 @@
 function halle96_discussions_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_article-comment_body'
+  // Exported field_instance: 'comment-comment_node_article-comment_body'.
   $field_instances['comment-comment_node_article-comment_body'] = array(
     'bundle' => 'comment_node_article',
     'default_value' => NULL,
@@ -32,19 +32,27 @@ function halle96_discussions_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'ds_code' => 0,
           'filtered_html' => 'filtered_html',
           'full_html' => 'full_html',
+          'limited_html' => 'limited_html',
           'plain_text' => 0,
         ),
         'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'ds_code' => array(
+              'weight' => 12,
+            ),
             'filtered_html' => array(
               'weight' => 0,
             ),
             'full_html' => array(
               'weight' => 1,
+            ),
+            'limited_html' => array(
+              'weight' => 0,
             ),
             'plain_text' => array(
               'weight' => 10,
@@ -66,7 +74,8 @@ function halle96_discussions_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'comment-comment_node_article-field_article_attachments'
+  // Exported field_instance:
+  // 'comment-comment_node_article-field_article_attachments'.
   $field_instances['comment-comment_node_article-field_article_attachments'] = array(
     'bundle' => 'comment_node_article',
     'deleted' => 0,
@@ -102,7 +111,7 @@ function halle96_discussions_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-body'
+  // Exported field_instance: 'node-article-body'.
   $field_instances['node-article-body'] = array(
     'bundle' => 'article',
     'default_value' => NULL,
@@ -169,7 +178,7 @@ function halle96_discussions_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_article_attachments'
+  // Exported field_instance: 'node-article-field_article_attachments'.
   $field_instances['node-article-field_article_attachments'] = array(
     'bundle' => 'article',
     'deleted' => 0,
@@ -211,7 +220,7 @@ function halle96_discussions_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_news_bild'
+  // Exported field_instance: 'node-article-field_news_bild'.
   $field_instances['node-article-field_news_bild'] = array(
     'bundle' => 'article',
     'deleted' => 0,
@@ -265,7 +274,7 @@ function halle96_discussions_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-article-field_themen'
+  // Exported field_instance: 'node-article-field_themen'.
   $field_instances['node-article-field_themen'] = array(
     'bundle' => 'article',
     'default_value' => NULL,

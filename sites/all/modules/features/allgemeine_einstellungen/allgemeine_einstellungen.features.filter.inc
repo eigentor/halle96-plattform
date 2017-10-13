@@ -29,7 +29,7 @@ function allgemeine_einstellungen_filter_default_formats() {
         'weight' => 1,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd><p><img>',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd><p><img><br>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),
@@ -87,9 +87,16 @@ function allgemeine_einstellungen_filter_default_formats() {
         'weight' => -10,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd><h2><h3><img><p>',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd><h2><h3><img><p><br>',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
+        ),
+      ),
+      'filter_url' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(
+          'filter_url_length' => 72,
         ),
       ),
       'media_filter' => array(

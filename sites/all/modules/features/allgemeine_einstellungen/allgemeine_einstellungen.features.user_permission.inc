@@ -53,6 +53,7 @@ function allgemeine_einstellungen_user_default_permissions() {
   $permissions['bypass node access'] = array(
     'name' => 'bypass node access',
     'roles' => array(
+      'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -73,6 +74,7 @@ function allgemeine_einstellungen_user_default_permissions() {
     'name' => 'create discussion content',
     'roles' => array(
       'Mieter' => 'Mieter',
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
     ),
     'module' => 'node',
   );
@@ -193,6 +195,7 @@ function allgemeine_einstellungen_user_default_permissions() {
     'name' => 'edit own discussion content',
     'roles' => array(
       'Mieter' => 'Mieter',
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
     ),
     'module' => 'node',
   );
@@ -228,6 +231,8 @@ function allgemeine_einstellungen_user_default_permissions() {
   $permissions['use text format filtered_html'] = array(
     'name' => 'use text format filtered_html',
     'roles' => array(
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
+      'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
     'module' => 'filter',
@@ -248,6 +253,7 @@ function allgemeine_einstellungen_user_default_permissions() {
     'name' => 'use text format limited_html',
     'roles' => array(
       'Mieter' => 'Mieter',
+      'administrator' => 'administrator',
     ),
     'module' => 'filter',
   );

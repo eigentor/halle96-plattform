@@ -10,7 +10,7 @@
 function halle_96_service_info_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-page-body'
+  // Exported field_instance: 'node-page-body'.
   $field_instances['node-page-body'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
@@ -54,7 +54,7 @@ function halle_96_service_info_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_attachments'
+  // Exported field_instance: 'node-page-field_attachments'.
   $field_instances['node-page-field_attachments'] = array(
     'bundle' => 'page',
     'deleted' => 0,
@@ -81,8 +81,8 @@ function halle_96_service_info_field_default_field_instances() {
     'settings' => array(
       'description_field' => 1,
       'file_directory' => 'documents',
-      'file_extensions' => 'gif png jpg jpeg pdf doc docx xls xlsx txt',
-      'max_filesize' => '15 MB',
+      'file_extensions' => 'gif png jpg jpeg pdf doc docx xls xlsx txt wmv mov',
+      'max_filesize' => '70 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -96,7 +96,7 @@ function halle_96_service_info_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-page-field_page_themen'
+  // Exported field_instance: 'node-page-field_page_themen'.
   $field_instances['node-page-field_page_themen'] = array(
     'bundle' => 'page',
     'default_value' => NULL,
