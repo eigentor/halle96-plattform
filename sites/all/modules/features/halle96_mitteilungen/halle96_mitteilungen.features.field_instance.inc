@@ -10,7 +10,7 @@
 function halle96_mitteilungen_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_discussion-comment_body'
+  // Exported field_instance: 'comment-comment_node_discussion-comment_body'.
   $field_instances['comment-comment_node_discussion-comment_body'] = array(
     'bundle' => 'comment_node_discussion',
     'default_value' => NULL,
@@ -43,7 +43,8 @@ function halle96_mitteilungen_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'comment-comment_node_discussion-field_datei_anhang'
+  // Exported field_instance:
+  // 'comment-comment_node_discussion-field_datei_anhang'.
   $field_instances['comment-comment_node_discussion-field_datei_anhang'] = array(
     'bundle' => 'comment_node_discussion',
     'deleted' => 0,
@@ -79,7 +80,7 @@ function halle96_mitteilungen_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'comment-comment_node_page-comment_body'
+  // Exported field_instance: 'comment-comment_node_page-comment_body'.
   $field_instances['comment-comment_node_page-comment_body'] = array(
     'bundle' => 'comment_node_page',
     'default_value' => NULL,
@@ -112,7 +113,7 @@ function halle96_mitteilungen_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-discussion-body'
+  // Exported field_instance: 'node-discussion-body'.
   $field_instances['node-discussion-body'] = array(
     'bundle' => 'discussion',
     'default_value' => NULL,
@@ -183,7 +184,7 @@ function halle96_mitteilungen_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-discussion-field_datei_anhang'
+  // Exported field_instance: 'node-discussion-field_datei_anhang'.
   $field_instances['node-discussion-field_datei_anhang'] = array(
     'bundle' => 'discussion',
     'deleted' => 0,
@@ -225,7 +226,7 @@ function halle96_mitteilungen_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-discussion-field_kategorie'
+  // Exported field_instance: 'node-discussion-field_kategorie'.
   $field_instances['node-discussion-field_kategorie'] = array(
     'bundle' => 'discussion',
     'default_value' => NULL,
@@ -262,7 +263,7 @@ function halle96_mitteilungen_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-discussion-field_mit_bild'
+  // Exported field_instance: 'node-discussion-field_mit_bild'.
   $field_instances['node-discussion-field_mit_bild'] = array(
     'bundle' => 'discussion',
     'deleted' => 0,
