@@ -83,6 +83,8 @@ function halle96_news_views_default_views() {
 
   /* Display: News Pane Startseite */
   $handler = $view->new_display('panel_pane', 'News Pane Startseite', 'panel_pane_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Servicebüro-News';
   $handler->display->display_options['defaults']['use_more'] = FALSE;
   $handler->display->display_options['use_more'] = TRUE;
   $handler->display->display_options['defaults']['use_more_always'] = FALSE;
@@ -165,6 +167,7 @@ function halle96_news_views_default_views() {
     t('letzte Seite »'),
     t('Page'),
     t('News Pane Startseite'),
+    t('Servicebüro-News'),
     t('>> Alle News'),
     t('View panes'),
   );

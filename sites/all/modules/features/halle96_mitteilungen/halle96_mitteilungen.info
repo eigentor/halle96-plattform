@@ -93,4 +93,3 @@ features[variable][] = user_picture_style
 features[variable][] = user_pictures
 features[views_view][] = kommentare
 features[views_view][] = mitteilungen
-mtime = 1417790181

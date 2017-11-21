@@ -198,6 +198,7 @@ function halle96_mitteilungen_strongarm() {
   $strongarm->name = 'subscriptions_blocked_content_types';
   $strongarm->value = array(
     'article' => 'article',
+    'conference_room' => 'conference_room',
     'page' => 'page',
   );
   $export['subscriptions_blocked_content_types'] = $strongarm;
@@ -289,7 +290,7 @@ function halle96_mitteilungen_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'subscriptions_site_mail';
-  $strongarm->value = 'info@rufzeichen-online.de';
+  $strongarm->value = 'Marion.Groenig@hannoverimpuls.de';
   $export['subscriptions_site_mail'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -313,6 +314,7 @@ function halle96_mitteilungen_strongarm() {
   $strongarm->value = array(
     'article' => 'article',
     'discussion' => 'discussion',
+    'conference_room' => 'conference_room',
     'page' => 'page',
   );
   $export['subscriptions_unlisted_content_types'] = $strongarm;

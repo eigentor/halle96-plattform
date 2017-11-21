@@ -19,7 +19,7 @@ function halle96_discussions_ctools_plugin_api($module = NULL, $api = NULL) {
 function halle96_discussions_node_info() {
   $items = array(
     'article' => array(
-      'name' => t('News'),
+      'name' => t('News vom Servicebüro'),
       'base' => 'node_content',
       'description' => t('Use <em>articles</em> for time-sensitive content like news, press releases or blog posts.'),
       'has_title' => '1',
@@ -27,5 +27,6 @@ function halle96_discussions_node_info() {
       'help' => '',
     ),
   );
+  drupal_alter('node_info', $items);
   return $items;
 }

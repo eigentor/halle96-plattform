@@ -23,6 +23,7 @@ function halle96_mitteilungen_user_default_permissions() {
   $permissions['administer user subscriptions'] = array(
     'name' => 'administer user subscriptions',
     'roles' => array(
+      'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
     'module' => 'subscriptions',
@@ -32,6 +33,7 @@ function halle96_mitteilungen_user_default_permissions() {
   $permissions['bulk-administer user subscriptions'] = array(
     'name' => 'bulk-administer user subscriptions',
     'roles' => array(
+      'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
     'module' => 'subscriptions',
@@ -60,7 +62,6 @@ function halle96_mitteilungen_user_default_permissions() {
     'name' => 'subscribe to content',
     'roles' => array(
       'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
-      'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
     'module' => 'subscriptions',

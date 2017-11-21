@@ -29,6 +29,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['access']['role'] = array(
     3 => '3',
     8 => '8',
+    4 => '4',
     5 => '5',
   );
   $handler->display->display_options['cache']['type'] = 'none';
@@ -56,7 +57,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Beitrag: Firma */
+  /* Field: Content: Firma */
   $handler->display->display_options['fields']['field_conf_firma']['id'] = 'field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['table'] = 'field_data_field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['field'] = 'field_conf_firma';
@@ -64,7 +65,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['fields']['field_conf_firma']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_conf_firma']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_conf_firma']['element_label_colon'] = FALSE;
-  /* Field: Beitrag: Termin */
+  /* Field: Content: Termin */
   $handler->display->display_options['fields']['field_conf_termin']['id'] = 'field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['field'] = 'field_conf_termin';
@@ -83,7 +84,7 @@ function halle_96_conf_schedule_views_default_views() {
   );
   $handler->display->display_options['fields']['field_conf_termin']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_conf_termin']['delta_offset'] = '0';
-  /* Sort criterion: Beitrag: Termin -  start date (field_conf_termin) */
+  /* Sort criterion: Content: Termin -  start date (field_conf_termin) */
   $handler->display->display_options['sorts']['field_conf_termin_value']['id'] = 'field_conf_termin_value';
   $handler->display->display_options['sorts']['field_conf_termin_value']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['sorts']['field_conf_termin_value']['field'] = 'field_conf_termin_value';
@@ -114,6 +115,13 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
   $handler->display->display_options['row_options']['colors']['legend'] = 'type';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Footer: Global: Unfiltered text */
+  $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['footer']['area_text_custom']['content'] = '<br />
+<a href ="/tutorial-video-belegungskalender-besprechugnsraum">>> Tutorial-Video zur Benutzung dieses Belegungskalenders</a>';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Date: Date (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
@@ -245,7 +253,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Field: Beitrag: Termin */
+  /* Field: Content: Termin */
   $handler->display->display_options['fields']['field_conf_termin']['id'] = 'field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['field'] = 'field_conf_termin';
@@ -358,6 +366,8 @@ function halle_96_conf_schedule_views_default_views() {
     t('Aufsteigend'),
     t('Absteigend'),
     t('Month'),
+    t('<br />
+<a href ="/tutorial-video-belegungskalender-besprechugnsraum">>> Tutorial-Video zur Benutzung dieses Belegungskalenders</a>'),
     t('Alle'),
     t('Week'),
     t('Day'),

@@ -59,17 +59,15 @@ function file_entity_file_insert($file) {
 
   // Save file metadata.
   if (!empty($file->metadata)) {
+    $query = db_insert('file_metadata')->fields(array('fid', 'name', 'value'));
     foreach ($file->metadata as $name => $value) {
-      db_merge('file_metadata')
-        ->fields(array(
-          'value' => serialize($value),
-        ))
-        ->key(array(
-          'fid' => $file->fid,
-          'name' => $name,
-        ))
-        ->execute();
+      $query->values(array(
+        'fid' => $file->fid,
+        'name' => $name,
+        'value' => serialize($value),
+      ));
     }
+    $query->execute();
   }
 
   // Clear any related field caches.
@@ -84,40 +82,37 @@ function file_entity_file_update($file) {
   field_attach_update('file', $file);
 
   // Save file metadata.
+  db_delete('file_metadata')->condition('fid', $file->fid)->execute();
   if (!empty($file->metadata)) {
+    $query = db_insert('file_metadata')->fields(array('fid', 'name', 'value'));
     foreach ($file->metadata as $name => $value) {
-      db_merge('file_metadata')
-        ->fields(array(
-          'value' => serialize($value),
-        ))
-        ->key(array(
-          'fid' => $file->fid,
-          'name' => $name,
-        ))
-        ->execute();
+      $query->values(array(
+        'fid' => $file->fid,
+        'name' => $name,
+        'value' => serialize($value),
+      ));
     }
+    $query->execute();
   }
 
-  // Save file metadata.
-  db_delete('file_metadata')->condition('fid', $file->fid);
-  if (!empty($file->metadata)) {
-    foreach ($file->metadata as $name => $value) {
-      db_merge('file_metadata')
-        ->fields(array(
-          'value' => serialize($value),
-        ))
-        ->key(array(
-          'fid' => $file->fid,
-          'name' => $name,
-        ))
-        ->execute();
+  if (module_exists('image') && file_entity_file_get_mimetype_type($file) == 'image' && $file->filesize && isset($file->original)) {
+    if (!isset($file->metadata)) {
+      $file->metadata = array();
     }
-  }
 
-  if (file_entity_file_get_mimetype_type($file) == 'image' && module_exists('image')) {
-    // If the image dimensions have changed, update any image field references
-    // to this file and flush image style derivatives.
-    if ($file->metadata['width'] != $file->metadata['width'] || $file->metadata['height'] != $file->metadata['height']) {
+    if (!isset($file->original->metadata)) {
+      if (!is_object($file->original)) {
+        $file->original = new stdClass();
+      }
+      $file->original->metadata = array();
+    }
+
+    // If the file has changed dimensions or a new file has been uploaded,
+    // update any image field reference to this file and flush image style
+    // derivatives.
+    $file->metadata += array('width' => NULL, 'height' => NULL);
+    $file->original->metadata += array('width' => NULL, 'height' => NULL);
+    if ($file->filesize != $file->original->filesize || $file->metadata['width'] != $file->original->metadata['width'] || $file->metadata['height'] != $file->original->metadata['height']) {
       _file_entity_update_image_field_dimensions($file);
     }
 
@@ -155,16 +150,12 @@ function file_entity_file_delete($file) {
  * Implements hook_file_mimetype_mapping_alter().
  */
 function file_entity_file_mimetype_mapping_alter(&$mapping) {
-  // Add support for mka and mkv.
-  // @todo Remove when http://drupal.org/node/1443070 is fixed in core.
-  $new_mappings['mka'] = 'audio/x-matroska';
-  $new_mappings['mkv'] = 'video/x-matroska';
+  // For info on adding new mime-types to core: http://drupal.org/node/1443070.
 
-  // Add support for weba, webm, and webp.
-  // @todo Remove when http://drupal.org/node/1443070 is fixed in core.
-  $new_mappings['weba'] = 'audio/webm';
-  $new_mappings['webm'] = 'video/webm';
-  $new_mappings['webp'] = 'image/webp';
+  // @todo. Remove after fixing this in core http://drupal.org/node/2912875.
+  // Add support for autocad drawings.
+  $new_mappings['dwg'] = 'application/acad';
+  // For info on adding new mime-types to file_entity: drupal.org/node/2900830.
 
   foreach ($new_mappings as $extension => $mime_type) {
     if (!in_array($mime_type, $mapping['mimetypes'])) {
@@ -182,12 +173,46 @@ function file_entity_file_mimetype_mapping_alter(&$mapping) {
  * Implements hook_file_load().
  */
 function file_entity_file_load($files) {
+  // Add alt and title text to images.
+  file_entity_set_title_alt_properties($files);
+
+  // Load and unserialize metadata.
+  $results = db_query("SELECT * FROM {file_metadata} WHERE fid IN (:fids)", array(':fids' => array_keys($files)));
+
+  foreach ($results as $result) {
+    $name = $result->name;
+
+    // image.module required height and width to be properties of the file.
+    if ($name == 'height' || $name == 'width') {
+      $files[$result->fid]->$name = unserialize($result->value);
+    }
+
+    $files[$result->fid]->metadata[$name] = unserialize($result->value);
+  }
+}
+
+/**
+ * Implements hook_entitycache_ENTITY_TYPE_load().
+ */
+function file_entitycache_file_load($files) {
+  // Integrates with entitycache - ensures the alt and title text on images is
+  // localized.
+  file_entity_set_title_alt_properties($files);
+}
+
+/**
+ * Set the title / alt properties of file objects.
+ *
+ * @param array $files List of file entities.
+ */
+function file_entity_set_title_alt_properties($files) {
   $alt = variable_get('file_entity_alt', '[file:field_file_image_alt_text]');
   $title = variable_get('file_entity_title', '[file:field_file_image_title_text]');
 
   $replace_options = array(
     'clear' => TRUE,
     'sanitize' => FALSE,
+    'language' => $GLOBALS['language'],
   );
 
   foreach ($files as $file) {
@@ -195,17 +220,21 @@ function file_entity_file_load($files) {
 
     // Load alt and title text from fields.
     if (!empty($alt)) {
-      $file->alt = token_replace($alt, array('file' => $file), $replace_options);
+      $output = token_replace($alt, array('file' => $file), $replace_options);
+
+      // @todo Remove once https://www.drupal.org/node/1713164 is fixed.
+      // There is currently no way to get the raw alt text returned from the
+      // token so we revert the encoding done during tokenization.
+      $file->alt = decode_entities($output);
     }
     if (!empty($title)) {
-      $file->title = token_replace($title, array('file' => $file), $replace_options);
-    }
-  }
+      $output = token_replace($title, array('file' => $file), $replace_options);
 
-  // Load and unserialize metadata.
-  $results = db_query("SELECT * FROM {file_metadata} WHERE fid IN (:fids)", array(':fids' => array_keys($files)));
-  foreach ($results as $result) {
-    $files[$result->fid]->metadata[$result->name] = unserialize($result->value);
+      // @todo Remove once https://www.drupal.org/node/1713164 is fixed.
+      // There is currently no way to get the raw title text returned from the
+      // token so we revert the encoding done during tokenization.
+      $file->title = decode_entities($output);
+    }
   }
 }
 
@@ -246,6 +275,12 @@ function file_entity_metadata_fetch_image_dimensions($file) {
  * @see http://drupal.org/node/1448124
  */
 function _file_entity_update_image_field_dimensions($file) {
+  // Prevent PHP notices when trying to read empty files.
+  // @see http://drupal.org/node/681042
+  if (!$file->filesize) {
+    return;
+  }
+
   // Do not bother proceeding if this file does not have an image mime type.
   if (file_entity_file_get_mimetype_type($file) != 'image') {
     return;

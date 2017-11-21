@@ -129,6 +129,13 @@ body
     #logo 
       float: left
       padding: 20px 15px 10px
+    // Not logged in user
+    &.not-logged-in
+      #logo
+        float: none
+        display: block
+        margin: auto
+        width: 230px
     ul#main-menu-links
       padding: 0
     #main-menu 
@@ -139,7 +146,7 @@ body
         li  
           a 
             &.beitrag-schreiben
-              margin-left: 26px
+              margin-left: 10px
 
     /** Service und Info Seite **/
     &.page-service-info

@@ -87,24 +87,25 @@ h1 a:link, h2 a:link, h3 a:link, h4 a:link {
     -o-border-radius: 5px;
     border-radius: 5px;
     margin-right: 7px;
-    font-size: 18px;
-    font-size: 1rem;
+    font-size: 17.1px;
+    font-size: 0.95rem;
     line-height: 1;
     border: 1px solid #bbbbbb;
     background: #fff2cc;
     color: #555555;
+    padding-left: 0.5em;
   }
-  /* line 61, ../sass/styles.sass */
+  /* line 62, ../sass/styles.sass */
   body #main-menu-links a.active, body #main-menu-links a:hover {
     background: white;
     border: 1px solid #777777;
     color: black;
   }
-  /* line 68, ../sass/styles.sass */
+  /* line 69, ../sass/styles.sass */
   body #homepage .panel-col-first .inside {
     margin-right: 1em;
   }
-  /* line 71, ../sass/styles.sass */
+  /* line 72, ../sass/styles.sass */
   body #homepage .panel-col-last .inside {
     margin-left: 1em;
   }

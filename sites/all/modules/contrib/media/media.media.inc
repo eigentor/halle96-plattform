@@ -93,13 +93,12 @@ function media_query_media_browser_alter($query) {
         if (count($mimetypes)) {
           $local_and->condition($alias . '.filemime', $mimetypes, 'IN');
         }
+        $local_or->condition($local_and);
+        $local_and = db_and();
       }
       else {
         $local_or->condition($alias . '.uri', db_like($scheme . '://') . '%', 'LIKE');
       }
-    }
-    if ($local_and->count()) {
-      $local_or->condition($local_and);
     }
 
     $or->condition($local_or);
@@ -107,5 +106,26 @@ function media_query_media_browser_alter($query) {
 
   if ($or->count()) {
     $query->condition($or);
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function media_form_views_exposed_form_alter(&$form, &$form_state, $form_id) {
+  $view = $form_state['view'];
+  $display = $form_state['display'];
+
+  if ($view->name == 'media_default' && $display->id == 'media_browser_1') {
+    $params = media_get_browser_params();
+
+    // Remove any unsupported types from the 'Type' filter.
+    if (!empty($form['type']) && !empty($params['types'])) {
+      foreach (array_keys($form['type']['#options']) as $type) {
+        if ($type != 'All' && !in_array($type, $params['types'])) {
+          unset($form['type']['#options'][$type]);
+        }
+      }
+    }
   }
 }
