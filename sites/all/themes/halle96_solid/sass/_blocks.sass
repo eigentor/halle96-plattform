@@ -1,0 +1,155 @@
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*------------- All Screen Sizes -------------*/
+/*------------------------------------------- */
+/*------------------------------------------- */
+#header
+  #block-search-form
+    span.search-toggle-mobile
+      width: 50px
+      height: 40px
+      display: block
+      align-self: center
+      position: relative
+      &:before
+        font-family: Fontawesome
+        content: "\f002"
+        color: $toggle-icons-mobile
+        +x-rem(font-size, 2)
+        position: absolute
+        line-height: 40px
+        width: 50px
+        text-align: center
+        z-index: 4
+        left: 0
+        top: 0
+    > .content
+      display: none
+  #block-tz-custom-blocks-user-account-menu
+    position: relative
+    z-index: 4
+    display: flex
+    span.user-toggle-mobile
+      width: 50px
+      height: 40px
+      display: block
+      align-self: center
+      position: relative
+      &:before
+        font-family: Fontawesome
+        content: "\f007"
+        color: $toggle-icons-mobile
+        +x-rem(font-size, 2)
+        position: absolute
+        line-height: 40px
+        width: 50px
+        text-align: center
+        z-index: 4
+        left: 0
+        top: 0
+    h2.block-title
+      text-indent: -9999px
+      line-height: 1
+      margin: 0
+      +x-rem(font-size, 1)
+    .content
+      display: none
+
+
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*----------- Tablet Portrait ----------------*/
+/*------------------------------------------- */
+/*------------------------------------------- */
++breakpoint($breakpoint-tablet-portrait)
+
+
+/* End Media Query Tablet Portrait */
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*---------------- Tablet  -------------------*/
+/*------------------------------------------- */
+/*------------------------------------------- */
++breakpoint($breakpoint-tablet)
+  #header
+    #block-search-form
+      span.search-toggle-mobile
+        &:before
+          color: $toggle-icons-tablet
+    #block-tz-custom-blocks-user-account-menu
+      span.user-toggle-mobile
+        &:before
+          color: $toggle-icons-tablet
+
+
+/* End Media Query Tablet */
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*------------- Desktop narrow  --------------*/
+/*------------------------------------------- */
+/*------------------------------------------- */
++breakpoint($breakpoint-desktop-narrow)
+  #header
+    #block-search-form
+      > .content
+        display: block!important
+      span.search-toggle-mobile
+        display: none
+    #block-tz-custom-blocks-user-account-menu
+      span.user-toggle-mobile
+        display: none
+      h2.block-title
+        text-indent: 0
+        line-height: 1.5
+        position: relative
+        display: inline-block
+        +x-rem(font-size, 0.85)
+        padding-left: 1.7em
+        cursor: pointer
+        cursor: hand
+        &:before
+          font-family: Fontawesome
+          content: "\f007"
+          color: #bbb
+          +x-rem(font-size, 1.4)
+          position: absolute
+          z-index: 4
+          left: 0
+          top: -0.4em
+      .content
+        display: none
+        position: absolute
+        top: 38px
+        left: 0
+        border: 1px solid #ccc
+        background: white
+        padding: 5px 13px
+        text-align: center
+        line-height: 1.3
+        ul
+          margin: 0
+          padding: 0
+          li
+            list-style-type: none
+            list-style-image: none
+            margin-left: 0
+            margin-bottom: 5px
+            a
+              color: $base-text-color
+              +x-rem(font-size, 0.85)
+
+
+/* End Media Query Desktop narrow */
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*---------------- Desktop  ------------------*/
+/*------------------------------------------- */
+/*------------------------------------------- */
++breakpoint($breakpoint-desktop)
+
+
+/* End Media Query Desktop */

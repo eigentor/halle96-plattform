@@ -1,0 +1,15 @@
+name = Halle 96 Theme
+description = Theme für die Halle 96
+package = halle96
+core = 7.x
+Version = VERSION
+
+stylesheets[all][] = css/uz-styles.css
+
+regions[header] = Header
+regions[navigation] = Navigation
+regions[content] = Content
+regions[content_bottom] = Content Bottom
+regions[sidebar_first]  = Left sidebar
+regions[sidebar_second] = Right sidebar
+regions[footer] = Footer

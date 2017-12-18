@@ -1,0 +1,354 @@
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*------------- All Screen Sizes -------------*/
+/*------------------------------------------- */
+/*------------------------------------------- */
+.front
+  #page-title-container
+    display: none
+  .panel-pane
+    .pane-title
+      a
+        color: $base-text-color
+
+  .view-mitteilungen
+    .views-field-title
+      h3.field-content
+        line-height: 1.3
+      span.title
+        margin-right: 10px
+      span.username, a.username
+        +small-grey-links
+        a
+          +small-grey-links
+
+  #main
+    .region-content
+      #block-system-main
+        display: none
+
+  #content-bottom
+    background: #eee
+    .region-content-bottom
+      padding-top: 20px
+      padding-bottom: 40px
+
+  #block-views-mitteilungen-block-1
+    h2.block-title
+      +front-block-title("\f0c0", 2.5, 1.1)
+    .views-row
+      margin-bottom: 10px
+    .views-field-title
+      h3
+        margin: 0
+        font-weight: 500
+    .views-field-field-mit-bild
+      display: none
+    .image-placeholder
+      width: 58px
+      height: 56px
+      background: #ddd
+      position: relative
+      &:before
+        font-family: Fontawesome
+        position: absolute
+        top: 0
+        left: 0
+        width: 58px
+        height: 56px
+        line-height: 58px
+        text-align: center
+        +x-rem(font-size, 1.8)
+        color: white
+        content: "\f10e"
+  #block-views-kommentare-block
+    h2.block-title
+      +front-block-title("\f0e6")
+    .views-row
+      margin-bottom: 10px
+      +legacy-pie-clearfix
+    .views-field-subject
+      h3
+        margin: 0
+    .user-avatar
+      display: none
+      .user-image-placeholder
+        width: 40px
+        height: 40px
+        position: relative
+        &:before
+          font-family: Fontawesome
+          position: absolute
+          top: 0
+          left: 0
+          width: 40px
+          height: 40px
+          line-height: 40px
+          text-align: center
+          +x-rem(font-size, 2.1)
+          color: #ccc
+          content: "\f2be"
+    .author-name
+      +small-grey-links
+      line-height: 1.3
+      hyphens: auto
+      word-wrap: break-word
+      a
+        +small-grey-links
+
+  #block-views-news-block-1
+    h2.block-title
+      +front-block-title("\f1ea", 2.3, 1.1, 15px)
+      //background: #777
+      //&:before
+      //  background: #777
+    .views-row
+      margin-bottom: 10px
+    .views-field-title
+      h3
+        margin: 0
+        font-weight: 500
+  #block-views-008f6cfec855a53f1dbdf423a4918844
+    h2.block-title
+      +front-block-title("\f05a", 2.7, 0.85, 18px)
+      //background: #777
+      //&:before
+      //  background: #777
+    .view-alle-kategorien-service-info
+      .views-row
+        margin-bottom: 0.7em
+        .field-content
+          &:before
+            font-family: fontawesome
+            +x-rem(font-size, 1.5)
+            color: #aaa
+            padding-right: 4px
+            vertical-align: -2px
+            display: inline-block
+            min-width: 32px
+          &.term-19
+            &:before
+              content: "\f0a1"
+          &.term-7
+            &:before
+              content: "\f291"
+              +x-rem(font-size, 1.35)
+          &.term-8
+            &:before
+              content: "\f0f5"
+              +x-rem(font-size, 1.35)
+          &.term-9
+            &:before
+              content: "\f135"
+          &.term-20
+            &:before
+              content: "\f140"
+          &.term-10
+            &:before
+              content: "\f0f7"
+          &.term-12
+            &:before
+              content: "\f239"
+          &.term-13
+            &:before
+              content: "\f0ad"
+          &.term-14
+            &:before
+              content: "\f26c"
+              +x-rem(font-size, 1.35)
+              vertical-align: -3px
+
+
+
+
+
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*----------- Tablet Portrait ----------------*/
+/*------------------------------------------- */
+/*------------------------------------------- */
++breakpoint($breakpoint-tablet-portrait)
+  .front
+    #block-views-mitteilungen-block-1
+      .views-row
+        clear: left
+      .views-field-field-mit-bild
+        display: block
+        float: left
+        margin-top: 6px
+      .views-field-title
+        margin-left: 74px
+      .views-field-body
+        margin-left: 74px
+    #block-views-kommentare-block
+      .views-row
+        clear: left
+      .views-field-name
+        float: left
+        width: 60px
+        text-align: center
+      .user-avatar
+        display: block
+        .user-image-placeholder
+          width: 60px
+          &:before
+            width: 60px
+      .views-field-subject
+        margin-left: 75px
+      .views-field-comment-body
+        margin-left: 75px
+
+
+
+
+/* End Media Query Tablet Portrait */
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*---------------- Tablet  -------------------*/
+/*------------------------------------------- */
+/*------------------------------------------- */
++breakpoint($breakpoint-tablet)
+  .front
+    #header
+      //border-top: 40px solid $yellow
+      a#logo
+        float: left
+        width: 370px
+    #navigation
+      margin-bottom: 0
+    #header-image
+      margin: auto
+      width: 1600px
+      max-width: 100%
+      background-image: url(../images/uz-frontal.jpg)
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: 100% auto
+      height: 240px
+      border-top: 30px solid $yellow
+      border-bottom: 30px solid $yellow
+    &.not-logged-in
+      #header-image
+        display: none
+    #block-views-008f6cfec855a53f1dbdf423a4918844
+      .view-alle-kategorien-service-info
+        .view-content
+          display: flex
+          flex-wrap: wrap
+        .views-row
+          width: 50%
+          margin-bottom: 10px
+          margin-bottom: 10px
+          .field-content
+            padding-right: 15px
+            &.term-9, &.term-12, &.term-13
+              line-height: 1.3
+              padding-right: 0
+              &:before
+                float: left
+              a
+                display: block
+            &.term-12
+              a
+                padding-right: 7px
+
+
+
+/* End Media Query Tablet */
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*------------- Desktop narrow  --------------*/
+/*------------------------------------------- */
+/*------------------------------------------- */
++breakpoint($breakpoint-desktop-narrow)
+  .front
+    #header
+      a#logo
+        width: 380px
+
+    #header-image
+      height: 310px
+      border-top: 40px solid $yellow
+      border-bottom: 40px solid $yellow
+
+    .region-navigation
+      ul.menu
+        li
+          a
+            +main-menu-link-front
+
+    #main
+      .region-content
+        display: flex
+        #block-system-main
+          display: none
+    #content-bottom
+      .region-content-bottom
+        display: flex
+
+    #block-views-mitteilungen-block-1
+      width: 50%
+      padding-left: 3%
+      .views-row
+        clear: left
+      .views-field-field-mit-bild
+        float: left
+        margin-top: 6px
+      .views-field-title
+        margin-left: 74px
+      .views-field-body
+        margin-left: 74px
+    #block-views-kommentare-block
+      width: 50%
+      padding-left: 3%
+      .views-row
+        clear: left
+      .views-field-name
+        float: left
+        width: 60px
+        text-align: center
+      .user-avatar
+        .user-image-placeholder
+          width: 60px
+          &:before
+            width: 60px
+      .views-field-subject
+        margin-left: 75px
+      .views-field-comment-body
+        margin-left: 75px
+
+    #block-views-news-block-1
+      width: 50%
+      padding-right: 3%
+      .views-row
+        padding-left: 20px
+    #block-views-008f6cfec855a53f1dbdf423a4918844
+      width: 50%
+      padding-right: 3%
+      .views-row
+        padding-left: 20px
+
+
+/* End Media Query Desktop narrow */
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*---------------- Desktop  ------------------*/
+/*------------------------------------------- */
+/*------------------------------------------- */
++breakpoint($breakpoint-desktop)
+
+  #block-views-008f6cfec855a53f1dbdf423a4918844
+    .view-alle-kategorien-service-info
+      .views-row
+        .field-content
+          &.term-12
+            a
+              padding-right: 0
+              padding-top: 0.4em
+
+
+/* End Media Query Desktop */
