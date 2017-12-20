@@ -79,7 +79,7 @@
 
 
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-          <img src="/<?php print $directory; ?>/images/logo-uz.jpg" alt="<?php print t('Home'); ?>" />
+          <img src="/<?php print $directory; ?>/images/halle-96-logo.svg" alt="<?php print t('Home'); ?>" />
 
         </a>
 

@@ -387,7 +387,7 @@ div.messages {
       color: #888; }
     #header a#logo {
       float: left;
-      width: 370px;
+      width: 230px;
       max-width: none;
       margin: 8px 30px 20px 0; }
     #header .region-header {
@@ -1636,7 +1636,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 /*------------------------------------------- */
 @media only screen and (min-width: 992px) {
   .front #header a#logo {
-    width: 380px; }
+    width: 230px; }
   .front #header-image {
     height: 310px;
     border-top: 40px solid #f7c74f;

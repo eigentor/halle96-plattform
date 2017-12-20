@@ -47,14 +47,22 @@ function halle_96_service_info_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['last'] = 'letzte Seite »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Feld: Taxonomie-Begriff: Begriff-ID */
+  $handler->display->display_options['fields']['tid']['id'] = 'tid';
+  $handler->display->display_options['fields']['tid']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['fields']['tid']['field'] = 'tid';
+  $handler->display->display_options['fields']['tid']['exclude'] = TRUE;
   /* Feld: Taxonomie-Begriff: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'taxonomy_term_data';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
+  $handler->display->display_options['fields']['name']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['path'] = 'service-info#term-[tid]';
   $handler->display->display_options['fields']['name']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['name']['alter']['ellipsis'] = FALSE;
-  $handler->display->display_options['fields']['name']['link_to_taxonomy'] = TRUE;
+  $handler->display->display_options['fields']['name']['element_class'] = 'term-[tid]';
+  $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   /* Filterkriterium: Taxonomie-Vokabular: Maschinenlesbarer Name */
   $handler->display->display_options['filters']['machine_name']['id'] = 'machine_name';
   $handler->display->display_options['filters']['machine_name']['table'] = 'taxonomy_vocabulary';
@@ -62,9 +70,18 @@ function halle_96_service_info_views_default_views() {
   $handler->display->display_options['filters']['machine_name']['value'] = array(
     'service_info' => 'service_info',
   );
+  /* Filterkriterium: Taxonomie-Begriff: Begriff-ID */
+  $handler->display->display_options['filters']['tid_raw']['id'] = 'tid_raw';
+  $handler->display->display_options['filters']['tid_raw']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['filters']['tid_raw']['field'] = 'tid_raw';
+  $handler->display->display_options['filters']['tid_raw']['operator'] = '!=';
+  $handler->display->display_options['filters']['tid_raw']['value']['value'] = '11';
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
+
+  /* Display: Block */
+  $handler = $view->new_display('block', 'Block', 'block_1');
   $translatables['alle_kategorien_service_info'] = array(
     t('Master'),
     t('Alle Kategorien'),
@@ -81,8 +98,12 @@ function halle_96_service_info_views_default_views() {
     t('‹ vorherige Seite'),
     t('nächste Seite ›'),
     t('letzte Seite »'),
+    t('Begriff-ID'),
+    t('.'),
+    t(','),
     t('Content pane'),
     t('View panes'),
+    t('Block'),
   );
   $export['alle_kategorien_service_info'] = $view;
 
@@ -117,7 +138,7 @@ function halle_96_service_info_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ vorherige Seite';
   $handler->display->display_options['pager']['options']['tags']['next'] = 'nächste Seite ›';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'letzte Seite »';
-  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_plugin'] = 'list';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Feld: Inhalt: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -179,6 +200,19 @@ function halle_96_service_info_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Einzelne Kategorie';
+  $handler->display->display_options['defaults']['use_ajax'] = FALSE;
+  $handler->display->display_options['use_ajax'] = TRUE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'mini';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elemente pro Seite';
+  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Alle -';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« erste Seite';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ vorherige Seite';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'nächste Seite ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'letzte Seite »';
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Feld: Inhalt: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';

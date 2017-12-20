@@ -10,6 +10,17 @@
 function allgemeine_einstellungen_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'access administration menu'.
+  $permissions['access administration menu'] = array(
+    'name' => 'access administration menu',
+    'roles' => array(
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
+      'Zentrumsleitung' => 'Zentrumsleitung',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'admin_menu',
+  );
+
   // Exported permission: 'access content'.
   $permissions['access content'] = array(
     'name' => 'access content',
@@ -30,6 +41,25 @@ function allgemeine_einstellungen_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'access media browser'.
+  $permissions['access media browser'] = array(
+    'name' => 'access media browser',
+    'roles' => array(
+      'Zentrumsleitung' => 'Zentrumsleitung',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'media',
+  );
+
+  // Exported permission: 'add media from remote sources'.
+  $permissions['add media from remote sources'] = array(
+    'name' => 'add media from remote sources',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'media_internet',
+  );
+
   // Exported permission: 'administer content types'.
   $permissions['administer content types'] = array(
     'name' => 'administer content types',
@@ -37,6 +67,15 @@ function allgemeine_einstellungen_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'administer media browser'.
+  $permissions['administer media browser'] = array(
+    'name' => 'administer media browser',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'media',
   );
 
   // Exported permission: 'administer nodes'.
@@ -77,6 +116,16 @@ function allgemeine_einstellungen_user_default_permissions() {
       'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'create files'.
+  $permissions['create files'] = array(
+    'name' => 'create files',
+    'roles' => array(
+      'Zentrumsleitung' => 'Zentrumsleitung',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'file_entity',
   );
 
   // Exported permission: 'create page content'.
@@ -152,6 +201,15 @@ function allgemeine_einstellungen_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'display drupal links'.
+  $permissions['display drupal links'] = array(
+    'name' => 'display drupal links',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'admin_menu',
+  );
+
   // Exported permission: 'edit any article content'.
   $permissions['edit any article content'] = array(
     'name' => 'edit any article content',
@@ -209,6 +267,25 @@ function allgemeine_einstellungen_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'flush caches'.
+  $permissions['flush caches'] = array(
+    'name' => 'flush caches',
+    'roles' => array(
+      'Zentrumsleitung' => 'Zentrumsleitung',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'admin_menu',
+  );
+
+  // Exported permission: 'masquerade as admin'.
+  $permissions['masquerade as admin'] = array(
+    'name' => 'masquerade as admin',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'masquerade',
+  );
+
   // Exported permission: 'revert revisions'.
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
@@ -218,19 +295,40 @@ function allgemeine_einstellungen_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'show format selection for node'.
-  $permissions['show format selection for node'] = array(
-    'name' => 'show format selection for node',
+  // Exported permission: 'show format selection for file'.
+  $permissions['show format selection for file'] = array(
+    'name' => 'show format selection for file',
     'roles' => array(
       'administrator' => 'administrator',
     ),
     'module' => 'better_formats',
   );
 
+  // Exported permission: 'show format selection for node'.
+  $permissions['show format selection for node'] = array(
+    'name' => 'show format selection for node',
+    'roles' => array(
+      'Zentrumsleitung' => 'Zentrumsleitung',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'better_formats',
+  );
+
+  // Exported permission: 'use media wysiwyg'.
+  $permissions['use media wysiwyg'] = array(
+    'name' => 'use media wysiwyg',
+    'roles' => array(
+      'Zentrumsleitung' => 'Zentrumsleitung',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'media_wysiwyg',
+  );
+
   // Exported permission: 'use text format filtered_html'.
   $permissions['use text format filtered_html'] = array(
     'name' => 'use text format filtered_html',
     'roles' => array(
+      'Mieter' => 'Mieter',
       'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
       'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
@@ -243,16 +341,6 @@ function allgemeine_einstellungen_user_default_permissions() {
     'name' => 'use text format full_html',
     'roles' => array(
       'Zentrumsleitung' => 'Zentrumsleitung',
-      'administrator' => 'administrator',
-    ),
-    'module' => 'filter',
-  );
-
-  // Exported permission: 'use text format limited_html'.
-  $permissions['use text format limited_html'] = array(
-    'name' => 'use text format limited_html',
-    'roles' => array(
-      'Mieter' => 'Mieter',
       'administrator' => 'administrator',
     ),
     'module' => 'filter',

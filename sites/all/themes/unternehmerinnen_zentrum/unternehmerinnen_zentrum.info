@@ -1,0 +1,14 @@
+name = Unternehmerinnen-Zentrum
+description = Theme für das Unternehmerinnen-Zentrum Intranet
+package = Unternehmerinnen-Zentrum
+core = 7.x
+
+stylesheets[all][] = css/uz-styles.css
+
+regions[header] = Header
+regions[navigation] = Navigation
+regions[content] = Content
+regions[content_bottom] = Content Bottom
+regions[sidebar_first]  = Left sidebar
+regions[sidebar_second] = Right sidebar
+regions[footer] = Footer

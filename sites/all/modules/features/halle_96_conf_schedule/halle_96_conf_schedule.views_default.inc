@@ -15,7 +15,7 @@ function halle_96_conf_schedule_views_default_views() {
   $view->description = '';
   $view->tag = 'Calendar';
   $view->base_table = 'node';
-  $view->human_name = 'Konferenzraum Belegung';
+  $view->human_name = 'Besprechungsraum Belegung';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -50,14 +50,14 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['style_options']['theme_style'] = '1';
   $handler->display->display_options['style_options']['max_items'] = '0';
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
-  /* Field: Content: Nid */
+  /* Feld: Inhalt: Beitrags-ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
   $handler->display->display_options['fields']['nid']['field'] = 'nid';
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Field: Content: Firma */
+  /* Feld: Inhalt: Firma */
   $handler->display->display_options['fields']['field_conf_firma']['id'] = 'field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['table'] = 'field_data_field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['field'] = 'field_conf_firma';
@@ -65,7 +65,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['fields']['field_conf_firma']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_conf_firma']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_conf_firma']['element_label_colon'] = FALSE;
-  /* Field: Content: Termin */
+  /* Feld: Inhalt: Termin */
   $handler->display->display_options['fields']['field_conf_termin']['id'] = 'field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['field'] = 'field_conf_termin';
@@ -84,20 +84,29 @@ function halle_96_conf_schedule_views_default_views() {
   );
   $handler->display->display_options['fields']['field_conf_termin']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_conf_termin']['delta_offset'] = '0';
-  /* Sort criterion: Content: Termin -  start date (field_conf_termin) */
+  /* Sortierkriterien: Inhalt: Termin -  Startdatum (field_conf_termin) */
   $handler->display->display_options['sorts']['field_conf_termin_value']['id'] = 'field_conf_termin_value';
   $handler->display->display_options['sorts']['field_conf_termin_value']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['sorts']['field_conf_termin_value']['field'] = 'field_conf_termin_value';
-  /* Filter criterion: Content: Published */
+  /* Filterkriterium: Inhalt: Veröffentlicht */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterium: Inhalt: Typ */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'conference_room' => 'conference_room',
+  );
 
   /* Display: Month */
   $handler = $view->new_display('page', 'Month', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Besprechungsraum';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'date_views_pager';
   $handler->display->display_options['pager']['options']['date_id'] = 'month';
@@ -116,14 +125,12 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['row_options']['colors']['legend'] = 'type';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
-  /* Footer: Global: Unfiltered text */
+  /* Fußbereich: Global: Unfiltered text */
   $handler->display->display_options['footer']['area_text_custom']['id'] = 'area_text_custom';
   $handler->display->display_options['footer']['area_text_custom']['table'] = 'views';
   $handler->display->display_options['footer']['area_text_custom']['field'] = 'area_text_custom';
-  $handler->display->display_options['footer']['area_text_custom']['content'] = '<br />
-<a href ="/tutorial-video-belegungskalender-besprechugnsraum">>> Tutorial-Video zur Benutzung dieses Belegungskalenders</a>';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Date: Date (node) */
+  /* Kontextfilter: Datum: Datum (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -165,7 +172,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Date: Date (node) */
+  /* Kontextfilter: Datum: Datum (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -205,7 +212,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Date: Date (node) */
+  /* Kontextfilter: Datum: Datum (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -244,7 +251,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Title */
+  /* Feld: Inhalt: Titel */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
@@ -253,7 +260,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Field: Content: Termin */
+  /* Feld: Inhalt: Termin */
   $handler->display->display_options['fields']['field_conf_termin']['id'] = 'field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['field'] = 'field_conf_termin';
@@ -271,7 +278,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['fields']['field_conf_termin']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_conf_termin']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Date: Date (node) */
+  /* Kontextfilter: Datum: Datum (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -310,7 +317,7 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'calendar_entity';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Date: Date (node) */
+  /* Kontextfilter: Datum: Datum (node) */
   $handler->display->display_options['arguments']['date_argument']['id'] = 'date_argument';
   $handler->display->display_options['arguments']['date_argument']['table'] = 'node';
   $handler->display->display_options['arguments']['date_argument']['field'] = 'date_argument';
@@ -340,14 +347,14 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filter criterion: Content: Published */
+  /* Filterkriterium: Inhalt: Veröffentlicht */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
   $handler->display->display_options['filters']['status']['value'] = 1;
   $handler->display->display_options['filters']['status']['group'] = 0;
   $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
-  /* Filter criterion: Date: Date (node) */
+  /* Filterkriterium: Datum: Datum (node) */
   $handler->display->display_options['filters']['date_filter']['id'] = 'date_filter';
   $handler->display->display_options['filters']['date_filter']['table'] = 'node';
   $handler->display->display_options['filters']['date_filter']['field'] = 'date_filter';
@@ -356,6 +363,67 @@ function halle_96_conf_schedule_views_default_views() {
   $handler->display->display_options['filters']['date_filter']['add_delta'] = 'yes';
   $handler->display->display_options['filters']['date_filter']['date_fields'] = array(
     'field_data_field_conf_termin.field_conf_termin_value' => 'field_data_field_conf_termin.field_conf_termin_value',
+  );
+
+  /* Display: Excel Export */
+  $handler = $view->new_display('views_data_export', 'Excel Export', 'views_data_export_1');
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['style_plugin'] = 'views_data_export_xls';
+  $handler->display->display_options['style_options']['provide_file'] = 1;
+  $handler->display->display_options['style_options']['filename'] = 'Besprechungsraum-%timestamp-mmm-%timestamp-yyyy.xls';
+  $handler->display->display_options['style_options']['parent_sort'] = 1;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Feld: Inhalt: Beitrags-ID */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  /* Feld: Inhalt: Firma */
+  $handler->display->display_options['fields']['field_conf_firma']['id'] = 'field_conf_firma';
+  $handler->display->display_options['fields']['field_conf_firma']['table'] = 'field_data_field_conf_firma';
+  $handler->display->display_options['fields']['field_conf_firma']['field'] = 'field_conf_firma';
+  $handler->display->display_options['fields']['field_conf_firma']['label'] = '';
+  $handler->display->display_options['fields']['field_conf_firma']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_conf_firma']['alter']['path'] = 'node/[nid]';
+  $handler->display->display_options['fields']['field_conf_firma']['element_label_colon'] = FALSE;
+  /* Feld: Inhalt: Termin */
+  $handler->display->display_options['fields']['field_conf_termin']['id'] = 'field_conf_termin';
+  $handler->display->display_options['fields']['field_conf_termin']['table'] = 'field_data_field_conf_termin';
+  $handler->display->display_options['fields']['field_conf_termin']['field'] = 'field_conf_termin';
+  $handler->display->display_options['fields']['field_conf_termin']['label'] = '';
+  $handler->display->display_options['fields']['field_conf_termin']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_conf_termin']['alter']['path'] = 'node/[nid]';
+  $handler->display->display_options['fields']['field_conf_termin']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_conf_termin']['hide_alter_empty'] = FALSE;
+  $handler->display->display_options['fields']['field_conf_termin']['settings'] = array(
+    'format_type' => 'medium',
+    'custom_date_format' => '',
+    'fromto' => 'both',
+    'multiple_number' => '',
+    'multiple_from' => '',
+    'multiple_to' => '',
+    'show_remaining_days' => 0,
+  );
+  $handler->display->display_options['fields']['field_conf_termin']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_conf_termin']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sortierkriterien: Inhalt: Termin -  Startdatum (field_conf_termin) */
+  $handler->display->display_options['sorts']['field_conf_termin_value']['id'] = 'field_conf_termin_value';
+  $handler->display->display_options['sorts']['field_conf_termin_value']['table'] = 'field_data_field_conf_termin';
+  $handler->display->display_options['sorts']['field_conf_termin_value']['field'] = 'field_conf_termin_value';
+  $handler->display->display_options['sorts']['field_conf_termin_value']['order'] = 'DESC';
+  $handler->display->display_options['path'] = 'besprechungsraum/month/xls';
+  $handler->display->display_options['displays'] = array(
+    'page_1' => 'page_1',
+    'default' => 0,
+    'page_2' => 0,
+    'page_3' => 0,
+    'page' => 0,
+    'block_1' => 0,
+    'block_2' => 0,
   );
   $translatables['conference_room_schedule'] = array(
     t('Master'),
@@ -366,8 +434,7 @@ function halle_96_conf_schedule_views_default_views() {
     t('Aufsteigend'),
     t('Absteigend'),
     t('Month'),
-    t('<br />
-<a href ="/tutorial-video-belegungskalender-besprechugnsraum">>> Tutorial-Video zur Benutzung dieses Belegungskalenders</a>'),
+    t('Besprechungsraum'),
     t('Alle'),
     t('Week'),
     t('Day'),
@@ -375,6 +442,7 @@ function halle_96_conf_schedule_views_default_views() {
     t('Block'),
     t('Upcoming'),
     t('Block der zukünftigen Events.'),
+    t('Excel Export'),
   );
   $export['conference_room_schedule'] = $view;
 

@@ -22,13 +22,13 @@ function halle_96_conf_schedule_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
     ),
-    'title' => array(
-      'weight' => '0',
+    'author' => array(
+      'weight' => '2',
       'label' => 'hidden',
-      'format' => 'default',
+      'format' => 'author',
     ),
     'submitted_by' => array(
-      'weight' => '2',
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'ds_time_ago',
     ),
@@ -87,22 +87,22 @@ function halle_96_conf_schedule_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'header' => array(
-        0 => 'title',
+        0 => 'submitted_by',
       ),
       'left' => array(
         1 => 'ds_user_picture',
+        2 => 'author',
       ),
       'right' => array(
-        2 => 'submitted_by',
         3 => 'field_conf_firma',
         4 => 'field_conf_termin',
         5 => 'back_to_conference_room_calendar',
       ),
     ),
     'fields' => array(
-      'title' => 'header',
+      'submitted_by' => 'header',
       'ds_user_picture' => 'left',
-      'submitted_by' => 'right',
+      'author' => 'left',
       'field_conf_firma' => 'right',
       'field_conf_termin' => 'right',
       'back_to_conference_room_calendar' => 'right',

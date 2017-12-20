@@ -10,15 +10,6 @@
 function halle96_mitteilungen_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: 'administer gravatar'.
-  $permissions['administer gravatar'] = array(
-    'name' => 'administer gravatar',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'gravatar',
-  );
-
   // Exported permission: 'administer user subscriptions'.
   $permissions['administer user subscriptions'] = array(
     'name' => 'administer user subscriptions',
@@ -37,15 +28,6 @@ function halle96_mitteilungen_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'subscriptions',
-  );
-
-  // Exported permission: 'disable own gravatar'.
-  $permissions['disable own gravatar'] = array(
-    'name' => 'disable own gravatar',
-    'roles' => array(
-      'administrator' => 'administrator',
-    ),
-    'module' => 'gravatar',
   );
 
   // Exported permission: 'subscribe to all content types'.
@@ -95,16 +77,6 @@ function halle96_mitteilungen_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'subscriptions',
-  );
-
-  // Exported permission: 'use gravatar'.
-  $permissions['use gravatar'] = array(
-    'name' => 'use gravatar',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'gravatar',
   );
 
   return $permissions;

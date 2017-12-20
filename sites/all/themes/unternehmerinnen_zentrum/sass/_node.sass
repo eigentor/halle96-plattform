@@ -1,0 +1,379 @@
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*------------- All Screen Sizes -------------*/
+/*------------------------------------------- */
+/*------------------------------------------- */
+.node
+  .content
+    +legacy-pie-clearfix
+  &.node-teaser
+    ul.links.inline
+      li
+        &:first-child
+          padding-left: 0
+        a
+          +small-grey-links
+          &:before
+            content: "\00bb"
+            padding-right: 3px
+
+  .submitted
+    +submitted
+    margin-bottom: 8px
+  .field-name-field-kategorie, .field-name-field-themen, .field-name-field-page-themen
+    .field-item
+      display: inline-block
+      a
+        +tags
+
+
+.page-service-info
+  #main-wrapper
+    padding-bottom: 40px
+  .panel-col-top
+    background: #d8d8d8
+    padding: 10px 15px
+    h2.pane-title
+      margin: 0 0 8px
+    .views-row
+      margin-bottom: 10px
+      .field-content
+        &:before
+          font-family: fontawesome
+          +x-rem(font-size, 1.5)
+          color: #999
+          padding-right: 4px
+          vertical-align: -2px
+          display: inline-block
+          min-width: 35px
+        a
+          color: black
+        &.term-19
+          &:before
+            content: "\f0a1"
+        &.term-7
+          &:before
+            content: "\f291"
+            +x-rem(font-size, 1.35)
+        &.term-8
+          &:before
+            content: "\f0f5"
+            +x-rem(font-size, 1.35)
+        &.term-9
+          &:before
+            content: "\f135"
+        &.term-10
+          &:before
+            content: "\f0f7"
+        &.term-12
+          &:before
+            content: "\f239"
+        &.term-13
+          &:before
+            content: "\f0ad"
+        &.term-14
+          &:before
+            content: "\f26c"
+            +x-rem(font-size, 1.35)
+            vertical-align: -3px
+        &.term-20
+          &:before
+            content: "\f140"
+
+  .panel-col-bottom
+    .view-einzelne-kategorie-service-und-info
+      ul
+        li
+          color: #aaa
+          margin-bottom: 0.5em
+    h2.pane-title
+      margin-bottom: 10px
+      border-bottom: 1px solid #aaa
+      +x-rem(font-size, 1.4)
+      &:before
+        font-family: Fontawesome
+        +x-rem(font-size, 2)
+        color: #a5a5a5
+        padding-right: 4px
+        vertical-align: -4px
+        display: inline-block
+        min-width: 35px
+        min-height: 50px
+        font-weight: normal
+    .panel-pane
+      &#term-19
+        h2.pane-title
+          &:before
+            content: "\f0a1"
+      &#term-7
+        h2.pane-title
+          &:before
+            content: "\f291"
+            +x-rem(font-size, 1.85)
+      &#term-8
+        h2.pane-title
+          &:before
+            content: "\f0f5"
+            +x-rem(font-size, 1.85)
+      &#term-9
+        h2.pane-title
+          &:before
+            content: "\f135"
+            padding-right: 2px
+      &#term-20
+        h2.pane-title
+          &:before
+            content: "\f140"
+      &#term-10
+        h2.pane-title
+          &:before
+            content: "\f0f7"
+      &#term-12
+        h2.pane-title
+          &:before
+            content: "\f239"
+      &#term-13
+        h2.pane-title
+          &:before
+            content: "\f0ad"
+      &#term-14
+        h2.pane-title
+          &:before
+            content: "\f26c"
+            +x-rem(font-size, 1.85)
+            vertical-align: -3px
+
+#comments
+  .comment
+    +legacy-pie-clearfix
+    margin-bottom: 1em
+    .comment-left
+      text-align: center
+      a.username, .username
+        +small-grey-links
+        line-height: 1.3
+    .comment-right
+      border: 1px solid #ccc
+      padding: 8px 14px
+    h3.comment-title
+      margin: 0.1em 0 0.5em
+    ul.links.inline
+      li
+        &:first-child
+          padding-left: 0
+        a
+          +x-rem(font-size, 0.8)
+
+
+form#comment-form
+  #edit-author, #edit-author--2, #edit-subscriptions-notify
+    display: none
+  background: #eee
+  border: #ddd
+  padding: 15px 25px
+  body.cke_editable
+    padding: 2px 12px
+  fieldset.filter-wrapper
+    padding: 1em
+    .filter-guidelines-item
+      display: none!important
+    .filter-help, .wysiwyg-toggle-wrapper
+      display: none
+  input.form-file
+    background: #f9f9f9
+    padding: 5px
+  #edit-actions
+    .form-submit
+      +submit-button
+
+body
+  &.conference-room-select
+    #main-wrapper
+      margin-top: 40px
+    .room-select
+      text-align: center
+    .conference-1, .conference-2, .conference-3
+      h3
+        margin: 0.5em 0
+
+.page-node
+  &.node-type-conference-room-paid-1, &.node-type-conference-room-paid-2, &.node-type-conference-room
+    .ds-2col-stacked
+      >.group-left, >.group-right
+        float: none
+        width: auto
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*----------- Tablet Portrait ----------------*/
+/*------------------------------------------- */
+/*------------------------------------------- */
++breakpoint($breakpoint-tablet-portrait)
+
+
+/* End Media Query Tablet Portrait */
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*---------------- Tablet  -------------------*/
+/*------------------------------------------- */
+/*------------------------------------------- */
++breakpoint($breakpoint-tablet)
+  .page-node
+    .node
+      .field-type-image
+        float: left
+        margin: 5px 15px 5px 0
+      ul.links.inline
+        clear: both
+  .node
+    &.node-teaser
+      .field-type-image
+        float: left
+        margin: 5px 15px 5px 0
+      ul.links.inline
+        clear: both
+
+
+  .page-service-info
+    .panel-col-top
+      display: none
+      .view-content
+        display: flex
+        flex-wrap: wrap
+      .views-row
+        width: 50%
+        padding-right: 3%
+
+    .panel-col-bottom
+      h2.pane-title
+        +x-rem(font-size, 1.3)
+      .inside
+        display: flex
+        flex-wrap: wrap
+        .panel-pane
+          width: 50%
+          padding-right: 3%
+          &#term-9
+            h2.pane-title
+              +x-rem(font-size, 1.2)
+              padding-bottom: 0.2em
+              box-sizing: content-box
+          &#term-13
+            h2.pane-title
+              +x-rem(font-size, 1.2)
+              padding-bottom: 0.25em
+              box-sizing: content-box
+
+  #comments
+    .comment
+      .comment-left
+        float: left
+        width: 98px
+        padding-top: 0.8em
+      .comment-right
+        margin-left: 100px
+  body
+    &.conference-room-select
+      .field-name-body
+        +legacy-pie-clearfix
+      .room-select
+        display: flex
+      .conference-1, .conference-2, .conference-3
+        width: 33.3%
+
+      .conference-1, .conference-2, .conference-3
+        padding-right: 3%
+        padding-top: 20px
+      //.conference-3
+      //  padding-right: 3%
+      //  padding-top: 20px
+        //img
+        //  max-width: 73%
+
+  .page-node
+    &.node-type-conference-room-paid-1, &.node-type-conference-room-paid-2, &.node-type-conference-room
+      .field-name-title
+        h2
+          margin-bottom: 0
+      .field-name-submitted-by
+        +small-grey-links
+        margin-bottom: 1em
+      .ds-2col-stacked
+        >.group-left
+          float: left
+          width: 25%
+        >.group-right
+          float: left
+          width: 75%
+
+
+/* End Media Query Tablet */
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*------------- Desktop narrow  --------------*/
+/*------------------------------------------- */
+/*------------------------------------------- */
++breakpoint($breakpoint-desktop-narrow)
+  .page-service-info
+    .panel-col-top
+      .views-row
+        width: 25%
+
+    .panel-col-bottom
+      .inside
+        .panel-pane
+          width: 33.3%
+          padding-right: 3%
+          &#term-9
+            h2.pane-title
+              +x-rem(font-size, 1.1)
+              padding-bottom: 0.2em
+              box-sizing: content-box
+          &#term-13
+            h2.pane-title
+              +x-rem(font-size, 1.05)
+              padding-bottom: 0.25em
+              box-sizing: content-box
+  body
+    &.conference-room-select
+      #content
+        width: 100%
+
+
+/* End Media Query Desktop narrow */
+
+/*------------------------------------------- */
+/*------------------------------------------- */
+/*---------------- Desktop  ------------------*/
+/*------------------------------------------- */
+/*------------------------------------------- */
++breakpoint($breakpoint-desktop)
+  .page-service-info
+    .panel-col-bottom
+      h2.pane-title
+        height: 45px
+      .inside
+        .panel-pane
+          &#term-9
+            h2.pane-title
+              +x-rem(font-size, 1.15)
+              padding-bottom: 0.15em
+              box-sizing: content-box
+              line-height: 1.6
+          &#term-13
+            h2.pane-title
+              +x-rem(font-size, 1.15)
+              padding-bottom: 0.15em
+              box-sizing: content-box
+              line-height: 1.6
+
+  body
+    &.conference-room-select
+      .conference-1, .conference-2, .conference-3
+        padding-top: 30px
+
+
+
+/* End Media Query Desktop */

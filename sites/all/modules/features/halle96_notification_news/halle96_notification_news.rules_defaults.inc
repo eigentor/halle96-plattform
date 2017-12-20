@@ -19,8 +19,8 @@ function halle96_notification_news_default_rules_configuration() {
       "DO" : [
         { "mail_to_users_of_role" : {
             "roles" : { "value" : { "4" : "4" } },
-            "subject" : "News aus der HALLE 96 - [node:title]",
-            "message" : "[node:body]\\r\\n\\r\\nDiesen Beitrag online auf der HALLE 96 Plattform lesen: \\r\\n[node:url]\\r\\n\\r\\nFreundliche Gr\\u00fc\\u00dfe\\r\\n\\r\\nMarion Gr\\u00f6nig\\r\\n\\r\\nZentrumsleiterin\\r\\n\\r\\nhannoverimpuls GmbH\\r\\nHanomaghof 2\\r\\n30449 Hannover | Deutschland\\r\\n\\r\\nTel.:   +49 511 9357-847\\r\\nMobil:  +49 163 3168428\\r\\nMail:   Marion.Groenig@hannoverimpuls.de\\r\\n        www.wirtschaftsfoerderung-hannover.de"
+            "subject" : "News aus dem TECHNOLOGIE ZENTRUM - [node:title]",
+            "message" : "[node:body]\\r\\n\\r\\nDiesen Beitrag online im Intranet des TECHNOLOGIE ZENTRUMs lesen: \\r\\n[node:url]\\r\\n\\r\\nBeste Gr\\u00fc\\u00dfe\\r\\nKatrin Gehrke\\r\\nZentrumsleiterin\\r\\n\\r\\nhannoverimpuls GmbH\\r\\nHollerithallee 17\\r\\n30419 Hannover | Deutschland\\r\\n\\r\\nTel.:   +49 511 9357-841\\r\\nMobil:  +49 170 2250517\\r\\nMail:   katrin.gehrke@hannoverimpuls.de\\r\\n        www.wirtschaftsfoerderung-hannover.de"
           }
         }
       ]

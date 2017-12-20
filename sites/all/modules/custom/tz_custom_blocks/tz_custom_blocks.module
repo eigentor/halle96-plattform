@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * Implements hook_block_info()
+ */
+function tz_custom_blocks_block_info() {
+  $blocks['user_account_menu'] = array (
+    'info' => t('User account menu'),
+  );
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view()
+ */
+function tz_custom_blocks_block_view($delta = '') {
+  switch($delta) {
+    case 'user_account_menu':
+      global $user;
+      $block['subject'] = $user->name;
+      $items = array(
+        array(
+          'data' => l(t('My user profile'), '/user/' . $user->uid),
+          'class' => array('profile'),
+        ),
+        array (
+          'data' => l(t('Logout'), 'user/logout'),
+          'class' => array('logout'),
+        ),
+        array(
+          'data' => l(t('Manage my subscriptions'), 'user/' .  $user->uid . '/subscriptions/taxa'),
+          'class' => array('my-subscriptions'),
+        ),
+      );
+      $title = '';
+      $type = 'ul';
+      $attributes = array();
+      $block['content'] = theme_item_list(array('items' => $items, 'title' => $title, 'type' => $type, 'attributes' => $attributes));
+
+      break;
+  }
+  return $block;
+}

@@ -62,6 +62,27 @@ function halle_96_conf_schedule_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'diff_enable_revisions_page_node_conference_room';
+  $strongarm->value = 1;
+  $export['diff_enable_revisions_page_node_conference_room'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_show_preview_changes_node_conference_room';
+  $strongarm->value = 1;
+  $export['diff_show_preview_changes_node_conference_room'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'diff_view_mode_preview_node_conference_room';
+  $strongarm->value = 'full';
+  $export['diff_view_mode_preview_node_conference_room'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__conference_room';
   $strongarm->value = array(
     'view_modes' => array(
@@ -84,6 +105,9 @@ function halle_96_conf_schedule_strongarm() {
         'custom_settings' => FALSE,
       ),
       'revision' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),

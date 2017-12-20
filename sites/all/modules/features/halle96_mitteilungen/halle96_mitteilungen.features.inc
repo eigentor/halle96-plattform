@@ -57,6 +57,82 @@ function halle96_mitteilungen_image_default_styles() {
     ),
   );
 
+  // Exported image style: news-thumbnail.
+  $styles['news-thumbnail'] = array(
+    'label' => 'News-Thumbnail',
+    'effects' => array(
+      2 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 58,
+          'height' => 56,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: user_image_round_tiny.
+  $styles['user_image_round_tiny'] = array(
+    'label' => 'Userbild rund mini',
+    'effects' => array(
+      2 => array(
+        'name' => 'canvasactions_definecanvas',
+        'data' => array(
+          'RGB' => array(
+            'HEX' => '',
+          ),
+          'under' => 1,
+          'exact' => array(
+            'width' => '',
+            'height' => '',
+            'xpos' => 'center',
+            'ypos' => 'center',
+          ),
+          'relative' => array(
+            'leftdiff' => 0,
+            'rightdiff' => 0,
+            'topdiff' => 0,
+            'bottomdiff' => 0,
+          ),
+        ),
+        'weight' => 1,
+      ),
+      3 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 40,
+          'height' => 40,
+        ),
+        'weight' => 2,
+      ),
+      4 => array(
+        'name' => 'canvasactions_roundedcorners',
+        'data' => array(
+          'radius' => 20,
+          'independent_corners_set' => array(
+            'independent_corners' => 0,
+            'radii' => array(
+              'tl' => 0,
+              'tr' => 0,
+              'bl' => 0,
+              'br' => 0,
+            ),
+          ),
+        ),
+        'weight' => 3,
+      ),
+      5 => array(
+        'name' => 'coloractions_convert',
+        'data' => array(
+          'format' => 'image/png',
+          'quality' => 75,
+        ),
+        'weight' => 4,
+      ),
+    ),
+  );
+
   return $styles;
 }
 
