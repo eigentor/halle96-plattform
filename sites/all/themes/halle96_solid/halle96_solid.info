@@ -4,7 +4,7 @@ package = halle96
 core = 7.x
 Version = VERSION
 
-stylesheets[all][] = css/uz-styles.css
+stylesheets[all][] = css/halle96-styles.css
 
 regions[header] = Header
 regions[navigation] = Navigation

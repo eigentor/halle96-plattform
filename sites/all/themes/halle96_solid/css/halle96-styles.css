@@ -455,7 +455,7 @@ div.messages {
       display: block;
       margin-bottom: 0; }
     #header .region-header {
-      margin-left: 420px;
+      margin-left: 330px;
       align-items: center; }
       #header .region-header .block.menu-toggle {
         display: none; }
@@ -1470,10 +1470,23 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
         font-size: 2.3rem;
         left: -59px; } }
 .front #block-views-news-block-1 .views-row {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  *zoom: 1; }
+  .front #block-views-news-block-1 .views-row:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden; }
 .front #block-views-news-block-1 .views-field-title h3 {
   margin: 0;
   font-weight: 500; }
+.front #block-views-news-block-1 .views-field-field-news-bild {
+  float: left; }
+  .front #block-views-news-block-1 .views-field-field-news-bild img {
+    margin-right: 1em;
+    margin-top: 0.5em; }
 .front #block-views-008f6cfec855a53f1dbdf423a4918844 h2.block-title {
   position: relative;
   font-size: 20.8px;
@@ -1738,4 +1751,4 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 /*------------------------------------------- */
 /* End Media Query Desktop */
 
-/*# sourceMappingURL=uz-styles.css.map */
+/*# sourceMappingURL=halle96-styles.css.map */
