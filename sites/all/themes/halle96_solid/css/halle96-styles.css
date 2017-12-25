@@ -1621,9 +1621,9 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
     margin: auto;
     width: 1600px;
     max-width: 100%;
-    background-image: url(../images/uz-frontal.jpg);
+    background-image: url(../images/halle-96-beleuchtet.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center -10px;
     background-size: 100% auto;
     height: 270px; }
   .front.not-logged-in #header-image {
@@ -1656,7 +1656,8 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   .front #header a#logo {
     width: 230px; }
   .front #header-image {
-    height: 370px; } }
+    height: 285px;
+    background-position: cennter top; } }
 @media only screen and (min-width: 992px) and (min-width: 992px) {
   .front .region-navigation ul.menu li a {
     border: 1px solid #bbb;
