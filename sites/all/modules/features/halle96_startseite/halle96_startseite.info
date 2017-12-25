@@ -2,6 +2,7 @@ name = Halle96 Startseite
 core = 7.x
 package = Halle 96
 dependencies[] = ctools
+dependencies[] = empty_front_page
 dependencies[] = empty_page
 dependencies[] = empty_page_extras
 dependencies[] = fe_block

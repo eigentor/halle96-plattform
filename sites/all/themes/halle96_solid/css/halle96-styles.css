@@ -500,6 +500,9 @@ div.messages {
     float: left;
     width: 25%; }
 
+  .front #content {
+    width: 100%; }
+
   #footer .region-footer ul.menu li {
     width: 33%; }
     #footer .region-footer ul.menu li a {
