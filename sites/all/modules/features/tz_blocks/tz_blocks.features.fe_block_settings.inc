@@ -221,8 +221,8 @@ function tz_blocks_default_fe_block_settings() {
         'weight' => -10,
       ),
       'halle96_solid' => array(
-        'region' => 'sidebar_second',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'halle96_solid',
         'weight' => -13,
       ),
@@ -266,8 +266,8 @@ function tz_blocks_default_fe_block_settings() {
         'weight' => -9,
       ),
       'halle96_solid' => array(
-        'region' => 'sidebar_second',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'halle96_solid',
         'weight' => -12,
       ),
