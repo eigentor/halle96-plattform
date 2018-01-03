@@ -57,6 +57,51 @@ function tz_blocks_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['block-mobile_menu_toggle_2'] = array(
+    'cache' => -1,
+    'css_class' => 'menu-toggle',
+    'custom' => 0,
+    'machine_name' => 'mobile_menu_toggle_2',
+    'module' => 'block',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'halle96' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'halle96',
+        'weight' => 0,
+      ),
+      'halle96_solid' => array(
+        'region' => 'header',
+        'status' => 1,
+        'theme' => 'halle96_solid',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'unternehmerinnen_zentrum' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'unternehmerinnen_zentrum',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '<none>',
+    'visibility' => 0,
+  );
+
   $export['block-my_subscriptions'] = array(
     'cache' => -1,
     'css_class' => '',

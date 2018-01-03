@@ -20,6 +20,14 @@ function tz_blocks_default_fe_block_boxes() {
   $export['mobile_menu_toggle'] = $fe_block_boxes;
 
   $fe_block_boxes = new stdClass();
+  $fe_block_boxes->info = 'Button für mobiles Menü 2';
+  $fe_block_boxes->format = 'ds_code';
+  $fe_block_boxes->machine_name = 'mobile_menu_toggle_2';
+  $fe_block_boxes->body = '&nbsp;';
+
+  $export['mobile_menu_toggle_2'] = $fe_block_boxes;
+
+  $fe_block_boxes = new stdClass();
   $fe_block_boxes->info = 'Meine Abonnements';
   $fe_block_boxes->format = 'ds_code';
   $fe_block_boxes->machine_name = 'my_subscriptions';
