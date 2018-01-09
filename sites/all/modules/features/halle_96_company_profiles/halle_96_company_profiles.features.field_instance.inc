@@ -172,12 +172,57 @@ function halle_96_company_profiles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-company_profile-field_comp_members'.
+  $field_instances['node-company_profile-field_comp_members'] = array(
+    'bundle' => 'company_profile',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'bypass_access' => FALSE,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_comp_members',
+    'label' => 'Mitarbeiter',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 6,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Beschreibung');
   t('Beschreibungstext.');
   t('Branche');
   t('Logo');
+  t('Mitarbeiter');
 
   return $field_instances;
 }
