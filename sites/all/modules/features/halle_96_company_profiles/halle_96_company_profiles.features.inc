@@ -14,6 +14,31 @@ function halle_96_company_profiles_ctools_plugin_api($module = NULL, $api = NULL
 }
 
 /**
+ * Implements hook_image_default_styles().
+ */
+function halle_96_company_profiles_image_default_styles() {
+  $styles = array();
+
+  // Exported image style: company_logo_big.
+  $styles['company_logo_big'] = array(
+    'label' => 'Firmenlogo Detailansicht',
+    'effects' => array(
+      3 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 220,
+          'height' => 220,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  return $styles;
+}
+
+/**
  * Implements hook_node_info().
  */
 function halle_96_company_profiles_node_info() {

@@ -21,6 +21,7 @@ features[field_instance][] = node-company_profile-body
 features[field_instance][] = node-company_profile-field_comp_industry
 features[field_instance][] = node-company_profile-field_comp_logo
 features[field_instance][] = node-company_profile-field_comp_members
+features[image][] = company_logo_big
 features[node][] = company_profile
 features[taxonomy][] = industry
 features[variable][] = comment_anonymous_company_profile

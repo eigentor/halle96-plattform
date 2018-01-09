@@ -133,7 +133,7 @@ function halle_96_company_profiles_field_default_field_instances() {
         'module' => 'image',
         'settings' => array(
           'image_link' => '',
-          'image_style' => 'medium',
+          'image_style' => 'company_logo_big',
         ),
         'type' => 'image',
         'weight' => 0,
