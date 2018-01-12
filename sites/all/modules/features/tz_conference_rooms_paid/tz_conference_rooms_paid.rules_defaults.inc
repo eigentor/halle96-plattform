@@ -20,7 +20,7 @@ function tz_conference_rooms_paid_default_rules_configuration() {
       },
       "DO" : [
         { "mail" : {
-            "to" : "Katrin.Gehrke@hannoverimpuls.de",
+            "to" : "Marion.Groenig@hannoverimpuls.de",
             "subject" : "Konferenzraum 1 wurde gebucht von [node:author] f\\u00fcr die Firma [node:field_conf_firma]",
             "message" : "Hallo Zentrumsleitung,\\r\\n\\r\\nEin Konferenzraum wurde gebucht oder eine Buchung bearbeitet.\\r\\n\\r\\n[node:author] hat f\\u00fcr die Firma [node:field_conf_firma] am\\r\\n[node:field_conf_termin]\\r\\nden Konferenzraum 1 gebucht.\\r\\nHier k\\u00f6nnen Sie die Buchung ansehen: [node:url]\\r\\n\\r\\nDas TZ Intranet",
             "language" : [ "" ]
@@ -40,7 +40,7 @@ function tz_conference_rooms_paid_default_rules_configuration() {
       },
       "DO" : [
         { "mail" : {
-            "to" : "Katrin.Gehrke@hannoverimpuls.de",
+            "to" : "Marion.Groenig@hannoverimpuls.de",
             "subject" : "Konferenzraum 2 wurde gebucht von [node:author] f\\u00fcr die Firma [node:field_conf_firma]",
             "message" : "Hallo Zentrumsleitung,\\r\\n\\r\\nEin Konferenzraum wurde gebucht oder eine Buchung bearbeitet.\\r\\n\\r\\n[node:author] hat f\\u00fcr die Firma [node:field_conf_firma] am\\r\\n[node:field_conf_termin]\\r\\nden Konferenzraum 2 gebucht.\\r\\nHier k\\u00f6nnen Sie die Buchung ansehen: [node:url]\\r\\n\\r\\nDas TZ Intranet",
             "language" : [ "" ]
