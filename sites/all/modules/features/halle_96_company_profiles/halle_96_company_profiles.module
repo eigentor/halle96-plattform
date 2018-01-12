@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Halle 96 Firmenprofile feature.
+ */
+
+include_once 'halle_96_company_profiles.features.inc';
