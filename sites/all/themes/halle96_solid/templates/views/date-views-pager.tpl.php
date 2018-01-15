@@ -43,14 +43,14 @@ $back_to_here = '?destination=' . $current_path;
 // Buchen-Button und Beschreibungstext für Konferenzraum bezahlt 1
 if($plugin->view->name == 'conference_room_paid_1' && $plugin->view->current_display = 'page_1') {
   $button_book_room = '<a class="book-room" alt ="Konferenzraum reservieren" href="/node/add/conference-room-paid-1' . $back_to_here . '">' . 'Konferenzraum 1 buchen' . '</a>';
-  $booking_description = '<div class="booking-description">Eine Stornierung für die kostenpflichtigen Konferenzräume ist nur über meine Person/Vertretung möglich. <br />
+  $booking_description = '<div class="booking-description">Eine Stornierung für die kostenpflichtigen Konferenzräume ist nur über Marion Grönig/Vertretung möglich. <br />
 Kostenlose Stornierungen sind 14 Tage möglich.</div>';
 }
 
 // Buchen-Button und Beschreibungstext für Konferenzraum bezahlt 2
 if($plugin->view->name == 'conference_room_paid_2' && $plugin->view->current_display = 'page_1') {
   $button_book_room = '<a class="book-room" alt ="Konferenzraum reservieren" href="/node/add/conference-room-paid-2' . $back_to_here . '">' . 'Konferenzraum 2 buchen' . '</a>';
-  $booking_description = '<div class="booking-description">Eine Stornierung für die kostenpflichtigen Konferenzräume ist nur über meine Person/Vertretung möglich. <br />
+  $booking_description = '<div class="booking-description">Eine Stornierung für die kostenpflichtigen Konferenzräume ist nur über Marion Grönig/Vertretung möglich. <br />
 Kostenlose Stornierungen sind 14 Tage möglich.</div>';
 }
 
