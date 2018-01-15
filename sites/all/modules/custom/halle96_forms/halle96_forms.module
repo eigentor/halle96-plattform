@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_form_BASE_FORM_ID_form_alter()
+ * @param $form
+ * @param $form_state
+ * @param $form_id
+ */
+function halle96_forms_form_node_form_alter(&$form, &$form_state, $form_id) {
+  $content_type = $form['#node']->type;
+  if ($content_type == 'conference_room_paid_2' || $content_type == 'conference_room_paid_1') {
+    $form['actions']['submit']['#value'] = 'Jetzt kostenpflichtig buchen';
+    // A new description right above the actions buttons
+    $form['actions']['#prefix'] = '<div class="description actions-description">';
+    $form['actions']['#prefix'] .= 'Bitte prüfen Sie noch einmal alle Angaben. <br /> Nach dem Speichern ist die Buchung nur noch durch die Zentrumsleitung bearbeitbar.';
+    $form['actions']['#prefix'] .= '</div>';
+  }
+}

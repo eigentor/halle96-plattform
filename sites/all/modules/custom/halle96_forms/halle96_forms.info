@@ -1,0 +1,5 @@
+name = Halle 96 Forms
+description = Manipulations of node forms and other forms
+core = 7.x
+version = VERSION
+package = Halle 96
