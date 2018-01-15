@@ -948,7 +948,9 @@ body.conference-room-select #main-wrapper {
 body.conference-room-select .room-select {
   text-align: center; }
 body.conference-room-select .conference-1 h3, body.conference-room-select .conference-2 h3, body.conference-room-select .conference-3 h3 {
-  margin: 0.5em 0; }
+  margin: 0.5em 0 1em;
+  font-size: 19.2px;
+  font-size: 1.2rem; }
 body.conference-room-select .conference-2 img {
   max-width: 75%;
   height: auto; }
