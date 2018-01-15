@@ -198,8 +198,12 @@ function halle96_mitteilungen_strongarm() {
   $strongarm->name = 'subscriptions_blocked_content_types';
   $strongarm->value = array(
     'article' => 'article',
+    'company_profile' => 'company_profile',
     'conference_room' => 'conference_room',
     'page' => 'page',
+    'conference_room_paid_1' => 'conference_room_paid_1',
+    'conference_room_paid_2' => 'conference_room_paid_2',
+    'simple_page' => 'simple_page',
   );
   $export['subscriptions_blocked_content_types'] = $strongarm;
 
@@ -356,8 +360,12 @@ function halle96_mitteilungen_strongarm() {
   $strongarm->value = array(
     'article' => 'article',
     'discussion' => 'discussion',
+    'company_profile' => 'company_profile',
     'conference_room' => 'conference_room',
     'page' => 'page',
+    'conference_room_paid_1' => 'conference_room_paid_1',
+    'conference_room_paid_2' => 'conference_room_paid_2',
+    'simple_page' => 'simple_page',
   );
   $export['subscriptions_unlisted_content_types'] = $strongarm;
 
