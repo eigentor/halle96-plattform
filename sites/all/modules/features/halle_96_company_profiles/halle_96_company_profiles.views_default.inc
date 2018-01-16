@@ -34,6 +34,7 @@ function halle_96_company_profiles_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sortieren nach';
   $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Aufsteigend';
   $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Absteigend';
+  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elemente pro Seite';
@@ -43,7 +44,18 @@ function halle_96_company_profiles_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['next'] = 'nächste Seite ›';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'letzte Seite »';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_plugin'] = 'panels_fields';
+  $handler->display->display_options['row_options']['layout'] = 'threecol_25_50_25';
+  $handler->display->display_options['row_options']['regions'] = array(
+    'nid' => 'left',
+    'title' => 'middle',
+    'field_comp_logo' => 'left',
+    'body' => 'middle',
+    'field_comp_industry' => 'right',
+    'field_comp_floor' => 'right',
+    'field_room_no' => 'right',
+    'field_comp_members' => 'right',
+  );
   /* Feld: Inhalt: Beitrags-ID */
   $handler->display->display_options['fields']['nid']['id'] = 'nid';
   $handler->display->display_options['fields']['nid']['table'] = 'node';
@@ -56,6 +68,7 @@ function halle_96_company_profiles_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['title']['element_type'] = 'h3';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Feld: Inhalt: Logo */
   $handler->display->display_options['fields']['field_comp_logo']['id'] = 'field_comp_logo';
@@ -100,11 +113,20 @@ function halle_96_company_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_room_no']['field'] = 'field_room_no';
   $handler->display->display_options['fields']['field_room_no']['label'] = 'Raum';
   $handler->display->display_options['fields']['field_room_no']['alter']['text'] = '[field_comp_floor], [field_room_no]';
-  /* Sortierkriterien: Inhalt: Beitragsdatum */
-  $handler->display->display_options['sorts']['created']['id'] = 'created';
-  $handler->display->display_options['sorts']['created']['table'] = 'node';
-  $handler->display->display_options['sorts']['created']['field'] = 'created';
-  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
+  /* Feld: Inhalt: Mitarbeiter */
+  $handler->display->display_options['fields']['field_comp_members']['id'] = 'field_comp_members';
+  $handler->display->display_options['fields']['field_comp_members']['table'] = 'field_data_field_comp_members';
+  $handler->display->display_options['fields']['field_comp_members']['field'] = 'field_comp_members';
+  $handler->display->display_options['fields']['field_comp_members']['settings'] = array(
+    'bypass_access' => 0,
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['field_comp_members']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_comp_members']['multi_type'] = 'ul';
+  /* Sortierkriterien: Inhalt: Titel */
+  $handler->display->display_options['sorts']['title']['id'] = 'title';
+  $handler->display->display_options['sorts']['title']['table'] = 'node';
+  $handler->display->display_options['sorts']['title']['field'] = 'title';
   /* Filterkriterium: Inhalt: Veröffentlicht */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
@@ -119,6 +141,28 @@ function halle_96_company_profiles_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'company_profile' => 'company_profile',
   );
+  /* Filterkriterium: Inhalt: Branche (field_comp_industry) */
+  $handler->display->display_options['filters']['field_comp_industry_tid']['id'] = 'field_comp_industry_tid';
+  $handler->display->display_options['filters']['field_comp_industry_tid']['table'] = 'field_data_field_comp_industry';
+  $handler->display->display_options['filters']['field_comp_industry_tid']['field'] = 'field_comp_industry_tid';
+  $handler->display->display_options['filters']['field_comp_industry_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_comp_industry_tid']['expose']['operator_id'] = 'field_comp_industry_tid_op';
+  $handler->display->display_options['filters']['field_comp_industry_tid']['expose']['label'] = 'Branche';
+  $handler->display->display_options['filters']['field_comp_industry_tid']['expose']['operator'] = 'field_comp_industry_tid_op';
+  $handler->display->display_options['filters']['field_comp_industry_tid']['expose']['identifier'] = 'field_comp_industry_tid';
+  $handler->display->display_options['filters']['field_comp_industry_tid']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['field_comp_industry_tid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+    6 => 0,
+    7 => 0,
+    8 => 0,
+  );
+  $handler->display->display_options['filters']['field_comp_industry_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_comp_industry_tid']['vocabulary'] = 'industry';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -148,6 +192,7 @@ function halle_96_company_profiles_views_default_views() {
     t('Stockwerk'),
     t('Raum'),
     t('[field_comp_floor], [field_room_no]'),
+    t('Mitarbeiter'),
     t('Page'),
   );
   $export['mieterfirmen'] = $view;
