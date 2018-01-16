@@ -112,27 +112,6 @@ function halle_96_company_profiles_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_part_building'.
-  $field_bases['field_part_building'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_part_building',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
   // Exported field_base: 'field_room_no'.
   $field_bases['field_room_no'] = array(
     'active' => 1,
