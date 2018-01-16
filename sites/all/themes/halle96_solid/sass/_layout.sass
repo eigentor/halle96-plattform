@@ -312,9 +312,14 @@
     #block-system-main-menu
       display: block!important
     ul.menu
+      +legacy-pie-clearfix
+      margin-bottom: 7px
       li
         padding-right: 0
         display: inline
+        float: left
+        margin-right: 3px
+        margin-bottom: 15px
         &:first-child
           margin-left: 0
         //a

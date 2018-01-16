@@ -477,11 +477,24 @@ div.messages {
     display: none !important; }
   .region-navigation #block-system-main-menu {
     display: block !important; }
-  .region-navigation ul.menu li {
-    padding-right: 0;
-    display: inline; }
-    .region-navigation ul.menu li:first-child {
-      margin-left: 0; }
+  .region-navigation ul.menu {
+    *zoom: 1;
+    margin-bottom: 7px; }
+    .region-navigation ul.menu:after {
+      content: " ";
+      display: block;
+      height: 0;
+      clear: both;
+      overflow: hidden;
+      visibility: hidden; }
+    .region-navigation ul.menu li {
+      padding-right: 0;
+      display: inline;
+      float: left;
+      margin-right: 3px;
+      margin-bottom: 15px; }
+      .region-navigation ul.menu li:first-child {
+        margin-left: 0; }
 
   .role-Zentrumsleitung .region-navigation ul.menu li a.news-schreiben {
     display: inline; }
