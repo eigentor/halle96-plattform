@@ -83,7 +83,7 @@ div.messages {
   padding-top: 30px; }
   #header a#logo {
     display: block;
-    max-width: 340px;
+    max-width: 230px;
     margin: auto; }
   #header .region-header {
     display: flex;
@@ -392,7 +392,7 @@ div.messages {
       margin: 8px 30px 20px 0; }
     #header .region-header {
       margin: 0 0 0 460px;
-      padding: 0;
+      padding: 30px 0;
       border: none;
       width: auto; }
     #header #block-search-form .container-inline {
@@ -456,6 +456,7 @@ div.messages {
       margin-bottom: 0; }
     #header .region-header {
       margin-left: 330px;
+      padding-top: 0;
       align-items: center; }
       #header .region-header .block.menu-toggle {
         display: none; }
@@ -1242,6 +1243,8 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 /*------------- All Screen Sizes ------------- */
 /*------------------------------------------- */
 /*------------------------------------------- */
+.front #header a#logo {
+  width: 230px; }
 .front #page-title-container {
   display: none; }
 .front .panel-pane .pane-title a {
@@ -1616,7 +1619,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 @media only screen and (min-width: 768px) {
   .front #header a#logo {
     float: left;
-    width: 370px; }
+    width: 250px; }
   .front #navigation {
     margin-bottom: 0; }
   .front #header-image {
