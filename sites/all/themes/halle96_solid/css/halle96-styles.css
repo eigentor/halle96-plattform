@@ -951,9 +951,6 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   margin: 0.5em 0 1em;
   font-size: 19.2px;
   font-size: 1.2rem; }
-body.conference-room-select .conference-2 img {
-  max-width: 75%;
-  height: auto; }
 
 .page-node.node-type-conference-room-paid-1 .ds-2col-stacked > .group-left, .page-node.node-type-conference-room-paid-1 .ds-2col-stacked > .group-right, .page-node.node-type-conference-room-paid-2 .ds-2col-stacked > .group-left, .page-node.node-type-conference-room-paid-2 .ds-2col-stacked > .group-right, .page-node.node-type-conference-room .ds-2col-stacked > .group-left, .page-node.node-type-conference-room .ds-2col-stacked > .group-right {
   float: none;
@@ -1078,10 +1075,7 @@ body.conference-room-select .conference-2 img {
       box-sizing: content-box; }
 
   body.conference-room-select #content {
-    width: 100%; }
-  body.conference-room-select .conference-2 img {
-    max-width: none;
-    width: 72%; } }
+    width: 100%; } }
 /* End Media Query Desktop narrow */
 /*------------------------------------------- */
 /*------------------------------------------- */
