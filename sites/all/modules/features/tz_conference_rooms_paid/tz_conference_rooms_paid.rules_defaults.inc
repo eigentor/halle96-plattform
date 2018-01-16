@@ -13,7 +13,7 @@ function tz_conference_rooms_paid_default_rules_configuration() {
       "LABEL" : "Benachrichtigung Zentrumsleitung Buchung Konferenzraum 1",
       "PLUGIN" : "reaction rule",
       "OWNER" : "rules",
-      "REQUIRES" : [ "rules" ],
+      "REQUIRES" : [ "rules", "devel" ],
       "ON" : {
         "node_insert--conference_room_paid_1" : { "bundle" : "conference_room_paid_1" },
         "node_update--conference_room_paid_1" : { "bundle" : "conference_room_paid_1" }
@@ -25,7 +25,14 @@ function tz_conference_rooms_paid_default_rules_configuration() {
             "message" : "Hallo Zentrumsleitung,\\r\\n\\r\\nEin Konferenzraum wurde gebucht oder eine Buchung bearbeitet.\\r\\n\\r\\n[node:author] hat f\\u00fcr die Firma [node:field_conf_firma] am\\r\\n[node:field_conf_termin]\\r\\nden Konferenzraum 1 gebucht.\\r\\nHier k\\u00f6nnen Sie die Buchung ansehen: [node:url]\\r\\n\\r\\nDas TZ Intranet",
             "language" : [ "" ]
           }
-        }
+        },
+        { "entity_fetch" : {
+            "USING" : { "type" : "user", "id" : [ "node:author:uid" ] },
+            "PROVIDE" : { "entity_fetched" : { "user_author" : "User booking room" } }
+          }
+        },
+        { "devel_debug" : { "value" : [ "user-author:mail" ] } },
+        { "devel_debug" : { "value" : [ "user-author:name" ] } }
       ]
     }
   }');

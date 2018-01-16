@@ -1,6 +1,7 @@
 name = TZ Konferenzräume
 core = 7.x
 package = TECHNOLOGIE ZENTRUM
+dependencies[] = devel
 dependencies[] = ds
 dependencies[] = halle_96_conf_schedule
 dependencies[] = rules
