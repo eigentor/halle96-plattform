@@ -186,7 +186,7 @@ div.messages {
       @media only screen and (min-width: 1200px) {
         .region-navigation .item-list ul li a {
           padding: 4px 10px;
-          margin-right: 0.7em; } }
+          margin-right: 0.6em; } }
 .region-navigation #block-system-main-menu {
   display: none; }
 .region-navigation ul.menu {
@@ -225,7 +225,7 @@ div.messages {
       @media only screen and (min-width: 1200px) {
         .region-navigation ul.menu li a {
           padding: 4px 10px;
-          margin-right: 0.7em; } }
+          margin-right: 0.6em; } }
       .region-navigation ul.menu li a.beitrag-schreiben {
         background: #eee url(../images/icon-background.png) no-repeat -20px center;
         padding-left: 38px;
