@@ -781,6 +781,8 @@ div.messages {
       border-color: #555;
       background: #eee;
       text-decoration: none; }
+.node .links.inline li.subscriptions-subscribe {
+  display: none; }
 
 .page-service-info #main-wrapper {
   padding-bottom: 40px; }
@@ -957,6 +959,24 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   float: none;
   width: auto; }
 
+.node-type-company-profile #main-wrapper {
+  margin-top: 30px; }
+.node-type-company-profile .node.ds-3col .group-left, .node-type-company-profile .node.ds-3col .group-middle, .node-type-company-profile .node.ds-3col .group-right {
+  float: none;
+  width: auto; }
+.node-type-company-profile .node.ds-3col .field-type-image {
+  float: none; }
+.node-type-company-profile .node .field-name-field-comp-floor {
+  float: left; }
+  .node-type-company-profile .node .field-name-field-comp-floor .field-item:after {
+    content: ",";
+    margin-left: 0.1em; }
+.node-type-company-profile .node .field-name-field-room-no {
+  float: left;
+  margin-left: 0.3em; }
+.node-type-company-profile .node .field-name-field-comp-members {
+  clear: left; }
+
 /*------------------------------------------- */
 /*------------------------------------------- */
 /*----------- Tablet Portrait ---------------- */
@@ -1076,7 +1096,23 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
       box-sizing: content-box; }
 
   body.conference-room-select #content {
-    width: 100%; } }
+    width: 100%; }
+
+  .node-type-company-profile.page-node #content {
+    width: auto; }
+  .node-type-company-profile .node.ds-3col .group-left {
+    float: left;
+    width: 25%;
+    padding-right: 1.5em; }
+  .node-type-company-profile .node.ds-3col .group-middle {
+    float: left;
+    width: 50%;
+    padding-right: 3em; }
+  .node-type-company-profile .node.ds-3col .group-right {
+    float: left;
+    width: 25%; }
+  .node-type-company-profile .field-name-body p {
+    margin-top: 0.3em; } }
 /* End Media Query Desktop narrow */
 /*------------------------------------------- */
 /*------------------------------------------- */

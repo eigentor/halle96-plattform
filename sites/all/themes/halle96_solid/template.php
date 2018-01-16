@@ -41,5 +41,17 @@ function halle96_solid_preprocess_page(&$variables) {
   );
 }
 
+/**
+ * Implement template_preprocess_page()
+ * @param $variables
+ */
+function halle96_solid_preprocess_field(&$variables) {
+
+  // Change the label of the "Stockwerk" Field in Node display.
+  if ($variables['element']['#field_name'] == 'field_comp_floor') {
+    $variables['label'] = 'Raum';
+  }
+}
+
 
 

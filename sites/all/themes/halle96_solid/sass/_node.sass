@@ -25,6 +25,9 @@
       display: inline-block
       a
         +tags
+  .links.inline
+    li.subscriptions-subscribe
+      display: none
 
 
 .page-service-info
@@ -208,6 +211,28 @@ body
         float: none
         width: auto
 
+.node-type-company-profile
+  #main-wrapper
+    margin-top: 30px
+  .node
+    &.ds-3col
+      .group-left, .group-middle, .group-right
+        float: none
+        width: auto
+      .field-type-image
+        float: none
+    .field-name-field-comp-floor
+      float: left
+      .field-item
+        &:after
+          content: ","
+          margin-left: 0.1em
+    .field-name-field-room-no
+      float: left
+      margin-left: 0.3em
+    .field-name-field-comp-members
+      clear: left
+
 /*------------------------------------------- */
 /*------------------------------------------- */
 /*----------- Tablet Portrait ----------------*/
@@ -345,6 +370,27 @@ body
     &.conference-room-select
       #content
         width: 100%
+
+  .node-type-company-profile
+    &.page-node
+      #content
+        width: auto
+    .node
+      &.ds-3col
+        .group-left
+          float: left
+          width: 25%
+          padding-right: 1.5em
+        .group-middle
+          float: left
+          width: 50%
+          padding-right: 3em
+        .group-right
+          float: left
+          width: 25%
+    .field-name-body
+      p
+        margin-top: 0.3em
 
 
 /* End Media Query Desktop narrow */
