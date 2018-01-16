@@ -5,6 +5,50 @@
  */
 
 /**
+ * Implements hook_ds_field_settings_info().
+ */
+function halle_96_company_profiles_ds_field_settings_info() {
+  $export = array();
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'ds_views|mieterfirmen-page-fields|default';
+  $ds_fieldsetting->entity_type = 'ds_views';
+  $ds_fieldsetting->bundle = 'mieterfirmen-page-fields';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'field_comp_logo' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'body' => array(
+      'weight' => '2',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'field_comp_industry' => array(
+      'weight' => '3',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'field_room_no' => array(
+      'weight' => '4',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+  );
+  $export['ds_views|mieterfirmen-page-fields|default'] = $ds_fieldsetting;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_layout_settings_info().
  */
 function halle_96_company_profiles_ds_layout_settings_info() {
