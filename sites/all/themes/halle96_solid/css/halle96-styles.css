@@ -711,7 +711,8 @@ div.messages {
   padding-bottom: 0.3em;
   border-bottom: 1px solid #ddd; }
 .page-mieterfirmen .view-mieterfirmen .views-field-title h3 {
-  margin: 0; }
+  margin: 0 0 0.3em;
+  line-height: 1.3; }
 .page-mieterfirmen .view-mieterfirmen .panel-col-last .views-label {
   font-weight: 600; }
 .page-mieterfirmen .view-mieterfirmen .panel-col-last .views-field-field-comp-industry .views-label {
