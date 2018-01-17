@@ -166,9 +166,11 @@ function halle_96_company_profiles_strongarm() {
       2 => 5,
     ),
     'view' => array(
-      0 => 6,
-      1 => 3,
-      2 => 5,
+      0 => 2,
+      1 => 4,
+      2 => 6,
+      3 => 3,
+      4 => 5,
     ),
   );
   $export['content_access_company_profile'] = $strongarm;

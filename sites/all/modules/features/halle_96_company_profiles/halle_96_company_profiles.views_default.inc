@@ -169,7 +169,10 @@ function halle_96_company_profiles_views_default_views() {
   $handler->display->display_options['path'] = 'mieterfirmen';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Mieterfirmen';
+  $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
   $translatables['mieterfirmen'] = array(
     t('Master'),
     t('Mieterfirmen'),
