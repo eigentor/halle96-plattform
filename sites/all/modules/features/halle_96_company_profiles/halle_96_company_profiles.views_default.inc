@@ -35,16 +35,11 @@ function halle_96_company_profiles_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Aufsteigend';
   $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Absteigend';
   $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elemente pro Seite';
-  $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Alle -';
-  $handler->display->display_options['pager']['options']['tags']['first'] = '« erste Seite';
-  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ vorherige Seite';
-  $handler->display->display_options['pager']['options']['tags']['next'] = 'nächste Seite ›';
-  $handler->display->display_options['pager']['options']['tags']['last'] = 'letzte Seite »';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'panels_fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
   $handler->display->display_options['row_options']['layout'] = 'threecol_25_50_25';
   $handler->display->display_options['row_options']['regions'] = array(
     'nid' => 'left',
@@ -106,13 +101,14 @@ function halle_96_company_profiles_views_default_views() {
   $handler->display->display_options['fields']['field_comp_floor']['id'] = 'field_comp_floor';
   $handler->display->display_options['fields']['field_comp_floor']['table'] = 'field_data_field_comp_floor';
   $handler->display->display_options['fields']['field_comp_floor']['field'] = 'field_comp_floor';
-  $handler->display->display_options['fields']['field_comp_floor']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_comp_floor']['label'] = 'Raum';
   /* Feld: Inhalt: Raum-Nr. */
   $handler->display->display_options['fields']['field_room_no']['id'] = 'field_room_no';
   $handler->display->display_options['fields']['field_room_no']['table'] = 'field_data_field_room_no';
   $handler->display->display_options['fields']['field_room_no']['field'] = 'field_room_no';
-  $handler->display->display_options['fields']['field_room_no']['label'] = 'Raum';
+  $handler->display->display_options['fields']['field_room_no']['label'] = '';
   $handler->display->display_options['fields']['field_room_no']['alter']['text'] = '[field_comp_floor], [field_room_no]';
+  $handler->display->display_options['fields']['field_room_no']['element_label_colon'] = FALSE;
   /* Feld: Inhalt: Mitarbeiter */
   $handler->display->display_options['fields']['field_comp_members']['id'] = 'field_comp_members';
   $handler->display->display_options['fields']['field_comp_members']['table'] = 'field_data_field_comp_members';
@@ -182,17 +178,9 @@ function halle_96_company_profiles_views_default_views() {
     t('Sortieren nach'),
     t('Aufsteigend'),
     t('Absteigend'),
-    t('Elemente pro Seite'),
-    t('- Alle -'),
-    t('Offset'),
-    t('« erste Seite'),
-    t('‹ vorherige Seite'),
-    t('nächste Seite ›'),
-    t('letzte Seite »'),
     t('Beitrags-ID'),
     t('weiterlesen'),
     t('Branche'),
-    t('Stockwerk'),
     t('Raum'),
     t('[field_comp_floor], [field_room_no]'),
     t('Mitarbeiter'),

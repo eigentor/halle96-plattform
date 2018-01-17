@@ -159,6 +159,65 @@
             .continues, .cutoff
               background: $conference-yellow
 
+.page-mieterfirmen
+  .view-mieterfirmen
+    .views-exposed-form
+      padding: 10px 20px
+      background: #eee
+      border: #e5e5e5
+      margin-bottom: 2em
+      margin-top: 2em
+    .panel-col-first, .panel-col, .panel-col-last,
+      float: none
+      width: auto
+      clear: left
+    .view-content
+      margin-top: 3em
+    .views-row
+      margin-top: 1.5em
+      margin-bottom: 1em
+      padding-bottom: 0.3em
+      border-bottom: 1px solid #ddd
+    .views-field-title
+      h3
+        margin: 0
+    .panel-col-last
+      .views-label
+        font-weight: 600
+      .views-field-field-comp-industry
+        .views-label
+          padding-right: 0.2em
+        div
+          display: inline
+      .views-field-field-comp-floor
+        display: inline
+        .views-label
+          padding-right: 0.2em
+        .field-content
+          &:after
+            content: ","
+            padding-right: 0.1em
+            padding-left: 0.1em
+        div
+          display: inline
+      .views-field-field-room-no
+        display: inline
+        div
+          display: inline
+      .views-field-field-comp-members
+        .views-label
+          margin-bottom: 0.5em
+        ul
+          li
+            list-style-type: none
+            list-style-image: none
+            padding-left: 0
+            margin-left: 0
+            margin-bottom: 0
+            &:before
+              content: "-"
+              padding: 0 0.3em 0 0.2em
+
 /*------------------------------------------- */
 /*------------------------------------------- */
 /*----------- Tablet Portrait ----------------*/
@@ -204,6 +263,22 @@
         left: 0
         top: 0
         margin-top: -3px
+
+  .page-mieterfirmen
+    .view-mieterfirmen
+      .panel-col-first
+        float: left
+        width: 20%
+        clear: none
+      .panel-col
+        float: left
+        width: 50%
+        clear: none
+        padding-right: 2em
+      .panel-col-last
+        float: left
+        width: 30%
+        clear: none
 
 
 /* End Media Query Desktop narrow */

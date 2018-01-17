@@ -693,6 +693,57 @@ div.messages {
 .view-conference-room-paid-2 .calendar-calendar .month-view td.multi-day .inner .monthview .continues, .view-conference-room-paid-2 .calendar-calendar .month-view td.multi-day .inner .monthview .cutoff {
   background: #f7c74f; }
 
+.page-mieterfirmen .view-mieterfirmen .views-exposed-form {
+  padding: 10px 20px;
+  background: #eee;
+  border: #e5e5e5;
+  margin-bottom: 2em;
+  margin-top: 2em; }
+.page-mieterfirmen .view-mieterfirmen .panel-col-first, .page-mieterfirmen .view-mieterfirmen .panel-col, .page-mieterfirmen .view-mieterfirmen .panel-col-last {
+  float: none;
+  width: auto;
+  clear: left; }
+.page-mieterfirmen .view-mieterfirmen .view-content {
+  margin-top: 3em; }
+.page-mieterfirmen .view-mieterfirmen .views-row {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #ddd; }
+.page-mieterfirmen .view-mieterfirmen .views-field-title h3 {
+  margin: 0; }
+.page-mieterfirmen .view-mieterfirmen .panel-col-last .views-label {
+  font-weight: 600; }
+.page-mieterfirmen .view-mieterfirmen .panel-col-last .views-field-field-comp-industry .views-label {
+  padding-right: 0.2em; }
+.page-mieterfirmen .view-mieterfirmen .panel-col-last .views-field-field-comp-industry div {
+  display: inline; }
+.page-mieterfirmen .view-mieterfirmen .panel-col-last .views-field-field-comp-floor {
+  display: inline; }
+  .page-mieterfirmen .view-mieterfirmen .panel-col-last .views-field-field-comp-floor .views-label {
+    padding-right: 0.2em; }
+  .page-mieterfirmen .view-mieterfirmen .panel-col-last .views-field-field-comp-floor .field-content:after {
+    content: ",";
+    padding-right: 0.1em;
+    padding-left: 0.1em; }
+  .page-mieterfirmen .view-mieterfirmen .panel-col-last .views-field-field-comp-floor div {
+    display: inline; }
+.page-mieterfirmen .view-mieterfirmen .panel-col-last .views-field-field-room-no {
+  display: inline; }
+  .page-mieterfirmen .view-mieterfirmen .panel-col-last .views-field-field-room-no div {
+    display: inline; }
+.page-mieterfirmen .view-mieterfirmen .panel-col-last .views-field-field-comp-members .views-label {
+  margin-bottom: 0.5em; }
+.page-mieterfirmen .view-mieterfirmen .panel-col-last .views-field-field-comp-members ul li {
+  list-style-type: none;
+  list-style-image: none;
+  padding-left: 0;
+  margin-left: 0;
+  margin-bottom: 0; }
+  .page-mieterfirmen .view-mieterfirmen .panel-col-last .views-field-field-comp-members ul li:before {
+    content: "-";
+    padding: 0 0.3em 0 0.2em; }
+
 /*------------------------------------------- */
 /*------------------------------------------- */
 /*----------- Tablet Portrait ---------------- */
@@ -727,7 +778,21 @@ div.messages {
     position: absolute;
     left: 0;
     top: 0;
-    margin-top: -3px; } }
+    margin-top: -3px; }
+
+  .page-mieterfirmen .view-mieterfirmen .panel-col-first {
+    float: left;
+    width: 20%;
+    clear: none; }
+  .page-mieterfirmen .view-mieterfirmen .panel-col {
+    float: left;
+    width: 50%;
+    clear: none;
+    padding-right: 2em; }
+  .page-mieterfirmen .view-mieterfirmen .panel-col-last {
+    float: left;
+    width: 30%;
+    clear: none; } }
 /* End Media Query Desktop narrow */
 /*------------------------------------------- */
 /*------------------------------------------- */
