@@ -84,6 +84,7 @@ div.messages {
   #header a#logo {
     display: block;
     max-width: 230px;
+    height: auto;
     margin: auto; }
   #header .region-header {
     display: flex;
@@ -1292,8 +1293,6 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 /*------------- All Screen Sizes ------------- */
 /*------------------------------------------- */
 /*------------------------------------------- */
-.front #header a#logo {
-  width: 230px; }
 .front #page-title-container {
   display: none; }
 .front .panel-pane .pane-title a {
@@ -1666,9 +1665,6 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 /*------------------------------------------- */
 /*------------------------------------------- */
 @media only screen and (min-width: 768px) {
-  .front #header a#logo {
-    float: left;
-    width: 250px; }
   .front #navigation {
     margin-bottom: 0; }
   .front #header-image {
@@ -1707,8 +1703,6 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 /*------------------------------------------- */
 /*------------------------------------------- */
 @media only screen and (min-width: 992px) {
-  .front #header a#logo {
-    width: 230px; }
   .front #header-image {
     height: 285px;
     background-position: cennter top; } }
