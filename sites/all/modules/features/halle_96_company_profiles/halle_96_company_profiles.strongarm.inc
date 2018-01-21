@@ -54,7 +54,7 @@ function halle_96_company_profiles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'chosen_jquery_selector';
-  $strongarm->value = 'select#edit-field-comp-industry-tid, select#edit-field-comp-industry-und';
+  $strongarm->value = 'select#edit-field-comp-industry-tid';
   $export['chosen_jquery_selector'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -161,9 +161,11 @@ function halle_96_company_profiles_strongarm() {
   $strongarm->name = 'content_access_company_profile';
   $strongarm->value = array(
     'view_own' => array(
-      0 => 6,
-      1 => 3,
-      2 => 5,
+      0 => 2,
+      1 => 4,
+      2 => 6,
+      3 => 3,
+      4 => 5,
     ),
     'view' => array(
       0 => 2,
