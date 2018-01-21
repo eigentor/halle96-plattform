@@ -26,6 +26,7 @@ function halle_96_company_profiles_strongarm() {
     'halle96' => 0,
     'halle96_solid' => 0,
     'seven' => 0,
+    'stark' => 0,
   );
   $export['chosen_disabled_themes'] = $strongarm;
 
@@ -54,7 +55,7 @@ function halle_96_company_profiles_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'chosen_jquery_selector';
-  $strongarm->value = 'select#edit-field-comp-industry-tid';
+  $strongarm->value = 'select#edit-field-comp-industry-tid, select#edit-field-comp-industry-und';
   $export['chosen_jquery_selector'] = $strongarm;
 
   $strongarm = new stdClass();

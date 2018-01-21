@@ -12,6 +12,7 @@ function tz_conference_rooms_paid_default_rules_configuration() {
   $items['rules_notify_admin_conference_booking'] = entity_import('rules_config', '{ "rules_notify_admin_conference_booking" : {
       "LABEL" : "Benachrichtigung Zentrumsleitung Buchung Konferenzraum 1",
       "PLUGIN" : "reaction rule",
+      "ACTIVE" : false,
       "OWNER" : "rules",
       "REQUIRES" : [ "rules" ],
       "ON" : {
@@ -47,6 +48,7 @@ function tz_conference_rooms_paid_default_rules_configuration() {
   $items['rules_notify_admin_conference_booking_2'] = entity_import('rules_config', '{ "rules_notify_admin_conference_booking_2" : {
       "LABEL" : "Benachrichtigung Zentrumsleitung Buchung Konferenzraum 2",
       "PLUGIN" : "reaction rule",
+      "ACTIVE" : false,
       "OWNER" : "rules",
       "REQUIRES" : [ "rules" ],
       "ON" : {

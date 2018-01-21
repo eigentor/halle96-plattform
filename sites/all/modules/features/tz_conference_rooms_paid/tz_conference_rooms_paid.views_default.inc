@@ -30,7 +30,10 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['access']['role'] = array(
     3 => '3',
     2 => '2',
+    8 => '8',
     4 => '4',
+    6 => '6',
+    7 => '7',
     5 => '5',
   );
   $handler->display->display_options['cache']['type'] = 'none';
@@ -461,8 +464,10 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['access']['type'] = 'role';
   $handler->display->display_options['access']['role'] = array(
     3 => '3',
+    2 => '2',
     8 => '8',
     4 => '4',
+    6 => '6',
     5 => '5',
   );
   $handler->display->display_options['cache']['type'] = 'none';
