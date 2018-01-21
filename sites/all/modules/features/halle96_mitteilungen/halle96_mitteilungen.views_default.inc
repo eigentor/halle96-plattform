@@ -44,12 +44,28 @@ function halle96_mitteilungen_views_default_views() {
   $handler->display->display_options['relationships']['nid']['table'] = 'comment';
   $handler->display->display_options['relationships']['nid']['field'] = 'nid';
   $handler->display->display_options['relationships']['nid']['required'] = TRUE;
+  /* Beziehung: Kommentar: Autor */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'comment';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  /* Feld: Benutzer: Bild */
+  $handler->display->display_options['fields']['picture']['id'] = 'picture';
+  $handler->display->display_options['fields']['picture']['table'] = 'users';
+  $handler->display->display_options['fields']['picture']['field'] = 'picture';
+  $handler->display->display_options['fields']['picture']['relationship'] = 'uid';
+  $handler->display->display_options['fields']['picture']['label'] = '';
+  $handler->display->display_options['fields']['picture']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['picture']['empty'] = '<div class="user-image-placeholder"></div>';
+  $handler->display->display_options['fields']['picture']['image_style'] = 'user_image_round_tiny';
   /* Feld: Kommentar: Autor */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'comment';
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['label'] = '';
-  $handler->display->display_options['fields']['name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['name']['alter']['text'] = '<div class="user-avatar">[picture]</div>
+<div class="author-name">[name]</div>';
   $handler->display->display_options['fields']['name']['element_label_colon'] = FALSE;
   /* Feld: Kommentar: Titel */
   $handler->display->display_options['fields']['subject']['id'] = 'subject';
@@ -57,9 +73,9 @@ function halle96_mitteilungen_views_default_views() {
   $handler->display->display_options['fields']['subject']['field'] = 'subject';
   $handler->display->display_options['fields']['subject']['label'] = '';
   $handler->display->display_options['fields']['subject']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['subject']['alter']['text'] = '[subject] [name]';
   $handler->display->display_options['fields']['subject']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['subject']['alter']['ellipsis'] = FALSE;
+  $handler->display->display_options['fields']['subject']['element_type'] = 'h3';
   $handler->display->display_options['fields']['subject']['element_label_colon'] = FALSE;
   /* Feld: Kommentar: Comment */
   $handler->display->display_options['fields']['comment_body']['id'] = 'comment_body';
@@ -111,7 +127,10 @@ function halle96_mitteilungen_views_default_views() {
     t('Aufsteigend'),
     t('Absteigend'),
     t('Inhalt'),
-    t('[subject] [name]'),
+    t('Autor'),
+    t('<div class="user-image-placeholder"></div>'),
+    t('<div class="user-avatar">[picture]</div>
+<div class="author-name">[name]</div>'),
     t('Block'),
   );
   $export['kommentare'] = $view;
@@ -217,10 +236,11 @@ function halle96_mitteilungen_views_default_views() {
   $handler->display->display_options['fields']['field_mit_bild']['field'] = 'field_mit_bild';
   $handler->display->display_options['fields']['field_mit_bild']['label'] = '';
   $handler->display->display_options['fields']['field_mit_bild']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_mit_bild']['empty'] = '<div class="image-placeholder"></div>';
   $handler->display->display_options['fields']['field_mit_bild']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_mit_bild']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_mit_bild']['settings'] = array(
-    'image_style' => 'mini_thumbnail',
+    'image_style' => 'news-thumbnail',
     'image_link' => '',
   );
   /* Feld: Benutzer: Name */
@@ -237,7 +257,7 @@ function halle96_mitteilungen_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
-  $handler->display->display_options['fields']['title']['alter']['text'] = '[title] [name] ';
+  $handler->display->display_options['fields']['title']['alter']['text'] = '<span class="title">[title]</span> [name] ';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_type'] = 'h3';
@@ -274,7 +294,8 @@ function halle96_mitteilungen_views_default_views() {
     t('Page'),
     t('Block neueste Mitteilungen'),
     t('>> Alle Mitteilungen'),
-    t('[title] [name] '),
+    t('<div class="image-placeholder"></div>'),
+    t('<span class="title">[title]</span> [name] '),
   );
   $export['mitteilungen'] = $view;
 

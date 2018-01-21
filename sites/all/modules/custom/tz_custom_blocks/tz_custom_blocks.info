@@ -1,0 +1,4 @@
+name = TZ Custom Blocks
+description = Blocks that are better defined in a module
+core = 7.x
+package = TECHNOLOGIE ZENTRUM

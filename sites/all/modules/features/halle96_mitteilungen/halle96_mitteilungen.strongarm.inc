@@ -198,8 +198,12 @@ function halle96_mitteilungen_strongarm() {
   $strongarm->name = 'subscriptions_blocked_content_types';
   $strongarm->value = array(
     'article' => 'article',
+    'company_profile' => 'company_profile',
     'conference_room' => 'conference_room',
     'page' => 'page',
+    'conference_room_paid_1' => 'conference_room_paid_1',
+    'conference_room_paid_2' => 'conference_room_paid_2',
+    'simple_page' => 'simple_page',
   );
   $export['subscriptions_blocked_content_types'] = $strongarm;
 
@@ -216,6 +220,41 @@ function halle96_mitteilungen_strongarm() {
   $strongarm->name = 'subscriptions_cron_percent';
   $strongarm->value = '50';
   $export['subscriptions_cron_percent'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_default_workflow_article';
+  $strongarm->value = array(
+    'n_new' => 'n_new',
+    'n_unpub' => 'n_unpub',
+    'n_pub' => 'n_pub',
+    'c_new' => 'c_new',
+    'c_unpub' => 'c_unpub',
+    'c_pub' => 'c_pub',
+  );
+  $export['subscriptions_default_workflow_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_default_workflow_conference_room';
+  $strongarm->value = array();
+  $export['subscriptions_default_workflow_conference_room'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_default_workflow_discussion';
+  $strongarm->value = array(
+    'n_new' => 'n_new',
+    'n_unpub' => 'n_unpub',
+    'n_pub' => 'n_pub',
+    'c_new' => 'c_new',
+    'c_unpub' => 'c_unpub',
+    'c_pub' => 'c_pub',
+  );
+  $export['subscriptions_default_workflow_discussion'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -244,6 +283,13 @@ function halle96_mitteilungen_strongarm() {
   $strongarm->name = 'subscriptions_form_link_only';
   $strongarm->value = '1';
   $export['subscriptions_form_link_only'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_hide_overview_page';
+  $strongarm->value = 0;
+  $export['subscriptions_hide_overview_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -314,8 +360,12 @@ function halle96_mitteilungen_strongarm() {
   $strongarm->value = array(
     'article' => 'article',
     'discussion' => 'discussion',
+    'company_profile' => 'company_profile',
     'conference_room' => 'conference_room',
     'page' => 'page',
+    'conference_room_paid_1' => 'conference_room_paid_1',
+    'conference_room_paid_2' => 'conference_room_paid_2',
+    'simple_page' => 'simple_page',
   );
   $export['subscriptions_unlisted_content_types'] = $strongarm;
 
@@ -336,6 +386,41 @@ function halle96_mitteilungen_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_workflow_article';
+  $strongarm->value = array(
+    0 => 'n_new',
+    1 => 'n_unpub',
+    2 => 'n_pub',
+    3 => 'c_new',
+    4 => 'c_unpub',
+    5 => 'c_pub',
+  );
+  $export['subscriptions_workflow_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_workflow_conference_room';
+  $strongarm->value = array();
+  $export['subscriptions_workflow_conference_room'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'subscriptions_workflow_discussion';
+  $strongarm->value = array(
+    0 => 'n_new',
+    1 => 'n_unpub',
+    2 => 'n_pub',
+    3 => 'c_new',
+    4 => 'c_unpub',
+    5 => 'c_pub',
+  );
+  $export['subscriptions_workflow_discussion'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'subscriptions_workflow_page';
   $strongarm->value = array();
   $export['subscriptions_workflow_page'] = $strongarm;
@@ -351,7 +436,7 @@ function halle96_mitteilungen_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'user_picture_default';
-  $strongarm->value = '';
+  $strongarm->value = '/sites/all/themes/technologie_zentrum/images/default-user.png';
   $export['user_picture_default'] = $strongarm;
 
   $strongarm = new stdClass();

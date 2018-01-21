@@ -282,7 +282,7 @@ function halle96_discussions_field_default_field_instances() {
     'description' => 'Das Thema des Beitrags. Mehrfachauswahl möglich.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',

@@ -8,9 +8,22 @@
  * Implements hook_ctools_plugin_api().
  */
 function halle_96_company_profiles_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "ds" && $api == "ds") {
+    return array("version" => "1");
+  }
+  if ($module == "ds_extras" && $api == "ds_extras") {
+    return array("version" => "1");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
+}
+
+/**
+ * Implements hook_views_api().
+ */
+function halle_96_company_profiles_views_api($module = NULL, $api = NULL) {
+  return array("api" => "3.0");
 }
 
 /**
@@ -27,7 +40,23 @@ function halle_96_company_profiles_image_default_styles() {
         'name' => 'image_scale',
         'data' => array(
           'width' => 220,
-          'height' => 220,
+          'height' => 140,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: company_logo_overview.
+  $styles['company_logo_overview'] = array(
+    'label' => 'Firmenlogo Übersicht',
+    'effects' => array(
+      4 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 160,
+          'height' => 80,
           'upscale' => 0,
         ),
         'weight' => 1,

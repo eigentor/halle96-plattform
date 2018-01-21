@@ -1,0 +1,4 @@
+name = TZ Hooks
+description = Various alter and views hooks
+core = 7.x
+package = TECHNOLOGIE ZENTRUM

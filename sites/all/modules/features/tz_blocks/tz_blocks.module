@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TZ Blöcke feature.
+ */
+
+include_once 'tz_blocks.features.inc';

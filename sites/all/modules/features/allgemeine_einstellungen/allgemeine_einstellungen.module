@@ -1,5 +1,7 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the Allgemeine Einstellungen feature.
  */
+
+include_once 'allgemeine_einstellungen.features.inc';

@@ -49,6 +49,7 @@ function halle96_mitteilungen_default_mail_edit_features() {
 {{[subs:items:count]#===================================================== #1 of [subs:items:count] {{[subs:items:index:#0:subs:is-new]?(neu):}}{{[subs:items:index:#0:subs:is-updated]?(geändert):}}{{[subs:items:index:#0:subs:is-old]?(kommentiert):}}
 [subs:items:index:#0:formatted]
 }}=====================================================
+
 ',
     'subscriptions_comment_body' => NULL,
     'module' => 'subscriptions_mail',

@@ -13,6 +13,102 @@ function halle_96_company_profiles_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_allow_single_deselect';
+  $strongarm->value = 0;
+  $export['chosen_allow_single_deselect'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_disabled_themes';
+  $strongarm->value = array(
+    'bartik' => 0,
+    'halle96' => 0,
+    'halle96_solid' => 0,
+    'seven' => 0,
+  );
+  $export['chosen_disabled_themes'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_disable_search';
+  $strongarm->value = 0;
+  $export['chosen_disable_search'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_disable_search_threshold';
+  $strongarm->value = '0';
+  $export['chosen_disable_search_threshold'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_include';
+  $strongarm->value = '2';
+  $export['chosen_include'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_jquery_selector';
+  $strongarm->value = 'select#edit-field-comp-industry-tid';
+  $export['chosen_jquery_selector'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_minimum_multiple';
+  $strongarm->value = '8';
+  $export['chosen_minimum_multiple'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_minimum_single';
+  $strongarm->value = '20';
+  $export['chosen_minimum_single'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_minimum_width';
+  $strongarm->value = '';
+  $export['chosen_minimum_width'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_no_results_text';
+  $strongarm->value = 'No results match';
+  $export['chosen_no_results_text'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_placeholder_text_multiple';
+  $strongarm->value = 'Optionen auswählen';
+  $export['chosen_placeholder_text_multiple'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_placeholder_text_single';
+  $strongarm->value = 'Choose an option';
+  $export['chosen_placeholder_text_single'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'chosen_search_contains';
+  $strongarm->value = 0;
+  $export['chosen_search_contains'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_company_profile';
   $strongarm->value = 0;
   $export['comment_anonymous_company_profile'] = $strongarm;
@@ -65,14 +161,18 @@ function halle_96_company_profiles_strongarm() {
   $strongarm->name = 'content_access_company_profile';
   $strongarm->value = array(
     'view_own' => array(
-      0 => 6,
-      1 => 3,
-      2 => 5,
+      0 => 2,
+      1 => 4,
+      2 => 6,
+      3 => 3,
+      4 => 5,
     ),
     'view' => array(
-      0 => 6,
-      1 => 3,
-      2 => 5,
+      0 => 2,
+      1 => 4,
+      2 => 6,
+      3 => 3,
+      4 => 5,
     ),
   );
   $export['content_access_company_profile'] = $strongarm;
@@ -120,7 +220,14 @@ function halle_96_company_profiles_strongarm() {
           'weight' => '5',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'subscriptions_ui' => array(
+          'default' => array(
+            'weight' => '15',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__company_profile'] = $strongarm;

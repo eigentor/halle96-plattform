@@ -33,7 +33,7 @@ function halle96_startseite_default_page_manager_pages() {
   $handler->weight = 0;
   $handler->conf = array(
     'title' => 'Panel',
-    'no_blocks' => 0,
+    'no_blocks' => 1,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
     'body_classes_to_add' => 'homepage',
@@ -43,7 +43,7 @@ function halle96_startseite_default_page_manager_pages() {
     'relationships' => array(),
   );
   $display = new panels_display();
-  $display->layout = 'twocol_stacked';
+  $display->layout = 'twocol_bricks';
   $display->layout_settings = array();
   $display->panel_settings = array(
     'style_settings' => array(
@@ -53,6 +53,11 @@ function halle96_startseite_default_page_manager_pages() {
       'left' => NULL,
       'right' => NULL,
       'bottom' => NULL,
+      'left_above' => NULL,
+      'right_above' => NULL,
+      'middle' => NULL,
+      'left_below' => NULL,
+      'right_below' => NULL,
     ),
   );
   $display->cache = array();
@@ -63,63 +68,8 @@ function halle96_startseite_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-7312ea42-fbe7-49e1-bc14-78a09927148f';
-  $pane->panel = 'left';
-  $pane->type = 'views_panes';
-  $pane->subtype = 'news-panel_pane_1';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'more_link' => 1,
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '7312ea42-fbe7-49e1-bc14-78a09927148f';
-  $display->content['new-7312ea42-fbe7-49e1-bc14-78a09927148f'] = $pane;
-  $display->panels['left'][0] = 'new-7312ea42-fbe7-49e1-bc14-78a09927148f';
-  $pane = new stdClass();
-  $pane->pid = 'new-55bd7c54-0e43-482b-8f3c-10016e4f132d';
-  $pane->panel = 'right';
-  $pane->type = 'views';
-  $pane->subtype = 'alle_kategorien_service_info';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'override_pager_settings' => 0,
-    'use_pager' => 1,
-    'nodes_per_page' => '14',
-    'pager_id' => '0',
-    'offset' => '0',
-    'more_link' => 0,
-    'feed_icons' => 0,
-    'panel_args' => 0,
-    'link_to_view' => 1,
-    'args' => '',
-    'url' => 'service-info',
-    'display' => 'default',
-    'override_title' => 1,
-    'override_title_text' => 'Gesammelte Infos',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '55bd7c54-0e43-482b-8f3c-10016e4f132d';
-  $display->content['new-55bd7c54-0e43-482b-8f3c-10016e4f132d'] = $pane;
-  $display->panels['right'][0] = 'new-55bd7c54-0e43-482b-8f3c-10016e4f132d';
-  $pane = new stdClass();
   $pane->pid = 'new-c3e64793-bec3-4e3a-9721-67b602d233d1';
-  $pane->panel = 'top';
+  $pane->panel = 'left_above';
   $pane->type = 'views';
   $pane->subtype = 'mitteilungen';
   $pane->shown = TRUE;
@@ -150,10 +100,31 @@ function halle96_startseite_default_page_manager_pages() {
   $pane->locks = array();
   $pane->uuid = 'c3e64793-bec3-4e3a-9721-67b602d233d1';
   $display->content['new-c3e64793-bec3-4e3a-9721-67b602d233d1'] = $pane;
-  $display->panels['top'][0] = 'new-c3e64793-bec3-4e3a-9721-67b602d233d1';
+  $display->panels['left_above'][0] = 'new-c3e64793-bec3-4e3a-9721-67b602d233d1';
+  $pane = new stdClass();
+  $pane->pid = 'new-7312ea42-fbe7-49e1-bc14-78a09927148f';
+  $pane->panel = 'left_below';
+  $pane->type = 'views_panes';
+  $pane->subtype = 'news-panel_pane_1';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'more_link' => 1,
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '7312ea42-fbe7-49e1-bc14-78a09927148f';
+  $display->content['new-7312ea42-fbe7-49e1-bc14-78a09927148f'] = $pane;
+  $display->panels['left_below'][0] = 'new-7312ea42-fbe7-49e1-bc14-78a09927148f';
   $pane = new stdClass();
   $pane->pid = 'new-1d15303b-e303-41ce-8c0f-ad6693f1f9ca';
-  $pane->panel = 'top';
+  $pane->panel = 'right_above';
   $pane->type = 'views';
   $pane->subtype = 'kommentare';
   $pane->shown = TRUE;
@@ -180,12 +151,46 @@ function halle96_startseite_default_page_manager_pages() {
   );
   $pane->css = array();
   $pane->extras = array();
-  $pane->position = 1;
+  $pane->position = 0;
   $pane->locks = array();
   $pane->uuid = '1d15303b-e303-41ce-8c0f-ad6693f1f9ca';
   $display->content['new-1d15303b-e303-41ce-8c0f-ad6693f1f9ca'] = $pane;
-  $display->panels['top'][1] = 'new-1d15303b-e303-41ce-8c0f-ad6693f1f9ca';
-  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->panels['right_above'][0] = 'new-1d15303b-e303-41ce-8c0f-ad6693f1f9ca';
+  $pane = new stdClass();
+  $pane->pid = 'new-55bd7c54-0e43-482b-8f3c-10016e4f132d';
+  $pane->panel = 'right_below';
+  $pane->type = 'views';
+  $pane->subtype = 'alle_kategorien_service_info';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'override_pager_settings' => 0,
+    'use_pager' => 1,
+    'nodes_per_page' => '14',
+    'pager_id' => '0',
+    'offset' => '0',
+    'more_link' => 0,
+    'feed_icons' => 0,
+    'panel_args' => 0,
+    'link_to_view' => 1,
+    'args' => '',
+    'url' => 'service-info',
+    'display' => 'default',
+    'override_title' => 1,
+    'override_title_text' => 'Gesammelte Infos',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '55bd7c54-0e43-482b-8f3c-10016e4f132d';
+  $display->content['new-55bd7c54-0e43-482b-8f3c-10016e4f132d'] = $pane;
+  $display->panels['right_below'][0] = 'new-55bd7c54-0e43-482b-8f3c-10016e4f132d';
+  $display->hide_title = PANELS_TITLE_NONE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
