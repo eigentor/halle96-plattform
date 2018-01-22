@@ -12,7 +12,6 @@ function tz_conference_rooms_paid_default_rules_configuration() {
   $items['rules_notify_admin_conference_booking'] = entity_import('rules_config', '{ "rules_notify_admin_conference_booking" : {
       "LABEL" : "Benachrichtigung Zentrumsleitung Buchung Konferenzraum 1",
       "PLUGIN" : "reaction rule",
-      "ACTIVE" : false,
       "OWNER" : "rules",
       "REQUIRES" : [ "rules" ],
       "ON" : {
@@ -26,7 +25,7 @@ function tz_conference_rooms_paid_default_rules_configuration() {
         { "mail" : {
             "to" : "Marion.Groenig@hannoverimpuls.de, leon.fricke-kleefisch@hannoverimpuls.de",
             "subject" : "Konferenzraum 1 wurde gebucht von [node:author] f\\u00fcr die Firma [node:field-conf-firma]",
-            "message" : "Hallo Zentrumsleitung,\\r\\n\\r\\nEin Konferenzraum wurde gebucht oder eine Buchung bearbeitet.\\r\\n\\r\\n[node:author] hat f\\u00fcr die Firma [node:field-conf-firma] am\\r\\n[node:field_conf_termin]\\r\\nden Konferenzraum 1 gebucht.\\r\\nHier k\\u00f6nnen Sie die Buchung ansehen: [node:url]\\r\\n\\r\\nDas TZ Intranet",
+            "message" : "Hallo Zentrumsleitung,\\r\\n\\r\\nEin Konferenzraum wurde gebucht oder eine Buchung bearbeitet.\\r\\n\\r\\n[node:author] hat f\\u00fcr die Firma [node:field-conf-firma] am\\r\\n[node:field_conf_termin]\\r\\nden Konferenzraum 1 gebucht.\\r\\nHier k\\u00f6nnen Sie die Buchung ansehen: [node:url]\\r\\n\\r\\nDas H96 Intranet",
             "language" : [ "" ]
           }
         },
@@ -48,7 +47,6 @@ function tz_conference_rooms_paid_default_rules_configuration() {
   $items['rules_notify_admin_conference_booking_2'] = entity_import('rules_config', '{ "rules_notify_admin_conference_booking_2" : {
       "LABEL" : "Benachrichtigung Zentrumsleitung Buchung Konferenzraum 2",
       "PLUGIN" : "reaction rule",
-      "ACTIVE" : false,
       "OWNER" : "rules",
       "REQUIRES" : [ "rules" ],
       "ON" : {
@@ -62,7 +60,7 @@ function tz_conference_rooms_paid_default_rules_configuration() {
         { "mail" : {
             "to" : "Marion.Groenig@hannoverimpuls.de, leon.fricke-kleefisch@hannoverimpuls.de",
             "subject" : "Konferenzraum 2 wurde gebucht von [node:author] f\\u00fcr die Firma [node:field_conf_firma]",
-            "message" : "Hallo Zentrumsleitung,\\r\\n\\r\\nEin Konferenzraum wurde gebucht oder eine Buchung bearbeitet.\\r\\n\\r\\n[node:author] hat f\\u00fcr die Firma [node:field_conf_firma] am\\r\\n[node:field_conf_termin]\\r\\nden Konferenzraum 2 gebucht.\\r\\nHier k\\u00f6nnen Sie die Buchung ansehen: [node:url]\\r\\n\\r\\nDas TZ Intranet",
+            "message" : "Hallo Zentrumsleitung,\\r\\n\\r\\nEin Konferenzraum wurde gebucht oder eine Buchung bearbeitet.\\r\\n\\r\\n[node:author] hat f\\u00fcr die Firma [node:field_conf_firma] am\\r\\n[node:field_conf_termin]\\r\\nden Konferenzraum 2 gebucht.\\r\\nHier k\\u00f6nnen Sie die Buchung ansehen: [node:url]\\r\\n\\r\\nDas H96 Intranet",
             "language" : [ "" ]
           }
         },
