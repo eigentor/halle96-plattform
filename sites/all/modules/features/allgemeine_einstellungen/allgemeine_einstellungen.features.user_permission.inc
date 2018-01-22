@@ -51,6 +51,17 @@ function allgemeine_einstellungen_user_default_permissions() {
     'module' => 'media',
   );
 
+  // Exported permission: 'access user profiles'.
+  $permissions['access user profiles'] = array(
+    'name' => 'access user profiles',
+    'roles' => array(
+      'Mieter' => 'Mieter',
+      'Zentrumsleitung' => 'Zentrumsleitung',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'user',
+  );
+
   // Exported permission: 'add media from remote sources'.
   $permissions['add media from remote sources'] = array(
     'name' => 'add media from remote sources',
@@ -86,6 +97,16 @@ function allgemeine_einstellungen_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'administer users'.
+  $permissions['administer users'] = array(
+    'name' => 'administer users',
+    'roles' => array(
+      'Zentrumsleitung' => 'Zentrumsleitung',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'user',
   );
 
   // Exported permission: 'bypass node access'.
