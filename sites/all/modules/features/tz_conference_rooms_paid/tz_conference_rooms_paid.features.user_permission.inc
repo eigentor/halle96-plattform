@@ -15,6 +15,7 @@ function tz_conference_rooms_paid_user_default_permissions() {
     'name' => 'create conference_room_paid_1 content',
     'roles' => array(
       'Mieter' => 'Mieter',
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
     ),
     'module' => 'node',
   );
@@ -24,6 +25,7 @@ function tz_conference_rooms_paid_user_default_permissions() {
     'name' => 'create conference_room_paid_2 content',
     'roles' => array(
       'Mieter' => 'Mieter',
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
     ),
     'module' => 'node',
   );
@@ -32,6 +34,7 @@ function tz_conference_rooms_paid_user_default_permissions() {
   $permissions['delete any conference_room_paid_1 content'] = array(
     'name' => 'delete any conference_room_paid_1 content',
     'roles' => array(
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
       'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
@@ -42,6 +45,7 @@ function tz_conference_rooms_paid_user_default_permissions() {
   $permissions['delete any conference_room_paid_2 content'] = array(
     'name' => 'delete any conference_room_paid_2 content',
     'roles' => array(
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
       'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
@@ -52,6 +56,7 @@ function tz_conference_rooms_paid_user_default_permissions() {
   $permissions['delete own conference_room_paid_1 content'] = array(
     'name' => 'delete own conference_room_paid_1 content',
     'roles' => array(
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
       'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
@@ -62,6 +67,7 @@ function tz_conference_rooms_paid_user_default_permissions() {
   $permissions['delete own conference_room_paid_2 content'] = array(
     'name' => 'delete own conference_room_paid_2 content',
     'roles' => array(
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
       'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
@@ -72,6 +78,7 @@ function tz_conference_rooms_paid_user_default_permissions() {
   $permissions['edit any conference_room_paid_1 content'] = array(
     'name' => 'edit any conference_room_paid_1 content',
     'roles' => array(
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
       'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
@@ -82,6 +89,7 @@ function tz_conference_rooms_paid_user_default_permissions() {
   $permissions['edit any conference_room_paid_2 content'] = array(
     'name' => 'edit any conference_room_paid_2 content',
     'roles' => array(
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
       'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
@@ -92,6 +100,7 @@ function tz_conference_rooms_paid_user_default_permissions() {
   $permissions['edit own conference_room_paid_1 content'] = array(
     'name' => 'edit own conference_room_paid_1 content',
     'roles' => array(
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
       'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
@@ -102,6 +111,7 @@ function tz_conference_rooms_paid_user_default_permissions() {
   $permissions['edit own conference_room_paid_2 content'] = array(
     'name' => 'edit own conference_room_paid_2 content',
     'roles' => array(
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
       'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
