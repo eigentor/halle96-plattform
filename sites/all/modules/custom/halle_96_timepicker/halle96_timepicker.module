@@ -48,7 +48,7 @@ function halle96_timepicker_init() {
   $path = drupal_get_path_alias($_GET['q']);
   $path_array = explode('/', $path);
 
-  if($path_array[0] == 'node' &&($path_array[1] == 'add' || $path_array[2] == 'edit')) {
+  if(count($path_array) > 1 && ($path_array[0] == 'node' &&($path_array[1] == 'add' || $path_array[2] == 'edit'))) {
     //drupal_add_js(libraries_get_path('jquery-1.11') . '/jquery-1.11.1.min.js');
     drupal_add_css(libraries_get_path('timepicker') . '/jquery.ui.timepicker.css');
     drupal_add_js(libraries_get_path('timepicker') . '/jquery.ui.timepicker.js');
