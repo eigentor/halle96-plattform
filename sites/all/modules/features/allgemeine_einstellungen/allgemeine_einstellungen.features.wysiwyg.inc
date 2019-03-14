@@ -45,8 +45,8 @@ function allgemeine_einstellungen_wysiwyg_default_profiles() {
       'css_path' => '',
       'stylesSet' => '',
       'block_formats' => 'p,address,pre,h2,h3,h4,h5,h6,div',
-      'advanced__active_tab' => 'edit-basic',
-      'forcePasteAsPlainText' => 1,
+      'advanced__active_tab' => 'edit-paste',
+      'forcePasteAsPlainText' => 0,
     ),
     'rdf_mapping' => array(),
   );
