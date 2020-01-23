@@ -1,0 +1,14 @@
+<?php
+
+/**
+ * implements hook_mail_alter()
+ *
+ * @param $message
+ */
+function halle96_mail_settings_mail_alter(&$message) {
+  // Revert Drupal's overriding of the "from" address so e.g.
+  // Webform or rules can define a custom sender address
+  unset($message['headers']['Sender']);
+  unset($message['headers']['Errors-To']);
+  unset($message['headers']['Return-Path']);
+}

@@ -1,0 +1,5 @@
+name = Halle 96 Mail Settings
+description = Modifications for mail sending
+core = 7.x
+version = VERSION
+package = Halle 96
