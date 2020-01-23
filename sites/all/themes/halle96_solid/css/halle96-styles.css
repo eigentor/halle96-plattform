@@ -248,11 +248,39 @@ div.messages {
           .region-navigation ul.menu li a.beitrag-schreiben {
             background-color: white;
             background-position: -30px center; }
+            .region-navigation ul.menu li a.beitrag-schreiben.active-trail {
+              background-color: #777; }
             .region-navigation ul.menu li a.beitrag-schreiben:before {
               left: 7px;
               top: 1px; } }
       .region-navigation ul.menu li a.news-schreiben {
         display: none; }
+      .region-navigation ul.menu li a.ticket-facility-management {
+        background: #eee url(../images/icon-background.png) no-repeat -20px center;
+        padding-left: 38px;
+        position: relative; }
+        .region-navigation ul.menu li a.ticket-facility-management:hover {
+          background: #777; }
+        .region-navigation ul.menu li a.ticket-facility-management:before {
+          font-family: Fontawesome;
+          content: "";
+          color: white;
+          margin-right: 0.7em;
+          font-size: 19.2px;
+          font-size: 1.2rem;
+          display: inline-block;
+          position: absolute;
+          left: 12px;
+          top: 6px; }
+        @media only screen and (min-width: 992px) {
+          .region-navigation ul.menu li a.ticket-facility-management {
+            background-color: white;
+            background-position: -30px center; }
+            .region-navigation ul.menu li a.ticket-facility-management.active-trail {
+              background-color: #777; }
+            .region-navigation ul.menu li a.ticket-facility-management:before {
+              left: 7px;
+              top: 1px; } }
 
 .role-Zentrumsleitung .region-navigation #block-system-main-menu {
   display: none; }
@@ -284,6 +312,8 @@ div.messages {
       .role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben {
         background-color: white;
         background-position: -30px center; }
+        .role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben.active-trail {
+          background-color: #777; }
         .role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben:before {
           left: 7px;
           top: 1px; } }
@@ -496,6 +526,8 @@ div.messages {
       margin-bottom: 15px; }
       .region-navigation ul.menu li:first-child {
         margin-left: 0; }
+      .region-navigation ul.menu li a {
+        padding: 4px 6px; }
 
   .role-Zentrumsleitung .region-navigation ul.menu li a.news-schreiben {
     display: inline; }
@@ -1853,17 +1885,40 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   list-style-type: none;
   list-style-image: none; }
 
+.node-webform input.form-text {
+  width: 100%; }
+.node-webform .form-actions .form-submit.button-primary {
+  width: 100%;
+  background: #777777;
+  color: white;
+  font-weight: bold;
+  padding: 0.5em 1em 0.7em;
+  border: none;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+  .node-webform .form-actions .form-submit.button-primary:hover {
+    background: #515151; }
+
 /*------------------------------------------- */
 /*------------------------------------------- */
 /*----------- Tablet Portrait ---------------- */
 /*------------------------------------------- */
 /*------------------------------------------- */
+@media only screen and (min-width: 480px) {
+  .node-webform .form-actions .form-submit.button-primary {
+    width: auto; } }
 /* End Media Query Tablet Portrait */
 /*------------------------------------------- */
 /*------------------------------------------- */
 /*---------------- Tablet  ------------------- */
 /*------------------------------------------- */
 /*------------------------------------------- */
+@media only screen and (min-width: 768px) {
+  .node-webform input.form-text {
+    width: auto; } }
 /* End Media Query Tablet */
 /*------------------------------------------- */
 /*------------------------------------------- */

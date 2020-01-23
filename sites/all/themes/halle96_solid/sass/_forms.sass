@@ -9,12 +9,35 @@
       list-style-type: none
       list-style-image: none
 
+.node-webform
+  input
+    &.form-text
+      width: 100%
+  .form-actions
+    .form-submit
+      &.button-primary
+        width: 100%
+        background: $button-color
+        color: white
+        font-weight: bold
+        padding: 0.5em 1em 0.7em
+        border: none
+        +border-radius(5px)
+        &:hover
+          background: darken($button-color, 15%)
+
+
 /*------------------------------------------- */
 /*------------------------------------------- */
 /*----------- Tablet Portrait ----------------*/
 /*------------------------------------------- */
 /*------------------------------------------- */
 +breakpoint($breakpoint-tablet-portrait)
+  .node-webform
+    .form-actions
+      .form-submit
+        &.button-primary
+          width: auto
 
 
 /* End Media Query Tablet Portrait */
@@ -25,6 +48,11 @@
 /*------------------------------------------- */
 /*------------------------------------------- */
 +breakpoint($breakpoint-tablet)
+  .node-webform
+    input
+      &.form-text
+        width: auto
+
 
 
 /* End Media Query Tablet */
