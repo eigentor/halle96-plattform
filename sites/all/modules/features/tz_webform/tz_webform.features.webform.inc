@@ -79,7 +79,7 @@ $webforms = array();
     ),
   ),
   'webform' => array(
-    'next_serial' => 6,
+    'next_serial' => 11,
     'confirmation' => '<p>Vielen Dank für Ihr Ticket an die Haustechnik.<br />
 	Wir werden Ihr Anliegen umgehend bearbeiten.</p>
 ',
@@ -119,8 +119,8 @@ $webforms = array();
       0 => array(
         'email' => 'Katrin.Gehrke@hannoverimpuls.de,volker.colditz@hannoverimpuls.de,Marion.Groenig@hannoverimpuls.de',
         'subject' => 'Es wurde ein Ticket an die Haustechnik erstellt',
-        'from_name' => 'default',
-        'from_address' => 'ihr_ticket_f_r_die_haustechnik__mail_adress_ticket_author',
+        'from_name' => 'Ticket an Haustechnik',
+        'from_address' => 'ticket-haustechnik@hannoverimpuls.de',
         'template' => 'Hallo Hannoverimpuls,
 
 [submission:user] hat ein Ticket an die Haustechnik erstellt.
@@ -140,14 +140,14 @@ Die Ergebnisse dieser Eingabe können eingesehen werden unter:
           'email' => FALSE,
           'subject' => FALSE,
           'from_name' => FALSE,
-          'from_address' => TRUE,
+          'from_address' => FALSE,
         ),
       ),
       1 => array(
         'email' => 'ihr_ticket_f_r_die_haustechnik__mail_adress_ticket_author',
         'subject' => 'Ihr Ticket für die Haustechnik auf [site:url]',
-        'from_name' => 'default',
-        'from_address' => 'default',
+        'from_name' => 'Ticket an Haustechnik',
+        'from_address' => 'ticket-haustechnik@hannoverimpuls.de',
         'template' => 'Hallo [submission:user],
 
 Sie haben ein Ticket für die Haustechnik erstellt.
@@ -318,7 +318,7 @@ Mail:   katrin.gehrke@hannoverimpuls.de
   'data' => 'a:3:{s:17:"mimemail_textonly";i:0;s:18:"htmlmail_plaintext";i:0;s:8:"gravatar";i:1;}',
   'subscriptions_notify' => TRUE,
   'webform_features_author' => 'siteadmin',
-  'webform_features_revision_author' => 'siteadmin',
+  'webform_features_revision_author' => 'thomas.moseler',
 );
 return $webforms;
 }
