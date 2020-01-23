@@ -8,7 +8,7 @@
 function halle96_mail_settings_mail_alter(&$message) {
   // Revert Drupal's overriding of the "from" address so e.g.
   // Webform or rules can define a custom sender address
-  // https://www.drupal.org/project/webform/issues/461324#comment-7775711
+  // https://www.drupal.org/project/webform/issues/461324#comment-11569033
   if (isset($message['headers']['Reply-To'])) {
     $message['headers']['From'] = $message['headers']['Reply-To'];
     $message['headers']['Sender'] = $message['headers']['Reply-To'];
