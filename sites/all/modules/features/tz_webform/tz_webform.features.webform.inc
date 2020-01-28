@@ -79,7 +79,7 @@ $webforms = array();
     ),
   ),
   'webform' => array(
-    'next_serial' => 11,
+    'next_serial' => 15,
     'confirmation' => '<p>Vielen Dank für Ihr Ticket an die Haustechnik.<br />
 	Wir werden Ihr Anliegen umgehend bearbeiten.</p>
 ',
@@ -120,7 +120,7 @@ $webforms = array();
         'email' => 'Katrin.Gehrke@hannoverimpuls.de,volker.colditz@hannoverimpuls.de,Marion.Groenig@hannoverimpuls.de',
         'subject' => 'Es wurde ein Ticket an die Haustechnik erstellt',
         'from_name' => 'Ticket an Haustechnik',
-        'from_address' => 'ticket-haustechnik@hannoverimpuls.de',
+        'from_address' => 'ihr_ticket_f_r_die_haustechnik__mail_adress_ticket_author',
         'template' => 'Hallo Hannoverimpuls,
 
 [submission:user] hat ein Ticket an die Haustechnik erstellt.
@@ -140,7 +140,7 @@ Die Ergebnisse dieser Eingabe können eingesehen werden unter:
           'email' => FALSE,
           'subject' => FALSE,
           'from_name' => FALSE,
-          'from_address' => FALSE,
+          'from_address' => TRUE,
         ),
       ),
       1 => array(
@@ -158,12 +158,12 @@ Sie haben ein Ticket für die Haustechnik erstellt.
 Wir werden Ihr Anliegen umgehend bearbeiten.
 
 hannoverimpuls GmbH
-Hollerithallee 17
-30419 Hannover | Deutschland
+Hanomaghof 2
+30449 Hannover | Deutschland
 
-Tel.:   +49 511 9357-841
-Mobil:  +49 170 2250517
-Mail:   katrin.gehrke@hannoverimpuls.de
+Tel.:   +49 511 9357-847
+Mobil:  +49 163 3168428
+Mail:   Marion.Groenig@hannoverimpuls.de
         www.wirtschaftsfoerderung-hannover.de',
         'excluded_components' => array(
           0 => 5,
