@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * halle_96_conf_schedule.features.field_base.inc
@@ -38,6 +39,9 @@ function halle_96_conf_schedule_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_conf_termin',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'date',

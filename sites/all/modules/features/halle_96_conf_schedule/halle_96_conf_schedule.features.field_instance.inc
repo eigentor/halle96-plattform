@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * halle_96_conf_schedule.features.field_instance.inc
@@ -112,46 +113,8 @@ function halle_96_conf_schedule_field_default_field_instances() {
     'label' => 'Termin',
     'required' => 1,
     'settings' => array(
-      'date_popup_timepicker' => array(
-        'timepicker' => array(
-          'timepicker_options' => array(
-            'amPmText' => array(
-              0 => 'AM',
-              1 => 'PM',
-            ),
-            'closeButtonText' => 'Done',
-            'defaultTime' => 'now',
-            'deselectButtonText' => 'Deselect',
-            'hourText' => 'Hour',
-            'hours' => array(
-              'ends' => 23,
-              'starts' => 0,
-            ),
-            'minuteText' => 'Minute',
-            'minutes' => array(
-              'ends' => 55,
-              'interval' => 5,
-              'starts' => 0,
-            ),
-            'nowButtonText' => 'Now',
-            'periodSeparator' => ' ',
-            'rows' => 4,
-            'showCloseButton' => FALSE,
-            'showDeselectButton' => FALSE,
-            'showHours' => TRUE,
-            'showLeadingZero' => TRUE,
-            'showMinutes' => TRUE,
-            'showMinutesLeadingZero' => TRUE,
-            'showNowButton' => FALSE,
-            'showOn' => 'focus',
-            'showPeriod' => FALSE,
-            'showPeriodLabels' => TRUE,
-            'timeSeparator' => ':',
-          ),
-        ),
-      ),
       'default_value' => 'now',
-      'default_value2' => 'same',
+      'default_value2' => 'sync',
       'default_value_code' => '',
       'default_value_code2' => '',
       'user_register_form' => FALSE,
@@ -164,6 +127,7 @@ function halle_96_conf_schedule_field_default_field_instances() {
         'input_format' => 'd.m.Y - H:i:s',
         'input_format_custom' => '',
         'label_position' => 'above',
+        'no_fieldset' => 0,
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),

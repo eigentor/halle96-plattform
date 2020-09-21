@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * tz_conference_rooms_paid.features.user_permission.inc
@@ -16,6 +17,7 @@ function tz_conference_rooms_paid_user_default_permissions() {
     'roles' => array(
       'Mieter' => 'Mieter',
       'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
+      'Zentrumsleitung' => 'Zentrumsleitung',
     ),
     'module' => 'node',
   );
@@ -26,6 +28,7 @@ function tz_conference_rooms_paid_user_default_permissions() {
     'roles' => array(
       'Mieter' => 'Mieter',
       'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
+      'Zentrumsleitung' => 'Zentrumsleitung',
     ),
     'module' => 'node',
   );

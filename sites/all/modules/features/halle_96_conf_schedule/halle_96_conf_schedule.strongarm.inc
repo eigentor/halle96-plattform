@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * halle_96_conf_schedule.strongarm.inc
@@ -105,9 +106,6 @@ function halle_96_conf_schedule_strongarm() {
         'custom_settings' => FALSE,
       ),
       'revision' => array(
-        'custom_settings' => FALSE,
-      ),
-      'diff_standard' => array(
         'custom_settings' => FALSE,
       ),
     ),

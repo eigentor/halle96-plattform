@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * tz_conference_rooms_paid.views_default.inc
@@ -61,7 +62,7 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Feld: Inhalt: Firma */
+  /* Feld: Node: Firma */
   $handler->display->display_options['fields']['field_conf_firma']['id'] = 'field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['table'] = 'field_data_field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['field'] = 'field_conf_firma';
@@ -69,7 +70,7 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['fields']['field_conf_firma']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_conf_firma']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_conf_firma']['element_label_colon'] = FALSE;
-  /* Feld: Inhalt: Termin */
+  /* Feld: Node: Termin */
   $handler->display->display_options['fields']['field_conf_termin']['id'] = 'field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['field'] = 'field_conf_termin';
@@ -89,11 +90,11 @@ function tz_conference_rooms_paid_views_default_views() {
   );
   $handler->display->display_options['fields']['field_conf_termin']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_conf_termin']['delta_offset'] = '0';
-  /* Sortierkriterien: Inhalt: Termin -  Startdatum (field_conf_termin) */
+  /* Sortierkriterien: Node: Termin -  Startdatum (field_conf_termin) */
   $handler->display->display_options['sorts']['field_conf_termin_value']['id'] = 'field_conf_termin_value';
   $handler->display->display_options['sorts']['field_conf_termin_value']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['sorts']['field_conf_termin_value']['field'] = 'field_conf_termin_value';
-  /* Filterkriterium: Inhalt: Veröffentlicht */
+  /* Filterkriterium: Inhalt: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -259,7 +260,7 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Feld: Inhalt: Termin */
+  /* Feld: Node: Termin */
   $handler->display->display_options['fields']['field_conf_termin']['id'] = 'field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['field'] = 'field_conf_termin';
@@ -346,7 +347,7 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterium: Inhalt: Veröffentlicht */
+  /* Filterkriterium: Inhalt: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -380,7 +381,7 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Feld: Inhalt: Firma */
+  /* Feld: Node: Firma */
   $handler->display->display_options['fields']['field_conf_firma']['id'] = 'field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['table'] = 'field_data_field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['field'] = 'field_conf_firma';
@@ -388,7 +389,7 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['fields']['field_conf_firma']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_conf_firma']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_conf_firma']['element_label_colon'] = FALSE;
-  /* Feld: Inhalt: Termin */
+  /* Feld: Node: Termin */
   $handler->display->display_options['fields']['field_conf_termin']['id'] = 'field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['field'] = 'field_conf_termin';
@@ -409,7 +410,7 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['fields']['field_conf_termin']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_conf_termin']['delta_offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sortierkriterien: Inhalt: Termin -  Startdatum (field_conf_termin) */
+  /* Sortierkriterien: Node: Termin -  Startdatum (field_conf_termin) */
   $handler->display->display_options['sorts']['field_conf_termin_value']['id'] = 'field_conf_termin_value';
   $handler->display->display_options['sorts']['field_conf_termin_value']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['sorts']['field_conf_termin_value']['field'] = 'field_conf_termin_value';
@@ -495,7 +496,7 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Feld: Inhalt: Firma */
+  /* Feld: Node: Firma */
   $handler->display->display_options['fields']['field_conf_firma']['id'] = 'field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['table'] = 'field_data_field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['field'] = 'field_conf_firma';
@@ -503,7 +504,7 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['fields']['field_conf_firma']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_conf_firma']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_conf_firma']['element_label_colon'] = FALSE;
-  /* Feld: Inhalt: Termin */
+  /* Feld: Node: Termin */
   $handler->display->display_options['fields']['field_conf_termin']['id'] = 'field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['field'] = 'field_conf_termin';
@@ -522,11 +523,11 @@ function tz_conference_rooms_paid_views_default_views() {
   );
   $handler->display->display_options['fields']['field_conf_termin']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_conf_termin']['delta_offset'] = '0';
-  /* Sortierkriterien: Inhalt: Termin -  Startdatum (field_conf_termin) */
+  /* Sortierkriterien: Node: Termin -  Startdatum (field_conf_termin) */
   $handler->display->display_options['sorts']['field_conf_termin_value']['id'] = 'field_conf_termin_value';
   $handler->display->display_options['sorts']['field_conf_termin_value']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['sorts']['field_conf_termin_value']['field'] = 'field_conf_termin_value';
-  /* Filterkriterium: Inhalt: Veröffentlicht */
+  /* Filterkriterium: Inhalt: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -562,7 +563,7 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['footer'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
-  /* Sortierkriterien: Inhalt: Termin -  Startdatum (field_conf_termin) */
+  /* Sortierkriterien: Node: Termin -  Startdatum (field_conf_termin) */
   $handler->display->display_options['sorts']['field_conf_termin_value']['id'] = 'field_conf_termin_value';
   $handler->display->display_options['sorts']['field_conf_termin_value']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['sorts']['field_conf_termin_value']['field'] = 'field_conf_termin_value';
@@ -698,7 +699,7 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = FALSE;
-  /* Feld: Inhalt: Termin */
+  /* Feld: Node: Termin */
   $handler->display->display_options['fields']['field_conf_termin']['id'] = 'field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['field'] = 'field_conf_termin';
@@ -785,7 +786,7 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
-  /* Filterkriterium: Inhalt: Veröffentlicht */
+  /* Filterkriterium: Inhalt: Published status */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
   $handler->display->display_options['filters']['status']['field'] = 'status';
@@ -819,7 +820,7 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['fields']['nid']['label'] = '';
   $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
   $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
-  /* Feld: Inhalt: Firma */
+  /* Feld: Node: Firma */
   $handler->display->display_options['fields']['field_conf_firma']['id'] = 'field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['table'] = 'field_data_field_conf_firma';
   $handler->display->display_options['fields']['field_conf_firma']['field'] = 'field_conf_firma';
@@ -827,7 +828,7 @@ function tz_conference_rooms_paid_views_default_views() {
   $handler->display->display_options['fields']['field_conf_firma']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['field_conf_firma']['alter']['path'] = 'node/[nid]';
   $handler->display->display_options['fields']['field_conf_firma']['element_label_colon'] = FALSE;
-  /* Feld: Inhalt: Termin */
+  /* Feld: Node: Termin */
   $handler->display->display_options['fields']['field_conf_termin']['id'] = 'field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['table'] = 'field_data_field_conf_termin';
   $handler->display->display_options['fields']['field_conf_termin']['field'] = 'field_conf_termin';

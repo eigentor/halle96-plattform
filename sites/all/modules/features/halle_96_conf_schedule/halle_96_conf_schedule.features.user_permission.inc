@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * halle_96_conf_schedule.features.user_permission.inc
@@ -16,6 +17,8 @@ function halle_96_conf_schedule_user_default_permissions() {
     'roles' => array(
       'Kalender-Tester' => 'Kalender-Tester',
       'Mieter' => 'Mieter',
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
+      'Zentrumsleitung' => 'Zentrumsleitung',
     ),
     'module' => 'node',
   );
@@ -23,7 +26,11 @@ function halle_96_conf_schedule_user_default_permissions() {
   // Exported permission: 'delete any conference_room content'.
   $permissions['delete any conference_room content'] = array(
     'name' => 'delete any conference_room content',
-    'roles' => array(),
+    'roles' => array(
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
+      'Zentrumsleitung' => 'Zentrumsleitung',
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -32,6 +39,9 @@ function halle_96_conf_schedule_user_default_permissions() {
     'name' => 'delete own conference_room content',
     'roles' => array(
       'Mieter' => 'Mieter',
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
+      'Zentrumsleitung' => 'Zentrumsleitung',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );
@@ -39,7 +49,11 @@ function halle_96_conf_schedule_user_default_permissions() {
   // Exported permission: 'edit any conference_room content'.
   $permissions['edit any conference_room content'] = array(
     'name' => 'edit any conference_room content',
-    'roles' => array(),
+    'roles' => array(
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
+      'Zentrumsleitung' => 'Zentrumsleitung',
+      'administrator' => 'administrator',
+    ),
     'module' => 'node',
   );
 
@@ -49,6 +63,9 @@ function halle_96_conf_schedule_user_default_permissions() {
     'roles' => array(
       'Kalender-Tester' => 'Kalender-Tester',
       'Mieter' => 'Mieter',
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
+      'Zentrumsleitung' => 'Zentrumsleitung',
+      'administrator' => 'administrator',
     ),
     'module' => 'node',
   );

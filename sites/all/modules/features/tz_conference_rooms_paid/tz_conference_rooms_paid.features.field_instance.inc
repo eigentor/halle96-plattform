@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * tz_conference_rooms_paid.features.field_instance.inc
@@ -133,7 +134,7 @@ function tz_conference_rooms_paid_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'default_value' => 'now',
-      'default_value2' => 'same',
+      'default_value2' => 'sync',
       'default_value_code' => '',
       'default_value_code2' => '',
       'user_register_form' => FALSE,
@@ -279,7 +280,7 @@ function tz_conference_rooms_paid_field_default_field_instances() {
     'required' => 1,
     'settings' => array(
       'default_value' => 'now',
-      'default_value2' => 'same',
+      'default_value2' => 'sync',
       'default_value_code' => '',
       'default_value_code2' => '',
       'user_register_form' => FALSE,

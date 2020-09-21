@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * tz_webform.features.webform.inc
@@ -79,7 +80,7 @@ $webforms = array();
     ),
   ),
   'webform' => array(
-    'next_serial' => 15,
+    'next_serial' => 34,
     'confirmation' => '<p>Vielen Dank für Ihr Ticket an die Haustechnik.<br />
 	Wir werden Ihr Anliegen umgehend bearbeiten.</p>
 ',
@@ -152,6 +153,8 @@ Die Ergebnisse dieser Eingabe können eingesehen werden unter:
 
 Sie haben ein Ticket für die Haustechnik erstellt.
 
+----- Bitte antworten Sie nicht auf diese E-Mail, da die Adresse keinen Empfänger hat. Ihre Nachricht oder Rückantwort wird nicht weitergeleitet. -----
+
 Übermittelte Werte:
 [submission:values]
 
@@ -203,7 +206,7 @@ Mail:   Marion.Groenig@hannoverimpuls.de
           'unique' => 0,
           'placeholder' => '',
           'attributes' => array(),
-          'analysis' => FALSE,
+          'analysis' => TRUE,
         ),
         'required' => 1,
         'weight' => 0,
@@ -231,7 +234,7 @@ Mail:   Marion.Groenig@hannoverimpuls.de
           'description' => '',
           'placeholder' => '',
           'attributes' => array(),
-          'analysis' => FALSE,
+          'analysis' => TRUE,
         ),
         'required' => 0,
         'weight' => 1,
@@ -259,7 +262,7 @@ Mail:   Marion.Groenig@hannoverimpuls.de
           'description' => '',
           'placeholder' => '',
           'attributes' => array(),
-          'analysis' => FALSE,
+          'analysis' => TRUE,
         ),
         'required' => 0,
         'weight' => 2,
@@ -284,7 +287,7 @@ Mail:   Marion.Groenig@hannoverimpuls.de
           'description' => '',
           'placeholder' => '',
           'attributes' => array(),
-          'analysis' => FALSE,
+          'analysis' => TRUE,
         ),
         'required' => 1,
         'weight' => 3,
@@ -299,7 +302,7 @@ Mail:   Marion.Groenig@hannoverimpuls.de
         'extra' => array(
           'private' => 0,
           'hidden_type' => 'value',
-          'analysis' => FALSE,
+          'analysis' => TRUE,
         ),
         'required' => 0,
         'weight' => 4,
