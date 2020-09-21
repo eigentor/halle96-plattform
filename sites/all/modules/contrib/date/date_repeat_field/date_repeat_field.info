@@ -7,9 +7,9 @@ stylesheets[all][] = date_repeat_field.css
 package = Date/Time
 core = 7.x
 
-; Information added by Drupal.org packaging script on 2016-06-05
-version = "7.x-2.10-rc1+2-dev"
+; Information added by Drupal.org packaging script on 2017-04-07
+version = "7.x-2.10"
 core = "7.x"
 project = "date"
-datestamp = "1465134861"
+datestamp = "1491562090"
 
