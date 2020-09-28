@@ -15,4 +15,8 @@ function halle96_forms_form_node_form_alter(&$form, &$form_state, $form_id) {
     $form['actions']['#prefix'] .= 'Bitte prüfen Sie noch einmal alle Angaben. <br /> Nach dem Speichern ist die Buchung nur noch durch die Zentrumsleitung bearbeitbar.';
     $form['actions']['#prefix'] .= '</div>';
   }
+
+  $form['field_conf_termin']['und']['#suffix'] = '<span class="time-description">Die Zeiten verstehen sich inklusive Aufbau und Abbau.</span></div>';
+
+
 }

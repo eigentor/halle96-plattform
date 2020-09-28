@@ -8,7 +8,7 @@ input#edit-title {
 }
 /*.page-node-add input#edit-title, .article-node-add input#edit-title,
 .page-node-edit input#edit-title, .article-node-edit input#edit-title {
-  
+
 }*/
 .cke_editable {
   padding-right: 10px;
@@ -26,4 +26,15 @@ table.ui-timepicker-table a.ui-state-active {
   width: auto;
   color: #0F517A;
   /*border: 1px solid #B5D1E0;*/
+}
+
+.field-type-datetime {
+  border: 1px solid #ccc;
+}
+.field-type-datetime span.time-description {
+  display: block;
+  padding: 0 15px 15px 15px;
+}
+fieldset.date-combo {
+  border: 0;
 }
