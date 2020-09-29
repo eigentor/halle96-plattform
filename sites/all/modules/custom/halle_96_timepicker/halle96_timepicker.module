@@ -72,3 +72,35 @@ function halle96_timepicker_form_conference_room_node_form_alter(&$form, &$form_
     ),
   );
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter()
+ */
+function halle96_timepicker_form_conference_room_paid_1_node_form_alter(&$form, &$form_state) {
+  $path = drupal_get_path('module', 'halle96_timepicker');
+
+  $form['field_conf_termin']['#attached'] = array(
+    'library' => array(
+      array('halle96_timepicker', 'timepicker'),
+    ),
+    'js' => array(
+      "$path/js/halle96_timepicker.js",
+    ),
+  );
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter()
+ */
+function halle96_timepicker_form_conference_room_paid_2_node_form_alter(&$form, &$form_state) {
+  $path = drupal_get_path('module', 'halle96_timepicker');
+
+  $form['field_conf_termin']['#attached'] = array(
+    'library' => array(
+      array('halle96_timepicker', 'timepicker'),
+    ),
+    'js' => array(
+      "$path/js/halle96_timepicker.js",
+    ),
+  );
+}
