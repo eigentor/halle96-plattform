@@ -160,7 +160,7 @@ function tz_conference_rooms_paid_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_conf_food',
-    'label' => 'Verpflegung',
+    'label' => 'Bewirtung zur Selbstversorgung',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -243,6 +243,50 @@ function tz_conference_rooms_paid_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'node-conference_room_paid_2-field_conf_equipment'.
+  $field_instances['node-conference_room_paid_2-field_conf_equipment'] = array(
+    'bundle' => 'conference_room_paid_2',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_conf_equipment',
+    'label' => 'Equipment',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 8,
+    ),
+  );
+
   // Exported field_instance: 'node-conference_room_paid_2-field_conf_firma'.
   $field_instances['node-conference_room_paid_2-field_conf_firma'] = array(
     'bundle' => 'conference_room_paid_2',
@@ -320,6 +364,49 @@ function tz_conference_rooms_paid_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-conference_room_paid_2-field_conf_food'.
+  $field_instances['node-conference_room_paid_2-field_conf_food'] = array(
+    'bundle' => 'conference_room_paid_2',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'token' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_conf_food',
+    'label' => 'Bewirtung zur Selbstversorgung',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 6,
+    ),
+  );
+
   // Exported field_instance: 'node-conference_room_paid_2-field_conf_termin'.
   $field_instances['node-conference_room_paid_2-field_conf_termin'] = array(
     'bundle' => 'conference_room_paid_2',
@@ -391,10 +478,10 @@ function tz_conference_rooms_paid_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Bewirtung zur Selbstversorgung');
   t('Equipment');
   t('Firma');
   t('Termin');
-  t('Verpflegung');
 
   return $field_instances;
 }
