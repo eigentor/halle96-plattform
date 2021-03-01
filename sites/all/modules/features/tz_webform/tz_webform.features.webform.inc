@@ -80,7 +80,7 @@ $webforms = array();
     ),
   ),
   'webform' => array(
-    'next_serial' => 34,
+    'next_serial' => 69,
     'confirmation' => '<p>Vielen Dank für Ihr Ticket an die Haustechnik.<br />
 	Wir werden Ihr Anliegen umgehend bearbeiten.</p>
 ',
@@ -307,6 +307,37 @@ Mail:   Marion.Groenig@hannoverimpuls.de
         'required' => 0,
         'weight' => 4,
         'machine_name' => 'ihr_ticket_f_r_die_haustechnik__mail_adress_ticket_author',
+        'page_num' => 1,
+      ),
+      'ihr_ticket_f_r_die_haustechnik__status' => array(
+        'form_key' => 'status',
+        'name' => 'Status',
+        'type' => 'select',
+        'value' => 'open',
+        'extra' => array(
+          'items' => 'open|Offen
+in_progress|In Bearbeitung
+done|Erledigt
+hide_from_list|Nicht in Liste anzeigen',
+          'multiple' => 0,
+          'title_display' => 'before',
+          'description_above' => 0,
+          'private' => 1,
+          'wrapper_classes' => '',
+          'css_classes' => '',
+          'aslist' => 0,
+          'empty_option' => '',
+          'optrand' => 0,
+          'other_option' => NULL,
+          'other_text' => 'Other...',
+          'description' => '',
+          'custom_keys' => FALSE,
+          'options_source' => '',
+          'analysis' => TRUE,
+        ),
+        'required' => 0,
+        'weight' => 5,
+        'machine_name' => 'ihr_ticket_f_r_die_haustechnik__status',
         'page_num' => 1,
       ),
     ),
