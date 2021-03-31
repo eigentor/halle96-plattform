@@ -91,8 +91,6 @@ function mail_edit_features_features_export_render($module, $data) {
 function mail_edit_features_features_rebuild($module) {
 
   if ($defaults = features_get_default('mail_edit_features', $module)) {
-    $current_templates = mail_edit_features_content_get();
-
     foreach ($defaults as $default_mail_template) {
       $registry_data = $default_mail_template;
       // Due avoid name conflict with same field names
@@ -100,24 +98,9 @@ function mail_edit_features_features_rebuild($module) {
       $registry_data['description'] = isset($registry_data['registry_description'])
         ? $registry_data['registry_description'] : '';
 
-      if (!isset($current_templates[$registry_data['id']])) {
-        // Add as existed to registry items.
-        $current_templates[$registry_data['id']] = array();
-        drupal_write_record('mail_edit_registry', $registry_data);
-      }
-      else {
-        drupal_write_record('mail_edit_registry', $registry_data, array('id'));
-      }
+      db_merge('mail_edit_registry', $registry_data);
 
-      // Insert new.
-      if (!in_array($default_mail_template['language'], $current_templates[$default_mail_template['id']])) {
-        $current_templates[$default_mail_template['id']][] = $default_mail_template['language'];
-        drupal_write_record('mail_edit', $default_mail_template);
-      }
-      // Either if template already exists in DB - update it.
-      else {
-        drupal_write_record('mail_edit', $default_mail_template, array('id', 'language'));
-      }
+      db_merge('mail_edit', $default_mail_template);
     }
     // @TODO Here should be deletion of removed templates
   }

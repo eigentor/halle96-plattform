@@ -5,6 +5,16 @@
  */
 
 /**
+ * Implements hook_views_api().
+ */
+function mail_logger_views_api() {
+  return array(
+    'api' => 2,
+    'path' => drupal_get_path('module', 'mail_logger') . '/views',
+  );
+}
+
+/**
  * Implements hook_permission().
  */
 function mail_logger_permission() {
@@ -22,21 +32,36 @@ function mail_logger_permission() {
 function mail_logger_menu() {
   $items = array();
   $items['admin/reports/mail-logger'] = array(
-    'title'             => 'Outgoing Mail log entries',
+    'title'             => 'Outgoing Mail Log',
     'description'       => 'View Mails that have been sent from this site.',
     'page callback'     => 'mail_logger_overview',
     'access arguments'  => array('access mail logger'),
-    'type'              => MENU_NORMAL_ITEM,
     'file'              => 'mail_logger.pages.inc',
   );
+
+  $items['admin/reports/mail-logger/logs'] = array(
+    'title' => 'Entries',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'weight' => -10
+  );
+
   $items['admin/reports/mail-logger/mail/%'] = array(
-    'title'             => 'Outgoing Mail log entries',
+    'title'             => 'Outgoing Mail Log Entry',
     'description'       => 'View information about a single logged mail entry',
     'page callback'     => 'mail_logger_read_mail',
     'page arguments'    => array(4),
     'access arguments'  => array('access mail logger'),
     'type'              => MENU_CALLBACK,
     'file'              => 'mail_logger.pages.inc',
+  );
+
+  $items['admin/reports/mail-logger/settings'] = array(
+    'title' => 'Settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('mail_logger_admin_settings_form'),
+    'access arguments' => array('administer modules'),
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'mail_logger.admin.inc',
   );
 
   return $items;
@@ -55,6 +80,20 @@ function mail_logger_theme() {
 }
 
 /**
+ * Implements hook_module_implements_alter().
+ * Force our mail_alter to go last so everyone else gets a crack at the mail
+ * before we try to log it.
+ */
+function mail_logger_module_implements_alter(&$implementations, $hook) {
+  // Fire our mail_alter last.
+  if ($hook == 'mail_alter' && isset($implementations['mail_logger'])) {
+    $group = $implementations['mail_logger'];
+    unset($implementations['mail_logger']);
+    $implementations['mail_logger'] = $group;
+  }
+}
+
+/**
  * Implements hook_mail_alter().
  *
  * Purpose of this function is to log all outgoing mail
@@ -62,23 +101,55 @@ function mail_logger_theme() {
 function mail_logger_mail_alter(&$message) {
   if (!empty($message['send'])) {
     $system = drupal_mail_system($message['module'], $message['key']);
+    $mail_system = get_class($system);
     $logger = $system->format($message);
     $logger['date_sent'] = REQUEST_TIME;
-    if (!isset($logger['language']->language)) {
-      $logger['language']->language = LANGUAGE_NONE;
+    if (!isset($logger['language'])) {
+      $language = LANGUAGE_NONE;
     }
-    db_insert('mail_logger', array())
-      ->fields(array(
-        'mailkey'   => $logger['id'],
-        'mailto'    => $logger['to'],
-        'subject'   => $logger['subject'],
-        'body'      => $logger['body'],
-        'mailfrom'  => $logger['from'],
-        'headers'   => serialize($logger['headers']),
-        'date_sent' => $logger['date_sent'],
-        'language'  => $logger['language']->language,
-      ))
+    else {
+      $language = (is_object($logger['language']) ? $logger['language']->language : $logger['language']);
+    }
+
+    // Process headers with mime_header_decode() in case they are encoded.
+    $empty = variable_get('mail_logger_log_empty_to', '* empty *');
+    $logger['to'] = mime_header_decode(empty($logger['to']) ? t($empty) : $logger['to']);
+    $logger['from'] = mime_header_decode($logger['from']);
+    foreach ($logger['headers'] as $key => $val) {
+      $logger['headers'][$key] = mime_header_decode($val);
+    }
+
+    $record = array(
+      'mailkey'     => $logger['id'],
+      'mailto'      => $logger['to'],
+      'subject'     => $logger['subject'],
+      'body'        => (variable_get('mail_logger_log_mail_body', TRUE) ?
+        $logger['body'] :
+        t(variable_get('mail_logger_log_exclude_text', '[MESSAGE BODY EXCLUDED]'))),
+      'mailfrom'    => $logger['from'],
+      'headers'     => serialize($logger['headers']),
+      'date_sent'   => $logger['date_sent'],
+      'language'    => $language,
+      'ipaddr'      => $_SERVER['REMOTE_ADDR'],
+      'mail_system' => $mail_system,
+      );
+
+    $db_specs = drupal_get_schema('mail_logger');
+
+    // Allow record to be altered.
+    $context = array('operation' => 'write');
+    drupal_alter('mail_logger_record', $record, $context);
+
+    foreach ($record as $field_name => $value) {
+      if (isset($db_specs[$field_name]['length'])) {
+        $record[$field_name] = substr($value, $db_specs[$field_name]['length']);
+      }
+    }
+
+    db_insert('mail_logger')
+      ->fields($record)
       ->execute();
+
     // Fire 'mail_logger' 'mail_sent' action.
     module_invoke_all('mail_logger', 'mail_sent', $message, user_load_by_mail($message['from']), user_load_by_mail($message['to']));
   }
@@ -162,6 +233,15 @@ function mail_logger_action_info_alter(&$info) {
 }
 
 /**
+ * Load a user associated with a specific e-mail.
+ */
+function mail_logger_email_user($email) {
+  if ($email = mail_logger_parse_email($email)) {
+    return user_load_by_mail($email);
+  }
+}
+
+/**
  * Return just the e-mail part of an address, which might be something like
  * "John Doe <john.doe@example.com>".
  */
@@ -227,16 +307,33 @@ function mail_logger_token_values($type, $object = NULL) {
  */
 function mail_logger_load($id) {
   $mail = db_select('mail_logger', 'ml')
-    ->range(0,1)
+    ->range(0, 1)
     ->fields('ml')
     ->condition('mlid', $id)
     ->execute()
     ->fetchObject();
   if ($mail) {
+
+    // Alter encrypted mail log records back to their original state.
+    $context = array('operation' => 'read');
+    drupal_alter('mail_logger_record', $mail, $context);
+
     $mail->headers = unserialize($mail->headers);
     return $mail;
   }
   else {
     return FALSE;
+  }
+}
+
+/**
+ * Implements hook_cron().
+ */
+function mail_logger_cron() {
+  $log_maximum_age = variable_get('mail_logger_log_maximum_age', 0);
+  if ($log_maximum_age > 0) {
+    db_delete('mail_logger')
+      ->condition('date_sent', REQUEST_TIME - $log_maximum_age, '<')
+      ->execute();
   }
 }

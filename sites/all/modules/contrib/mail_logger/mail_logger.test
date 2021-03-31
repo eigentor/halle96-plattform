@@ -6,7 +6,7 @@
  */
 
 class MailLoggerTest extends DrupalWebTestCase {
-  function getInfo() {
+  public static function getInfo() {
     return array(
       'name' => 'Mail Logger Test',
       'description' => "This tests basic functionality of the Mail Logger module.",

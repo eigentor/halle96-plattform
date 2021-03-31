@@ -3,6 +3,11 @@ description = "Backup the Drupal database and files or migrate them to another e
 core = 7.x
 configure = admin/config/system/backup_migrate
 
+; Require PHP 5.4 so that some slightly more advanced PHP logic can be used.
+; This is for future usage; removing this will allow the module to continue
+; working fine for now.
+php = 5.4
+
 ; All of the class files used within the module.
 files[] = includes/crud.inc
 files[] = includes/destinations.inc
@@ -12,7 +17,6 @@ files[] = includes/destinations.db.mysql.inc
 files[] = includes/destinations.email.inc
 files[] = includes/destinations.file.inc
 files[] = includes/destinations.ftp.inc
-files[] = includes/destinations.nodesquirrel.inc
 files[] = includes/destinations.s3.inc
 files[] = includes/files.inc
 files[] = includes/filters.inc
@@ -30,13 +34,19 @@ files[] = includes/sources.db.inc
 files[] = includes/sources.db.mysql.inc
 files[] = includes/sources.filesource.inc
 
-; Test suite.
-files[] = tests/BackupMigrateHelper.test
-files[] = tests/BackupMigrateBasicsTest.test
+; Test dependencies.
+test_dependencies[] = ctools
 
-; Information added by Drupal.org packaging script on 2018-02-05
-version = "7.x-3.5"
+; Test suite.
+files[] = tests/BmTestBase.test
+files[] = tests/BmTestBasics.test
+files[] = tests/BmTestProfiles.test
+files[] = tests/BmTestEmail.test
+files[] = tests/BmTestCtools.test
+files[] = tests/BmTestUpdate7310.test
+
+; Information added by Drupal.org packaging script on 2020-07-15
+version = "7.x-3.9"
 core = "7.x"
 project = "backup_migrate"
-datestamp = "1517871486"
-
+datestamp = "1594807678"
