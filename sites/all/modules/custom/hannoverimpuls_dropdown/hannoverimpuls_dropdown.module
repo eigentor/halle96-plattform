@@ -1,0 +1,31 @@
+<?php
+
+
+/**
+ * Implements hook_libraries_info().
+ */
+function hannoverimpuls_dropdown_libraries_info() {
+  $libraries['metismenu_js'] = [
+    'name' => 'Metismenu-Js',
+    'vendor url' => 'https://github.com/onokumus/metismenu/',
+    'download url' => 'https://github.com/onokumus/metisMenu/archive/master.zip',
+    'version callback' => 'simple_version_callback',
+    'files' => [
+      'js' => ['dist/metisMenu.min.js'],
+      'css' => ['dist/metisMenu.min.css'],
+    ],
+  ];
+  return $libraries;
+}
+
+/**
+ * Implements hook_init().
+ */
+function hannoverimpuls_dropdown_init() {
+ libraries_load('metismenu_js');
+}
+
+function simple_version_callback() {
+  //use some fancy magic to get the version number... or don't
+  return TRUE;
+}
