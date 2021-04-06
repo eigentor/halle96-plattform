@@ -249,7 +249,7 @@
           &:hover
             background-color: #eee
 
-  
+
 
   #page-title-container
     .inner-container
@@ -320,15 +320,27 @@
       +legacy-pie-clearfix
       margin-bottom: 7px
       li
+        position: relative
         padding-right: 0
         display: inline
         float: left
         margin-right: 3px
         margin-bottom: 15px
+        min-height: 30px
         &:first-child
           margin-left: 0
         a
           padding: 4px 6px
+        > ul
+          position: absolute
+          top: 30px
+          min-width: 200px
+          display: none
+        &:hover
+          > ul, ul.collapse
+            display: block !important
+            height: auto !important
+            z-index: 1000
 
   .role-Zentrumsleitung
     .region-navigation
