@@ -4,7 +4,8 @@
 
       //$('#block-system-main-menu .content > ul.menu').metisMenu();
 
-      new MetisMenu("#block-system-main-menu .content > ul.menu");
+      //var metis_menu = new MetisMenu("#block-system-main-menu .content > ul.menu");
+
 
     } // end attach function
   }

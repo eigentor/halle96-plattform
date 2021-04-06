@@ -1,48 +1,108 @@
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import babel from 'rollup-plugin-babel';
-import pkg from './package.json';
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "@rollup/plugin-typescript";
+import postcss from "rollup-plugin-postcss";
+import postcssPresetEnv from "postcss-preset-env";
+import pkg from "./package.json";
 
 const banner = `/*!
-* ${pkg.name} ${pkg.homepage}
+* ${pkg.name} - v${pkg.version}
 * ${pkg.description}
-* @version ${pkg.version}
-* @author ${pkg.author}
-* @license: ${pkg.license} 
+* ${pkg.homepage}
+*
+* Made by ${pkg.author}
+* Under ${pkg.license} License
 */`;
 
+const production = !process.env.ROLLUP_WATCH;
 
 export default [
   {
-    input: 'src/index.js',
-    external: ['jquery'],
+    input: "src/index.ts",
     output: [
       {
-        name: 'metisMenu',
+        dir: "dist/cjs",
         banner,
-        globals: {
-          jquery: 'jQuery',
-        },
-        file: pkg.browser,
-        format: 'umd',
-        sourcemap: true,
-      },
+        format: "cjs"
+      }
+    ],
+    plugins: [
+      typescript({
+        typescript: require("typescript")
+      }),
+      resolve(),
+      commonjs()
+    ],
+    external: [
+      "tslib"
+    ]
+  },
+  {
+    input: "src/index.ts",
+    output: [
       {
-        file: pkg.main,
+        name: "MetisMenu",
+        file: production ? pkg.browser : 'docs/assets/js/metismenujs.js',
         banner,
-        format: 'cjs',
-
-      },
+        format: "umd",
+        sourcemap: true
+      }
+    ],
+    plugins: [
+      typescript({
+        typescript: require("typescript")
+      }),
+      resolve(),
+      commonjs()
+    ]
+  },
+  {
+    input: "scss/metismenujs.scss",
+    output: [
       {
-        file: pkg.module,
-        banner,
-        format: 'es',
+        file: production ? pkg.style : "docs/assets/css/metismenujs.css",
+        format: "cjs",
+        banner
       },
     ],
     plugins: [
-      babel({ exclude: 'node_modules/**' }),
-      resolve(),
-      commonjs(),
-    ],
+      postcss({
+        extract: true,
+        sourceMap: true,
+        plugins: [
+          postcssPresetEnv({
+            autoprefixer: {
+              flexbox: 'no-2009',
+            },
+            stage: 3,
+          })
+        ]
+      })
+    ]
   },
+  {
+    input: "scss/metismenujs.scss",
+    output: [
+      {
+        file: "dist/metismenujs.min.css",
+        format: "cjs",
+        banner
+      }
+    ],
+    plugins: [
+      postcss({
+        extract: true,
+        sourceMap: true,
+        minimize: true,
+        plugins: [
+          postcssPresetEnv({
+            autoprefixer: {
+              flexbox: 'no-2009',
+            },
+            stage: 3,
+          })
+        ]
+      })
+    ]
+  }
 ];

@@ -2,5 +2,3 @@ name = hannoverimpuls Dropdown Menu
 description = A dropdown menu for Hannoverimpuls
 core = 7.x
 package = hannoverimpuls
-
-scripts[] = js/hi_dropdown.js

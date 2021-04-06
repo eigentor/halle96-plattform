@@ -11,8 +11,8 @@ function hannoverimpuls_dropdown_libraries_info() {
     'download url' => 'https://github.com/onokumus/metisMenu/archive/master.zip',
     'version callback' => 'simple_version_callback',
     'files' => [
-      'js' => ['dist/metisMenu.min.js'],
-      'css' => ['dist/metisMenu.min.css'],
+      'js' => ['dist/metismenujs.min.js'],
+      'css' => ['dist/metismenujs.min.css'],
     ],
   ];
   return $libraries;
@@ -22,7 +22,7 @@ function hannoverimpuls_dropdown_libraries_info() {
  * Implements hook_init().
  */
 function hannoverimpuls_dropdown_init() {
- libraries_load('metismenu_js');
+
 }
 
 function simple_version_callback() {
