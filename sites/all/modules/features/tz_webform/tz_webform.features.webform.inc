@@ -80,7 +80,7 @@ $webforms = array();
     ),
   ),
   'webform' => array(
-    'next_serial' => 69,
+    'next_serial' => 79,
     'confirmation' => '<p>Vielen Dank für Ihr Ticket an die Haustechnik.<br />
 	Wir werden Ihr Anliegen umgehend bearbeiten.</p>
 ',
@@ -322,7 +322,7 @@ hide_from_list|Nicht in Liste anzeigen',
           'multiple' => 0,
           'title_display' => 'before',
           'description_above' => 0,
-          'private' => 1,
+          'private' => 0,
           'wrapper_classes' => '',
           'css_classes' => '',
           'aslist' => 0,

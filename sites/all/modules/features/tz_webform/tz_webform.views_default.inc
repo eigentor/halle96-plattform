@@ -51,6 +51,12 @@ function tz_webform_views_default_views() {
       'empty_column' => 0,
     ),
   );
+  /* Beziehung: Webform submissions: Daten */
+  $handler->display->display_options['relationships']['data']['id'] = 'data';
+  $handler->display->display_options['relationships']['data']['table'] = 'webform_submissions';
+  $handler->display->display_options['relationships']['data']['field'] = 'data';
+  $handler->display->display_options['relationships']['data']['webform_nid'] = '2760';
+  $handler->display->display_options['relationships']['data']['webform_cid'] = '6';
   /* Feld: Webform submission data: Wert */
   $handler->display->display_options['fields']['value_4']['id'] = 'value_4';
   $handler->display->display_options['fields']['value_4']['table'] = 'webform_submissions';
@@ -104,6 +110,27 @@ function tz_webform_views_default_views() {
   $handler->display->display_options['sorts']['modified']['table'] = 'webform_submissions';
   $handler->display->display_options['sorts']['modified']['field'] = 'modified';
   $handler->display->display_options['sorts']['modified']['granularity'] = 'hour';
+  /* Filterkriterium: Wert von Status */
+  $handler->display->display_options['filters']['data']['id'] = 'data';
+  $handler->display->display_options['filters']['data']['table'] = 'webform_submitted_data';
+  $handler->display->display_options['filters']['data']['field'] = 'data';
+  $handler->display->display_options['filters']['data']['relationship'] = 'data';
+  $handler->display->display_options['filters']['data']['ui_name'] = 'Wert von Status';
+  $handler->display->display_options['filters']['data']['operator'] = 'not empty';
+  /* Filterkriterium: Webform submission data: Data field */
+  $handler->display->display_options['filters']['data_1']['id'] = 'data_1';
+  $handler->display->display_options['filters']['data_1']['table'] = 'webform_submitted_data';
+  $handler->display->display_options['filters']['data_1']['field'] = 'data';
+  $handler->display->display_options['filters']['data_1']['relationship'] = 'data';
+  $handler->display->display_options['filters']['data_1']['operator'] = '!=';
+  $handler->display->display_options['filters']['data_1']['value'] = 'done';
+  /* Filterkriterium: Webform submission data: Data field */
+  $handler->display->display_options['filters']['data_2']['id'] = 'data_2';
+  $handler->display->display_options['filters']['data_2']['table'] = 'webform_submitted_data';
+  $handler->display->display_options['filters']['data_2']['field'] = 'data';
+  $handler->display->display_options['filters']['data_2']['relationship'] = 'data';
+  $handler->display->display_options['filters']['data_2']['operator'] = '!=';
+  $handler->display->display_options['filters']['data_2']['value'] = 'hide_from_list';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -117,6 +144,7 @@ function tz_webform_views_default_views() {
     t('Sortieren nach'),
     t('Aufsteigend'),
     t('Absteigend'),
+    t('Submission Data'),
     t('Modified'),
     t('Bearbeiten'),
     t('Page'),
