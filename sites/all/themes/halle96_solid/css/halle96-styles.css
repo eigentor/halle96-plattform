@@ -56,6 +56,14 @@ div.messages {
   margin: 35px 0 0;
 }
 
+table th {
+  border: 0;
+}
+table tr.even, table tr.odd {
+  background: none;
+  border: 0;
+}
+
 /*------------------------------------------- */
 /*------------------------------------------- */
 /*----------- Tablet Portrait ----------------*/
