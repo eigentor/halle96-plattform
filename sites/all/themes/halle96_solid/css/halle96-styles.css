@@ -77,18 +77,22 @@ table th.views-field-edit-submission a, table td.views-field-edit-submission a {
   display: block;
   padding: 0 1em;
 }
-table th {
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
-  border-bottom: 0;
-  background: #eee;
-}
 table tr {
   border: 0;
 }
 table tr.even, table tr.odd {
   background: none;
   border: 0;
+}
+table th {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 0;
+  background: #eee;
+}
+table td.views-field-value-4 {
+  background: #f9f9f9;
+  color: #3581ad;
 }
 
 /*------------------------------------------- */

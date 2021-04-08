@@ -38,17 +38,65 @@ function tz_webform_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
-    'serial' => 'serial',
+    'value_4' => 'value_4',
+    'value' => 'value',
+    'value_1' => 'value_1',
+    'value_2' => 'value_2',
+    'value_3' => 'value_3',
+    'modified' => 'modified',
+    'edit_submission' => 'edit_submission',
   );
   $handler->display->display_options['style_options']['class'] = '';
   $handler->display->display_options['style_options']['default'] = '-1';
   $handler->display->display_options['style_options']['info'] = array(
-    'serial' => array(
+    'value_4' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
+    ),
+    'value' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'value_1' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'value_2' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'value_3' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'modified' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'edit_submission' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 1,
     ),
   );
   /* Beziehung: Webform submissions: Daten */
@@ -103,6 +151,7 @@ function tz_webform_views_default_views() {
   $handler->display->display_options['fields']['edit_submission']['table'] = 'webform_submissions';
   $handler->display->display_options['fields']['edit_submission']['field'] = 'edit_submission';
   $handler->display->display_options['fields']['edit_submission']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['edit_submission']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['edit_submission']['text'] = 'Bearbeiten';
   $handler->display->display_options['fields']['edit_submission']['access_check'] = 1;
   /* Sortierkriterien: Webform submissions: Modified */
