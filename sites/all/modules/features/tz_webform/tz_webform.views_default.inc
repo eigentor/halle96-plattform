@@ -99,6 +99,13 @@ function tz_webform_views_default_views() {
       'empty_column' => 1,
     ),
   );
+  /* Kopfbereich: Global: Textbereich */
+  $handler->display->display_options['header']['area']['id'] = 'area';
+  $handler->display->display_options['header']['area']['table'] = 'views';
+  $handler->display->display_options['header']['area']['field'] = 'area';
+  $handler->display->display_options['header']['area']['content'] = 'Hier finden sie die aktuell offenen Tickets und deren Bearbeitungsstatus.
+Bei Fragen wenden Sie sich bitte an Volker Colditz oder die Zentrumsleitung.';
+  $handler->display->display_options['header']['area']['format'] = 'filtered_html';
   /* Beziehung: Webform submissions: Daten */
   $handler->display->display_options['relationships']['data']['id'] = 'data';
   $handler->display->display_options['relationships']['data']['table'] = 'webform_submissions';
@@ -193,6 +200,8 @@ function tz_webform_views_default_views() {
     t('Sortieren nach'),
     t('Aufsteigend'),
     t('Absteigend'),
+    t('Hier finden sie die aktuell offenen Tickets und deren Bearbeitungsstatus.
+Bei Fragen wenden Sie sich bitte an Volker Colditz oder die Zentrumsleitung.'),
     t('Submission Data'),
     t('Modified'),
     t('Bearbeiten'),

@@ -1038,6 +1038,13 @@ table td.views-field-value-4 {
   padding: 0 0.3em 0 0.2em;
 }
 
+.page-tickets .view-tickets {
+  margin-top: 2em;
+}
+.page-tickets .view-tickets .view-header {
+  margin-bottom: 1.5em;
+}
+
 /*------------------------------------------- */
 /*------------------------------------------- */
 /*----------- Tablet Portrait ----------------*/
@@ -1094,6 +1101,10 @@ table td.views-field-value-4 {
     float: left;
     width: 30%;
     clear: none;
+  }
+
+  .page-tickets .view-tickets .view-header {
+    width: 60%;
   }
 }
 /* End Media Query Desktop narrow */
