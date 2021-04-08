@@ -35,12 +35,33 @@ div.messages
   margin: 35px 0 0
 
 table
-  th
+  thead
     border: 0
+  tbody
+    border: 0
+  th, td
+    padding: 0.2em 1em
+    border: 1px solid #ddd
+    &.views-field-modified
+      display: none
+    &.views-field-edit-submission
+      padding: 0
+      border-left: 0
+      a
+        display: block
+        padding: 0 1em
+  th
+    padding-top: 0.5em
+    padding-bottom: 0.5em
+    border-bottom: 0
+    background: #eee
   tr
+    border: 0
     &.even, &.odd
       background: none
       border: 0
+
+
 
 
 /*------------------------------------------- */
