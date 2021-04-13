@@ -39,7 +39,7 @@ function halle96_solid_preprocess_page(&$variables) {
     'data' => drupal_get_path('theme', 'halle96_solid') . '/js/tz_scripts.js',
     'weight' => 2
   ];
-  libraries_load('smartmenus');
+//  libraries_load('smartmenus');
 }
 
 /**

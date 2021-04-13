@@ -5,16 +5,6 @@
  * Implements hook_libraries_info().
  */
 function hannoverimpuls_dropdown_libraries_info() {
-  $libraries['metismenu_js'] = [
-    'name' => 'Metismenu-Js',
-    'vendor url' => 'https://github.com/onokumus/metismenu/',
-    'download url' => 'https://github.com/onokumus/metisMenu/archive/master.zip',
-    'version callback' => 'simple_version_callback',
-    'files' => [
-      'js' => ['dist/metismenujs.min.js'],
-      'css' => ['dist/metismenujs.min.css'],
-    ],
-  ];
 
   $libraries['smartmenus'] = [
     'name' => 'Smartmenus',
@@ -27,13 +17,6 @@ function hannoverimpuls_dropdown_libraries_info() {
     ],
   ];
   return $libraries;
-}
-
-/**
- * Implements hook_init().
- */
-function hannoverimpuls_dropdown_init() {
-
 }
 
 function simple_version_callback() {

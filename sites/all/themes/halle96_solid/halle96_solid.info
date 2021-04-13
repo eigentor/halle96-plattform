@@ -6,7 +6,7 @@ Version = VERSION
 
 stylesheets[all][] = css/halle96-styles.css
 
-scripts[] = js/hi_dropdown.js
+;scripts[] = js/hi_dropdown.js
 
 regions[header] = Header
 regions[navigation] = Navigation
