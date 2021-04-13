@@ -94,9 +94,9 @@
           display: none
         &.ticket-facility-management
           +menu-add-content
-    //&.sm
-    //  ul
-    //    display: block
+      ul
+        li
+          padding-right: 0
 
 // Display the "add news" menu link with a plus icon
 // for the role "Zentrumsleitung"
@@ -323,15 +323,38 @@
       +legacy-pie-clearfix
       margin-bottom: 7px
       li
+        position: relative
         padding-right: 0
         display: inline
         float: left
         margin-right: 3px
         margin-bottom: 15px
+        min-height: 30px
         &:first-child
           margin-left: 0
         a
           padding: 4px 6px
+        ul
+          display: none
+          position: absolute
+          float: none
+          left: 0
+          top: 30px
+          width: auto
+          li
+            white-space: nowrap
+            margin-bottom: 0
+        &.active-trail
+          ul
+            li
+              a
+                text-decoration: none
+                background: #777
+                border: 1px solid #777
+                color: white
+        &:hover
+          ul
+            display: block
 
   .role-Zentrumsleitung
     .region-navigation
