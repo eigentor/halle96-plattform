@@ -4,7 +4,10 @@
 
       //$('#block-system-main-menu .content > ul.menu').metisMenu();
 
-      new MetisMenu("#block-system-main-menu .content > ul.menu");
+      //new MetisMenu("#block-system-main-menu .content > ul.menu");
+
+      $('#block-system-main-menu .content > ul.menu').addClass('sm');
+      $('#block-system-main-menu .content > ul.menu').smartmenus();
 
 
 

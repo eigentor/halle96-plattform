@@ -15,6 +15,17 @@ function hannoverimpuls_dropdown_libraries_info() {
       'css' => ['dist/metismenujs.min.css'],
     ],
   ];
+
+  $libraries['smartmenus'] = [
+    'name' => 'Smartmenus',
+    'vendor url' => 'https://github.com/vadikom/smartmenus/releases',
+    'download url' => 'https://github.com/vadikom/smartmenus/archive/refs/tags/1.0.1.zip',
+    'version callback' => 'simple_version_callback',
+    'files' => [
+      'js' => ['jquery.smartmenus.min.js'],
+      'css' => ['css/sm-core-css.css'],
+    ],
+  ];
   return $libraries;
 }
 

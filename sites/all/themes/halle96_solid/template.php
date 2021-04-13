@@ -34,12 +34,12 @@ function halle96_solid_preprocess_block(&$variables) {
  * @param $variables
  */
 function halle96_solid_preprocess_page(&$variables) {
-  $variables['page']['content']['#attached']['js'][] = array(
+  $variables['page']['content']['#attached']['js'][] = [
     'type' => 'file',
     'data' => drupal_get_path('theme', 'halle96_solid') . '/js/tz_scripts.js',
     'weight' => 2
-  );
-  libraries_load('metismenu_js');
+  ];
+  libraries_load('smartmenus');
 }
 
 /**
