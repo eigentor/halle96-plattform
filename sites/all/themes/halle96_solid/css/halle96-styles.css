@@ -677,30 +677,17 @@ table td.views-field-value-4 {
     visibility: hidden;
   }
   .region-navigation ul.menu li {
-    position: relative;
     padding-right: 0;
     display: inline;
     float: left;
     margin-right: 3px;
     margin-bottom: 15px;
-    min-height: 30px;
   }
   .region-navigation ul.menu li:first-child {
     margin-left: 0;
   }
   .region-navigation ul.menu li a {
     padding: 4px 6px;
-  }
-  .region-navigation ul.menu li > ul {
-    position: absolute;
-    top: 30px;
-    min-width: 200px;
-    display: none;
-  }
-  .region-navigation ul.menu li:hover > ul, .region-navigation ul.menu li:hover ul.collapse {
-    display: block !important;
-    height: auto !important;
-    z-index: 1000;
   }
 
   .role-Zentrumsleitung .region-navigation ul.menu li a.news-schreiben {
