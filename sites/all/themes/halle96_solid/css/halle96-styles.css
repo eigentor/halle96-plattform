@@ -92,7 +92,7 @@ table th {
 }
 table td.views-field-value-4 {
   background: #f9f9f9;
-  color: #3581ad;
+  color: #1c72ce;
 }
 
 /*------------------------------------------- */
@@ -2442,6 +2442,12 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 
 .node-webform input.form-text {
   width: 100%;
+}
+.node-webform .form-item.webform-component--aktive-tickets {
+  padding: 0.7em 1.5em;
+  background: #f5f5f5;
+  border: 1px solid #ececec;
+  margin-bottom: 2em;
 }
 .node-webform .form-actions .form-submit.button-primary {
   width: 100%;
