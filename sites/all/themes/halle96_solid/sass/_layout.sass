@@ -337,20 +337,30 @@
         ul
           display: none
           position: absolute
+          z-index: 1001
           float: none
           left: 0
-          top: 30px
+          top: 31px
           width: auto
+          background: white
+          padding-bottom: 0.3em
+          +border-radius(5px)
           li
             white-space: nowrap
             margin-bottom: 0
+            a
+              background: none
+              border: none
+              &:hover
+                color: $red
         &.active-trail
           ul
+            background: #777
             li
               a
                 text-decoration: none
-                background: #777
-                border: 1px solid #777
+                background: none
+                border: none
                 color: white
         &:hover
           ul

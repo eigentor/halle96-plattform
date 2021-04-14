@@ -63,7 +63,7 @@ table tbody {
   border: 0;
 }
 table th, table td {
-  padding: 0.2em 1em;
+  padding: 1em 1em;
   border: 1px solid #ddd;
 }
 table th.views-field-modified, table td.views-field-modified {
@@ -237,6 +237,7 @@ table td.views-field-value-4 {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
+  line-height: 30px;
 }
 .region-navigation .item-list ul li a:hover, .region-navigation .item-list ul li a.active-trail {
   text-decoration: none;
@@ -251,7 +252,7 @@ table td.views-field-value-4 {
     padding: 4px 6px;
     margin-right: 0.2em;
     color: #555;
-    background: transparent;
+    background: white;
     border: 1px solid #ddd;
   }
 }
@@ -285,6 +286,7 @@ table td.views-field-value-4 {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
+  line-height: 30px;
 }
 .region-navigation ul.menu li a:hover, .region-navigation ul.menu li a.active-trail {
   text-decoration: none;
@@ -299,7 +301,7 @@ table td.views-field-value-4 {
     padding: 4px 6px;
     margin-right: 0.2em;
     color: #555;
-    background: transparent;
+    background: white;
     border: 1px solid #ddd;
   }
 }
@@ -697,19 +699,37 @@ table td.views-field-value-4 {
   .region-navigation ul.menu li ul {
     display: none;
     position: absolute;
+    z-index: 1001;
     float: none;
     left: 0;
-    top: 30px;
+    top: 31px;
     width: auto;
+    background: white;
+    padding-bottom: 0.3em;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
   }
   .region-navigation ul.menu li ul li {
     white-space: nowrap;
     margin-bottom: 0;
   }
+  .region-navigation ul.menu li ul li a {
+    background: none;
+    border: none;
+  }
+  .region-navigation ul.menu li ul li a:hover {
+    color: #d83e27;
+  }
+  .region-navigation ul.menu li.active-trail ul {
+    background: #777;
+  }
   .region-navigation ul.menu li.active-trail ul li a {
     text-decoration: none;
-    background: #777;
-    border: 1px solid #777;
+    background: none;
+    border: none;
     color: white;
   }
   .region-navigation ul.menu li:hover ul {
@@ -1118,6 +1138,9 @@ table td.views-field-value-4 {
 
   .page-tickets .view-tickets .view-header {
     width: 60%;
+  }
+  .page-tickets .view-tickets th.views-field-value {
+    min-width: 11em;
   }
 }
 /* End Media Query Desktop narrow */
