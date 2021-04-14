@@ -66,14 +66,7 @@ table th, table td {
   padding: 1em 1em;
   border: 1px solid #ddd;
 }
-table th.views-field-modified, table td.views-field-modified {
-  display: none;
-}
-table th.views-field-edit-submission, table td.views-field-edit-submission {
-  padding: 0;
-  border-left: 0;
-}
-table th.views-field-edit-submission a, table td.views-field-edit-submission a {
+table th a, table td a {
   display: block;
   padding: 0 1em;
 }
@@ -1139,8 +1132,22 @@ table td.views-field-value-4 {
   .page-tickets .view-tickets .view-header {
     width: 60%;
   }
-  .page-tickets .view-tickets th.views-field-value {
-    min-width: 11em;
+  .page-tickets .view-tickets table th.views-field-value {
+    min-width: 10.5em;
+  }
+  .page-tickets .view-tickets table td {
+    padding-left: 0.8em;
+    padding-right: 0.5em;
+  }
+  .page-tickets .view-tickets table td.views-field-value-2 {
+    width: 100px;
+  }
+  .page-tickets .view-tickets table td.views-field-modified {
+    width: 100px;
+  }
+  .page-tickets .view-tickets table td.views-field-edit-submission {
+    padding: 0;
+    border-left: 0;
   }
 }
 /* End Media Query Desktop narrow */

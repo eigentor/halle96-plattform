@@ -137,7 +137,8 @@ Bei Fragen wenden Sie sich bitte an Volker Colditz oder die Zentrumsleitung.';
   $handler->display->display_options['fields']['value_2']['id'] = 'value_2';
   $handler->display->display_options['fields']['value_2']['table'] = 'webform_submissions';
   $handler->display->display_options['fields']['value_2']['field'] = 'value';
-  $handler->display->display_options['fields']['value_2']['label'] = '';
+  $handler->display->display_options['fields']['value_2']['label'] = 'Raumnr. / Etage';
+  $handler->display->display_options['fields']['value_2']['custom_label'] = 'custom';
   $handler->display->display_options['fields']['value_2']['webform_nid'] = '2760';
   $handler->display->display_options['fields']['value_2']['webform_cid'] = '3';
   /* Feld: Webform submission data: Wert */
@@ -151,6 +152,7 @@ Bei Fragen wenden Sie sich bitte an Volker Colditz oder die Zentrumsleitung.';
   $handler->display->display_options['fields']['modified']['id'] = 'modified';
   $handler->display->display_options['fields']['modified']['table'] = 'webform_submissions';
   $handler->display->display_options['fields']['modified']['field'] = 'modified';
+  $handler->display->display_options['fields']['modified']['label'] = 'Erstellt / Zuletzt bearbeitet';
   $handler->display->display_options['fields']['modified']['date_format'] = 'short';
   $handler->display->display_options['fields']['modified']['second_date_format'] = 'long';
   /* Feld: Webform submissions: ‚Bearbeiten‘-Link */
@@ -165,6 +167,7 @@ Bei Fragen wenden Sie sich bitte an Volker Colditz oder die Zentrumsleitung.';
   $handler->display->display_options['sorts']['modified']['id'] = 'modified';
   $handler->display->display_options['sorts']['modified']['table'] = 'webform_submissions';
   $handler->display->display_options['sorts']['modified']['field'] = 'modified';
+  $handler->display->display_options['sorts']['modified']['order'] = 'DESC';
   $handler->display->display_options['sorts']['modified']['granularity'] = 'hour';
   /* Filterkriterium: Wert von Status */
   $handler->display->display_options['filters']['data']['id'] = 'data';
@@ -203,7 +206,8 @@ Bei Fragen wenden Sie sich bitte an Volker Colditz oder die Zentrumsleitung.';
     t('Hier finden sie die aktuell offenen Tickets und deren Bearbeitungsstatus.
 Bei Fragen wenden Sie sich bitte an Volker Colditz oder die Zentrumsleitung.'),
     t('Submission Data'),
-    t('Modified'),
+    t('Raumnr. / Etage'),
+    t('Erstellt / Zuletzt bearbeitet'),
     t('Bearbeiten'),
     t('Page'),
   );

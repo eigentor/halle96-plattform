@@ -80,9 +80,11 @@ $webforms = array();
     ),
   ),
   'webform' => array(
-    'next_serial' => 79,
+    'next_serial' => 82,
     'confirmation' => '<p>Vielen Dank für Ihr Ticket an die Haustechnik.<br />
 	Wir werden Ihr Anliegen umgehend bearbeiten.</p>
+
+<p>Schauen Sie ihr Anliegen in der&nbsp;<a href="/tickets">Liste aller aktuellen Tickets</a> an.</p>
 ',
     'confirmation_format' => 'filtered_html',
     'redirect_url' => '<confirmation>',
@@ -130,7 +132,10 @@ $webforms = array();
 [submission:values]
 
 Die Ergebnisse dieser Eingabe können eingesehen werden unter:
-[submission:url]',
+[submission:url]
+
+Die Liste aller Tickets finden Sie hier:
+[site:url]tickets',
         'excluded_components' => array(),
         'html' => 0,
         'attachments' => 0,
@@ -159,6 +164,9 @@ Sie haben ein Ticket für die Haustechnik erstellt.
 [submission:values]
 
 Wir werden Ihr Anliegen umgehend bearbeiten.
+
+Die Liste aller Tickets inklusive Ihrem gerade erstellten finden Sie hier:
+[site:url]tickets
 
 hannoverimpuls GmbH
 Hanomaghof 2
