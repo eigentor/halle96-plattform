@@ -246,13 +246,13 @@ table td.views-field-value-4 {
     margin-right: 0.2em;
     color: #555;
     background: white;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
   }
 }
 @media only screen and (min-width: 1200px) {
   .region-navigation .item-list ul li a {
-    padding: 4px 10px;
-    margin-right: 0.6em;
+    padding: 4px 12px;
+    margin-right: 0.4em;
   }
 }
 .region-navigation #block-system-main-menu {
@@ -295,19 +295,22 @@ table td.views-field-value-4 {
     margin-right: 0.2em;
     color: #555;
     background: white;
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
   }
 }
 @media only screen and (min-width: 1200px) {
   .region-navigation ul.menu li a {
-    padding: 4px 10px;
-    margin-right: 0.6em;
+    padding: 4px 12px;
+    margin-right: 0.4em;
   }
 }
 .region-navigation ul.menu li a.beitrag-schreiben {
   background: #eee url(../images/icon-background.png) no-repeat -20px center;
   padding-left: 38px;
   position: relative;
+}
+.region-navigation ul.menu li a.beitrag-schreiben.active-trail {
+  background-color: #777;
 }
 .region-navigation ul.menu li a.beitrag-schreiben:hover {
   background: #777;
@@ -344,6 +347,9 @@ table td.views-field-value-4 {
   background: #eee url(../images/icon-background.png) no-repeat -20px center;
   padding-left: 38px;
   position: relative;
+}
+.region-navigation ul.menu li a.ticket-facility-management.active-trail {
+  background-color: #777;
 }
 .region-navigation ul.menu li a.ticket-facility-management:hover {
   background: #777;
@@ -393,6 +399,9 @@ table td.views-field-value-4 {
   background: #eee url(../images/icon-background.png) no-repeat -20px center;
   padding-left: 38px;
   position: relative;
+}
+.role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben.active-trail {
+  background-color: #777;
 }
 .role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben:hover {
   background: #777;
@@ -650,7 +659,7 @@ table td.views-field-value-4 {
 
   #navigation {
     margin-top: 35px;
-    padding-bottom: 13px;
+    padding-bottom: 5px;
   }
 
   .region-navigation form#search-block-form {
@@ -665,6 +674,8 @@ table td.views-field-value-4 {
   .region-navigation ul.menu {
     *zoom: 1;
     margin-bottom: 7px;
+    display: flex;
+    flex-wrap: wrap;
   }
   .region-navigation ul.menu:after {
     content: " ";
@@ -676,48 +687,64 @@ table td.views-field-value-4 {
   }
   .region-navigation ul.menu li {
     position: relative;
-    padding-right: 0;
-    display: inline;
+    padding: 0;
     float: left;
     margin-right: 3px;
     margin-bottom: 15px;
-    min-height: 30px;
+    height: 36px;
   }
   .region-navigation ul.menu li:first-child {
     margin-left: 0;
   }
   .region-navigation ul.menu li a {
-    padding: 4px 6px;
+    display: block;
+    padding: 0 6px;
+    line-height: 34px;
+    height: 36px;
+    display: block;
   }
   .region-navigation ul.menu li ul {
-    display: none;
     position: absolute;
     z-index: 1001;
     float: none;
     left: 0;
-    top: 31px;
-    width: auto;
+    top: 36px;
     background: white;
-    padding-bottom: 0.3em;
+    border: 1px solid #ccc;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    display: none;
   }
   .region-navigation ul.menu li ul li {
     white-space: nowrap;
-    margin-bottom: 0;
+    margin: 0;
+    padding: 0;
+    display: block;
+    border: none;
+  }
+  .region-navigation ul.menu li ul li:hover {
+    display: block;
   }
   .region-navigation ul.menu li ul li a {
     background: none;
     border: none;
+    display: block;
+    margin: 0;
   }
   .region-navigation ul.menu li ul li a:hover {
-    color: #d83e27;
+    display: block;
+    border: none;
+    background: #777;
+    color: white;
   }
   .region-navigation ul.menu li.active-trail ul {
     background: #777;
+    border: 1px solid #777;
   }
   .region-navigation ul.menu li.active-trail ul li a {
     text-decoration: none;
@@ -725,8 +752,12 @@ table td.views-field-value-4 {
     border: none;
     color: white;
   }
+  .region-navigation ul.menu li.active-trail ul li a:hover {
+    background: white;
+    color: #555;
+  }
   .region-navigation ul.menu li:hover ul {
-    display: block;
+    display: flex;
   }
 
   .role-Zentrumsleitung .region-navigation ul.menu li a.news-schreiben {
@@ -1745,6 +1776,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 }
 #header #block-tz-custom-blocks-user-account-menu h2.block-title {
   text-indent: -9999px;
+  display: none;
   line-height: 1;
   margin: 0;
   font-size: 16px;

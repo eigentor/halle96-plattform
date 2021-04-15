@@ -81,13 +81,13 @@
     margin-right: 0.2em
     color: $base-text-color
     background: white
-    border: 1px solid #ddd
+    border: 1px solid #ccc
   /////////////////
   // Breakpoint desktop
   /////////////////
   +breakpoint($breakpoint-desktop)
-    padding: 4px 10px
-    margin-right: 0.6em
+    padding: 4px 12px
+    margin-right: 0.4em
 
 @mixin main-menu-link-front
   +breakpoint($breakpoint-desktop-narrow)
@@ -100,6 +100,8 @@
   background: #eee url(../images/icon-background.png) no-repeat -20px center
   padding-left: 38px
   position: relative
+  &.active-trail
+    background-color: #777
   &:hover
     background: #777
   &:before
