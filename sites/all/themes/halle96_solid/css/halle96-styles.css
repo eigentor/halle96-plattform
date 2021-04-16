@@ -719,6 +719,7 @@ table td.views-field-value-4 {
     display: flex;
     flex-direction: column;
     display: none;
+    min-width: 170px;
   }
   .region-navigation ul.menu li ul li {
     white-space: nowrap;
