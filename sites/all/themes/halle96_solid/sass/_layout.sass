@@ -94,6 +94,9 @@
           display: none
         &.ticket-facility-management
           +menu-add-content
+      ul
+        li
+          padding-right: 0
 
 // Display the "add news" menu link with a plus icon
 // for the role "Zentrumsleitung"
@@ -249,6 +252,8 @@
           &:hover
             background-color: #eee
 
+
+
   #page-title-container
     .inner-container
       h1
@@ -305,7 +310,7 @@
 
   #navigation
     margin-top: 35px
-    padding-bottom: 13px
+    padding-bottom: 5px
   .region-navigation
     form#search-block-form
       display: none!important
@@ -317,16 +322,70 @@
     ul.menu
       +legacy-pie-clearfix
       margin-bottom: 7px
+      display: flex
+      flex-wrap: wrap
       li
-        padding-right: 0
-        display: inline
+        position: relative
+        padding: 0
         float: left
         margin-right: 3px
         margin-bottom: 15px
+        height: 36px
         &:first-child
           margin-left: 0
         a
-          padding: 4px 6px
+          display: block
+          padding: 0 6px
+          line-height: 34px
+          height: 36px
+          display: block
+        ul
+          position: absolute
+          z-index: 1001
+          float: none
+          left: 0
+          top: 36px
+          //width: auto
+          background: white
+          border: 1px solid #ccc
+          +border-radius(5px)
+          display: flex
+          flex-direction: column
+          display: none
+          li
+            white-space: nowrap
+            margin: 0
+            padding: 0
+            display: block
+            border: none
+            &:hover
+              display: block
+            a
+              background: none
+              border: none
+              display: block
+              margin: 0
+              &:hover
+                display: block
+                border: none
+                background: #777
+                color: white
+        &.active-trail
+          ul
+            background: #777
+            border: 1px solid #777
+            li
+              a
+                text-decoration: none
+                background: none
+                border: none
+                color: white
+                &:hover
+                  background: white
+                  color: $base-text-color
+        &:hover
+          ul
+            display: flex
 
   .role-Zentrumsleitung
     .region-navigation

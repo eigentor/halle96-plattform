@@ -65,17 +65,17 @@ function tz_webform_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'content_access_webform';
   $strongarm->value = array(
-    'view_own' => array(
-      0 => 2,
-      1 => 3,
-      2 => 5,
-    ),
+    'per_node' => 1,
     'view' => array(
       0 => 2,
       1 => 3,
       2 => 5,
     ),
-    'per_node' => 1,
+    'view_own' => array(
+      0 => 2,
+      1 => 3,
+      2 => 5,
+    ),
   );
   $export['content_access_webform'] = $strongarm;
 

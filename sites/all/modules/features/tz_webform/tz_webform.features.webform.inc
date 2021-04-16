@@ -80,9 +80,11 @@ $webforms = array();
     ),
   ),
   'webform' => array(
-    'next_serial' => 34,
+    'next_serial' => 82,
     'confirmation' => '<p>Vielen Dank für Ihr Ticket an die Haustechnik.<br />
 	Wir werden Ihr Anliegen umgehend bearbeiten.</p>
+
+<p>Schauen Sie ihr Anliegen in der&nbsp;<a href="/tickets">Liste aller aktuellen Tickets</a> an.</p>
 ',
     'confirmation_format' => 'filtered_html',
     'redirect_url' => '<confirmation>',
@@ -130,7 +132,10 @@ $webforms = array();
 [submission:values]
 
 Die Ergebnisse dieser Eingabe können eingesehen werden unter:
-[submission:url]',
+[submission:url]
+
+Die Liste aller Tickets finden Sie hier:
+[site:url]tickets',
         'excluded_components' => array(),
         'html' => 0,
         'attachments' => 0,
@@ -160,6 +165,9 @@ Sie haben ein Ticket für die Haustechnik erstellt.
 
 Wir werden Ihr Anliegen umgehend bearbeiten.
 
+Die Liste aller Tickets inklusive Ihrem gerade erstellten finden Sie hier:
+[site:url]tickets
+
 hannoverimpuls GmbH
 Hanomaghof 2
 30449 Hannover | Deutschland
@@ -185,6 +193,22 @@ Mail:   Marion.Groenig@hannoverimpuls.de
       ),
     ),
     'components' => array(
+      'ihr_ticket_f_r_die_haustechnik__aktive_tickets' => array(
+        'form_key' => 'aktive_tickets',
+        'name' => 'Aktive Tickets',
+        'type' => 'markup',
+        'value' => '<p>Prüfen Sie, ob Ihr Anliegen in den <a href="/tickets" target="_blank">aktuell offenen Tickets</a> bereits erfasst ist.</p>
+',
+        'extra' => array(
+          'format' => 'filtered_html',
+          'private' => 0,
+          'display_on' => 'form',
+        ),
+        'required' => 0,
+        'weight' => 6,
+        'machine_name' => 'ihr_ticket_f_r_die_haustechnik__aktive_tickets',
+        'page_num' => 1,
+      ),
       'ihr_ticket_f_r_die_haustechnik__name' => array(
         'form_key' => 'name',
         'name' => 'Name',
@@ -209,7 +233,7 @@ Mail:   Marion.Groenig@hannoverimpuls.de
           'analysis' => TRUE,
         ),
         'required' => 1,
-        'weight' => 0,
+        'weight' => 7,
         'machine_name' => 'ihr_ticket_f_r_die_haustechnik__name',
         'page_num' => 1,
       ),
@@ -237,7 +261,7 @@ Mail:   Marion.Groenig@hannoverimpuls.de
           'analysis' => TRUE,
         ),
         'required' => 0,
-        'weight' => 1,
+        'weight' => 8,
         'machine_name' => 'ihr_ticket_f_r_die_haustechnik__firma',
         'page_num' => 1,
       ),
@@ -265,7 +289,7 @@ Mail:   Marion.Groenig@hannoverimpuls.de
           'analysis' => TRUE,
         ),
         'required' => 0,
-        'weight' => 2,
+        'weight' => 9,
         'machine_name' => 'ihr_ticket_f_r_die_haustechnik__raumnummer_etage',
         'page_num' => 1,
       ),
@@ -290,7 +314,7 @@ Mail:   Marion.Groenig@hannoverimpuls.de
           'analysis' => TRUE,
         ),
         'required' => 1,
-        'weight' => 3,
+        'weight' => 10,
         'machine_name' => 'ihr_ticket_f_r_die_haustechnik__ihr_anliegen',
         'page_num' => 1,
       ),
@@ -305,8 +329,39 @@ Mail:   Marion.Groenig@hannoverimpuls.de
           'analysis' => TRUE,
         ),
         'required' => 0,
-        'weight' => 4,
+        'weight' => 11,
         'machine_name' => 'ihr_ticket_f_r_die_haustechnik__mail_adress_ticket_author',
+        'page_num' => 1,
+      ),
+      'ihr_ticket_f_r_die_haustechnik__status' => array(
+        'form_key' => 'status',
+        'name' => 'Status',
+        'type' => 'select',
+        'value' => 'open',
+        'extra' => array(
+          'items' => 'open|Offen
+in_progress|In Bearbeitung
+done|Erledigt
+hide_from_list|Nicht in Liste anzeigen',
+          'multiple' => 0,
+          'title_display' => 'before',
+          'description_above' => 0,
+          'private' => 0,
+          'wrapper_classes' => '',
+          'css_classes' => '',
+          'aslist' => 0,
+          'empty_option' => '',
+          'optrand' => 0,
+          'other_option' => NULL,
+          'other_text' => 'Other...',
+          'description' => '',
+          'custom_keys' => FALSE,
+          'options_source' => '',
+          'analysis' => TRUE,
+        ),
+        'required' => 0,
+        'weight' => 12,
+        'machine_name' => 'ihr_ticket_f_r_die_haustechnik__status',
         'page_num' => 1,
       ),
     ),
