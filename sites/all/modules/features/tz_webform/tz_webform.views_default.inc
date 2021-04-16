@@ -111,14 +111,15 @@ Bei Fragen wenden Sie sich bitte an Volker Colditz oder die Zentrumsleitung.';
   $handler->display->display_options['relationships']['data']['table'] = 'webform_submissions';
   $handler->display->display_options['relationships']['data']['field'] = 'data';
   $handler->display->display_options['relationships']['data']['webform_nid'] = '2760';
-  $handler->display->display_options['relationships']['data']['webform_cid'] = '6';
+  $handler->display->display_options['relationships']['data']['webform_cid'] = '7';
+  $handler->display->display_options['relationships']['data']['webform_join_by'] = 'cid';
   /* Feld: Webform submission data: Wert */
   $handler->display->display_options['fields']['value_4']['id'] = 'value_4';
   $handler->display->display_options['fields']['value_4']['table'] = 'webform_submissions';
   $handler->display->display_options['fields']['value_4']['field'] = 'value';
   $handler->display->display_options['fields']['value_4']['label'] = '';
   $handler->display->display_options['fields']['value_4']['webform_nid'] = '2760';
-  $handler->display->display_options['fields']['value_4']['webform_cid'] = '6';
+  $handler->display->display_options['fields']['value_4']['webform_cid'] = '7';
   /* Feld: Webform submission data: Wert */
   $handler->display->display_options['fields']['value']['id'] = 'value';
   $handler->display->display_options['fields']['value']['table'] = 'webform_submissions';
