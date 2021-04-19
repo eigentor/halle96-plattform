@@ -44,8 +44,6 @@ function tz_webform_user_default_permissions() {
   $permissions['delete all webform submissions'] = array(
     'name' => 'delete all webform submissions',
     'roles' => array(
-      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
-      'Zentrumsleitung' => 'Zentrumsleitung',
       'administrator' => 'administrator',
     ),
     'module' => 'webform',
