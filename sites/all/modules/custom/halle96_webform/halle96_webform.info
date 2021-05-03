@@ -1,0 +1,5 @@
+name = Halle96 Webform
+description = Custom webform functions. Tokens and Rules conditions/actions.
+core = 7.x
+version = VERSION
+package = Halle 96
