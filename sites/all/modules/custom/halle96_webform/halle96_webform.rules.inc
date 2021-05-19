@@ -5,6 +5,10 @@
  */
 function halle96_webform_rules_condition_info() {
   $conditions = [
+    'status_has_changed' => array(
+      'label' => t('Value Status has changed'),
+      'group' => t('Halle96 Webform'),
+    ),
   ];
 
   return $conditions;
