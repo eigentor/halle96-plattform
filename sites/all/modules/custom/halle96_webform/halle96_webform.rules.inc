@@ -8,6 +8,7 @@ function halle96_webform_rules_condition_info() {
     'status_has_changed' => array(
       'label' => t('Value Status has changed'),
       'group' => t('Halle96 Webform'),
+      'base' => 'halle96_webform_condition_status_has_changed'
     ),
   ];
 
@@ -23,3 +24,7 @@ function halle96_webform_rules_condition_info() {
 //
 //  return $actions;
 //}
+
+function halle96_webform_condition_status_has_changed() {
+
+}
