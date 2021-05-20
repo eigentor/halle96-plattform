@@ -7,9 +7,9 @@ function halle96_webform_rules_condition_info() {
   $conditions = [
     'status_has_changed' => [
       'parameter' => [
-        'form_id' => [
+        'nid' => [
           'type' => 'text',
-          'label' => t('The form id of the submitted form'),
+          'label' => t('The node ID of the webform node'),
         ],
       ],
       'label' => t('Value Status has changed'),
@@ -31,6 +31,18 @@ function halle96_webform_rules_condition_info() {
 //  return $actions;
 //}
 
-function halle96_webform_condition_status_has_changed() {
+function halle96_webform_condition_status_has_changed($nid, $sid = NULL) {
+  module_load_include('inc', 'webform', 'includes/webform.submissions');
+  $filters = array(
+    'nid' => $nid,
+  );
+  if (!empty($sid)) {
+    $filters['sid'] = $sid;
+  }
+  // Fetch submissions.
+  dpm($nid);
+  $submissions = webform_get_submissions($filters);
+  dpm($submissions);
 
+ return TRUE;
 }

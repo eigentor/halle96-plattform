@@ -1,1 +1,53 @@
 <?php
+
+
+/**
+ * implements hook_webform_submission_update()
+ *
+ * @param $node
+ * @param $submission
+ */
+function halle96_webform_webform_submission_update($node, $submission) {
+  dpm($node);
+  dpm($submission);
+}
+
+/**
+ * Implements hook_menu().
+ */
+function halle96_webform_menu() {
+  $items['admin/structure/ticket_notifications'] = [
+    'title' => 'Ticket Notifications',
+    'description' => 'Set the notifications for ticket status changes.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => ['form_ticket_notifications'],
+    'access arguments' => ['administer ticket notifications'],
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  ];
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function halle96_webform_permission() {
+  return ['administer ticket notifications' => [
+    'title' => t('Administer ticket notifications')
+    ]
+  ];
+}
+
+/**
+ * The form function for the configuration of ticket mails.
+ *
+ * @param $form
+ * @param $form_state
+ *
+ * @return mixed
+ */
+function form_ticket_notifications($form, &$form_state) {
+  return $form;
+}
+
+
