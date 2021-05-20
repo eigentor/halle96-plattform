@@ -47,41 +47,64 @@ function halle96_webform_permission() {
  * @return mixed
  */
 function form_ticket_notifications($form, &$form_state) {
+  $default_values_mail_author = variable_get(halle96_webform_mail_author);
+  $default_values_mail_admin = variable_get(halle96_webform_mail_admin);
+
   $form['description'] = [
     '#type' => 'item',
     '#title' => t('Administer notifications for ticket status changes'),
   ];
   $form['mail_author'] = [
+    '#tree' => TRUE,
     '#type' => 'fieldset',
-    '#title' => t('Email sent to ticket author')
+    '#title' => t('Email to ticket author'),
   ];
   $form['mail_author']['subject'] = [
-    '#type' => 'textarea',
+    '#type' => 'textfield',
     '#title' => t('Subject'),
+    '#default_value' => $default_values_mail_author['subject']
   ];
   $form['mail_author']['text'] = [
     '#type' => 'textarea',
     '#title' => t('Text'),
+    '#default_value' => $default_values_mail_author['text']
   ];
   $form['mail_admin'] = [
+    '#tree' => TRUE,
     '#type' => 'fieldset',
-    '#title' => t('Email sent to ticket author')
+    '#title' => t('Email to admins')
   ];
-  $form['mail_admin']['recipient'] = [
+  $form['mail_admin']['recipients'] = [
     '#type' => 'textfield',
     '#title' => t('Mail addresses of recipients'),
     '#description' => t('Enter comma separated mail addresses'),
+    '#default_value' => $default_values_mail_admin['recipients']
   ];
   $form['mail_admin']['subject'] = [
-    '#type' => 'textarea',
+    '#type' => 'textfield',
     '#title' => t('Subject'),
+    '#default_value' => $default_values_mail_admin['subject']
   ];
   $form['mail_admin']['text'] = [
     '#type' => 'textarea',
     '#title' => t('Text'),
+    '#default_value' => $default_values_mail_admin['text']
   ];
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save'),
+  );
 
   return $form;
+}
+
+function form_ticket_notifications_submit($form, &$form_state) {
+  variable_set('halle96_webform_mail_author', $form_state['values']['mail_author']);
+  variable_set('halle96_webform_mail_admin', $form_state['values']['mail_admin']);
+  drupal_set_message(
+    t('The options for ticket notifications were saved.'
+    )
+  );
 }
 
 
