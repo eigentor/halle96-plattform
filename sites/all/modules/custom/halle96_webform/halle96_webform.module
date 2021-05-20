@@ -47,6 +47,40 @@ function halle96_webform_permission() {
  * @return mixed
  */
 function form_ticket_notifications($form, &$form_state) {
+  $form['description'] = [
+    '#type' => 'item',
+    '#title' => t('Administer notifications for ticket status changes'),
+  ];
+  $form['mail_author'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Email sent to ticket author')
+  ];
+  $form['mail_author']['subject'] = [
+    '#type' => 'textarea',
+    '#title' => t('Subject'),
+  ];
+  $form['mail_author']['text'] = [
+    '#type' => 'textarea',
+    '#title' => t('Text'),
+  ];
+  $form['mail_admin'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Email sent to ticket author')
+  ];
+  $form['mail_admin']['recipient'] = [
+    '#type' => 'textfield',
+    '#title' => t('Mail addresses of recipients'),
+    '#description' => t('Enter comma separated mail addresses'),
+  ];
+  $form['mail_admin']['subject'] = [
+    '#type' => 'textarea',
+    '#title' => t('Subject'),
+  ];
+  $form['mail_admin']['text'] = [
+    '#type' => 'textarea',
+    '#title' => t('Text'),
+  ];
+
   return $form;
 }
 
