@@ -7,7 +7,6 @@ dependencies[] = menu
 dependencies[] = strongarm
 dependencies[] = webform
 dependencies[] = webform_features
-dependencies[] = webform_rules
 dependencies[] = webform_uuid
 __drupal_alter_by_ref[][node][webform] = webform
 features[ctools][] = strongarm:strongarm:1
