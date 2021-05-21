@@ -40,6 +40,17 @@ function tz_webform_user_default_permissions() {
     'module' => 'webform',
   );
 
+  // Exported permission: 'administer ticket notifications'.
+  $permissions['administer ticket notifications'] = array(
+    'name' => 'administer ticket notifications',
+    'roles' => array(
+      'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
+      'Zentrumsleitung' => 'Zentrumsleitung',
+      'administrator' => 'administrator',
+    ),
+    'module' => 'halle96_webform',
+  );
+
   // Exported permission: 'delete all webform submissions'.
   $permissions['delete all webform submissions'] = array(
     'name' => 'delete all webform submissions',
