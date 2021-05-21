@@ -14,7 +14,6 @@ features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
 features[node][] = webform
-features[rules_config][] = rules_ticket_notification
 features[user_permission][] = access all webform results
 features[user_permission][] = access own webform results
 features[user_permission][] = access own webform submissions
