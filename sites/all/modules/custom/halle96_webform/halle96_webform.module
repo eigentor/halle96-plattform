@@ -8,8 +8,30 @@
  * @param $submission
  */
 function halle96_webform_webform_submission_update($node, $submission) {
-  dpm($node);
-  dpm($submission);
+  // Only react if the webform node is our ticket webform
+  // @TODO nid is hardcoded, needs to be changed for TECHNOLOGIE ZENTRUM
+  if($node->nid == 2760) {
+//    dpm($node->webform['components']);
+//    dpm($submission);
+    $data_key = '';
+    // Get the data key from the webform data in the node.
+    // Since we might add more webform elements later, the machine name
+    // of our field is safer than using the number in the submission data directly.
+    foreach($node->webform['components'] as $key => $component) {
+      if($component['machine_name'] == 'ihr_ticket_f_r_die_haustechnik__status')  {
+        $data_key = $key;
+      }
+    }
+    $status = $submission->data[$data_key][0];
+
+    // Only act if the ticket status has changed and the new status is either "in_progress" or "done"
+    if($submission->original->data[$data_key][0] != $status && in_array($status, ['in_progress','done'] )) {
+      //dpm($status);
+    }
+
+
+
+  };
 }
 
 /**
@@ -105,6 +127,28 @@ function form_ticket_notifications_submit($form, &$form_state) {
     t('The options for ticket notifications were saved.'
     )
   );
+}
+
+/**
+ * Implements hook_mail().
+ */
+function halle96_webform_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'ticket_notify_author':
+      // Set headers etc
+      $message['to'] = 'foo@bar.com';
+      $message['subject'] = t('Hello');
+      $message['body'][] = t('Hello @username,', array('@username' => $params['username']));
+      $message['body'][] = t('The main part of the message.');
+      break;
+    case 'ticket_notify_admin':
+      // Set headers etc
+      $message['to'] = 'foo@bar.com';
+      $message['subject'] = t('Hello');
+      $message['body'][] = t('Hello @username,', array('@username' => $params['username']));
+      $message['body'][] = t('The main part of the message.');
+      break;
+  }
 }
 
 
