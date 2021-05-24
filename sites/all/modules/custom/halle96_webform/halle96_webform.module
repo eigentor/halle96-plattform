@@ -2,39 +2,6 @@
 
 
 /**
- * implements hook_webform_submission_update()
- *
- * @param $node
- * @param $submission
- */
-function halle96_webform_webform_submission_update($node, $submission) {
-  // Only react if the webform node is our ticket webform
-  // @TODO nid is hardcoded, needs to be changed for TECHNOLOGIE ZENTRUM
-  if($node->nid == 2760) {
-//    dpm($node->webform['components']);
-//    dpm($submission);
-    $data_key = '';
-    // Get the data key from the webform data in the node.
-    // Since we might add more webform elements later, the machine name
-    // of our field is safer than using the number in the submission data directly.
-    foreach($node->webform['components'] as $key => $component) {
-      if($component['machine_name'] == 'ihr_ticket_f_r_die_haustechnik__status')  {
-        $data_key = $key;
-      }
-    }
-    $status = $submission->data[$data_key][0];
-
-    // Only act if the ticket status has changed and the new status is either "in_progress" or "done"
-    if($submission->original->data[$data_key][0] != $status && in_array($status, ['in_progress','done'] )) {
-      //dpm($status);
-    }
-
-
-
-  };
-}
-
-/**
  * Implements hook_menu().
  */
 function halle96_webform_menu() {
@@ -91,7 +58,8 @@ function form_ticket_notifications($form, &$form_state) {
     '#title' => t('Text'),
     '#default_value' => $default_values_mail_author['text']
   ];
-  $form['mail_admin'] = [
+  // Comment out the admin part.
+ /* $form['mail_admin'] = [
     '#tree' => TRUE,
     '#type' => 'fieldset',
     '#title' => t('Email to admins')
@@ -111,7 +79,7 @@ function form_ticket_notifications($form, &$form_state) {
     '#type' => 'textarea',
     '#title' => t('Text'),
     '#default_value' => $default_values_mail_admin['text']
-  ];
+  ]; */
   $form['submit'] = array(
     '#type' => 'submit',
     '#value' => t('Save'),
@@ -136,19 +104,73 @@ function halle96_webform_mail($key, &$message, $params) {
   switch ($key) {
     case 'ticket_notify_author':
       // Set headers etc
-      $message['to'] = 'foo@bar.com';
-      $message['subject'] = t('Hello');
-      $message['body'][] = t('Hello @username,', array('@username' => $params['username']));
-      $message['body'][] = t('The main part of the message.');
+      $message['subject'] = $params['subject'];
+      $message['body'][] = $params['body'];
       break;
-    case 'ticket_notify_admin':
+    // Comment out the admin part.
+    /* case 'ticket_notify_admin':
       // Set headers etc
       $message['to'] = 'foo@bar.com';
       $message['subject'] = t('Hello');
       $message['body'][] = t('Hello @username,', array('@username' => $params['username']));
       $message['body'][] = t('The main part of the message.');
-      break;
+      break; */
   }
+}
+
+/**
+ * implements hook_webform_submission_update()
+ *
+ * @param $node
+ * @param $submission
+ */
+function halle96_webform_webform_submission_update($node, $submission) {
+  // Only react if the webform node is our ticket webform
+  // @TODO nid is hardcoded, needs to be changed for TECHNOLOGIE ZENTRUM
+  if($node->nid == 2760) {
+    //    dpm($node->webform['components']);
+    //    dpm($submission);
+    $data_key = '';
+    // Get the data key from the webform data in the node.
+    // Since we might add more webform elements later, the machine name
+    // of our field is safer than using the number in the submission data directly.
+    foreach($node->webform['components'] as $key => $component) {
+      if($component['machine_name'] == 'ihr_ticket_f_r_die_haustechnik__status')  {
+        $data_key = $key;
+        $all_select_options = [];
+        $select_options = explode("\n", $component['extra']['items']);
+        foreach ($select_options as $option) {
+          $option_parts = explode('|', $option);
+          if (isset($option_parts[0]) && isset($option_parts[1])) $options[$option_parts[0]] = $option_parts[1];
+          $all_select_options[$option_parts[0]] = $option_parts[1];
+        }
+      }
+    }
+    $status = $submission->data[$data_key][0];
+    $status_label = trim($all_select_options[$status]);
+
+    // Only act if the ticket status has changed and the new status is either "in_progress" or "done"
+    if($submission->original->data[$data_key][0] != $status && in_array($status, ['in_progress','done'] )) {
+      // Send the mail
+      $module = 'halle96_webform';
+      $key = 'ticket_notify_author';
+      $to = 'info@rufzeichen-online.de';
+      $language = language_default();
+      $from = 'news-halle96@hannoverimpuls.de';
+      $settings_form_values = variable_get(halle96_webform_mail_author);
+      $params['subject'] = format_string($settings_form_values['subject'], ['@status' => $status_label]);
+      $params['body'] = $settings_form_values['text'];
+
+      // send the mail
+      drupal_mail($module, $key, $to, $language, $params, $from);
+      drupal_set_message('Eine Mail-Benachrichtigung an '
+        . $to . ' über die Status-Änderung des Tickets wurde verschickt.');
+    }
+
+
+
+
+  };
 }
 
 
