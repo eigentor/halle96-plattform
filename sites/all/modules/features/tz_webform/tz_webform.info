@@ -34,6 +34,7 @@ features[variable][] = content_access_webform
 features[variable][] = diff_enable_revisions_page_node_webform
 features[variable][] = diff_show_preview_changes_node_webform
 features[variable][] = diff_view_mode_preview_node_webform
+features[variable][] = halle96_webform_mail_author
 features[variable][] = language_content_type_webform
 features[variable][] = menu_options_webform
 features[variable][] = menu_parent_webform
