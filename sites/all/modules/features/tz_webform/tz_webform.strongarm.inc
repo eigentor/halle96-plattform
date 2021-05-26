@@ -103,6 +103,25 @@ function tz_webform_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'halle96_webform_mail_author';
+  $strongarm->value = array(
+    'subject' => 'Ihr Ticketstatus im Halle96 Intranet hat sich auf "@status" geändert',
+    'text' => 'Hallo @user_name,
+
+Der Status ihres Tickets im Halle 96 Intranet hat sich auf "@status" geändert.
+Der Text ihres Tickets lautet: 
+
+"@ticket_text"
+
+Schauen Sie die Liste der aktuell offenen Tickets an: @ticket_list_url
+
+Ihr Halle 96 Intranet',
+  );
+  $export['halle96_webform_mail_author'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_webform';
   $strongarm->value = '0';
   $export['language_content_type_webform'] = $strongarm;

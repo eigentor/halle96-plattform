@@ -1,0 +1,183 @@
+<?php
+
+
+/**
+ * Implements hook_menu().
+ */
+function halle96_webform_menu() {
+  $items['admin/structure/ticket_notifications'] = [
+    'title' => 'Ticket Notifications',
+    'description' => 'Set the notifications for ticket status changes.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => ['form_ticket_notifications'],
+    'access arguments' => ['administer ticket notifications'],
+    'file' => 'system.admin.inc',
+    'file path' => drupal_get_path('module', 'system'),
+  ];
+  return $items;
+}
+
+/**
+ * Implements hook_permission().
+ */
+function halle96_webform_permission() {
+  return ['administer ticket notifications' => [
+    'title' => t('Administer ticket notifications')
+    ]
+  ];
+}
+
+/**
+ * The form function for the configuration of ticket mails.
+ *
+ * @param $form
+ * @param $form_state
+ *
+ * @return mixed
+ */
+function form_ticket_notifications($form, &$form_state) {
+  $default_values_mail_author = variable_get(halle96_webform_mail_author);
+  $default_values_mail_admin = variable_get(halle96_webform_mail_admin);
+
+  $form['description'] = [
+    '#type' => 'item',
+    '#title' => t('Administer notifications for ticket status changes'),
+  ];
+  $form['mail_author'] = [
+    '#tree' => TRUE,
+    '#type' => 'fieldset',
+    '#title' => t('Email to ticket author'),
+  ];
+  $form['mail_author']['subject'] = [
+    '#type' => 'textfield',
+    '#title' => t('Subject'),
+    '#default_value' => $default_values_mail_author['subject']
+  ];
+  $form['mail_author']['text'] = [
+    '#type' => 'textarea',
+    '#title' => t('Text'),
+    '#default_value' => $default_values_mail_author['text'],
+    '#description' => 'Verfügbare Variablen: @status, @user_name, @ticket_text, @ticket_list_url.'
+  ];
+  // Comment out the admin part.
+ /* $form['mail_admin'] = [
+    '#tree' => TRUE,
+    '#type' => 'fieldset',
+    '#title' => t('Email to admins')
+  ];
+  $form['mail_admin']['recipients'] = [
+    '#type' => 'textfield',
+    '#title' => t('Mail addresses of recipients'),
+    '#description' => t('Enter comma separated mail addresses'),
+    '#default_value' => $default_values_mail_admin['recipients']
+  ];
+  $form['mail_admin']['subject'] = [
+    '#type' => 'textfield',
+    '#title' => t('Subject'),
+    '#default_value' => $default_values_mail_admin['subject']
+  ];
+  $form['mail_admin']['text'] = [
+    '#type' => 'textarea',
+    '#title' => t('Text'),
+    '#default_value' => $default_values_mail_admin['text']
+  ]; */
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Save'),
+  );
+
+  return $form;
+}
+
+function form_ticket_notifications_submit($form, &$form_state) {
+  variable_set('halle96_webform_mail_author', $form_state['values']['mail_author']);
+  variable_set('halle96_webform_mail_admin', $form_state['values']['mail_admin']);
+  drupal_set_message(
+    'Die Einstellungen wurden gespeichert.'
+  );
+}
+
+/**
+ * Implements hook_mail().
+ */
+function halle96_webform_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'ticket_notify_author':
+      // Set headers etc
+      $message['subject'] = $params['subject'];
+      $message['body'][] = $params['body'];
+      break;
+    // Comment out the admin part.
+    /* case 'ticket_notify_admin':
+      // Set headers etc
+      $message['to'] = 'foo@bar.com';
+      $message['subject'] = t('Hello');
+      $message['body'][] = t('Hello @username,', array('@username' => $params['username']));
+      $message['body'][] = t('The main part of the message.');
+      break; */
+  }
+}
+
+/**
+ * implements hook_webform_submission_update()
+ *
+ * @param $node
+ * @param $submission
+ */
+function halle96_webform_webform_submission_update($node, $submission) {
+  // Only react if the webform node is our ticket webform
+  // @TODO nid is hardcoded, needs to be changed for TECHNOLOGIE ZENTRUM
+  if($node->nid == 2760) {
+    $data_key = '';
+    // Get the data key from the webform data in the node.
+    // Since we might add more webform elements later, the machine name
+    // of our field is safer than using the number in the submission data directly.
+    foreach($node->webform['components'] as $key => $component) {
+      if($component['machine_name'] == 'ihr_ticket_f_r_die_haustechnik__status')  {
+        $data_key = $key;
+        $all_select_options = [];
+        $select_options = explode("\n", $component['extra']['items']);
+        foreach ($select_options as $option) {
+          $option_parts = explode('|', $option);
+          if (isset($option_parts[0]) && isset($option_parts[1])) $options[$option_parts[0]] = $option_parts[1];
+          $all_select_options[$option_parts[0]] = $option_parts[1];
+        }
+      }
+      if ($component['machine_name'] == 'ihr_ticket_f_r_die_haustechnik__ihr_anliegen')  {
+        $body_key = $key;
+      }
+    }
+    // Get the ticket status
+    $status = $submission->data[$data_key][0];
+    $status_label = trim($all_select_options[$status]);
+    // Get the body text of the submission
+    $body = $submission->data[$body_key][0];
+    // Get the user who submitted the original submission
+    $user = user_load($submission->uid);
+    $user_mail = $user->mail;
+    $user_name = $user->name;
+    global $base_url;
+    $ticket_list_url = $base_url . '/tickets';
+
+
+    // Only act if the ticket status has changed and the new status is either "in_progress" or "done"
+    if($submission->original->data[$data_key][0] != $status && in_array($status, ['in_progress','done'] )) {
+      // Send the mail
+      $module = 'halle96_webform';
+      $key = 'ticket_notify_author';
+      $to = $user_mail;
+      $language = language_default();
+      $from = 'news-halle96@hannoverimpuls.de';
+      $settings_form_values = variable_get(halle96_webform_mail_author);
+      $params['subject'] = format_string($settings_form_values['subject'], ['@status' => $status_label, '@user_name' =>$user_name, '@ticket_text' =>$body, '@ticket_list_url' => $ticket_list_url]);
+      $params['body'] = format_string($settings_form_values['text'], ['@status' => $status_label, '@user_name' =>$user_name, '@ticket_text' =>$body, '@ticket_list_url' => $ticket_list_url]);
+
+      // send the mail
+      drupal_mail($module, $key, $to, $language, $params, $from);
+      drupal_set_message('Eine Mail-Benachrichtigung an '
+        . $to . ' über die Status-Änderung des Tickets wurde verschickt.');
+    }
+  };
+}
+
+
