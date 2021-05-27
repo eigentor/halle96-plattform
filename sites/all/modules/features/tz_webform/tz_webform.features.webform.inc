@@ -80,7 +80,7 @@ $webforms = array();
     ),
   ),
   'webform' => array(
-    'next_serial' => 89,
+    'next_serial' => 91,
     'confirmation' => '<p>Vielen Dank für Ihr Ticket an die Haustechnik.<br />
 	Wir werden Ihr Anliegen umgehend bearbeiten.</p>
 
@@ -123,7 +123,7 @@ $webforms = array();
         'email' => 'Katrin.Gehrke@hannoverimpuls.de,volker.colditz@hannoverimpuls.de,Marion.Groenig@hannoverimpuls.de',
         'subject' => 'Es wurde ein Ticket an die Haustechnik erstellt',
         'from_name' => 'Ticket an Haustechnik',
-        'from_address' => 'ihr_ticket_f_r_die_haustechnik__mail_adress_ticket_author',
+        'from_address' => 'ticket-haustechnik@hannoverimpuls.de',
         'template' => 'Hallo Hannoverimpuls,
 
 [submission:user] hat ein Ticket an die Haustechnik erstellt.
@@ -146,7 +146,7 @@ Die Liste aller Tickets finden Sie hier:
           'email' => FALSE,
           'subject' => FALSE,
           'from_name' => FALSE,
-          'from_address' => TRUE,
+          'from_address' => FALSE,
         ),
       ),
       1 => array(
