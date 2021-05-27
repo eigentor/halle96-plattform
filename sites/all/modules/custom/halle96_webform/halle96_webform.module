@@ -167,7 +167,7 @@ function halle96_webform_webform_submission_update($node, $submission) {
       $key = 'ticket_notify_author';
       $to = $user_mail;
       $language = language_default();
-      $from = 'news-halle96@hannoverimpuls.de';
+      $from = 'ticket-haustechnik@hannoverimpuls.de';
       $settings_form_values = variable_get(halle96_webform_mail_author);
       $params['subject'] = format_string($settings_form_values['subject'], ['@status' => $status_label, '@user_name' =>$user_name, '@ticket_text' =>$body, '@ticket_list_url' => $ticket_list_url]);
       $params['body'] = format_string($settings_form_values['text'], ['@status' => $status_label, '@user_name' =>$user_name, '@ticket_text' =>$body, '@ticket_list_url' => $ticket_list_url]);
