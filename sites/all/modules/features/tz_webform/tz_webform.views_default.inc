@@ -184,13 +184,6 @@ Bei Fragen wenden Sie sich bitte an Volker Colditz oder die Zentrumsleitung.';
   $handler->display->display_options['filters']['data_1']['relationship'] = 'data';
   $handler->display->display_options['filters']['data_1']['operator'] = '!=';
   $handler->display->display_options['filters']['data_1']['value'] = 'done';
-  /* Filterkriterium: Daten einer Webformulareingabe: Datumsfeld */
-  $handler->display->display_options['filters']['data_2']['id'] = 'data_2';
-  $handler->display->display_options['filters']['data_2']['table'] = 'webform_submitted_data';
-  $handler->display->display_options['filters']['data_2']['field'] = 'data';
-  $handler->display->display_options['filters']['data_2']['relationship'] = 'data';
-  $handler->display->display_options['filters']['data_2']['operator'] = '!=';
-  $handler->display->display_options['filters']['data_2']['value'] = 'hide_from_list';
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');

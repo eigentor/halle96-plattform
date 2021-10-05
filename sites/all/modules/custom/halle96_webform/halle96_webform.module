@@ -180,4 +180,13 @@ function halle96_webform_webform_submission_update($node, $submission) {
   };
 }
 
+/**
+ * Implements hook_form_alter().
+ */
+function halle96_webform_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'webform_client_form_2760')  {
+    unset($form['submitted']['status']['#options']['hide_from_list']);
+  }
+}
+
 
