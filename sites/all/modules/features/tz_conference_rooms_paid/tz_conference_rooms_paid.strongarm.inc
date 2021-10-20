@@ -156,11 +156,28 @@ function tz_conference_rooms_paid_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__conference_room_paid_1';
   $strongarm->value = array(
+    'extra_fields' => array(
+      'display' => array(),
+      'form' => array(
+        'path' => array(
+          'weight' => '3',
+        ),
+        'redirect' => array(
+          'weight' => '4',
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+      ),
+    ),
     'view_modes' => array(
-      'teaser' => array(
-        'custom_settings' => TRUE,
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
       ),
       'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
         'custom_settings' => FALSE,
       ),
       'rss' => array(
@@ -172,29 +189,12 @@ function tz_conference_rooms_paid_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
-      'diff_standard' => array(
-        'custom_settings' => FALSE,
+      'teaser' => array(
+        'custom_settings' => TRUE,
       ),
       'token' => array(
         'custom_settings' => TRUE,
       ),
-      'revision' => array(
-        'custom_settings' => FALSE,
-      ),
-    ),
-    'extra_fields' => array(
-      'form' => array(
-        'title' => array(
-          'weight' => '0',
-        ),
-        'path' => array(
-          'weight' => '3',
-        ),
-        'redirect' => array(
-          'weight' => '4',
-        ),
-      ),
-      'display' => array(),
     ),
   );
   $export['field_bundle_settings_node__conference_room_paid_1'] = $strongarm;
@@ -204,11 +204,28 @@ function tz_conference_rooms_paid_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__conference_room_paid_2';
   $strongarm->value = array(
+    'extra_fields' => array(
+      'display' => array(),
+      'form' => array(
+        'path' => array(
+          'weight' => '3',
+        ),
+        'redirect' => array(
+          'weight' => '4',
+        ),
+        'title' => array(
+          'weight' => '0',
+        ),
+      ),
+    ),
     'view_modes' => array(
-      'teaser' => array(
-        'custom_settings' => TRUE,
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
       ),
       'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'revision' => array(
         'custom_settings' => FALSE,
       ),
       'rss' => array(
@@ -220,29 +237,12 @@ function tz_conference_rooms_paid_strongarm() {
       'search_result' => array(
         'custom_settings' => FALSE,
       ),
-      'diff_standard' => array(
-        'custom_settings' => FALSE,
+      'teaser' => array(
+        'custom_settings' => TRUE,
       ),
       'token' => array(
         'custom_settings' => TRUE,
       ),
-      'revision' => array(
-        'custom_settings' => FALSE,
-      ),
-    ),
-    'extra_fields' => array(
-      'form' => array(
-        'title' => array(
-          'weight' => '0',
-        ),
-        'path' => array(
-          'weight' => '3',
-        ),
-        'redirect' => array(
-          'weight' => '4',
-        ),
-      ),
-      'display' => array(),
     ),
   );
   $export['field_bundle_settings_node__conference_room_paid_2'] = $strongarm;

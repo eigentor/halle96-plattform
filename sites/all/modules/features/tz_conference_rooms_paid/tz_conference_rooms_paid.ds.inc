@@ -18,25 +18,25 @@ function tz_conference_rooms_paid_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'conference_room_paid_1';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'back_conference_paid_1' => array(
-      'weight' => '5',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
     'author' => array(
-      'weight' => '2',
-      'label' => 'hidden',
       'format' => 'author',
-    ),
-    'submitted_by' => array(
-      'weight' => '0',
       'label' => 'hidden',
-      'format' => 'ds_time_ago',
+      'weight' => '2',
+    ),
+    'back_conference_paid_1' => array(
+      'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '5',
     ),
     'ds_user_picture' => array(
-      'weight' => '1',
-      'label' => 'hidden',
       'format' => 'ds_picture_diskussionen_grosses_bild',
+      'label' => 'hidden',
+      'weight' => '1',
+    ),
+    'submitted_by' => array(
+      'format' => 'ds_time_ago',
+      'label' => 'hidden',
+      'weight' => '0',
     ),
   );
   $export['node|conference_room_paid_1|default'] = $ds_fieldsetting;
@@ -48,25 +48,25 @@ function tz_conference_rooms_paid_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'conference_room_paid_2';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'back_conference_paid_2' => array(
-      'weight' => '5',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
     'author' => array(
-      'weight' => '2',
-      'label' => 'hidden',
       'format' => 'author',
-    ),
-    'submitted_by' => array(
-      'weight' => '0',
       'label' => 'hidden',
-      'format' => 'ds_time_ago',
+      'weight' => '2',
+    ),
+    'back_conference_paid_2' => array(
+      'format' => 'default',
+      'label' => 'hidden',
+      'weight' => '5',
     ),
     'ds_user_picture' => array(
-      'weight' => '1',
-      'label' => 'hidden',
       'format' => 'ds_picture_diskussionen_grosses_bild',
+      'label' => 'hidden',
+      'weight' => '1',
+    ),
+    'submitted_by' => array(
+      'format' => 'ds_time_ago',
+      'label' => 'hidden',
+      'weight' => '0',
     ),
   );
   $export['node|conference_room_paid_2|default'] = $ds_fieldsetting;
@@ -91,9 +91,9 @@ function tz_conference_rooms_paid_ds_custom_fields_info() {
   $ds_field->ui_limit = 'conference_room_paid_1|*';
   $ds_field->properties = array(
     'code' => array(
+      'format' => 'full_html',
       'value' => '<p><a href="/konferenzraum_1/month">&lt;&lt; Zurück zum Konferenzraum-1-Kalender</a></p>
 ',
-      'format' => 'full_html',
     ),
     'use_token' => 0,
   );
@@ -110,9 +110,9 @@ function tz_conference_rooms_paid_ds_custom_fields_info() {
   $ds_field->ui_limit = 'conference_room_paid_2|*';
   $ds_field->properties = array(
     'code' => array(
+      'format' => 'full_html',
       'value' => '<p><a href="/konferenzraum_2/month">&lt;&lt; Zurück zum Konferenzraum-2-Kalender</a></p>
 ',
-      'format' => 'full_html',
     ),
     'use_token' => 0,
   );
@@ -135,6 +135,21 @@ function tz_conference_rooms_paid_ds_layout_settings_info() {
   $ds_layout->view_mode = 'default';
   $ds_layout->layout = 'ds_2col_stacked';
   $ds_layout->settings = array(
+    'classes' => array(),
+    'fields' => array(
+      'author' => 'left',
+      'back_conference_paid_1' => 'right',
+      'ds_user_picture' => 'left',
+      'field_conf_firma' => 'right',
+      'field_conf_termin' => 'right',
+      'submitted_by' => 'header',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => 0,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
     'regions' => array(
       'header' => array(
         0 => 'submitted_by',
@@ -149,27 +164,12 @@ function tz_conference_rooms_paid_ds_layout_settings_info() {
         5 => 'back_conference_paid_1',
       ),
     ),
-    'fields' => array(
-      'submitted_by' => 'header',
-      'ds_user_picture' => 'left',
-      'author' => 'left',
-      'field_conf_firma' => 'right',
-      'field_conf_termin' => 'right',
-      'back_conference_paid_1' => 'right',
-    ),
-    'classes' => array(),
     'wrappers' => array(
+      'footer' => 'div',
       'header' => 'div',
       'left' => 'div',
       'right' => 'div',
-      'footer' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => 0,
   );
   $export['node|conference_room_paid_1|default'] = $ds_layout;
 
@@ -181,6 +181,21 @@ function tz_conference_rooms_paid_ds_layout_settings_info() {
   $ds_layout->view_mode = 'default';
   $ds_layout->layout = 'ds_2col_stacked';
   $ds_layout->settings = array(
+    'classes' => array(),
+    'fields' => array(
+      'author' => 'left',
+      'back_conference_paid_2' => 'right',
+      'ds_user_picture' => 'left',
+      'field_conf_firma' => 'right',
+      'field_conf_termin' => 'right',
+      'submitted_by' => 'header',
+    ),
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_disable_css' => 0,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_wrapper' => 'div',
     'regions' => array(
       'header' => array(
         0 => 'submitted_by',
@@ -195,27 +210,12 @@ function tz_conference_rooms_paid_ds_layout_settings_info() {
         5 => 'back_conference_paid_2',
       ),
     ),
-    'fields' => array(
-      'submitted_by' => 'header',
-      'ds_user_picture' => 'left',
-      'author' => 'left',
-      'field_conf_firma' => 'right',
-      'field_conf_termin' => 'right',
-      'back_conference_paid_2' => 'right',
-    ),
-    'classes' => array(),
     'wrappers' => array(
+      'footer' => 'div',
       'header' => 'div',
       'left' => 'div',
       'right' => 'div',
-      'footer' => 'div',
     ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => 0,
   );
   $export['node|conference_room_paid_2|default'] = $ds_layout;
 

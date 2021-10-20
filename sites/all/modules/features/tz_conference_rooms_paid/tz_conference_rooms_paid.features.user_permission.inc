@@ -15,7 +15,6 @@ function tz_conference_rooms_paid_user_default_permissions() {
   $permissions['create conference_room_paid_1 content'] = array(
     'name' => 'create conference_room_paid_1 content',
     'roles' => array(
-      'Mieter' => 'Mieter',
       'Mitarbeiter hannoverimpuls' => 'Mitarbeiter hannoverimpuls',
       'Zentrumsleitung' => 'Zentrumsleitung',
     ),
