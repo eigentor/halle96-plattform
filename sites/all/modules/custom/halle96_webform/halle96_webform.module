@@ -22,7 +22,7 @@ function halle96_webform_menu() {
  */
 function halle96_webform_permission() {
   return ['administer ticket notifications' => [
-    'title' => t('Administer ticket notifications')
+    'title' => t('Administer ticket notifications') 
     ]
   ];
 }
