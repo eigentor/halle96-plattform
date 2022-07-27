@@ -24,7 +24,7 @@ function tz_conference_rooms_paid_default_rules_configuration() {
       ],
       "DO" : [
         { "mail" : {
-            "to" : "Marion.Groenig@hannoverimpuls.de, Jonas.Hansen@hannoverimpuls.de",
+            "to" : "Marion.Groenig@hannoverimpuls.de, Jonas.Hansen@hannoverimpuls.de, Katrin.Gehrke@hannoverimpuls.de",
             "subject" : "Konferenzraum 1 wurde gebucht von [node:author] f\\u00fcr die Firma [node:field-conf-firma]",
             "message" : "Hallo Zentrumsleitung,\\r\\n\\r\\nEin Konferenzraum wurde gebucht oder eine Buchung bearbeitet.\\r\\n\\r\\n[node:author] hat f\\u00fcr die Firma [node:field-conf-firma] am\\r\\n[node:field_conf_termin]\\r\\nden Konferenzraum 1 gebucht.\\r\\nHier k\\u00f6nnen Sie die Buchung ansehen: [node:url]\\r\\n\\r\\nW\\u00fcnsche f\\u00fcr Bewirtung und Equipment:\\r\\nBewirtung zur Selbstversorgung: [node:field-conf-food]\\r\\nEquipment: [node:field-conf-equipment]\\r\\n\\r\\n\\r\\nDas H96 Intranet",
             "language" : [ "" ]
@@ -59,7 +59,7 @@ function tz_conference_rooms_paid_default_rules_configuration() {
       ],
       "DO" : [
         { "mail" : {
-            "to" : "Marion.Groenig@hannoverimpuls.de, Jonas.Hansen@hannoverimpuls.de",
+            "to" : "Marion.Groenig@hannoverimpuls.de, Jonas.Hansen@hannoverimpuls.de, Katrin.Gehrke@hannoverimpuls.de",
             "subject" : "Konferenzraum 2 wurde gebucht von [node:author] f\\u00fcr die Firma [node:field_conf_firma]",
             "message" : "Hallo Zentrumsleitung,\\r\\n\\r\\nEin Konferenzraum wurde gebucht oder eine Buchung bearbeitet.\\r\\n\\r\\n[node:author] hat f\\u00fcr die Firma [node:field_conf_firma] am\\r\\n[node:field_conf_termin]\\r\\nden Konferenzraum 2 gebucht.\\r\\nHier k\\u00f6nnen Sie die Buchung ansehen: [node:url]\\r\\n\\r\\nW\\u00fcnsche f\\u00fcr Bewirtung und Equipment:\\r\\nBewirtung zur Selbstversorgung: [node:field-conf-food]\\r\\nEquipment: [node:field-conf-equipment]\\r\\n\\r\\nDas H96 Intranet",
             "language" : [ "" ]
