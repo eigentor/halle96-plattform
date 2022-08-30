@@ -174,7 +174,7 @@ function subscriptions_ui_node_form($form, &$form_state, $node, $expand = NULL) 
   $default_send_intervals = array();
   foreach ($node_options as $field => $field_options) {
     foreach ($field_options as $option) {
-      if (!is_array($option)) {
+      if (!is_array($option) || isset($option['#access']) && !$option['#access']) {
         continue;
       }
       if ((!$show_node_info || !variable_get('subscriptions_show_by_author_options', 1)) && isset($option['params']['author_uid']) && $option['params']['author_uid'] >= 0) {
