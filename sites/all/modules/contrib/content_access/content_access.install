@@ -42,6 +42,7 @@ function content_access_schema() {
  */
 function content_access_update_7101() {
   $settings = variable_get('content_access_settings', array());
+  $settings_new = array();
   foreach ($settings as $setting => $data) {
     foreach ($data as $type_name => $value) {
       $settings_new[$type_name][$setting] = $value;
@@ -51,4 +52,12 @@ function content_access_update_7101() {
     variable_set('content_access_' . $type_name, $data);
   }
   variable_del('content_access_settings');
+}
+
+/**
+ * Enable notice to rebuild node access permissions since a new node access realm
+ * was added to respect the core "view own unpublished content" permission
+ */
+function content_access_update_7102() {
+  node_access_needs_rebuild(TRUE);
 }
