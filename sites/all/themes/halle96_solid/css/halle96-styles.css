@@ -1,5 +1,7 @@
 @charset "UTF-8";
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import "../fonts/open-sans/open-sans.css";
+@import "../fonts/raleway/raleway.css";
+@import "../fonts/fontawesome/fontawesome.css";
 /*------------------------------------------- */
 /*------------------------------------------- */
 /*------------- All Screen Sizes -------------*/
@@ -145,6 +147,7 @@ table td.views-field-value-4 {
 }
 #header .region-header .block.menu-toggle .content:before {
   font-family: Fontawesome;
+  font-weight: normal;
   font-size: 32px;
   font-size: 2rem;
   content: "";
@@ -315,6 +318,7 @@ table td.views-field-value-4 {
 }
 .region-navigation ul.menu li a.beitrag-schreiben:before {
   font-family: Fontawesome;
+  font-weight: normal;
   content: "";
   color: white;
   margin-right: 0.7em;
@@ -354,6 +358,7 @@ table td.views-field-value-4 {
 }
 .region-navigation ul.menu li a.ticket-facility-management:before {
   font-family: Fontawesome;
+  font-weight: normal;
   content: "";
   color: white;
   margin-right: 0.7em;
@@ -406,6 +411,7 @@ table td.views-field-value-4 {
 }
 .role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben:before {
   font-family: Fontawesome;
+  font-weight: normal;
   content: "";
   color: white;
   margin-right: 0.7em;
@@ -939,6 +945,7 @@ table td.views-field-value-4 {
   margin-right: 8px;
   margin-left: -2px;
   font-family: Fontawesome;
+  font-weight: normal;
   content: "";
   font-size: 1.5em;
 }
@@ -1278,7 +1285,8 @@ table td.views-field-value-4 {
   margin-bottom: 10px;
 }
 .page-service-info .panel-col-top .views-row .field-content:before {
-  font-family: fontawesome;
+  font-family: Fontawesome;
+  font-weight: normal;
   font-size: 24px;
   font-size: 1.5rem;
   color: #999;
@@ -1336,6 +1344,7 @@ table td.views-field-value-4 {
 }
 .page-service-info .panel-col-bottom h2.pane-title:before {
   font-family: Fontawesome;
+  font-weight: normal;
   font-size: 32px;
   font-size: 2rem;
   color: #a5a5a5;
@@ -1732,6 +1741,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 }
 #header #block-search-form span.search-toggle-mobile:before {
   font-family: Fontawesome;
+  font-weight: normal;
   content: "";
   color: #a5a5a5;
   font-size: 32px;
@@ -1761,6 +1771,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 }
 #header #block-tz-custom-blocks-user-account-menu span.user-toggle-mobile:before {
   font-family: Fontawesome;
+  font-weight: normal;
   content: "";
   color: #a5a5a5;
   font-size: 32px;
@@ -1833,6 +1844,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   }
   #header #block-tz-custom-blocks-user-account-menu h2.block-title:before {
     font-family: Fontawesome;
+    font-weight: normal;
     content: "";
     color: #bbb;
     font-size: 22.4px;
@@ -1994,6 +2006,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 }
 .front #block-views-mitteilungen-block-1 .image-placeholder:before {
   font-family: Fontawesome;
+  font-weight: normal;
   position: absolute;
   top: 0;
   left: 0;
@@ -2080,6 +2093,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 }
 .front #block-views-kommentare-block .user-avatar .user-image-placeholder:before {
   font-family: Fontawesome;
+  font-weight: normal;
   position: absolute;
   top: 0;
   left: 0;
@@ -2245,6 +2259,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 }
 .front #block-views-008f6cfec855a53f1dbdf423a4918844 .view-alle-kategorien-service-info .views-row .field-content:before {
   font-family: fontawesome;
+  font-weight: normal;
   font-size: 24px;
   font-size: 1.5rem;
   color: #aaa;
