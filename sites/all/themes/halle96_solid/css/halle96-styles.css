@@ -766,7 +766,7 @@ table td.views-field-value-4 {
   }
 
   .role-Zentrumsleitung .region-navigation ul.menu li a.news-schreiben {
-    display: inline;
+    display: block;
   }
 
   #page-title-container .inner-container {
