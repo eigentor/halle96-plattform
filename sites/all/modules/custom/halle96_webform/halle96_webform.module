@@ -22,7 +22,7 @@ function halle96_webform_menu() {
  */
 function halle96_webform_permission() {
   return ['administer ticket notifications' => [
-    'title' => t('Administer ticket notifications') 
+    'title' => t('Administer ticket notifications')
     ]
   ];
 }
@@ -36,8 +36,8 @@ function halle96_webform_permission() {
  * @return mixed
  */
 function form_ticket_notifications($form, &$form_state) {
-  $default_values_mail_author = variable_get(halle96_webform_mail_author);
-  $default_values_mail_admin = variable_get(halle96_webform_mail_admin);
+  $default_values_mail_author = variable_get('halle96_webform_mail_author');
+  $default_values_mail_admin = variable_get('halle96_webform_mail_admin');
 
   $form['description'] = [
     '#type' => 'item',
@@ -168,10 +168,9 @@ function halle96_webform_webform_submission_update($node, $submission) {
       $to = $user_mail;
       $language = language_default();
       $from = 'ticket-haustechnik@hannoverimpuls.de';
-      $settings_form_values = variable_get(halle96_webform_mail_author);
+      $settings_form_values = variable_get('halle96_webform_mail_author');
       $params['subject'] = format_string($settings_form_values['subject'], ['@status' => $status_label, '@user_name' =>$user_name, '@ticket_text' =>$body, '@ticket_list_url' => $ticket_list_url]);
       $params['body'] = format_string($settings_form_values['text'], ['@status' => $status_label, '@user_name' =>$user_name, '@ticket_text' =>$body, '@ticket_list_url' => $ticket_list_url]);
-
       // send the mail
       drupal_mail($module, $key, $to, $language, $params, $from);
       drupal_set_message('Eine Mail-Benachrichtigung an '
