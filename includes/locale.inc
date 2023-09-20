@@ -615,7 +615,7 @@ function locale_add_language($langcode, $name = NULL, $native = NULL, $direction
       'direction' => $direction,
       'domain' => $domain,
       'prefix' => $prefix,
-      'enabled' => $enabled,
+      'enabled' => $enabled ? 1 : 0,
     ))
     ->execute();
 
@@ -1093,7 +1093,7 @@ function _locale_import_one_string($op, $value = NULL, $mode = NULL, $lang = NUL
  *
  * @param $report
  *   Report array summarizing the number of changes done in the form:
- *   array(inserts, updates, deletes).
+ *   array(additions, deletes, skips, updates).
  * @param $langcode
  *   Language code to import string into.
  * @param $context

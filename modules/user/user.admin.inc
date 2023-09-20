@@ -266,6 +266,9 @@ function user_admin_account_submit($form, &$form_state) {
   }
 }
 
+/**
+ * Form validation handler for the user_admin_account() form.
+ */
 function user_admin_account_validate($form, &$form_state) {
   $form_state['values']['accounts'] = array_filter($form_state['values']['accounts']);
   if (count($form_state['values']['accounts']) == 0) {
@@ -857,27 +860,26 @@ function theme_user_permission_description($variables) {
  */
 function user_admin_roles($form, $form_state) {
   $roles = user_roles();
+  $role_weights = db_query('SELECT r.rid, r.weight FROM {role} r')->fetchAllKeyed();
 
   $form['roles'] = array(
     '#tree' => TRUE,
   );
-  $order = 0;
   foreach ($roles as $rid => $name) {
     $form['roles'][$rid]['#role'] = (object) array(
       'rid' => $rid,
       'name' => $name,
-      'weight' => $order,
+      'weight' => $role_weights[$rid],
     );
-    $form['roles'][$rid]['#weight'] = $order;
+    $form['roles'][$rid]['#weight'] = $role_weights[$rid];
     $form['roles'][$rid]['weight'] = array(
       '#type' => 'textfield',
       '#title' => t('Weight for @title', array('@title' => $name)),
       '#title_display' => 'invisible',
       '#size' => 4,
-      '#default_value' => $order,
+      '#default_value' => $role_weights[$rid],
       '#attributes' => array('class' => array('role-weight')),
     );
-    $order++;
   }
 
   $form['name'] = array(
