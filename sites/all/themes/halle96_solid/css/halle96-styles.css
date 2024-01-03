@@ -150,7 +150,7 @@ table td.views-field-value-4 {
   font-weight: normal;
   font-size: 32px;
   font-size: 2rem;
-  content: "";
+  content: "\f0c9";
   position: absolute;
   top: 0;
   left: 0;
@@ -319,7 +319,7 @@ table td.views-field-value-4 {
 .region-navigation ul.menu li a.beitrag-schreiben:before {
   font-family: Fontawesome;
   font-weight: normal;
-  content: "";
+  content: "\f067";
   color: white;
   margin-right: 0.7em;
   font-size: 19.2px;
@@ -359,7 +359,7 @@ table td.views-field-value-4 {
 .region-navigation ul.menu li a.ticket-facility-management:before {
   font-family: Fontawesome;
   font-weight: normal;
-  content: "";
+  content: "\f067";
   color: white;
   margin-right: 0.7em;
   font-size: 19.2px;
@@ -412,7 +412,7 @@ table td.views-field-value-4 {
 .role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben:before {
   font-family: Fontawesome;
   font-weight: normal;
-  content: "";
+  content: "\f067";
   color: white;
   margin-right: 0.7em;
   font-size: 19.2px;
@@ -549,7 +549,6 @@ table td.views-field-value-4 {
   .not-logged-in #header {
     padding-top: 30px;
   }
-
   #header {
     padding-top: 0;
   }
@@ -601,12 +600,10 @@ table td.views-field-value-4 {
   #header #block-search-form input.form-submit:hover {
     background-color: #eee;
   }
-
   #page-title-container .inner-container h1 {
     font-size: 32px;
     font-size: 2rem;
   }
-
   #footer .region-footer {
     display: flex;
     justify-content: space-between;
@@ -629,14 +626,12 @@ table td.views-field-value-4 {
   #page {
     padding: 0;
   }
-
   #header > .section, #navigation > .section, #main, #footer > .section, #breadcrumb, #messages-container, #content-bottom .region-content-bottom, #page-title-container .inner-container {
     padding-left: 30px;
     padding-right: 30px;
     margin: auto;
     width: 980px;
   }
-
   #header {
     padding-top: 25px;
   }
@@ -660,12 +655,10 @@ table td.views-field-value-4 {
     flex-grow: 1;
     margin-top: 27px;
   }
-
   #navigation {
     margin-top: 35px;
     padding-bottom: 5px;
   }
-
   .region-navigation form#search-block-form {
     display: none !important;
   }
@@ -764,11 +757,9 @@ table td.views-field-value-4 {
   .region-navigation ul.menu li:hover ul {
     display: flex;
   }
-
   .role-Zentrumsleitung .region-navigation ul.menu li a.news-schreiben {
     display: block;
   }
-
   #page-title-container .inner-container {
     min-height: 100px;
   }
@@ -778,7 +769,6 @@ table td.views-field-value-4 {
     font-size: 32px;
     font-size: 2rem;
   }
-
   .one-sidebar #content, .page-node #content, .page-mitteilungen #content, .page-veranstaltungen #content, .page-taxonomy-term- #content {
     float: left;
     width: 75%;
@@ -787,11 +777,9 @@ table td.views-field-value-4 {
     float: left;
     width: 25%;
   }
-
   .front #content {
     width: 100%;
   }
-
   #footer .region-footer ul.menu li {
     width: 33%;
   }
@@ -810,11 +798,9 @@ table td.views-field-value-4 {
   #header > .section, #navigation > .section, #main, #footer > .section, #breadcrumb, #messages-container, #content-bottom .region-content-bottom, #page-title-container .inner-container {
     width: 1180px;
   }
-
   #header .region-header {
     margin-left: 370px;
   }
-
   .region-navigation ul.menu li {
     padding-right: 0;
   }
@@ -946,7 +932,7 @@ table td.views-field-value-4 {
   margin-left: -2px;
   font-family: Fontawesome;
   font-weight: normal;
-  content: "";
+  content: "\f271";
   font-size: 1.5em;
 }
 .view-conference-room-schedule td div.day, .view-conference-room-schedule td div.day a, .view-conference-room-paid-1 td div.day, .view-conference-room-paid-1 td div.day a, .view-conference-room-paid-2 td div.day, .view-conference-room-paid-2 td div.day a {
@@ -1148,7 +1134,6 @@ table td.views-field-value-4 {
     top: 0;
     margin-top: -3px;
   }
-
   .page-mieterfirmen .view-mieterfirmen .panel-col-first {
     float: left;
     width: 20%;
@@ -1165,7 +1150,6 @@ table td.views-field-value-4 {
     width: 30%;
     clear: none;
   }
-
   .page-tickets .view-tickets .view-header {
     width: 60%;
   }
@@ -1299,38 +1283,38 @@ table td.views-field-value-4 {
   color: black;
 }
 .page-service-info .panel-col-top .views-row .field-content.term-19:before {
-  content: "";
+  content: "\f0a1";
 }
 .page-service-info .panel-col-top .views-row .field-content.term-7:before {
-  content: "";
+  content: "\f291";
   font-size: 21.6px;
   font-size: 1.35rem;
 }
 .page-service-info .panel-col-top .views-row .field-content.term-8:before {
-  content: "";
+  content: "\f0f5";
   font-size: 21.6px;
   font-size: 1.35rem;
 }
 .page-service-info .panel-col-top .views-row .field-content.term-9:before {
-  content: "";
+  content: "\f135";
 }
 .page-service-info .panel-col-top .views-row .field-content.term-10:before {
-  content: "";
+  content: "\f0f7";
 }
 .page-service-info .panel-col-top .views-row .field-content.term-12:before {
-  content: "";
+  content: "\f239";
 }
 .page-service-info .panel-col-top .views-row .field-content.term-13:before {
-  content: "";
+  content: "\f0ad";
 }
 .page-service-info .panel-col-top .views-row .field-content.term-14:before {
-  content: "";
+  content: "\f26c";
   font-size: 21.6px;
   font-size: 1.35rem;
   vertical-align: -3px;
 }
 .page-service-info .panel-col-top .views-row .field-content.term-20:before {
-  content: "";
+  content: "\f140";
 }
 .page-service-info .panel-col-bottom .view-einzelne-kategorie-service-und-info ul li {
   color: #aaa;
@@ -1356,36 +1340,36 @@ table td.views-field-value-4 {
   font-weight: normal;
 }
 .page-service-info .panel-col-bottom .panel-pane#term-19 h2.pane-title:before {
-  content: "";
+  content: "\f0a1";
 }
 .page-service-info .panel-col-bottom .panel-pane#term-7 h2.pane-title:before {
-  content: "";
+  content: "\f291";
   font-size: 29.6px;
   font-size: 1.85rem;
 }
 .page-service-info .panel-col-bottom .panel-pane#term-8 h2.pane-title:before {
-  content: "";
+  content: "\f0f5";
   font-size: 29.6px;
   font-size: 1.85rem;
 }
 .page-service-info .panel-col-bottom .panel-pane#term-9 h2.pane-title:before {
-  content: "";
+  content: "\f135";
   padding-right: 2px;
 }
 .page-service-info .panel-col-bottom .panel-pane#term-20 h2.pane-title:before {
-  content: "";
+  content: "\f140";
 }
 .page-service-info .panel-col-bottom .panel-pane#term-10 h2.pane-title:before {
-  content: "";
+  content: "\f0f7";
 }
 .page-service-info .panel-col-bottom .panel-pane#term-12 h2.pane-title:before {
-  content: "";
+  content: "\f239";
 }
 .page-service-info .panel-col-bottom .panel-pane#term-13 h2.pane-title:before {
-  content: "";
+  content: "\f0ad";
 }
 .page-service-info .panel-col-bottom .panel-pane#term-14 h2.pane-title:before {
-  content: "";
+  content: "\f26c";
   font-size: 29.6px;
   font-size: 1.85rem;
   vertical-align: -3px;
@@ -1542,7 +1526,6 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   .page-node .node ul.links.inline {
     clear: both;
   }
-
   .node.node-teaser .field-type-image {
     float: left;
     margin: 5px 15px 5px 0;
@@ -1550,7 +1533,6 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   .node.node-teaser ul.links.inline {
     clear: both;
   }
-
   .page-service-info .panel-col-top {
     display: none;
   }
@@ -1586,7 +1568,6 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
     padding-bottom: 0.25em;
     box-sizing: content-box;
   }
-
   #comments .comment .comment-left {
     float: left;
     width: 105px;
@@ -1595,7 +1576,6 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   #comments .comment .comment-right {
     margin-left: 110px;
   }
-
   body.conference-room-select .field-name-body {
     *zoom: 1;
   }
@@ -1617,7 +1597,6 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
     padding-right: 3%;
     padding-top: 20px;
   }
-
   .page-node.node-type-conference-room-paid-1 .field-name-title h2, .page-node.node-type-conference-room-paid-2 .field-name-title h2, .page-node.node-type-conference-room .field-name-title h2 {
     margin-bottom: 0;
   }
@@ -1671,11 +1650,9 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
     padding-bottom: 0.25em;
     box-sizing: content-box;
   }
-
   body.conference-room-select #content {
     width: 100%;
   }
-
   .node-type-company-profile.page-node #content {
     width: auto;
   }
@@ -1721,7 +1698,6 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
     box-sizing: content-box;
     line-height: 1.6;
   }
-
   body.conference-room-select .conference-1, body.conference-room-select .conference-2, body.conference-room-select .conference-3 {
     padding-top: 30px;
   }
@@ -1742,7 +1718,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 #header #block-search-form span.search-toggle-mobile:before {
   font-family: Fontawesome;
   font-weight: normal;
-  content: "";
+  content: "\f002";
   color: #a5a5a5;
   font-size: 32px;
   font-size: 2rem;
@@ -1772,7 +1748,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
 #header #block-tz-custom-blocks-user-account-menu span.user-toggle-mobile:before {
   font-family: Fontawesome;
   font-weight: normal;
-  content: "";
+  content: "\f007";
   color: #a5a5a5;
   font-size: 32px;
   font-size: 2rem;
@@ -1845,7 +1821,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   #header #block-tz-custom-blocks-user-account-menu h2.block-title:before {
     font-family: Fontawesome;
     font-weight: normal;
-    content: "";
+    content: "\f007";
     color: #bbb;
     font-size: 22.4px;
     font-size: 1.4rem;
@@ -1956,7 +1932,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   }
   .front #block-views-mitteilungen-block-1 h2.block-title:before {
     font-family: Fontawesome;
-    content: "";
+    content: "\f0c0";
     font-weight: normal;
     font-size: 32px;
     font-size: 2rem;
@@ -2017,7 +1993,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   font-size: 28.8px;
   font-size: 1.8rem;
   color: white;
-  content: "";
+  content: "\f10e";
 }
 .front #block-views-kommentare-block h2.block-title {
   position: relative;
@@ -2036,7 +2012,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   }
   .front #block-views-kommentare-block h2.block-title:before {
     font-family: Fontawesome;
-    content: "";
+    content: "\f0e6";
     font-weight: normal;
     font-size: 34.56px;
     font-size: 2.16rem;
@@ -2104,7 +2080,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   font-size: 33.6px;
   font-size: 2.1rem;
   color: #ccc;
-  content: "";
+  content: "\f2be";
 }
 .front #block-views-kommentare-block .author-name {
   font-weight: 500;
@@ -2150,7 +2126,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   }
   .front #block-views-news-block-1 h2.block-title:before {
     font-family: Fontawesome;
-    content: "";
+    content: "\f1ea";
     font-weight: normal;
     font-size: 29.44px;
     font-size: 1.84rem;
@@ -2222,7 +2198,7 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   }
   .front #block-views-008f6cfec855a53f1dbdf423a4918844 h2.block-title:before {
     font-family: Fontawesome;
-    content: "";
+    content: "\f05a";
     font-weight: normal;
     font-size: 34.56px;
     font-size: 2.16rem;
@@ -2269,35 +2245,35 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   min-width: 32px;
 }
 .front #block-views-008f6cfec855a53f1dbdf423a4918844 .view-alle-kategorien-service-info .views-row .field-content.term-19:before {
-  content: "";
+  content: "\f0a1";
 }
 .front #block-views-008f6cfec855a53f1dbdf423a4918844 .view-alle-kategorien-service-info .views-row .field-content.term-7:before {
-  content: "";
+  content: "\f291";
   font-size: 21.6px;
   font-size: 1.35rem;
 }
 .front #block-views-008f6cfec855a53f1dbdf423a4918844 .view-alle-kategorien-service-info .views-row .field-content.term-8:before {
-  content: "";
+  content: "\f0f5";
   font-size: 21.6px;
   font-size: 1.35rem;
 }
 .front #block-views-008f6cfec855a53f1dbdf423a4918844 .view-alle-kategorien-service-info .views-row .field-content.term-9:before {
-  content: "";
+  content: "\f135";
 }
 .front #block-views-008f6cfec855a53f1dbdf423a4918844 .view-alle-kategorien-service-info .views-row .field-content.term-20:before {
-  content: "";
+  content: "\f140";
 }
 .front #block-views-008f6cfec855a53f1dbdf423a4918844 .view-alle-kategorien-service-info .views-row .field-content.term-10:before {
-  content: "";
+  content: "\f0f7";
 }
 .front #block-views-008f6cfec855a53f1dbdf423a4918844 .view-alle-kategorien-service-info .views-row .field-content.term-12:before {
-  content: "";
+  content: "\f239";
 }
 .front #block-views-008f6cfec855a53f1dbdf423a4918844 .view-alle-kategorien-service-info .views-row .field-content.term-13:before {
-  content: "";
+  content: "\f0ad";
 }
 .front #block-views-008f6cfec855a53f1dbdf423a4918844 .view-alle-kategorien-service-info .views-row .field-content.term-14:before {
-  content: "";
+  content: "\f26c";
   font-size: 21.6px;
   font-size: 1.35rem;
   vertical-align: -3px;
@@ -2424,13 +2400,9 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   .front #main .region-content #block-system-main {
     display: none;
   }
-}
-@media only screen and (min-width: 992px) {
   .front #content-bottom .region-content-bottom {
     display: flex;
   }
-}
-@media only screen and (min-width: 992px) {
   .front #block-views-mitteilungen-block-1 {
     width: 50%;
     padding-left: 3%;
@@ -2448,8 +2420,6 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   .front #block-views-mitteilungen-block-1 .views-field-body {
     margin-left: 74px;
   }
-}
-@media only screen and (min-width: 992px) {
   .front #block-views-kommentare-block {
     width: 50%;
     padding-left: 3%;
@@ -2474,8 +2444,6 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   .front #block-views-kommentare-block .views-field-comment-body {
     margin-left: 75px;
   }
-}
-@media only screen and (min-width: 992px) {
   .front #block-views-news-block-1 {
     width: 50%;
     padding-right: 3%;
@@ -2483,8 +2451,6 @@ body.conference-room-select .conference-1 h3, body.conference-room-select .confe
   .front #block-views-news-block-1 .views-row {
     padding-left: 20px;
   }
-}
-@media only screen and (min-width: 992px) {
   .front #block-views-008f6cfec855a53f1dbdf423a4918844 {
     width: 50%;
     padding-right: 3%;
