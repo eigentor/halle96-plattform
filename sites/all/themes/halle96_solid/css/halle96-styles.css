@@ -386,30 +386,30 @@ table td.views-field-value-4 {
   padding-right: 0;
 }
 
-.role-Zentrumsleitung .region-navigation #block-system-main-menu {
+.role-Zentrumsleitung .region-navigation #block-system-main-menu, .role-Mitarbeiterhannoverimpuls .region-navigation #block-system-main-menu {
   display: none;
 }
-.role-Zentrumsleitung .region-navigation ul.menu {
+.role-Zentrumsleitung .region-navigation ul.menu, .role-Mitarbeiterhannoverimpuls .region-navigation ul.menu {
   padding: 0;
 }
-.role-Zentrumsleitung .region-navigation ul.menu li {
+.role-Zentrumsleitung .region-navigation ul.menu li, .role-Mitarbeiterhannoverimpuls .region-navigation ul.menu li {
   list-style-type: none;
   list-style-image: none;
   margin-left: 0;
 }
-.role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben {
+.role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben, .role-Mitarbeiterhannoverimpuls .region-navigation ul.menu a.news-schreiben {
   display: block;
   background: #eee url(../images/icon-background.png) no-repeat -20px center;
   padding-left: 38px;
   position: relative;
 }
-.role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben.active-trail {
+.role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben.active-trail, .role-Mitarbeiterhannoverimpuls .region-navigation ul.menu a.news-schreiben.active-trail {
   background-color: #777;
 }
-.role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben:hover {
+.role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben:hover, .role-Mitarbeiterhannoverimpuls .region-navigation ul.menu a.news-schreiben:hover {
   background: #777;
 }
-.role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben:before {
+.role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben:before, .role-Mitarbeiterhannoverimpuls .region-navigation ul.menu a.news-schreiben:before {
   font-family: Fontawesome;
   font-weight: normal;
   content: "\f067";
@@ -423,19 +423,19 @@ table td.views-field-value-4 {
   top: 6px;
 }
 @media only screen and (min-width: 992px) {
-  .role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben {
+  .role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben, .role-Mitarbeiterhannoverimpuls .region-navigation ul.menu a.news-schreiben {
     background-color: white;
     background-position: -30px center;
   }
-  .role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben.active-trail {
+  .role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben.active-trail, .role-Mitarbeiterhannoverimpuls .region-navigation ul.menu a.news-schreiben.active-trail {
     background-color: #777;
   }
-  .role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben:before {
+  .role-Zentrumsleitung .region-navigation ul.menu a.news-schreiben:before, .role-Mitarbeiterhannoverimpuls .region-navigation ul.menu a.news-schreiben:before {
     left: 7px;
     top: 1px;
   }
 }
-.role-Zentrumsleitung .region-navigation ul.menu a.beitrag-schreiben {
+.role-Zentrumsleitung .region-navigation ul.menu a.beitrag-schreiben, .role-Mitarbeiterhannoverimpuls .region-navigation ul.menu a.beitrag-schreiben {
   display: none;
 }
 
@@ -757,7 +757,7 @@ table td.views-field-value-4 {
   .region-navigation ul.menu li:hover ul {
     display: flex;
   }
-  .role-Zentrumsleitung .region-navigation ul.menu li a.news-schreiben {
+  .role-Zentrumsleitung .region-navigation ul.menu li a.news-schreiben, .role-Mitarbeiterhannoverimpuls .region-navigation ul.menu li a.news-schreiben {
     display: block;
   }
   #page-title-container .inner-container {
